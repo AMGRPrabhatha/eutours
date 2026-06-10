@@ -39,10 +39,10 @@ const Footer = () => {
           <div className="footer-column contact-column">
             <h4 className="footer-heading">CONTACT INFO</h4>
             <ul className="footer-links">
-              <li><a href="tel:+94771234567">+94 77 123 4567</a></li>
+              <li><a href="tel:+447700900077">+44 7700 900077</a></li>
               <li><a href="#">WhatsApp Us</a></li>
-              <li><a href="mailto:info@eutours.lk">info@eutours.lk</a></li>
-              <li className="location-text" style={{ marginTop: '1rem', color: '#1a1a1a' }}>Colombo, Sri Lanka</li>
+              <li><a href="mailto:info@eutours.eu">info@eutours.eu</a></li>
+              <li className="location-text" style={{ marginTop: '1rem', color: '#1a1a1a' }}>Paris, Europe</li>
             </ul>
           </div>
 
@@ -60,7 +60,7 @@ const Footer = () => {
         
         <div className="footer-bottom-bar">
           <div className="footer-bottom-left">
-            <span className="location-pin">📍 Sri Lanka</span>
+            <span className="location-pin">📍 Europe</span>
             <span className="copyright">© 2026 Eutours. All rights reserved</span>
           </div>
           <div className="footer-bottom-right">
