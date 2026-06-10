@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const TravelersChoice = () => {
+  const [visibleCount, setVisibleCount] = useState(4);
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -100,15 +101,18 @@ const TravelersChoice = () => {
         <div className="container">
             <div className="dest-header" style={{ flexWrap: 'wrap', gap: '10px' }}>
                 <h2 className="dest-section-title" style={{ fontSize: '1.5rem', margin: 0 }}>Travelers' favorite choices</h2>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: 'auto' }}>
+                <div className="mobile-only" style={{ display: 'flex', gap: '10px', alignItems: 'center', marginLeft: 'auto' }}>
                     <button onClick={() => scroll('left')} className="scroll-btn">←</button>
                     <button onClick={() => scroll('right')} className="scroll-btn">→</button>
                 </div>
+                {visibleCount < tours.length && (
+                  <div className="explore-more desktop-only" style={{cursor: 'pointer', marginLeft: 'auto'}} onClick={() => setVisibleCount(prev => prev + 4)}>See more</div>
+                )}
             </div>
             
             <div className="advanced-grid" style={{ marginBottom: 0 }} ref={scrollRef}>
                 {tours.map((tour, idx) => (
-                  <Link to={tour.link} className="adv-card" key={idx}>
+                  <Link to={tour.link} className={`adv-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} key={idx}>
                       <div className="adv-img-container">
                           <img src={tour.img} alt={tour.title} className="adv-img" />
                       </div>

@@ -1,7 +1,8 @@
-import React, { useRef } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
 const WhereToNext = () => {
+  const [visibleCount, setVisibleCount] = useState(5);
   const scrollRef = useRef(null);
 
   const scroll = (direction) => {
@@ -26,16 +27,19 @@ const WhereToNext = () => {
   return (
     <section className="destinations" style={{ paddingTop: '4rem', paddingBottom: '2rem', background: 'var(--white)' }}>
         <div className="container">
-            <div className="dest-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem' }}>
+            <div className="dest-header" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', flexWrap: 'wrap' }}>
                 <h2 className="dest-section-title" style={{ fontSize: '1.5rem', margin: 0 }}>Where to next?</h2>
-                <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                <div className="mobile-only" style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                     <button onClick={() => scroll('left')} className="scroll-btn">←</button>
                     <button onClick={() => scroll('right')} className="scroll-btn">→</button>
                 </div>
+                {visibleCount < destinations.length && (
+                  <div className="explore-more desktop-only" style={{cursor: 'pointer'}} onClick={() => setVisibleCount(prev => prev + 5)}>See more</div>
+                )}
             </div>
-            <div className="dest-grid" style={{ display: 'flex', overflowX: 'auto', gap: '1rem', scrollBehavior: 'smooth' }} ref={scrollRef}>
+            <div className="dest-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', marginTop: '1rem' }} ref={scrollRef}>
                 {destinations.map((dest, idx) => (
-                  <Link to={dest.link} className="vertical-card" key={idx} style={{ flex: '0 0 auto', width: '200px' }}>
+                  <Link to={dest.link} className={`vertical-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} key={idx}>
                       <img src={dest.img} alt={dest.title} style={dest.style || {}} />
                       <div className="v-card-overlay">
                           <h3>{dest.title}</h3>

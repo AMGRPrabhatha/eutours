@@ -2562,6 +2562,17 @@ ul {
 
 .scroll-btn { display: none; }
 
+/* Visibility Utilities */
+.mobile-only { display: none !important; }
+.desktop-only { display: block; }
+@media (max-width: 768px) {
+  .mobile-only { display: flex !important; }
+  .desktop-only { display: none !important; }
+}
+@media (min-width: 769px) {
+  .desktop-hide { display: none !important; }
+}
+
 /* =========================================
    COMPREHENSIVE MOBILE RESPONSIVENESS FIXES 
    ========================================= */
