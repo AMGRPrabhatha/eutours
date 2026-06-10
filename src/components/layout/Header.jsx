@@ -164,8 +164,6 @@ const Header = () => {
                 <Link to="/travel-guides" className="sub-nav-link">Travel guides</Link>
                 <Link to="/faq" className="sub-nav-link">FAQ</Link>
                 <Link to="/moments" className="sub-nav-link">Moments</Link>
-                <a href="#" className="sub-nav-link">🏷️ Payment discounts</a>
-                <a href="#" className="sub-nav-link">🎁 Gift cards</a>
             </div>
         </div>
     </header>
