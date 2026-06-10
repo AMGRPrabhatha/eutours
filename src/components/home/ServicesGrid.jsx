@@ -1,0 +1,22 @@
+import { Link } from 'react-router-dom';
+
+const ServicesGrid = () => {
+  return (
+    <section className="services-grid-wrapper">
+      <Link to="/contact" className="service-panel" style={{ backgroundImage: "url('/images/island_tours.jpg')" }}>
+        <div className="service-panel-overlay"></div>
+        <h3 className="service-panel-title">Europe Tour Packages</h3>
+      </Link>
+      <Link to="/contact" className="service-panel" style={{ backgroundImage: "url('/images/airport_transfers.jpg')" }}>
+        <div className="service-panel-overlay"></div>
+        <h3 className="service-panel-title">Visa Assistance & Travel Support</h3>
+      </Link>
+      <Link to="/contact" className="service-panel" style={{ backgroundImage: "url('/images/vehicle_fleet.jpg')" }}>
+        <div className="service-panel-overlay"></div>
+        <h3 className="service-panel-title">Accommodation & Airport Pickup</h3>
+      </Link>
+    </section>
+  );
+};
+
+export default ServicesGrid;
