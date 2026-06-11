@@ -110,6 +110,20 @@ ul {
   box-shadow: 0 6px 20px rgba(245, 158, 11, 0.6);
 }
 
+.nav-contact-btn {
+  background: white !important;
+  color: black !important;
+  border: 1px solid #ccc !important;
+  padding: 0.5rem 1.5rem !important;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05) !important;
+}
+
+.nav-contact-btn:hover {
+  background: #f8f9fa !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+}
+
 /* Unified Header */
 .main-header {
   position: fixed;
@@ -1449,14 +1463,14 @@ ul {
 
 /* About Us Page Redesign */
 .about-page {
-  padding-top: 130px; /* Account for fixed header */
+  padding-top: 110px; /* Account for fixed header */
   min-height: 100vh;
 }
 
 /* About Hero */
 .about-hero {
   position: relative;
-  height: 60vh;
+  height: calc(100vh - 110px);
   min-height: 400px;
   background-size: cover;
   background-position: center;
@@ -1710,7 +1724,7 @@ ul {
 
 /* Adventure Styles Page */
 .adv-styles-page {
-  padding-top: 130px;
+  padding-top: 110px;
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -1853,14 +1867,14 @@ ul {
 
 /* Reviews Page */
 .reviews-page {
-  padding-top: 130px;
+  padding-top: 110px;
   min-height: 100vh;
   background: var(--bg-light);
 }
 
 .reviews-hero {
   position: relative;
-  height: 50vh;
+  height: calc(100vh - 110px);
   min-height: 350px;
   background-size: cover;
   background-position: center;
@@ -1890,6 +1904,7 @@ ul {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: white;
   text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
@@ -2234,7 +2249,7 @@ ul {
 
 /* FAQ Page Redesign */
 .faq-page {
-  padding-top: 130px;
+  padding-top: 110px;
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -2270,6 +2285,7 @@ ul {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: white;
   text-shadow: 0 4px 15px rgba(0,0,0,0.4);
 }
 
@@ -2407,7 +2423,7 @@ ul {
 
 /* Travel Guides Page */
 .guides-page {
-  padding-top: 130px;
+  padding-top: 110px;
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -2444,6 +2460,7 @@ ul {
   font-size: 3.8rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: white;
   text-shadow: 0 4px 15px rgba(0,0,0,0.5);
 }
 

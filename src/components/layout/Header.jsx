@@ -118,7 +118,7 @@ const Header = () => {
                     </li>
                     <li><a href="#booking">Book a Vehicle</a></li>
                     <li><Link to="/reviews">Reviews</Link></li>
-                    <li><Link to="/contact" className="btn btn-primary" style={{ color: 'white', padding: '0.5rem 1.5rem' }}>Contact Us</Link></li>
+                    <li><Link to="/contact" className="btn nav-contact-btn">Contact Us</Link></li>
                 </ul>
             </div>
         </nav>

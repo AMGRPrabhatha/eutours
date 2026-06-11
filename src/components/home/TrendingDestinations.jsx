@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
 
 const trendingData = [
-  { id: 'hk', name: 'Hong Kong', flag: '🇭🇰', img: '/images/dest_hongkong_1781115508284.png', size: 'large' },
-  { id: 'sg', name: 'Singapore', flag: '🇸🇬', img: '/images/dest_singapore_1781115521016.png', size: 'large' },
-  { id: 'dn', name: 'Danang', flag: '🇻🇳', img: '/images/dest_danang_1781115533572.png', size: 'small' },
-  { id: 'bk', name: 'Bangkok', flag: '🇹🇭', img: '/images/dest_bangkok_1781115545498.png', size: 'small' },
-  { id: 'ld', name: 'London', flag: '🇬🇧', img: '/images/dest_london_1781115556558.png', size: 'small' }
+  { id: 'fr', name: 'France', flag: '🇫🇷', img: '/images/dest_hongkong_1781115508284.png', size: 'large' },
+  { id: 'ch', name: 'Switzerland', flag: '🇨🇭', img: '/images/dest_singapore_1781115521016.png', size: 'large' },
+  { id: 'it', name: 'Italy', flag: '🇮🇹', img: '/images/dest_danang_1781115533572.png', size: 'small' },
+  { id: 'de', name: 'Germany', flag: '🇩🇪', img: '/images/dest_bangkok_1781115545498.png', size: 'small' },
+  { id: 'nl', name: 'Netherlands', flag: '🇳🇱', img: '/images/dest_london_1781115556558.png', size: 'small' }
 ];
 
 const TrendingDestinations = () => {
