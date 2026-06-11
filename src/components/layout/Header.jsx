@@ -105,7 +105,7 @@ const Header = () => {
                             <div className="adv-styles-right">
                               <div className="adv-styles-grid">
                                 {advStyles.map(style => (
-                                  <Link to="/styles" key={style.name} className="adv-style-item" onClick={() => setAdvHover(false)}>
+                                  <Link to={`/styles?filter=${encodeURIComponent(style.name)}`} key={style.name} className="adv-style-item" onClick={() => setAdvHover(false)}>
                                     <span className="adv-style-icon" style={{ filter: 'grayscale(1)', opacity: 0.6 }}>{style.icon}</span>
                                     {style.name}
                                   </Link>

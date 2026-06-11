@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const adventureStylesData = [
   { name: 'Adventure & Adrenaline', icon: '⛰️', desc: 'Push your limits and seek thrills.', img: '/images/swiss_circle_1781090136030.webp' },
@@ -16,10 +16,18 @@ const adventureStylesData = [
 ];
 
 const AdventureStyles = () => {
-  // Ensure the page starts at the top
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const filterStyle = searchParams.get('filter');
+
+  // Ensure the page starts at the top or updates when location changes
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, []);
+  }, [location]);
+
+  const displayStyles = filterStyle 
+    ? adventureStylesData.filter(s => s.name === filterStyle) 
+    : adventureStylesData;
 
   return (
     <div className="adv-styles-page">
@@ -35,8 +43,14 @@ const AdventureStyles = () => {
       {/* Styles Grid Section */}
       <section className="adv-styles-grid-section">
         <div className="container">
+          {filterStyle && (
+            <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+              <h2 style={{ marginBottom: '1rem', color: 'var(--primary)' }}>Showing: {filterStyle}</h2>
+              <Link to="/styles" className="btn btn-primary" style={{ padding: '0.6rem 1.5rem', color: 'white', display: 'inline-block' }}>View All Styles</Link>
+            </div>
+          )}
           <div className="styles-card-grid">
-            {adventureStylesData.map((style) => (
+            {displayStyles.map((style) => (
               <Link to="/contact" key={style.name} className="style-card" style={{ backgroundImage: `url(${style.img})` }}>
                 <div className="style-card-overlay"></div>
                 <div className="style-card-content">
