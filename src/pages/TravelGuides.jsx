@@ -34,7 +34,7 @@ const TravelGuides = () => {
   return (
     <div className="guides-page">
       {/* Hero Section */}
-      <section className="guides-hero" style={{ backgroundImage: "url('/images/guide_hero_1781117022033.png')" }}>
+      <section className="guides-hero" style={{ backgroundImage: "url('/images/travelguide-hero.jpg')" }}>
         <div className="guides-hero-overlay"></div>
         <div className="guides-hero-content container">
           <h1>Expert Travel Guides</h1>

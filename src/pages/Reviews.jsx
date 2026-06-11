@@ -59,7 +59,7 @@ const Reviews = () => {
   return (
     <div className="reviews-page">
       {/* Hero Section */}
-      <section className="reviews-hero" style={{ backgroundImage: "url('/images/paris_dest_1781075727792.webp')" }}>
+      <section className="reviews-hero" style={{ backgroundImage: "url('/images/reviews-hero.jpg')" }}>
         <div className="reviews-hero-overlay"></div>
         <div className="container reviews-hero-content">
           <h1>What Our Travelers Say</h1>

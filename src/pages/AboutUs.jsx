@@ -10,7 +10,7 @@ const AboutUs = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <section className="about-hero" style={{ backgroundImage: "url('/images/paris_dest_1781075727792.webp')" }}>
+      <section className="about-hero" style={{ backgroundImage: "url('/images/aboutus-hero.jpg')" }}>
         <div className="about-hero-overlay"></div>
         <div className="container about-hero-content">
           <h1>Discover Eutours</h1>

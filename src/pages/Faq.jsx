@@ -57,7 +57,7 @@ const Faq = () => {
   return (
     <div className="faq-page">
       {/* Hero Section */}
-      <section className="faq-hero" style={{ backgroundImage: "url('/images/faq_hero.png')" }}>
+      <section className="faq-hero" style={{ backgroundImage: "url('/images/faq-hero.jpg')" }}>
         <div className="faq-hero-overlay"></div>
         <div className="faq-hero-content container">
           <h1>How can we help?</h1>
