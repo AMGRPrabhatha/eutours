@@ -1,5 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } }
+};
 
 const Contact = () => {
   const [searchParams] = useSearchParams();
@@ -17,6 +23,7 @@ const Contact = () => {
     if (tourQuery) {
       setFormData(prev => ({ ...prev, destination: tourQuery }));
     }
+    window.scrollTo(0, 0);
   }, [tourQuery]);
 
   const handleChange = (e) => {
@@ -27,7 +34,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Thank you for your inquiry! Our travel experts will get back to you shortly.');
-    // Reset form
     setFormData({
       name: '',
       email: '',
@@ -38,90 +44,153 @@ const Contact = () => {
   };
 
   return (
-    <main className="container" style={{ marginTop: '140px', padding: '2rem 0 6rem', minHeight: '70vh' }}>
-      <div style={{ maxWidth: '800px', margin: '0 auto', background: 'white', borderRadius: '16px', padding: '3rem', boxShadow: '0 10px 30px rgba(0,0,0,0.05)', border: '1px solid #eaeaea' }}>
-        <h1 className="section-title" style={{ textAlign: 'center', marginBottom: '1rem', fontSize: '2.5rem' }}>Contact Us</h1>
-        <p style={{ textAlign: 'center', color: '#64748b', marginBottom: '3rem' }}>
-          Have a question or want to book a specific experience? Fill out the form below and we'll get right back to you.
-        </p>
+    <div className="contact-page">
+      {/* Contact Hero */}
+      <section className="contact-hero" style={{ backgroundImage: "url('/images/aboutus-hero.jpg')" }}>
+        <div className="contact-hero-overlay"></div>
+        <motion.div 
+          className="container contact-hero-content"
+          initial="hidden"
+          animate="visible"
+          variants={fadeInUp}
+        >
+          <h1>Get in Touch</h1>
+          <p>We're here to help you craft the perfect European getaway.</p>
+        </motion.div>
+      </section>
 
-        <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="name" style={{ fontWeight: 600, color: '#1a1a1a', fontSize: '0.95rem' }}>Full Name *</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                required 
-                value={formData.name}
-                onChange={handleChange}
-                style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }}
-                placeholder="John Doe"
-              />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="email" style={{ fontWeight: 600, color: '#1a1a1a', fontSize: '0.95rem' }}>Email Address *</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                required 
-                value={formData.email}
-                onChange={handleChange}
-                style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }}
-                placeholder="john@example.com"
-              />
-            </div>
+      {/* Contact Split Layout */}
+      <section className="contact-split-section">
+        <div className="container">
+          <div className="contact-split-layout">
+            
+            <motion.div 
+              className="contact-info-col"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+            >
+              <span className="contact-subtitle">REACH OUT TO US</span>
+              <h2>Let's Start Planning Your European Dream</h2>
+              <p>
+                Whether you have a question about our itineraries, need help booking a specific luxury vehicle, or want a completely customized tour, our expert team is ready to assist you.
+              </p>
+              
+              <div className="contact-details">
+                <div className="contact-detail-item">
+                  <div className="detail-icon">📍</div>
+                  <div>
+                    <h3>Office Address</h3>
+                    <p>123 Luxury Avenue,<br/>London, W1J 7BU,<br/>United Kingdom</p>
+                  </div>
+                </div>
+                
+                <div className="contact-detail-item">
+                  <div className="detail-icon">📞</div>
+                  <div>
+                    <h3>Phone Number</h3>
+                    <p>+44 20 7946 0958<br/>+94 74 359 2570</p>
+                  </div>
+                </div>
+                
+                <div className="contact-detail-item">
+                  <div className="detail-icon">✉️</div>
+                  <div>
+                    <h3>Email Address</h3>
+                    <p>bookings@eutours.com<br/>support@eutours.com</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div 
+              className="contact-form-wrapper"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={{
+                hidden: { opacity: 0, x: 50 },
+                visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
+              }}
+            >
+              <form className="modern-contact-form" onSubmit={handleSubmit}>
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="name">FULL NAME *</label>
+                    <input 
+                      type="text" 
+                      id="name" 
+                      name="name" 
+                      required 
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="e.g. John Doe"
+                    />
+                  </div>
+                  <div className="form-group-new">
+                    <label htmlFor="email">EMAIL ADDRESS *</label>
+                    <input 
+                      type="email" 
+                      id="email" 
+                      name="email" 
+                      required 
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="your@email.com"
+                    />
+                  </div>
+                </div>
+
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="phone">PHONE NUMBER</label>
+                    <input 
+                      type="tel" 
+                      id="phone" 
+                      name="phone" 
+                      value={formData.phone}
+                      onChange={handleChange}
+                      placeholder="+1 234 567 8900"
+                    />
+                  </div>
+                  <div className="form-group-new">
+                    <label htmlFor="destination">DESTINATION INQUIRY *</label>
+                    <input 
+                      type="text" 
+                      id="destination" 
+                      name="destination" 
+                      required 
+                      value={formData.destination}
+                      onChange={handleChange}
+                      placeholder="e.g. Paris & Rome"
+                    />
+                  </div>
+                </div>
+
+                <div className="form-group-new full-width">
+                  <label htmlFor="message">YOUR MESSAGE *</label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    required 
+                    rows="5"
+                    value={formData.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your ideal trip, special requirements, or any questions you have..."
+                  ></textarea>
+                </div>
+
+                <button type="submit" className="btn-book-orange">
+                  Send Message
+                </button>
+              </form>
+            </motion.div>
+            
           </div>
-
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="phone" style={{ fontWeight: 600, color: '#1a1a1a', fontSize: '0.95rem' }}>Phone Number</label>
-              <input 
-                type="tel" 
-                id="phone" 
-                name="phone" 
-                value={formData.phone}
-                onChange={handleChange}
-                style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none' }}
-                placeholder="+1 (555) 000-0000"
-              />
-            </div>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-              <label htmlFor="destination" style={{ fontWeight: 600, color: '#1a1a1a', fontSize: '0.95rem' }}>Destination / Tour Inquiry *</label>
-              <input 
-                type="text" 
-                id="destination" 
-                name="destination" 
-                required 
-                value={formData.destination}
-                onChange={handleChange}
-                style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none', background: tourQuery ? '#f1f5f9' : 'white' }}
-                placeholder="e.g. Paris Day Trip"
-              />
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '0.5rem' }}>
-            <label htmlFor="message" style={{ fontWeight: 600, color: '#1a1a1a', fontSize: '0.95rem' }}>Message / Special Requests</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              rows="5"
-              value={formData.message}
-              onChange={handleChange}
-              style={{ padding: '0.8rem 1rem', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '1rem', outline: 'none', resize: 'vertical' }}
-              placeholder="Tell us about your ideal trip..."
-            ></textarea>
-          </div>
-
-          <button type="submit" className="btn btn-primary" style={{ padding: '1rem', fontSize: '1.1rem', marginTop: '1rem', border: 'none', cursor: 'pointer' }}>
-            Send Inquiry
-          </button>
-        </form>
-      </div>
-    </main>
+        </div>
+      </section>
+    </div>
   );
 };
 
