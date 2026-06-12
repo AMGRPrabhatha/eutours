@@ -19,27 +19,27 @@ const staggerContainer = {
 const vehicles = [
   {
     id: 'luxury-van',
-    name: 'Luxury Tour Van',
+    name: 'Luxury Van',
     image: '/images/luxury_van_1781075675269.webp',
     passengers: 'Up to 7',
     luggage: '7 Large Suitcases',
     features: ['Wi-Fi', 'Leather Seats', 'Climate Control']
   },
   {
-    id: 'executive-suv',
-    name: 'Executive SUV',
-    image: '/images/switzerland_vertical_1781089957980.webp',
-    passengers: 'Up to 4',
-    luggage: '4 Large Suitcases',
-    features: ['Wi-Fi', 'Panoramic Roof', 'Heated Seats']
-  },
-  {
     id: 'premium-sedan',
     name: 'Premium Sedan',
-    image: '/images/paris_dest_1781075727792.webp',
+    image: '/images/airport_transfers.jpg',
     passengers: 'Up to 3',
     luggage: '2 Large Suitcases',
     features: ['Wi-Fi', 'Quiet Cabin', 'Refreshments']
+  },
+  {
+    id: 'luxury-bus',
+    name: 'Luxury Bus',
+    image: '/images/vehicle_fleet.jpg',
+    passengers: 'Up to 30',
+    luggage: '30 Large Suitcases',
+    features: ['Wi-Fi', 'Onboard Restroom', 'Panoramic Windows']
   }
 ];
 

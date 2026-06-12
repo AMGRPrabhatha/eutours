@@ -2813,6 +2813,26 @@ ul {
 }
 
 /* Fleet Section */
+.booking-fleet {
+  padding: 5rem 0;
+}
+
+.booking-fleet .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.booking-fleet .section-header h2 {
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+
+.booking-fleet .section-header p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
 .fleet-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2887,6 +2907,10 @@ ul {
 }
 
 /* Booking Form Section */
+.booking-form-section {
+  padding: 5rem 0;
+}
+
 .booking-form-container {
   max-width: 800px;
   margin: 0 auto;
