@@ -114,7 +114,7 @@ const Contact = () => {
                 visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
               }}
             >
-              <form className="modern-contact-form" onSubmit={handleSubmit}>
+              <form className="booking-form-new" onSubmit={handleSubmit}>
                 <div className="form-row-new">
                   <div className="form-group-new">
                     <label htmlFor="name">FULL NAME *</label>
