@@ -123,8 +123,11 @@ const getMockData = (id) => {
     '/images/switzerland_vertical_1781089957980.webp'
   ];
 
-  const destNames = realData[id]?.dests || ['Capital City', 'Historic Center', 'Mountain Resort', 'Coastal Town', 'Wine Region'];
-  const attrNames = realData[id]?.attrs || ['National Museum', 'Royal Palace', 'Scenic Gorge', 'Old Town Square'];
+  const fallbackDests = [`${capitalized} Capital City`, `Historic ${capitalized}`, `${capitalized} Mountains`, `${capitalized} Coast`, `Rural ${capitalized}`];
+  const fallbackAttrs = [`National Museum of ${capitalized}`, `Royal Palace of ${capitalized}`, `${capitalized} Scenic Gorge`, `Old Town Square`];
+
+  const destNames = realData[id]?.dests || fallbackDests;
+  const attrNames = realData[id]?.attrs || fallbackAttrs;
 
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
@@ -196,7 +199,16 @@ const getMockData = (id) => {
     }
   ];
 
-  return { title: capitalized, topDests, topAttractions, topThings, reviews };
+  const weatherSeed = (seed % 4);
+  const weathers = [
+    { season: "DEC - FEB", temps: { high: "45°", low: "28°" }, desc: "Winter Season" },
+    { season: "MAR - MAY", temps: { high: "68°", low: "45°" }, desc: "Spring Season" },
+    { season: "JUN - AUG", temps: { high: "85°", low: "65°" }, desc: "Summer Season" },
+    { season: "SEP - NOV", temps: { high: "62°", low: "48°" }, desc: "Autumn Season" }
+  ];
+  const weather = weathers[weatherSeed];
+
+  return { title: capitalized, topDests, topAttractions, topThings, reviews, weather };
 };
 
 const Region = () => {
@@ -212,7 +224,7 @@ const Region = () => {
     heroImage = regionPages[id].hero;
   }
 
-  const { title, topDests, topAttractions, topThings, reviews } = getMockData(id);
+  const { title, topDests, topAttractions, topThings, reviews, weather } = getMockData(id);
 
   return (
     <div className="region-page">
@@ -335,12 +347,12 @@ const Region = () => {
                     <span>°C</span>
                 </div>
             </div>
-            <div className="klook-weather-season">MAR - MAY</div>
+            <div className="klook-weather-season">{weather.season}</div>
             <div className="klook-weather-temps">
-                <span>74°</span>
-                <span className="low">40°</span>
+                <span>{weather.temps.high}</span>
+                <span className="low">{weather.temps.low}</span>
             </div>
-            <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>Spring Season</div>
+            <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>{weather.desc}</div>
         </div>
       </section>
 
