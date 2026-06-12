@@ -2259,8 +2259,8 @@ ul {
 
 .faq-hero {
   position: relative;
-  height: 40vh;
-  min-height: 300px;
+  height: 45vh;
+  min-height: 350px;
   background-size: cover;
   background-position: center;
   display: flex;
@@ -2433,7 +2433,7 @@ ul {
 
 .guides-hero {
   position: relative;
-  height: 40vh;
+  height: 45vh;
   min-height: 350px;
   background-size: cover;
   background-position: center;
