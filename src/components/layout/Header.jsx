@@ -116,7 +116,7 @@ const Header = () => {
                         </div>
                       )}
                     </li>
-                    <li><a href="#booking">Book a Vehicle</a></li>
+                    <li><Link to="/book-vehicle">Book a Vehicle</Link></li>
                     <li><Link to="/reviews">Reviews</Link></li>
                     <li><Link to="/contact" className="btn nav-contact-btn">Contact Us</Link></li>
                 </ul>

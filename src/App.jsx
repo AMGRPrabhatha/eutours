@@ -10,6 +10,7 @@ import Moments from './pages/Moments';
 import Contact from './pages/Contact';
 import Reviews from './pages/Reviews';
 import TravelGuides from './pages/TravelGuides';
+import BookVehicle from './pages/BookVehicle';
 import ScrollToTop from './components/ScrollToTop';
 
 import './assets/css/styles.css';
@@ -29,6 +30,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/travel-guides" element={<TravelGuides />} />
+          <Route path="/book-vehicle" element={<BookVehicle />} />
           <Route path="/region/:id" element={<Region />} />
         </Routes>
         <Footer />

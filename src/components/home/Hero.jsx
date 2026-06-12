@@ -9,7 +9,7 @@ const Hero = () => {
             <p className="hero-subtitle">Premium, hassle-free European tours tailored exclusively for Sri Lankan travelers.</p>
             <div className="hero-cta">
                 <Link to="/destinations" className="btn btn-primary">Explore Places</Link>
-                <a href="#booking" className="btn btn-accent">Book a Vehicle</a>
+                <Link to="/book-vehicle" className="btn btn-accent">Book a Vehicle</Link>
             </div>
         </div>
     </section>
