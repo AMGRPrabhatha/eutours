@@ -21,25 +21,46 @@ const vehicles = [
     id: 'luxury-van',
     name: 'Luxury Van',
     image: '/images/luxury_van_1781075675269.webp',
-    passengers: 'Up to 7',
-    luggage: '7 Large Suitcases',
-    features: ['Wi-Fi', 'Leather Seats', 'Climate Control']
+    price: '$250',
+    topTags: [{text: 'Last in Unit', type: 'alert'}, {text: '25% Discount', type: 'success'}],
+    pills: [
+      { icon: '👥', text: '7 seats' },
+      { icon: '🧳', text: '7 Bags' },
+      { icon: '📶', text: 'Wi-Fi' },
+      { icon: '💺', text: 'Leather Seats' },
+      { icon: '❄️', text: 'Climate Control' },
+      { icon: '🚐', text: 'Van' }
+    ]
   },
   {
     id: 'premium-sedan',
     name: 'Premium Sedan',
     image: '/images/airport_transfers.jpg',
-    passengers: 'Up to 3',
-    luggage: '2 Large Suitcases',
-    features: ['Wi-Fi', 'Quiet Cabin', 'Refreshments']
+    price: '$180',
+    topTags: [{text: 'Available Cars', type: 'success'}, {text: '15% Discount', type: 'success'}],
+    pills: [
+      { icon: '👥', text: '3 seats' },
+      { icon: '🧳', text: '2 Bags' },
+      { icon: '📶', text: 'Wi-Fi' },
+      { icon: '🔇', text: 'Quiet Cabin' },
+      { icon: '🍾', text: 'Refreshments' },
+      { icon: '🚗', text: 'Sedan' }
+    ]
   },
   {
     id: 'luxury-bus',
     name: 'Luxury Bus',
     image: '/images/vehicle_fleet.jpg',
-    passengers: 'Up to 30',
-    luggage: '30 Large Suitcases',
-    features: ['Wi-Fi', 'Onboard Restroom', 'Panoramic Windows']
+    price: '$450',
+    topTags: [{text: 'Available Cars', type: 'success'}, {text: 'Group Travel', type: 'success'}],
+    pills: [
+      { icon: '👥', text: '30 seats' },
+      { icon: '🧳', text: '30 Bags' },
+      { icon: '📶', text: 'Wi-Fi' },
+      { icon: '🚻', text: 'Restroom' },
+      { icon: '🖼️', text: 'Panoramic' },
+      { icon: '🚌', text: 'Bus' }
+    ]
   }
 ];
 
@@ -79,42 +100,50 @@ const BookVehicle = () => {
           </motion.div>
 
           <motion.div 
-            className="fleet-list"
+            className="fleet-grid-new"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
           >
             {vehicles.map((vehicle) => (
-              <motion.div className="fleet-card" key={vehicle.id} variants={fadeInUp}>
-                <div className="fleet-img-wrapper">
+              <motion.div className="fleet-card-new" key={vehicle.id} variants={fadeInUp}>
+                <div className="fleet-card-top">
+                  {vehicle.topTags.map((tag, idx) => (
+                    <span key={idx} className={`fleet-top-tag tag-${tag.type}`}>
+                      <span className="tag-icon">{tag.type === 'alert' ? '!' : '✓'}</span> {tag.text}
+                    </span>
+                  ))}
+                </div>
+                
+                <div className="fleet-card-image-box">
                   <img src={vehicle.image} alt={vehicle.name} className="fleet-img" />
+                  <div className="fleet-carousel-dots">
+                    <span className="dot active"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                    <span className="dot"></span>
+                  </div>
                 </div>
-                <div className="fleet-details">
-                  <div className="fleet-details-header">
-                    <h3>{vehicle.name}</h3>
-                    <span className="fleet-badge">Premium</span>
+
+                <div className="fleet-card-header-new">
+                  <h3>{vehicle.name}</h3>
+                  <div className="fleet-card-price">
+                    <strong>{vehicle.price}</strong><span>/day</span>
                   </div>
-                  <div className="fleet-specs">
-                    <span><i className="icon-users">👥</i> {vehicle.passengers}</span>
-                    <span><i className="icon-luggage">🧳</i> {vehicle.luggage}</span>
-                  </div>
-                  <ul className="fleet-features">
-                    {vehicle.features.map((feature, idx) => (
-                      <li key={idx}>
-                        <span style={{ color: '#22c55e', marginRight: '5px' }}>✓</span> {feature}
-                      </li>
-                    ))}
-                  </ul>
                 </div>
-                <div className="fleet-action">
-                  <div className="fleet-price-placeholder">
-                    <span className="discount">10% Off!</span>
-                    <span className="price-strike">$350</span>
-                    <div className="price-current">$315 <span className="per-day">per day</span></div>
-                  </div>
+
+                <div className="fleet-pill-grid">
+                  {vehicle.pills.map((pill, idx) => (
+                    <div className="fleet-pill" key={idx}>
+                      <span className="pill-icon">{pill.icon}</span> {pill.text}
+                    </div>
+                  ))}
+                </div>
+
+                <div className="fleet-card-footer">
                   <button 
-                    className="btn btn-primary btn-book-now"
+                    className="btn btn-primary btn-book-now-new"
                     onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
                   >
                     Book Now
@@ -129,74 +158,112 @@ const BookVehicle = () => {
       {/* Booking Form Section */}
       <section id="booking-form-section" className="booking-form-section bg-light section-padding">
         <div className="container">
-          <div className="booking-form-container">
+          <div className="booking-split-layout">
+            
             <motion.div 
-              className="booking-form-wrapper"
+              className="booking-split-info"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
             >
-              <h2>Trip Details & Booking</h2>
-              <form className="booking-form" onSubmit={(e) => e.preventDefault()}>
+              <span className="quick-booking-label">QUICK BOOKING</span>
+              <h2>Send Your Ride Plan</h2>
+              <p>Share your trip details once and we will confirm the best vehicle with pricing quickly. Custom routes and multi-stop rides are supported.</p>
+              
+              <ul className="booking-contact-list">
+                <li><span className="icon">📱</span> +94 74 359 2570</li>
+                <li><span className="icon">✉️</span> mahimapsinfo@gmail.com</li>
+                <li><span className="icon">💬</span> Available 24/7 for support</li>
+              </ul>
+            </motion.div>
+
+            <motion.div 
+              className="booking-split-form-wrapper"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeInUp}
+            >
+              <form className="booking-form-new" onSubmit={(e) => e.preventDefault()}>
                 
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="pickupLocation">Pickup Location</label>
-                    <input type="text" id="pickupLocation" placeholder="Airport, Hotel, or City" required />
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="fullName">FULL NAME *</label>
+                    <input type="text" id="fullName" placeholder="Your full name" required />
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="dropoffLocation">Drop-off Location</label>
-                    <input type="text" id="dropoffLocation" placeholder="Airport, Hotel, or City" required />
-                  </div>
-                </div>
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="pickupDate">Pickup Date & Time</label>
-                    <input type="datetime-local" id="pickupDate" required />
-                  </div>
-                  <div className="form-group">
-                    <label htmlFor="passengers">Number of Passengers</label>
-                    <input type="number" id="passengers" min="1" max="15" placeholder="e.g. 4" required />
+                  <div className="form-group-new">
+                    <label htmlFor="email">EMAIL ADDRESS *</label>
+                    <input type="email" id="email" placeholder="your@email.com" required />
                   </div>
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="vehicleType">Select Vehicle</label>
-                  <select id="vehicleType" required>
-                    <option value="">-- Choose a Vehicle --</option>
-                    {vehicles.map(v => (
-                      <option key={v.id} value={v.id}>{v.name}</option>
-                    ))}
-                  </select>
-                </div>
-
-                <div className="form-divider"></div>
-                <h3>Personal Details</h3>
-
-                <div className="form-row">
-                  <div className="form-group">
-                    <label htmlFor="fullName">Full Name</label>
-                    <input type="text" id="fullName" placeholder="John Doe" required />
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="flightNumber">FLIGHT NUMBER</label>
+                    <input type="text" id="flightNumber" placeholder="e.g., UL 504" />
                   </div>
-                  <div className="form-group">
-                    <label htmlFor="email">Email Address</label>
-                    <input type="email" id="email" placeholder="john@example.com" required />
+                  <div className="form-group-new">
+                    <label htmlFor="pickupDate">PICKUP DATE *</label>
+                    <input type="date" id="pickupDate" required />
                   </div>
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="phone">Phone Number</label>
-                  <input type="tel" id="phone" placeholder="+1 234 567 8900" required />
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="pickupTime">PICKUP TIME *</label>
+                    <input type="time" id="pickupTime" required />
+                  </div>
+                  <div className="form-group-new">
+                    <label htmlFor="adults">ADULTS *</label>
+                    <select id="adults" required>
+                      <option value="">Select number</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4+">4+</option>
+                    </select>
+                  </div>
                 </div>
 
-                <div className="form-group">
-                  <label htmlFor="notes">Special Requests / Notes</label>
-                  <textarea id="notes" rows="4" placeholder="Any special requirements? (e.g. child seat, extra luggage)"></textarea>
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="children">CHILDREN</label>
+                    <select id="children">
+                      <option value="0">No Children</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3+">3+</option>
+                    </select>
+                  </div>
+                  <div className="form-group-new">
+                    <label htmlFor="vehicleType">VEHICLE TYPE *</label>
+                    <select id="vehicleType" required>
+                      <option value="">Select vehicle type</option>
+                      {vehicles.map(v => (
+                        <option key={v.id} value={v.id}>{v.name}</option>
+                      ))}
+                    </select>
+                  </div>
                 </div>
 
-                <button type="submit" className="btn btn-primary btn-block">Request Booking</button>
+                <div className="form-row-new">
+                  <div className="form-group-new">
+                    <label htmlFor="pickupLocation">PICKUP LOCATION *</label>
+                    <input type="text" id="pickupLocation" placeholder="e.g., Colombo Airport" required />
+                  </div>
+                  <div className="form-group-new">
+                    <label htmlFor="dropoffLocation">DROP-OFF LOCATION *</label>
+                    <input type="text" id="dropoffLocation" placeholder="e.g., Galle Fort Hotel" required />
+                  </div>
+                </div>
+
+                <div className="form-group-new full-width">
+                  <label htmlFor="specialRequests">SPECIAL REQUESTS</label>
+                  <textarea id="specialRequests" rows="3" placeholder="Any special requirements, luggage details, or additional information..."></textarea>
+                </div>
+
+                <button type="submit" className="btn btn-book-orange">BOOK NOW →</button>
               </form>
             </motion.div>
           </div>
