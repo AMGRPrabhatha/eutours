@@ -143,20 +143,21 @@ const AboutUs = () => {
               </div>
             </div>
           </motion.div>
-          
-          <motion.div 
-            className="global-reach-map"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={{
-              hidden: { opacity: 0, scale: 0.95 },
-              visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
-            }}
-          >
-            <img src="/images/europe_map.png" alt="European Travel Routes" className="reach-map-img" />
           </motion.div>
         </div>
+        
+        <motion.div 
+          className="global-reach-map"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={{
+            hidden: { opacity: 0, scale: 0.95 },
+            visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
+          }}
+        >
+          <img src="/images/europe_map_wide.png" alt="European Travel Routes" className="reach-map-img" />
+        </motion.div>
       </section>
 
       {/* CTA Section */}

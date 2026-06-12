@@ -3290,11 +3290,11 @@ ul {
 .reach-map-img {
   width: 100%;
   height: auto;
-  max-height: 600px;
-  margin: 0 auto;
+  max-height: 700px;
   display: block;
-  object-fit: contain;
+  object-fit: cover;
   mix-blend-mode: multiply;
+  object-position: center;
 }
 
 @media (max-width: 1200px) {
