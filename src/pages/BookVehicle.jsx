@@ -79,7 +79,7 @@ const BookVehicle = () => {
           </motion.div>
 
           <motion.div 
-            className="fleet-grid"
+            className="fleet-list"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
@@ -91,16 +91,34 @@ const BookVehicle = () => {
                   <img src={vehicle.image} alt={vehicle.name} className="fleet-img" />
                 </div>
                 <div className="fleet-details">
-                  <h3>{vehicle.name}</h3>
+                  <div className="fleet-details-header">
+                    <h3>{vehicle.name}</h3>
+                    <span className="fleet-badge">Premium</span>
+                  </div>
                   <div className="fleet-specs">
                     <span><i className="icon-users">👥</i> {vehicle.passengers}</span>
                     <span><i className="icon-luggage">🧳</i> {vehicle.luggage}</span>
                   </div>
                   <ul className="fleet-features">
                     {vehicle.features.map((feature, idx) => (
-                      <li key={idx}>✓ {feature}</li>
+                      <li key={idx}>
+                        <span style={{ color: '#22c55e', marginRight: '5px' }}>✓</span> {feature}
+                      </li>
                     ))}
                   </ul>
+                </div>
+                <div className="fleet-action">
+                  <div className="fleet-price-placeholder">
+                    <span className="discount">10% Off!</span>
+                    <span className="price-strike">$350</span>
+                    <div className="price-current">$315 <span className="per-day">per day</span></div>
+                  </div>
+                  <button 
+                    className="btn btn-primary btn-book-now"
+                    onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    Book Now
+                  </button>
                 </div>
               </motion.div>
             ))}
@@ -109,7 +127,7 @@ const BookVehicle = () => {
       </section>
 
       {/* Booking Form Section */}
-      <section className="booking-form-section bg-light section-padding">
+      <section id="booking-form-section" className="booking-form-section bg-light section-padding">
         <div className="container">
           <div className="booking-form-container">
             <motion.div 

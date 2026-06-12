@@ -2833,29 +2833,29 @@ ul {
   font-size: 1.1rem;
 }
 
-.fleet-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.fleet-list {
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
-  margin-top: 3rem;
 }
 
 .fleet-card {
+  display: flex;
   background: var(--white);
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.05);
-  border: 1px solid rgba(0,0,0,0.02);
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .fleet-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
 }
 
 .fleet-img-wrapper {
-  height: 220px;
+  flex: 0 0 350px;
   overflow: hidden;
 }
 
@@ -2871,13 +2871,31 @@ ul {
 }
 
 .fleet-details {
-  padding: 2rem;
+  flex: 1;
+  padding: 1.5rem 2rem;
+  border-right: 1px solid #eee;
 }
 
-.fleet-details h3 {
+.fleet-details-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.fleet-details-header h3 {
   font-size: 1.5rem;
   color: var(--primary);
-  margin-bottom: 1rem;
+  margin: 0;
+}
+
+.fleet-badge {
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.2rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .fleet-specs {
@@ -2896,14 +2914,94 @@ ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  border-top: 1px solid #eee;
-  padding-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
 }
 
 .fleet-features li {
-  margin-bottom: 0.5rem;
   color: #555;
+  font-size: 0.9rem;
+}
+
+.fleet-action {
+  flex: 0 0 250px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #fafafa;
+}
+
+.fleet-price-placeholder {
+  margin-bottom: 1.5rem;
+}
+
+.fleet-price-placeholder .discount {
+  display: block;
+  color: #22c55e;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 0.2rem;
+}
+
+.fleet-price-placeholder .price-strike {
+  display: block;
+  color: #999;
+  text-decoration: line-through;
   font-size: 0.95rem;
+}
+
+.fleet-price-placeholder .price-current {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+  margin-top: 0.2rem;
+}
+
+.fleet-price-placeholder .per-day {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 400;
+  margin-top: 0.2rem;
+}
+
+.btn-book-now {
+  width: 100%;
+}
+
+@media (max-width: 992px) {
+  .fleet-card {
+    flex-direction: column;
+  }
+  .fleet-img-wrapper {
+    flex: auto;
+    height: 250px;
+  }
+  .fleet-details {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+  .fleet-action {
+    flex: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white);
+    padding: 1.5rem 2rem;
+  }
+  .fleet-price-placeholder {
+    margin-bottom: 0;
+    text-align: left;
+  }
+  .btn-book-now {
+    width: auto;
+    padding: 0.8rem 2rem;
+  }
 }
 
 /* Booking Form Section */
