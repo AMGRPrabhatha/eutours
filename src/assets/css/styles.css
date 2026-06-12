@@ -2836,44 +2836,63 @@ ul {
 
 .fleet-grid-new {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.fleet-card-new {
+.fleet-card-modern {
   background: var(--white);
-  border-radius: 12px;
+  border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  border: 1px solid #e2e8f0;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  border: none;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.fleet-card-top {
+.fleet-card-modern:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.fleet-card-image-wrapper {
+  position: relative;
+  background: #ffffff;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.fleet-card-tags {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 1.5rem;
-  border-bottom: 1px solid #f1f5f9;
+  z-index: 2;
 }
 
-.fleet-top-tag {
-  font-size: 0.8rem;
+.fleet-tag {
+  font-size: 0.75rem;
   font-weight: 600;
-  padding: 0.3rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   border-radius: 20px;
   display: flex;
   align-items: center;
-  gap: 0.4rem;
-  border: 1px solid #e2e8f0;
+  gap: 0.3rem;
+  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-.fleet-top-tag .tag-icon {
+.fleet-tag .tag-icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   color: white;
   font-size: 0.6rem;
@@ -2881,78 +2900,90 @@ ul {
 
 .tag-alert {
   color: #ef4444;
-  border-color: #fca5a5;
 }
 .tag-alert .tag-icon {
   background: #ef4444;
 }
 
 .tag-success {
-  color: #22c55e;
-  border-color: #86efac;
+  color: #10b981;
 }
 .tag-success .tag-icon {
-  background: #22c55e;
+  background: #10b981;
 }
 
-.fleet-card-image-box {
-  padding: 2rem 0 1rem;
-  text-align: center;
-  background: #fff;
-}
-
-.fleet-card-image-box .fleet-img {
-  max-width: 90%;
-  height: 200px;
+.fleet-card-image-wrapper .fleet-img {
+  max-width: 95%;
+  height: 130px;
   object-fit: contain;
   margin: 0 auto;
+  transition: transform 0.5s ease;
+}
+
+.fleet-card-modern:hover .fleet-img {
+  transform: scale(1.05);
 }
 
 .fleet-carousel-dots {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: center;
-  gap: 0.5rem;
-  margin-top: 1rem;
+  gap: 0.4rem;
 }
 
 .fleet-carousel-dots .dot {
   width: 6px;
   height: 6px;
-  background: #cbd5e1;
+  background: rgba(0,0,0,0.15);
   border-radius: 50%;
+  transition: background 0.3s;
 }
 .fleet-carousel-dots .dot.active {
-  background: #22c55e;
+  background: var(--primary);
+  width: 12px;
+  border-radius: 4px;
 }
 
-.fleet-card-header-new {
+.fleet-card-content {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.fleet-card-header-modern {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
 }
 
-.fleet-card-header-new h3 {
-  font-size: 1.4rem;
-  color: var(--primary);
+.fleet-card-header-modern h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
   margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
 .fleet-card-price strong {
   font-size: 1.4rem;
   color: var(--primary);
+  font-weight: 800;
 }
 .fleet-card-price span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #64748b;
+  font-weight: 500;
 }
 
 .fleet-pill-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  padding: 0 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -2961,32 +2992,52 @@ ul {
   align-items: center;
   gap: 0.4rem;
   padding: 0.4rem 0.8rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 6px;
-  font-size: 0.85rem;
-  color: #64748b;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #475569;
   background: #f8fafc;
+  transition: background 0.3s, color 0.3s;
+}
+
+.fleet-card-modern:hover .fleet-pill {
+  background: #f1f5f9;
 }
 
 .fleet-card-footer {
-  padding: 1.5rem;
-  border-top: 1px solid #f1f5f9;
   margin-top: auto;
 }
 
-.btn-book-now-new {
+.btn-book-now-modern {
   width: 100%;
-  background: #3b82f6;
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
   color: white;
-  padding: 0.8rem;
-  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  border-radius: 10px;
+  font-size: 1.05rem;
   font-weight: 600;
-  transition: background 0.3s ease;
   border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(249, 115, 22, 0.25);
 }
-.btn-book-now-new:hover {
-  background: #2563eb;
+
+.btn-book-now-modern .arrow {
+  transition: transform 0.3s ease;
+}
+
+.btn-book-now-modern:hover {
+  background: linear-gradient(135deg, #ea580c 0%, #c2410c 100%);
+  box-shadow: 0 8px 25px rgba(249, 115, 22, 0.35);
+  transform: translateY(-2px);
+}
+
+.btn-book-now-modern:hover .arrow {
+  transform: translateX(5px);
 }
 
 /* Booking Form Split Layout */
@@ -3134,5 +3185,151 @@ ul {
   }
   .booking-split-form-wrapper {
     padding: 2rem;
+  }
+}
+
+/* Brand Story Section */
+.brand-story-section {
+  padding: 6rem 0;
+  background: var(--white);
+}
+
+.brand-story-container {
+  display: flex;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.brand-story-image {
+  flex: 1;
+}
+
+.brand-story-image img {
+  width: 100%;
+  height: auto;
+  max-height: 800px;
+  object-fit: cover;
+  display: block;
+}
+
+.brand-story-content {
+  flex: 1;
+  padding: 4rem 6rem;
+}
+
+.brand-story-content h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+}
+
+.brand-story-content p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 1.5rem;
+}
+
+/* Global Reach Section */
+.global-reach-section {
+  padding: 6rem 0 0 0;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.global-reach-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.reach-title {
+  flex: 0 0 50%;
+}
+
+.reach-title h2 {
+  font-size: 2.8rem;
+  color: var(--primary);
+  line-height: 1.2;
+}
+
+.reach-stats {
+  display: flex;
+  gap: 3rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--primary);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+.global-reach-map {
+  width: 100%;
+  position: relative;
+  margin-top: 2rem;
+}
+
+.reach-map-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+@media (max-width: 1200px) {
+  .brand-story-content {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .brand-story-container {
+    flex-direction: column;
+  }
+  .brand-story-image {
+    width: 100%;
+  }
+  .global-reach-header {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .reach-title {
+    flex: 1;
+  }
+  .reach-stats {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-story-content {
+    padding: 2rem;
+  }
+  .brand-story-content h2 {
+    font-size: 2rem;
+  }
+  .reach-stats {
+    flex-direction: column;
+    gap: 1.5rem;
   }
 }

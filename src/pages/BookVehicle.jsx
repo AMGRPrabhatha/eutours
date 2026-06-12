@@ -20,7 +20,7 @@ const vehicles = [
   {
     id: 'luxury-van',
     name: 'Luxury Van',
-    image: '/images/luxury_van_1781075675269.webp',
+    image: '/images/van.jpg',
     price: '$250',
     topTags: [{text: 'Last in Unit', type: 'alert'}, {text: '25% Discount', type: 'success'}],
     pills: [
@@ -35,7 +35,7 @@ const vehicles = [
   {
     id: 'premium-sedan',
     name: 'Premium Sedan',
-    image: '/images/airport_transfers.jpg',
+    image: '/images/sedan.webp',
     price: '$180',
     topTags: [{text: 'Available Cars', type: 'success'}, {text: '15% Discount', type: 'success'}],
     pills: [
@@ -50,7 +50,7 @@ const vehicles = [
   {
     id: 'luxury-bus',
     name: 'Luxury Bus',
-    image: '/images/vehicle_fleet.jpg',
+    image: '/images/bus.jpg',
     price: '$450',
     topTags: [{text: 'Available Cars', type: 'success'}, {text: 'Group Travel', type: 'success'}],
     pills: [
@@ -107,16 +107,15 @@ const BookVehicle = () => {
             variants={staggerContainer}
           >
             {vehicles.map((vehicle) => (
-              <motion.div className="fleet-card-new" key={vehicle.id} variants={fadeInUp}>
-                <div className="fleet-card-top">
-                  {vehicle.topTags.map((tag, idx) => (
-                    <span key={idx} className={`fleet-top-tag tag-${tag.type}`}>
-                      <span className="tag-icon">{tag.type === 'alert' ? '!' : '✓'}</span> {tag.text}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="fleet-card-image-box">
+              <motion.div className="fleet-card-modern" key={vehicle.id} variants={fadeInUp}>
+                <div className="fleet-card-image-wrapper">
+                  <div className="fleet-card-tags">
+                    {vehicle.topTags.map((tag, idx) => (
+                      <span key={idx} className={`fleet-tag tag-${tag.type}`}>
+                        <span className="tag-icon">{tag.type === 'alert' ? '!' : '✓'}</span> {tag.text}
+                      </span>
+                    ))}
+                  </div>
                   <img src={vehicle.image} alt={vehicle.name} className="fleet-img" />
                   <div className="fleet-carousel-dots">
                     <span className="dot active"></span>
@@ -126,28 +125,30 @@ const BookVehicle = () => {
                   </div>
                 </div>
 
-                <div className="fleet-card-header-new">
-                  <h3>{vehicle.name}</h3>
-                  <div className="fleet-card-price">
-                    <strong>{vehicle.price}</strong><span>/day</span>
-                  </div>
-                </div>
-
-                <div className="fleet-pill-grid">
-                  {vehicle.pills.map((pill, idx) => (
-                    <div className="fleet-pill" key={idx}>
-                      <span className="pill-icon">{pill.icon}</span> {pill.text}
+                <div className="fleet-card-content">
+                  <div className="fleet-card-header-modern">
+                    <h3>{vehicle.name}</h3>
+                    <div className="fleet-card-price">
+                      <strong>{vehicle.price}</strong><span>/day</span>
                     </div>
-                  ))}
-                </div>
+                  </div>
 
-                <div className="fleet-card-footer">
-                  <button 
-                    className="btn btn-primary btn-book-now-new"
-                    onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
-                  >
-                    Book Now
-                  </button>
+                  <div className="fleet-pill-grid">
+                    {vehicle.pills.map((pill, idx) => (
+                      <div className="fleet-pill" key={idx}>
+                        <span className="pill-icon">{pill.icon}</span> {pill.text}
+                      </div>
+                    ))}
+                  </div>
+
+                  <div className="fleet-card-footer">
+                    <button 
+                      className="btn-book-now-modern"
+                      onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
+                    >
+                      Book Now <span className="arrow">→</span>
+                    </button>
+                  </div>
                 </div>
               </motion.div>
             ))}
@@ -172,8 +173,8 @@ const BookVehicle = () => {
               <p>Share your trip details once and we will confirm the best vehicle with pricing quickly. Custom routes and multi-stop rides are supported.</p>
               
               <ul className="booking-contact-list">
-                <li><span className="icon">📱</span> +94 74 359 2570</li>
-                <li><span className="icon">✉️</span> mahimapsinfo@gmail.com</li>
+                <li><span className="icon">📱</span> +94 12 000 0000</li>
+                <li><span className="icon">✉️</span> eutoursinfo@gmail.com</li>
                 <li><span className="icon">💬</span> Available 24/7 for support</li>
               </ul>
             </motion.div>
