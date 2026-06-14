@@ -2761,13 +2761,9 @@ ul {
   .logo { color: var(--text-main) !important; }
   .logo span { color: var(--accent) !important; }
   
-  .nav-container { position: relative; }
+  .nav-container { position: static; }
   .menu-toggle {
     display: flex !important;
-    position: absolute !important;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
     z-index: 9999 !important;
   }
   .menu-toggle span { 
