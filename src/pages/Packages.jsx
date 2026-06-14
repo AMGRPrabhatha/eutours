@@ -396,9 +396,14 @@ const Packages = () => {
             {sortedPackages.length > 0 ? (
               sortedPackages.map((pkg) => (
                 <div key={pkg.id} className="pkg-horizontal-card" onClick={() => openItinerary(pkg)} style={{ cursor: 'pointer' }}>
-                  {/* Left Column: Template Image & Map overlay */}
+                  {/* Left Column: Real Image & Map overlay */}
                   <div className="pkg-card-media-col" onClick={(e) => e.stopPropagation()}>
-                    <TemplateImagePlaceholder category={pkg.category} />
+                    <img 
+                      src={`/images/packages/${pkg.id}.jpg`} 
+                      alt={pkg.title} 
+                      onError={(e) => { e.target.onerror = null; e.target.src = '/images/switzerland_vertical_1781089957980.webp'; }}
+                      className="pkg-card-real-img"
+                    />
                     
                     <button 
                       className={`wishlist-heart-btn ${wishlist.includes(pkg.id) ? 'active' : ''}`}
