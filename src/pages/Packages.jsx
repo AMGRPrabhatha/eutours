@@ -208,24 +208,6 @@ const packagesData = [
 ];
 
 // Helper components for UI templates
-const MockMapSvg = () => (
-  <svg className="mock-map-svg" viewBox="0 0 100 65" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-    <rect width="100" height="65" fill="#e2e8f0" rx="8" />
-    <line x1="20" y1="0" x2="20" y2="65" stroke="#cbd5e1" strokeWidth="0.3" strokeDasharray="3,3" />
-    <line x1="45" y1="0" x2="45" y2="65" stroke="#cbd5e1" strokeWidth="0.3" strokeDasharray="3,3" />
-    <line x1="75" y1="0" x2="75" y2="65" stroke="#cbd5e1" strokeWidth="0.3" strokeDasharray="3,3" />
-    <line x1="0" y1="20" x2="100" y2="20" stroke="#cbd5e1" strokeWidth="0.3" strokeDasharray="3,3" />
-    <line x1="0" y1="45" x2="100" y2="45" stroke="#cbd5e1" strokeWidth="0.3" strokeDasharray="3,3" />
-    
-    {/* Map Path Route */}
-    <path d="M 15 45 Q 40 15 85 35" fill="none" stroke="#0f172a" strokeWidth="2" strokeLinecap="round" strokeDasharray="2,3" />
-    <path d="M 15 45 Q 40 15 85 35" fill="none" stroke="#2563eb" strokeWidth="1.5" strokeLinecap="round" />
-    
-    <circle cx="15" cy="45" r="4.5" fill="#f43f5e" stroke="white" strokeWidth="1" />
-    <circle cx="45" cy="27" r="3.5" fill="#3b82f6" stroke="white" strokeWidth="1" />
-    <circle cx="85" cy="35" r="4.5" fill="#10b981" stroke="white" strokeWidth="1" />
-  </svg>
-);
 
 const TemplateImagePlaceholder = ({ category }) => (
   <div className="template-image-placeholder">
@@ -435,7 +417,7 @@ const Packages = () => {
                     </button>
                     
                     <div className="pkg-map-wrapper">
-                      <MockMapSvg />
+                      <img src="/images/map_placeholder.png" className="mock-map-svg" alt="Map Route Placeholder" />
                       <button className="view-map-overlay-btn" onClick={() => openItinerary(pkg)}>
                         <span className="map-icon">📍</span> View Map
                       </button>
@@ -537,7 +519,7 @@ const Packages = () => {
               <div className="pkg-itinerary-map-section">
                 <h4>Interactive Route Map Placeholder</h4>
                 <div className="large-mock-map">
-                  <MockMapSvg />
+                  <img src="/images/map_placeholder.png" className="mock-map-svg" alt="Map Route Placeholder" />
                 </div>
                 <p className="map-caption">Route covers: {activeItinerary.destinations}</p>
               </div>
