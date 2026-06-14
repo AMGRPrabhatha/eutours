@@ -263,6 +263,10 @@ ul {
   position: relative;
 }
 
+.mobile-dropdown-icon {
+  display: none;
+}
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -2639,6 +2643,20 @@ ul {
   
   .mobile-only-sub-nav .sub-nav-divider {
     display: none;
+  }
+  
+  .mobile-dropdown-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-main);
+  }
+  
+  .nav-links a, .sub-nav-link {
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
   
   /* Mega menu dropdown fixes for mobile */

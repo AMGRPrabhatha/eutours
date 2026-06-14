@@ -49,8 +49,15 @@ const Header = () => {
               className="mega-menu-wrapper"
               onMouseEnter={() => setActiveMenu(menuKey)}
             >
-                <Link to="#" className={`sub-nav-link ${activeMenu === menuKey ? 'active' : ''}`}>
+                <Link 
+                  to="#" 
+                  className={`sub-nav-link ${activeMenu === menuKey ? 'active' : ''}`}
+                  onClick={(e) => { e.preventDefault(); setActiveMenu(activeMenu === menuKey ? null : menuKey); }}
+                >
                     {menuData[menuKey].title}
+                    <span className="mobile-dropdown-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: activeMenu === menuKey ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </span>
                 </Link>
                 
                 {activeMenu === menuKey && (
@@ -109,7 +116,12 @@ const Header = () => {
                       onMouseLeave={() => setDestHover(false)}
                       className="primary-nav-item"
                     >
-                      <a href="#" onClick={(e) => { e.preventDefault(); setDestHover(!destHover); }}>Destinations</a>
+                      <a href="#" onClick={(e) => { e.preventDefault(); setDestHover(!destHover); }}>
+                        Destinations
+                        <span className="mobile-dropdown-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: destHover ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                      </a>
                       {destHover && (
                         <div className="primary-wrapper">
                           <div className="primary-dropdown">
@@ -136,7 +148,12 @@ const Header = () => {
                       onMouseLeave={() => setAdvHover(false)}
                       className="primary-nav-item"
                     >
-                      <a href="#" onClick={(e) => { e.preventDefault(); setAdvHover(!advHover); }}>Adventure Styles</a>
+                      <a href="#" onClick={(e) => { e.preventDefault(); setAdvHover(!advHover); }}>
+                        Adventure Styles
+                        <span className="mobile-dropdown-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: advHover ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                      </a>
                       {advHover && (
                         <div className="adv-styles-wrapper">
                           <div className="adv-styles-dropdown">
@@ -164,7 +181,7 @@ const Header = () => {
                     <li className="mobile-only-sub-nav">
                         {renderSubNav()}
                     </li>
-                    <li style={{ marginTop: 'auto', paddingTop: '1.5rem' }}>
+                    <li style={{ paddingTop: '1.5rem', marginBottom: '2rem' }}>
                         <Link to="/contact" className="btn nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
                     </li>
                 </ul>
