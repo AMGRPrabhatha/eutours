@@ -428,18 +428,6 @@ const Packages = () => {
                   <div className="pkg-card-details-col">
                     <div className="pkg-category-badge">{pkg.category}</div>
                     <h2>{pkg.title}</h2>
-                    
-                    <div className="pkg-rating-reviews">
-                      <span className="stars">★★★★★</span>
-                      <span className="rating-value">{pkg.rating.toFixed(1)}</span>
-                      <span className="reviews-count">({pkg.reviewCount} traveler reviews)</span>
-                    </div>
-
-                    <div className="pkg-traveler-quote">
-                      <span className="quote-icon">“</span>
-                      <p>{pkg.quote}</p>
-                      <span className="quote-author">— {pkg.quoteAuthor}, traveled in {pkg.quoteMonth}</span>
-                    </div>
 
                     <div className="pkg-spec-grid">
                       <div className="spec-item">
@@ -479,9 +467,6 @@ const Packages = () => {
                     <div className="pkg-action-buttons">
                       <button className="btn btn-primary btn-view-tour" onClick={() => openItinerary(pkg)}>
                         View tour
-                      </button>
-                      <button className="btn btn-outline-secondary btn-download" onClick={() => openBrochure(pkg)}>
-                        Download Brochure
                       </button>
                     </div>
                   </div>
