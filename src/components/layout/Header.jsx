@@ -102,9 +102,6 @@ const Header = () => {
                     <span style={{ transform: mobileMenuOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'none' }}></span>
                 </div>
                 <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`} id="nav-links">
-                    <li className="mobile-only-sub-nav">
-                        {renderSubNav()}
-                    </li>
                     <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
                     <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
                     <li 
@@ -162,9 +159,14 @@ const Header = () => {
                         </div>
                       )}
                     </li>
-                    <li><Link to="/book-vehicle">Book a Vehicle</Link></li>
-                    <li><Link to="/reviews">Reviews</Link></li>
-                    <li><Link to="/contact" className="btn nav-contact-btn">Contact Us</Link></li>
+                    <li><Link to="/book-vehicle" onClick={() => setMobileMenuOpen(false)}>Book a Vehicle</Link></li>
+                    <li><Link to="/reviews" onClick={() => setMobileMenuOpen(false)}>Reviews</Link></li>
+                    <li className="mobile-only-sub-nav">
+                        {renderSubNav()}
+                    </li>
+                    <li style={{ marginTop: 'auto', paddingTop: '1.5rem' }}>
+                        <Link to="/contact" className="btn nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+                    </li>
                 </ul>
             </div>
         </nav>

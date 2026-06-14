@@ -2614,14 +2614,30 @@ ul {
   .mobile-only-sub-nav {
     display: block !important;
     width: 100%;
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 1px solid #f1f5f9;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
   }
   
   .mobile-only-sub-nav .sub-nav-flex {
-    justify-content: flex-start !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    overflow-x: visible !important;
     padding-left: 0;
+    gap: 0;
+  }
+  
+  .mobile-only-sub-nav .sub-nav-link,
+  .mobile-only-sub-nav .mega-menu-wrapper {
+    display: block;
+    width: 100%;
+    padding: 0.8rem 0;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+  
+  .mobile-only-sub-nav .sub-nav-divider {
+    display: none;
   }
   
   /* Mega menu dropdown fixes for mobile */
