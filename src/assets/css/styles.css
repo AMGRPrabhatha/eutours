@@ -2629,6 +2629,7 @@ ul {
     overflow-x: visible !important;
     padding-left: 0;
     gap: 1.5rem !important;
+    height: auto !important;
   }
   
   .mobile-only-sub-nav .sub-nav-link,
@@ -2639,6 +2640,7 @@ ul {
     margin: 0 !important;
     font-size: 1.1rem;
     font-weight: 600;
+    height: auto !important;
   }
   
   .mobile-only-sub-nav .sub-nav-divider {
@@ -2659,6 +2661,13 @@ ul {
     width: 100%;
   }
   
+  .nav-links a.adv-style-item, 
+  .nav-links a.country-item,
+  .nav-links a.mega-item {
+    justify-content: flex-start !important;
+    gap: 0.8rem !important;
+  }
+  
   /* Mega menu dropdown fixes for mobile */
   .mega-menu { 
     position: static !important; 
@@ -2671,6 +2680,8 @@ ul {
     border-radius: 0 !important;
     box-sizing: border-box !important;
     border: none !important;
+    height: auto !important;
+    transform: none !important;
   }
   .mega-grid { 
     grid-template-columns: 1fr !important;
