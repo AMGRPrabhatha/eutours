@@ -181,8 +181,8 @@ const Header = () => {
                     <li className="mobile-only-sub-nav">
                         {renderSubNav()}
                     </li>
-                    <li style={{ paddingTop: '1.5rem', marginBottom: '2rem' }}>
-                        <Link to="/contact" className="btn nav-contact-btn" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+                    <li>
+                        <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
                     </li>
                 </ul>
             </div>

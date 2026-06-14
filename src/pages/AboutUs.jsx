@@ -66,7 +66,7 @@ const AboutUs = () => {
             className="brand-story-content"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={slideInRight}
           >
             <h2>HISTORY OF THE BRAND</h2>
@@ -96,7 +96,7 @@ const AboutUs = () => {
             className="features-grid"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={staggerContainer}
           >
             {[
