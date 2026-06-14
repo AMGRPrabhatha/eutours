@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
+  --header-height: 80px;
   --primary: #0f172a; /* Slate 900 */
   --secondary: #3b82f6; /* Blue 500 */
   --accent: #f59e0b; /* Amber 500 */
@@ -304,8 +305,8 @@ ul {
 
 /* Hero Section */
 .hero {
-  height: calc(100vh - 110px);
-  margin-top: 110px;
+  height: calc(100vh - var(--header-height));
+  margin-top: var(--header-height);
   position: relative;
   display: flex;
   align-items: center;
@@ -1482,14 +1483,14 @@ ul {
 
 /* About Us Page Redesign */
 .about-page {
-  padding-top: 110px; /* Account for fixed header */
+  padding-top: var(--header-height); /* Account for fixed header */
   min-height: 100vh;
 }
 
 /* About Hero */
 .about-hero {
   position: relative;
-  height: calc(100vh - 110px);
+  height: calc(100vh - var(--header-height));
   min-height: 400px;
   background-size: cover;
   background-position: center;
@@ -1744,7 +1745,7 @@ ul {
 
 /* Adventure Styles Page */
 .adv-styles-page {
-  padding-top: 110px;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -1889,14 +1890,14 @@ ul {
 
 /* Reviews Page */
 .reviews-page {
-  padding-top: 110px;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background: var(--bg-light);
 }
 
 .reviews-hero {
   position: relative;
-  height: calc(100vh - 110px);
+  height: calc(100vh - var(--header-height));
   min-height: 350px;
   background-size: cover;
   background-position: center;
@@ -2271,7 +2272,7 @@ ul {
 
 /* FAQ Page Redesign */
 .faq-page {
-  padding-top: 110px;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -2445,7 +2446,7 @@ ul {
 
 /* Travel Guides Page */
 .guides-page {
-  padding-top: 110px;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -2796,7 +2797,7 @@ ul {
   }
   
   /* Home Page Components */
-  .hero { margin-top: 110px; height: calc(100vh - 110px); }
+  .hero { margin-top: var(--header-height); height: calc(100vh - var(--header-height)); }
   .hero-title { font-size: 2.2rem !important; }
   .hero-subtitle { font-size: 1.1rem; }
   
@@ -2889,7 +2890,7 @@ ul {
 ========================================= */
 
 .booking-page {
-  padding-top: 110px;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -3860,7 +3861,7 @@ ul {
    Packages Page & Sidebar Filters
    ========================================================================== */
 .packages-page {
-  padding-top: 110px;
+  padding-top: var(--header-height);
   min-height: 100vh;
   background: var(--bg-light);
 }
@@ -4716,3 +4717,10 @@ ul {
 }
 
 
+
+
+@media (max-width: 992px) {
+  :root {
+    --header-height: 40px;
+  }
+}
