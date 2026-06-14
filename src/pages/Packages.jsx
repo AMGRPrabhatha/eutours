@@ -471,55 +471,146 @@ const Packages = () => {
         </main>
       </div>
 
-      {/* Itinerary / View Tour Modal */}
+      {/* Itinerary / View Tour Modal Redesign */}
       {activeItinerary && (
         <div className="guide-modal-overlay" onClick={closeItinerary}>
-          <div className="guide-modal-container animate-slide-up" onClick={(e) => e.stopPropagation()}>
+          <div className="guide-modal-container pkg-modal-redesign animate-slide-up" onClick={(e) => e.stopPropagation()}>
             <button className="guide-modal-close" onClick={closeItinerary} aria-label="Close modal">
               &times;
             </button>
             
-            <div className="guide-modal-hero" style={{ background: 'linear-gradient(135deg, #1e293b, #0f172a)' }}>
-              <div className="guide-modal-hero-content">
-                <span className="guide-modal-badge">{activeItinerary.category}</span>
-                <h2>{activeItinerary.title}</h2>
-                <p style={{ margin: '0.5rem 0 0', opacity: 0.9 }}>{activeItinerary.duration} Days Tour • Operated by {activeItinerary.operator}</p>
+            <div className="pkg-modal-header">
+              <h2>{activeItinerary.title}</h2>
+              <div className="pkg-modal-meta-row">
+                <span className="pkg-rating">★ {activeItinerary.rating.toFixed(1)} <span className="pkg-reviews">({activeItinerary.reviewCount} reviews)</span></span>
+                <span className="pkg-meta-divider"></span>
+                <span className="pkg-tour-code">Tour Code: EU-{activeItinerary.id.substring(0, 6).toUpperCase()}</span>
+                <span className="pkg-guarantee-badge">Guaranteed Departure</span>
               </div>
             </div>
-            
-            <div className="guide-modal-body">
-              <div className="pkg-itinerary-map-section">
-                <h4>Interactive Route Map Placeholder</h4>
-                <div className="large-mock-map">
-                  <img src="/images/map_placeholder.png" className="mock-map-svg" alt="Map Route Placeholder" />
-                </div>
-                <p className="map-caption">Route covers: {activeItinerary.destinations}</p>
-              </div>
 
-              <div className="guide-modal-intro">
-                <strong>Review Highlights:</strong> "{activeItinerary.quote}" – {activeItinerary.quoteAuthor}
-              </div>
-              
-              <div className="guide-modal-sections">
-                <h4 style={{ marginBottom: '1.25rem' }}>Detailed Day-by-Day Itinerary</h4>
-                {activeItinerary.itinerary.map((dayPlan) => (
-                  <div key={dayPlan.day} className="pkg-itinerary-day-card">
-                    <div className="day-number-badge">Day {dayPlan.day}</div>
-                    <div className="day-card-body">
-                      <h5>{dayPlan.title}</h5>
-                      <p>{dayPlan.desc}</p>
+            <div className="pkg-modal-split-layout">
+              {/* Left Column (70%) */}
+              <div className="pkg-modal-left">
+                <div className="pkg-modal-hero-img">
+                  <img src={`/images/packages/${activeItinerary.id}.jpg`} alt={activeItinerary.title} onError={(e) => { e.target.onerror = null; e.target.src = '/images/switzerland_vertical_1781089957980.webp'; }} />
+                  {activeItinerary.discount && (
+                    <div className="pkg-hero-discount">
+                      Save {activeItinerary.discount.replace(' Off', '')}
+                    </div>
+                  )}
+                </div>
+
+                <div className="pkg-details-grid">
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">Departure City</span>
+                      <span className="pkg-detail-value">{activeItinerary.itinerary[0]?.title.split(',')[0].replace('Arrival in ', '') || 'Varies'}</span>
                     </div>
                   </div>
-                ))}
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">End City</span>
+                      <span className="pkg-detail-value">{activeItinerary.itinerary[activeItinerary.itinerary.length - 1]?.title.split(' ')[0] || 'Varies'}</span>
+                    </div>
+                  </div>
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">Duration</span>
+                      <span className="pkg-detail-value">{activeItinerary.duration} days</span>
+                    </div>
+                  </div>
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">Language</span>
+                      <span className="pkg-detail-value">{activeItinerary.operatedIn}</span>
+                    </div>
+                  </div>
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">Group Size</span>
+                      <span className="pkg-detail-value">Up to 35</span>
+                    </div>
+                  </div>
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">Group Type</span>
+                      <span className="pkg-detail-value">Standard Group</span>
+                    </div>
+                  </div>
+                  <div className="pkg-detail-item">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                    <div className="pkg-detail-text">
+                      <span className="pkg-detail-label">Tour Audience</span>
+                      <span className="pkg-detail-value">{activeItinerary.ageRange}</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="guide-modal-sections">
+                  <h4 style={{ marginBottom: '1.25rem', fontSize: '1.5rem', fontWeight: 800 }}>Detailed Day-by-Day Itinerary</h4>
+                  {activeItinerary.itinerary.map((dayPlan) => (
+                    <div key={dayPlan.day} className="pkg-itinerary-day-card">
+                      <div className="day-number-badge">Day {dayPlan.day}</div>
+                      <div className="day-card-body">
+                        <h5>{dayPlan.title}</h5>
+                        <p>{dayPlan.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              
-              <div className="guide-modal-footer">
-                <p>Interested in customizing this route for your trip?</p>
-                <div className="guide-modal-footer-btns">
-                  <button className="btn btn-secondary" onClick={closeItinerary}>Close</button>
-                  <Link to={`/contact?subject=${encodeURIComponent('Inquiry for ' + activeItinerary.title)}`} className="btn btn-primary" onClick={closeItinerary}>
-                    Inquire / Customize Route
-                  </Link>
+
+              {/* Right Column (30%) */}
+              <div className="pkg-modal-right">
+                {/* Action Card */}
+                <div className="pkg-action-card">
+                  <div className="pkg-action-flex">
+                    <Link to={`/contact?subject=${encodeURIComponent('Availability for ' + activeItinerary.title)}`} className="btn btn-primary pkg-book-btn" onClick={closeItinerary}>
+                      Check Availability
+                    </Link>
+                    <button className="pkg-wishlist-btn" aria-label="Add to wishlist">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Why Book Card */}
+                <div className="pkg-guarantees-card">
+                  <h4>Why book with Eutours?</h4>
+                  <ul className="pkg-guarantees-list">
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      Best Price Guarantee
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      Transparent Pricing
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      Departure & Itinerary Protection
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      Travel Safety Assurance
+                    </li>
+                    <li>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="#0ea5e9" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7"/></svg>
+                      24/7 Multilingual Support
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Map Card */}
+                <div className="pkg-map-card">
+                  <img src="/images/map_placeholder.png" alt="Route Map" />
                 </div>
               </div>
             </div>
