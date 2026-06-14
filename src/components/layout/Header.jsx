@@ -41,6 +41,50 @@ const Header = () => {
     destinations: { items: destinations, label: 'Things to do in', title: 'Popular destinations' }
   };
 
+  const renderSubNav = () => (
+    <div className="container sub-nav-flex" style={{ position: 'relative' }}>
+        {Object.keys(menuData).map((menuKey) => (
+            <div 
+              key={menuKey} 
+              className="mega-menu-wrapper"
+              onMouseEnter={() => setActiveMenu(menuKey)}
+            >
+                <Link to="#" className={`sub-nav-link ${activeMenu === menuKey ? 'active' : ''}`}>
+                    {menuData[menuKey].title}
+                </Link>
+                
+                {activeMenu === menuKey && (
+                    <div className="mega-menu" style={{ 
+                        opacity: 1, 
+                        visibility: 'visible', 
+                        transform: 'none',
+                        left: 0,
+                        width: menuData[menuKey].items.length > 8 ? '900px' : '800px'
+                    }}>
+                        <div className="mega-grid" style={{ gridTemplateColumns: menuData[menuKey].items.length > 8 ? 'repeat(4, 1fr)' : 'repeat(4, 1fr)' }}>
+                            {menuData[menuKey].items.map((item) => (
+                                <Link to={`/region/${item.id}`} className="mega-item" key={item.id} onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
+                                    <img src={item.img} alt={item.title} />
+                                    <div>
+                                        <span className="mega-sub">{menuData[menuKey].label}</span>
+                                        <span className="mega-title">{item.title}</span>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                )}
+            </div>
+        ))}
+
+        <Link to="/packages" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Packages</Link>
+        <span className="sub-nav-divider"></span>
+        <Link to="/travel-guides" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Travel guides</Link>
+        <Link to="/faq" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+        <Link to="/moments" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Moments</Link>
+    </div>
+  );
+
   return (
     <header className="main-header" onMouseLeave={() => setActiveMenu(null)}>
         <nav className="navbar static-nav" id="navbar">
@@ -58,8 +102,11 @@ const Header = () => {
                     <span style={{ transform: mobileMenuOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'none' }}></span>
                 </div>
                 <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`} id="nav-links">
-                    <li><Link to="/">Home</Link></li>
-                    <li><Link to="/about">About Us</Link></li>
+                    <li className="mobile-only-sub-nav">
+                        {renderSubNav()}
+                    </li>
+                    <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
+                    <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
                     <li 
                       onMouseEnter={() => setDestHover(true)}
                       onMouseLeave={() => setDestHover(false)}
@@ -122,49 +169,8 @@ const Header = () => {
             </div>
         </nav>
 
-        <div className="sub-nav-categories">
-            <div className="container sub-nav-flex" style={{ position: 'relative' }}>
-                
-                {Object.keys(menuData).map((menuKey) => (
-                    <div 
-                      key={menuKey} 
-                      className="mega-menu-wrapper"
-                      onMouseEnter={() => setActiveMenu(menuKey)}
-                    >
-                        <Link to="#" className={`sub-nav-link ${activeMenu === menuKey ? 'active' : ''}`}>
-                            {menuData[menuKey].title}
-                        </Link>
-                        
-                        {activeMenu === menuKey && (
-                            <div className="mega-menu" style={{ 
-                                opacity: 1, 
-                                visibility: 'visible', 
-                                transform: 'none',
-                                left: 0,
-                                width: menuData[menuKey].items.length > 8 ? '900px' : '800px'
-                            }}>
-                                <div className="mega-grid" style={{ gridTemplateColumns: menuData[menuKey].items.length > 8 ? 'repeat(4, 1fr)' : 'repeat(4, 1fr)' }}>
-                                    {menuData[menuKey].items.map((item) => (
-                                        <Link to={`/region/${item.id}`} className="mega-item" key={item.id} onClick={() => setActiveMenu(null)}>
-                                            <img src={item.img} alt={item.title} />
-                                            <div>
-                                                <span className="mega-sub">{menuData[menuKey].label}</span>
-                                                <span className="mega-title">{item.title}</span>
-                                            </div>
-                                        </Link>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                ))}
-
-                <Link to="/packages" className="sub-nav-link">Packages</Link>
-                <span className="sub-nav-divider"></span>
-                <Link to="/travel-guides" className="sub-nav-link">Travel guides</Link>
-                <Link to="/faq" className="sub-nav-link">FAQ</Link>
-                <Link to="/moments" className="sub-nav-link">Moments</Link>
-            </div>
+        <div className="sub-nav-categories desktop-only-sub-nav">
+            {renderSubNav()}
         </div>
     </header>
   );

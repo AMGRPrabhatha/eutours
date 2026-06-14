@@ -148,6 +148,14 @@ ul {
   align-items: center;
 }
 
+.desktop-only-sub-nav {
+  display: block;
+}
+
+.mobile-only-sub-nav {
+  display: none;
+}
+
 .logo {
   font-size: 1.8rem;
   font-weight: 700;
@@ -2601,7 +2609,20 @@ ul {
 
 @media (max-width: 992px) {
   /* Mobile Secondary Navbar */
-  .sub-nav-categories { display: block !important; }
+  .sub-nav-categories { display: none !important; }
+  
+  .mobile-only-sub-nav {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  
+  .mobile-only-sub-nav .sub-nav-flex {
+    justify-content: flex-start !important;
+    padding-left: 0;
+  }
   
   /* Mega menu dropdown fixes for mobile */
   .mega-menu { 
