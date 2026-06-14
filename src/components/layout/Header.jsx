@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { regions, destinations, explore } from '../../data';
+import { regions, destinations } from '../../data';
 
 const advStyles = [
   { name: 'Adventure & Adrenaline', icon: '⛰️' },
@@ -38,8 +38,7 @@ const Header = () => {
 
   const menuData = {
     regions: { items: regions, label: 'Things to do in', title: 'Popular regions' },
-    destinations: { items: destinations, label: 'Things to do in', title: 'Popular destinations' },
-    explore: { items: explore, label: 'Explore', title: 'Explore Eutours' }
+    destinations: { items: destinations, label: 'Things to do in', title: 'Popular destinations' }
   };
 
   return (
@@ -160,6 +159,7 @@ const Header = () => {
                     </div>
                 ))}
 
+                <Link to="/packages" className="sub-nav-link">Packages</Link>
                 <span className="sub-nav-divider"></span>
                 <Link to="/travel-guides" className="sub-nav-link">Travel guides</Link>
                 <Link to="/faq" className="sub-nav-link">FAQ</Link>

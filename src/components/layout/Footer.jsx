@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
   return (
     <footer className="site-footer" id="contact">
@@ -6,7 +8,7 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-heading">RESOURCES</h4>
             <ul className="footer-links">
-              <li><a href="#">Tour Packages</a></li>
+              <li><Link to="/packages">Tour Packages</Link></li>
               <li><a href="#">Vehicle Fleet</a></li>
               <li><a href="#">Travel Gallery</a></li>
               <li><a href="#">Custom Itineraries</a></li>

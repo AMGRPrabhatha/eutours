@@ -11,6 +11,7 @@ import Contact from './pages/Contact';
 import Reviews from './pages/Reviews';
 import TravelGuides from './pages/TravelGuides';
 import BookVehicle from './pages/BookVehicle';
+import Packages from './pages/Packages';
 import ScrollToTop from './components/ScrollToTop';
 
 import './assets/css/styles.css';
@@ -31,6 +32,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/travel-guides" element={<TravelGuides />} />
           <Route path="/book-vehicle" element={<BookVehicle />} />
+          <Route path="/packages" element={<Packages />} />
           <Route path="/region/:id" element={<Region />} />
         </Routes>
         <Footer />
