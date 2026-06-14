@@ -2710,7 +2710,13 @@ ul {
   }
   .nav-links li { width: 100%; }
   .nav-links a { color: var(--text-main) !important; font-weight: 600; font-size: 1.1rem; }
-  .nav-links a.btn { color: white !important; }
+  .nav-links a.btn { 
+    color: var(--text-main) !important; 
+    background: transparent !important; 
+    border: none !important; 
+    padding: 0 !important; 
+    box-shadow: none !important; 
+  }
   
   /* Home Page Components */
   .hero { margin-top: 110px; height: calc(100vh - 110px); }
