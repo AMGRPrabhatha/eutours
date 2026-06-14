@@ -109,7 +109,7 @@ const Header = () => {
                       onMouseLeave={() => setDestHover(false)}
                       className="primary-nav-item"
                     >
-                      <a href="#">Destinations</a>
+                      <a href="#" onClick={(e) => { e.preventDefault(); setDestHover(!destHover); }}>Destinations</a>
                       {destHover && (
                         <div className="primary-wrapper">
                           <div className="primary-dropdown">
@@ -136,7 +136,7 @@ const Header = () => {
                       onMouseLeave={() => setAdvHover(false)}
                       className="primary-nav-item"
                     >
-                      <a href="#">Adventure Styles</a>
+                      <a href="#" onClick={(e) => { e.preventDefault(); setAdvHover(!advHover); }}>Adventure Styles</a>
                       {advHover && (
                         <div className="adv-styles-wrapper">
                           <div className="adv-styles-dropdown">
