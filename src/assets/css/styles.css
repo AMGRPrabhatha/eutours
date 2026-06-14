@@ -137,7 +137,7 @@ ul {
 /* Navbar */
 .navbar {
   position: relative;
-  padding: 0.5rem 0;
+  padding: 0.2rem 0;
   transition: var(--transition);
   background: var(--white);
 }
@@ -487,14 +487,14 @@ ul {
   gap: 2rem;
   padding: 0 2rem;
   align-items: center;
-  height: 50px;
+  height: 40px;
   overflow: visible; /* Important for mega menu */
 }
 
 .sub-nav-link {
   color: var(--text-main);
   font-size: 0.95rem;
-  padding: 15px 0;
+  padding: 10px 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -2758,8 +2758,8 @@ ul {
   /* Header adjustments */
   .navbar { background: white !important; position: static !important; }
   .logo { color: var(--text-main) !important; }
-  .logo span { color: var(--primary) !important; }
-  .menu-toggle span { background-color: var(--text-main) !important; }
+  .logo span { color: var(--accent) !important; }
+  .menu-toggle span { display: block !important; background-color: var(--text-main) !important; }
   
   .nav-links { 
     background: white !important;
