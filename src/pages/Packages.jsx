@@ -317,14 +317,6 @@ const Packages = () => {
 
   return (
     <div className="packages-page">
-      {/* Banner / Hero */}
-      <section className="packages-hero">
-        <div className="packages-hero-overlay"></div>
-        <div className="packages-hero-content container">
-          <h1>Mega Sale Deals</h1>
-          <p>Find the best special offers on exclusive European itineraries.</p>
-        </div>
-      </section>
 
       <div className="packages-layout container">
         {/* Left Side Filters Sidebar */}
