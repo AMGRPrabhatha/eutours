@@ -459,11 +459,6 @@ const Packages = () => {
                   <div className="pkg-card-actions-col" onClick={(e) => e.stopPropagation()}>
                     <div className="pkg-discount-tag">{pkg.discount}</div>
                     
-                    <div className="pkg-room-info">
-                      <span className="info-icon">🛏️</span>
-                      {pkg.roomType}
-                    </div>
-                    
                     <div className="pkg-action-buttons">
                       <button className="btn btn-primary btn-view-tour" onClick={() => openItinerary(pkg)}>
                         View tour
