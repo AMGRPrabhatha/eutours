@@ -18,7 +18,7 @@ const packagesData = [
     ageRange: 'Ages 18-35',
     operatedIn: 'English',
     operator: 'G Adventures • Platinum',
-    discount: '30% Off',
+    discount: '10% Off',
     roomType: 'Price based on Shared Room',
     itinerary: [
       { day: 1, title: 'Arrival in Munich, Germany', desc: 'Arrive in the Bavarian capital, check into your hostel, and meet your group for a welcome dinner.' },
@@ -46,7 +46,7 @@ const packagesData = [
     ageRange: 'All Ages Welcome',
     operatedIn: 'English',
     operator: 'WiseYatra • Gold',
-    discount: '30% Off',
+    discount: '10% Off',
     roomType: 'Price based on Private Double Room',
     itinerary: [
       { day: 1, title: 'Welcome to Berlin', desc: 'Arrive in Berlin and gather for a briefing and local craft beer tasting.' },
@@ -78,7 +78,7 @@ const packagesData = [
     ageRange: 'All Ages Welcome',
     operatedIn: 'English',
     operator: 'WiseYatra • Silver',
-    discount: '30% Off',
+    discount: '10% Off',
     roomType: 'Price based on Private Double Room',
     itinerary: [
       { day: 1, title: 'Munich Check-in & Marienplatz', desc: 'Check into your hotel and enjoy a walking tour around Marienplatz and the English Garden.' },
@@ -106,7 +106,7 @@ const packagesData = [
     ageRange: 'Ages 18-39',
     operatedIn: 'English',
     operator: 'Iberian Wonders • Gold',
-    discount: '25% Off',
+    discount: '10% Off',
     roomType: 'Price based on Shared Twin Room',
     itinerary: [
       { day: 1, title: 'Arrival in Madrid, Spain', desc: 'Meet your tour leader and group, then enjoy a tapas and sangria tasting in Plaza Mayor.' },
@@ -136,7 +136,7 @@ const packagesData = [
     ageRange: 'All Ages Welcome',
     operatedIn: 'English',
     operator: 'AlpenTours • Elite',
-    discount: '15% Off',
+    discount: '10% Off',
     roomType: 'Price based on Private Double Room',
     itinerary: [
       { day: 1, title: 'Zurich to Lucerne Canals', desc: 'Arrive in Zurich and transfer to the lakeside town of Lucerne. See the famous Chapel Bridge.' },
@@ -165,7 +165,7 @@ const packagesData = [
     ageRange: 'All Ages Welcome',
     operatedIn: 'English',
     operator: 'Eutours Platinum',
-    discount: '20% Off',
+    discount: '10% Off',
     roomType: 'Price based on Private Double Room',
     itinerary: [
       { day: 1, title: 'Welcome to Paris, France', desc: 'Arrive in the City of Light. Enjoy an evening cruise along the Seine River to see the Eiffel Tower lit up.' },
@@ -192,7 +192,7 @@ const packagesData = [
     ageRange: 'Ages 18-35',
     operatedIn: 'English',
     operator: 'Aegean Cruises • Premium',
-    discount: '40% Off',
+    discount: '10% Off',
     roomType: 'Price based on Catamaran Cabin',
     itinerary: [
       { day: 1, title: 'Arrival in Athens, Greece', desc: 'Check in, meet your group, and climb up to the Acropolis to watch the sunset over Athens.' },
