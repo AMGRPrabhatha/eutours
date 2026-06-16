@@ -1,4 +1,5 @@
 import Hero from '../components/home/Hero';
+import SpecialFeatures from '../components/home/SpecialFeatures';
 import WhereToNext from '../components/home/WhereToNext';
 import TravelersChoice from '../components/home/TravelersChoice';
 import ServicesGrid from '../components/home/ServicesGrid';
@@ -8,6 +9,7 @@ const Home = () => {
   return (
     <>
       <Hero />
+      <SpecialFeatures />
       <WhereToNext />
       <TravelersChoice />
       <ServicesGrid />
