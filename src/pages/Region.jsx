@@ -132,13 +132,15 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: images[i % images.length]
+    img: id === 'france' ? `/images/france/${name}.jpg` : images[i % images.length],
+    fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: images[(i + 5) % images.length]
+    img: id === 'france' ? `/images/france/${name}.jpg` : images[(i + 5) % images.length],
+    fallbackImg: images[(i + 5) % images.length]
   }));
 
   // Top things to do using available attractions
@@ -168,7 +170,8 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: images[(itemSeed) % images.length],
+      img: id === 'france' ? `/images/france/${title}.jpg` : images[(itemSeed) % images.length],
+      fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
     };
@@ -220,7 +223,9 @@ const Region = () => {
   
   // Use existing hero if available, else generic
   let heroImage = '/images/home%20hero.webp';
-  if (regionPages[id] && regionPages[id].hero) {
+  if (id === 'france') {
+    heroImage = '/images/france/France hero.webp';
+  } else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }
 
@@ -255,7 +260,7 @@ const Region = () => {
         <div className="klook-grid-5">
           {topDests.slice(0, visibleDests).map((dest, index) => (
             <div className="klook-card klook-square-card" key={index}>
-              <img src={dest.img} alt={dest.title} />
+              <img src={dest.img} alt={dest.title} onError={(e) => { e.target.onerror = null; e.target.src = dest.fallbackImg; }} />
               <div className="klook-card-overlay">{dest.title}</div>
             </div>
           ))}
@@ -273,7 +278,7 @@ const Region = () => {
         <div className="klook-grid-4">
           {topAttractions.slice(0, visibleAttrs).map((attr, index) => (
             <div className="klook-card klook-rect-card" key={index}>
-              <img src={attr.img} alt={attr.title} />
+              <img src={attr.img} alt={attr.title} onError={(e) => { e.target.onerror = null; e.target.src = attr.fallbackImg; }} />
               <div className="klook-card-overlay">{attr.title}</div>
             </div>
           ))}
@@ -292,7 +297,7 @@ const Region = () => {
           {topThings.slice(0, visibleThings).map((thing, index) => (
             <div className="klook-vert-card" key={index}>
               <div className="klook-vert-img-box">
-                  <img src={thing.img} alt={thing.title} />
+                  <img src={thing.img} alt={thing.title} onError={(e) => { e.target.onerror = null; e.target.src = thing.fallbackImg; }} />
                   <div className="klook-vert-heart">♡</div>
               </div>
               <div className="klook-vert-info">
