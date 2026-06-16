@@ -132,14 +132,14 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: id === 'france' ? `/images/france/${name.replace(/ /g, '_')}.jpg` : images[i % images.length],
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : images[i % images.length],
     fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: id === 'france' ? `/images/france/${name.replace(/ /g, '_')}.jpg` : images[(i + 5) % images.length],
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : images[(i + 5) % images.length],
     fallbackImg: images[(i + 5) % images.length]
   }));
 
@@ -170,7 +170,7 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: id === 'france' ? `/images/france/${title.replace(/ /g, '_')}.jpg` : images[(itemSeed) % images.length],
+      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.jpg` : images[(itemSeed) % images.length],
       fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
@@ -225,6 +225,8 @@ const Region = () => {
   let heroImage = '/images/home%20hero.webp';
   if (id === 'france') {
     heroImage = '/images/france/France_hero.webp';
+  } else if (id === 'italy') {
+    heroImage = '/images/italy/Italy_hero.jpg';
   } else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }
@@ -236,7 +238,7 @@ const Region = () => {
       {/* Hero Banner */}
       <div className="klook-hero" style={{ backgroundImage: `url('${heroImage}')` }}>
         <h1 className="klook-hero-title">
-          {title} {id === 'france' && '🇫🇷'}
+          {title} {id === 'france' && '🇫🇷'} {id === 'italy' && '🇮🇹'}
         </h1>
       </div>
 
