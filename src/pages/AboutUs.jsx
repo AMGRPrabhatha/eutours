@@ -60,7 +60,7 @@ const AboutUs = () => {
             viewport={{ once: true, amount: 0.3 }}
             variants={slideInLeft}
           >
-            <img src="/images/switzerland_vertical_1781089957980.webp" alt="Eutours Journey" />
+            <img src="/images/about_us_history.jpg" alt="Eutours Journey" />
           </motion.div>
           <motion.div 
             className="brand-story-content"
