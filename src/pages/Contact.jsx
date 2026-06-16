@@ -67,8 +67,7 @@ const Contact = () => {
             <motion.div 
               className="contact-info-col"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              animate="visible"
               variants={fadeInUp}
             >
               <span className="contact-subtitle">REACH OUT TO US</span>
@@ -107,8 +106,7 @@ const Contact = () => {
             <motion.div 
               className="contact-form-wrapper"
               initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              animate="visible"
               variants={{
                 hidden: { opacity: 0, x: 50 },
                 visible: { opacity: 1, x: 0, transition: { duration: 0.8, ease: "easeOut" } }
