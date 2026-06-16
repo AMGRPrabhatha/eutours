@@ -18,47 +18,54 @@ const staggerContainer = {
 
 const vehicles = [
   {
-    id: 'luxury-van',
-    name: 'Luxury Van',
+    id: '8-9-seated',
+    name: '8/9 seated',
     image: '/images/van.jpg',
-    price: '$250',
-    topTags: [{text: 'Last in Unit', type: 'alert'}, {text: '25% Discount', type: 'success'}],
+    price: '$200',
+    topTags: [{text: 'Group Travel', type: 'success'}],
     pills: [
-      { icon: '👥', text: '7 seats' },
-      { icon: '🧳', text: '7 Bags' },
+      { icon: '👥', text: '8/9 seats' },
+      { icon: '🧳', text: '8 Bags' },
       { icon: '📶', text: 'Wi-Fi' },
-      { icon: '💺', text: 'Leather Seats' },
-      { icon: '❄️', text: 'Climate Control' },
-      { icon: '🚐', text: 'Van' }
+      { icon: '❄️', text: 'Climate Control' }
     ]
   },
   {
-    id: 'premium-sedan',
-    name: 'Premium Sedan',
+    id: 'mercedes-benz-ford',
+    name: 'Mercedes Benz/ Ford',
     image: '/images/sedan.webp',
-    price: '$180',
-    topTags: [{text: 'Available Cars', type: 'success'}, {text: '15% Discount', type: 'success'}],
+    price: '$300',
+    topTags: [{text: 'Premium', type: 'success'}],
     pills: [
       { icon: '👥', text: '3 seats' },
       { icon: '🧳', text: '2 Bags' },
       { icon: '📶', text: 'Wi-Fi' },
-      { icon: '🔇', text: 'Quiet Cabin' },
-      { icon: '🍾', text: 'Refreshments' },
-      { icon: '🚗', text: 'Sedan' }
+      { icon: '💺', text: 'Leather Seats' }
+    ]
+  },
+  {
+    id: 'luxury-vans',
+    name: 'Luxury vans',
+    image: '/images/luxury_van_1781075675269.webp',
+    price: '$250',
+    topTags: [{text: 'Available', type: 'success'}, {text: 'Popular', type: 'alert'}],
+    pills: [
+      { icon: '👥', text: '7 seats' },
+      { icon: '🧳', text: '7 Bags' },
+      { icon: '📶', text: 'Wi-Fi' },
+      { icon: '🚐', text: 'Van' }
     ]
   },
   {
     id: 'luxury-bus',
-    name: 'Luxury Bus',
+    name: 'luxury bus',
     image: '/images/bus.jpg',
     price: '$450',
-    topTags: [{text: 'Available Cars', type: 'success'}, {text: 'Group Travel', type: 'success'}],
+    topTags: [{text: 'Available', type: 'success'}],
     pills: [
       { icon: '👥', text: '30 seats' },
       { icon: '🧳', text: '30 Bags' },
       { icon: '📶', text: 'Wi-Fi' },
-      { icon: '🚻', text: 'Restroom' },
-      { icon: '🖼️', text: 'Panoramic' },
       { icon: '🚌', text: 'Bus' }
     ]
   }
