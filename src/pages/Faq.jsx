@@ -48,7 +48,7 @@ const Faq = () => {
   };
 
   return (
-    <div className="faq-page-redesign" style={{ background: 'var(--white)', minHeight: '80vh' }}>
+    <div className="faq-page-redesign" style={{ background: 'var(--white)', minHeight: '80vh', paddingTop: 'var(--header-height)' }}>
       {/* New Header Section */}
       <section className="faq-header-modern container section-padding" style={{ paddingBottom: '0' }}>
         <div className="faq-header-grid">
