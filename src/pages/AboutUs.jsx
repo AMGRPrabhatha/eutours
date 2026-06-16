@@ -56,8 +56,7 @@ const AboutUs = () => {
           <motion.div 
             className="brand-story-image"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            animate="visible"
             variants={slideInLeft}
           >
             <img src="/images/about_us_history.jpg" alt="Eutours Journey" />
@@ -65,8 +64,7 @@ const AboutUs = () => {
           <motion.div 
             className="brand-story-content"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
+            animate="visible"
             variants={slideInRight}
           >
             <h2>HISTORY OF THE BRAND</h2>
