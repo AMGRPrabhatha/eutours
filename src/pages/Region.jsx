@@ -236,7 +236,7 @@ const Region = () => {
       {/* Hero Banner */}
       <div className="klook-hero" style={{ backgroundImage: `url('${heroImage}')` }}>
         <h1 className="klook-hero-title">
-          {title} {id === 'france' && '🇫🇷'} <span>⌄</span>
+          {title} {id === 'france' && '🇫🇷'}
         </h1>
       </div>
 
