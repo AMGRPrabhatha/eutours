@@ -343,14 +343,14 @@ ul {
 }
 
 .hero-title {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   color: var(--white);
   margin-bottom: 1rem;
   text-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .hero-subtitle {
-  font-size: 1.5rem;
+  font-size: 1.15rem;
   margin-bottom: 2.5rem;
   font-weight: 300;
   text-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -934,7 +934,7 @@ ul {
   position: relative;
   z-index: 10;
   color: white;
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 700;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
   display: flex;
@@ -942,7 +942,7 @@ ul {
   gap: 0.8rem;
 }
 .klook-hero-title span {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   background: rgba(255,255,255,0.2);
   border-radius: 50%;
   width: 30px;
@@ -1519,7 +1519,7 @@ ul {
 }
 
 .about-hero-content h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   color: white;
@@ -1527,7 +1527,7 @@ ul {
 }
 
 .about-hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.6;
   opacity: 0.9;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -1780,7 +1780,7 @@ ul {
 }
 
 .adv-styles-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: white;
@@ -1788,7 +1788,7 @@ ul {
 }
 
 .adv-styles-hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   opacity: 0.9;
   text-shadow: 0 2px 10px rgba(0,0,0,0.3);
@@ -1925,7 +1925,7 @@ ul {
 }
 
 .reviews-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: white;
@@ -1933,7 +1933,7 @@ ul {
 }
 
 .reviews-hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   opacity: 0.9;
 }
@@ -2306,7 +2306,7 @@ ul {
 }
 
 .faq-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: white;
@@ -2314,7 +2314,7 @@ ul {
 }
 
 .faq-hero-content p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   opacity: 0.9;
 }
 
@@ -2481,7 +2481,7 @@ ul {
 }
 
 .guides-hero-content h1 {
-  font-size: 3.8rem;
+  font-size: 3.2rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: white;
@@ -2489,7 +2489,7 @@ ul {
 }
 
 .guides-hero-content p {
-  font-size: 1.3rem;
+  font-size: 1.15rem;
   opacity: 0.95;
 }
 
@@ -2926,7 +2926,7 @@ ul {
 }
 
 .booking-hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
   color: var(--white);
@@ -2934,7 +2934,7 @@ ul {
 }
 
 .booking-hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   opacity: 0.9;
   text-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
@@ -3491,13 +3491,13 @@ ul {
 }
 
 .contact-hero-content h1 {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 1rem;
 }
 
 .contact-hero-content p {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   opacity: 0.9;
 }
 
@@ -3894,14 +3894,14 @@ ul {
 }
 
 .packages-hero-content h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: white;
 }
 
 .packages-hero-content p {
-  font-size: 1.15rem;
+  font-size: 1.05rem;
   opacity: 0.85;
 }
 
