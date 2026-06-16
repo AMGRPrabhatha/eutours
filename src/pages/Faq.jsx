@@ -3,48 +3,41 @@ import { Link } from 'react-router-dom';
 
 const faqData = [
   {
-    category: "Booking & Reservations",
-    questions: [
-      {
-        q: "How do I book a tour?",
-        a: "You can book a tour directly through our website by navigating to the Destinations page, selecting your preferred tour, and clicking 'See Details' to proceed with booking. You can also contact our team for a customized itinerary."
-      },
-      {
-        q: "What is your cancellation policy?",
-        a: "We offer free cancellation up to 48 hours before the tour departure for most of our standard tours. Premium and small-group tours may have different policies which will be clearly stated during the booking process."
-      }
-    ]
+    q: "How do I book a tour?",
+    a: "You can book a tour directly through our website by navigating to the Destinations page, selecting your preferred tour, and clicking 'See Details' to proceed with booking. You can also contact our team for a customized itinerary."
   },
   {
-    category: "Transport & Logistics",
-    questions: [
-      {
-        q: "Are flights included in the tour packages?",
-        a: "Flights are generally not included in our standard tour packages. This allows you the flexibility to choose your preferred airline and use your air miles. However, we do offer luxury transport solutions and private vehicle pickups once you arrive in Europe."
-      },
-      {
-        q: "What kind of vehicles do you use for tours?",
-        a: "We maintain a premium fleet of modern, air-conditioned vehicles ranging from luxury sedans for couples to spacious, comfortable minivans for larger families and groups. All our vehicles are driven by professional, experienced chauffeurs."
-      }
-    ]
+    q: "What is your cancellation policy?",
+    a: "We offer free cancellation up to 48 hours before the tour departure for most of our standard tours. Premium and small-group tours may have different policies which will be clearly stated during the booking process."
   },
   {
-    category: "Visas & Preparation",
-    questions: [
-      {
-        q: "Do you provide visa assistance?",
-        a: "Yes! We provide comprehensive visa guidance for Sri Lankan travelers applying for Schengen visas. We assist with itinerary planning, hotel confirmations, and document preparation to maximize your chances of a successful application."
-      },
-      {
-        q: "What is the best time of year to visit Europe?",
-        a: "Europe is a year-round destination! Summer (June-August) offers warm weather and long days, perfect for coastal regions. Spring and Autumn provide mild weather and fewer crowds. Winter is magical for skiing in the Alps and visiting Christmas markets."
-      }
-    ]
+    q: "Are flights included in the tour packages?",
+    a: "Flights are generally not included in our standard tour packages. This allows you the flexibility to choose your preferred airline and use your air miles. However, we do offer luxury transport solutions and private vehicle pickups once you arrive in Europe."
+  },
+  {
+    q: "What kind of vehicles do you use for tours?",
+    a: "We maintain a premium fleet of modern, air-conditioned vehicles ranging from luxury sedans for couples to spacious, comfortable minivans for larger families and groups. All our vehicles are driven by professional, experienced chauffeurs."
+  },
+  {
+    q: "Do you provide visa assistance?",
+    a: "Yes! We provide comprehensive visa guidance for Sri Lankan travelers applying for Schengen visas. We assist with itinerary planning, hotel confirmations, and document preparation to maximize your chances of a successful application."
+  },
+  {
+    q: "What is the best time of year to visit Europe?",
+    a: "Europe is a year-round destination! Summer (June-August) offers warm weather and long days, perfect for coastal regions. Spring and Autumn provide mild weather and fewer crowds. Winter is magical for skiing in the Alps and visiting Christmas markets."
+  },
+  {
+    q: "Can you accommodate specific dietary requirements?",
+    a: "Absolutely. We understand that dietary needs vary. Please inform our booking team of any allergies or dietary restrictions (e.g., vegan, halal, gluten-free) well in advance so we can ensure suitable meal options are arranged throughout your tour."
+  },
+  {
+    q: "How large are your tour groups?",
+    a: "Our standard group tours range from 12 to 24 travelers to ensure a personalized experience. We also offer private customized tours for couples, families, and completely bespoke travel parties."
   }
 ];
 
 const Faq = () => {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0); // Open first by default like screenshot
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -55,64 +48,48 @@ const Faq = () => {
   };
 
   return (
-    <div className="faq-page">
-      {/* Hero Section */}
-      <section className="faq-hero" style={{ backgroundImage: "url('/images/faq-hero.jpg')" }}>
-        <div className="faq-hero-overlay"></div>
-        <div className="faq-hero-content container">
-          <h1>How can we help?</h1>
-          <p>Find answers to our most frequently asked questions below.</p>
-        </div>
-      </section>
+    <div className="faq-page-redesign" style={{ background: 'var(--white)', minHeight: '80vh' }}>
+      <section className="faq-split-container container section-padding" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+        <div className="faq-split-layout">
+          {/* Left Column */}
+          <div className="faq-left-col">
+            <h2>General FAQs</h2>
+            <p>Everything you need to know about our tours and how they work. Can't find an answer? Please <Link to="/contact" style={{textDecoration: 'underline'}}>chat to our friendly team</Link>.</p>
+          </div>
 
-      {/* FAQ Accordion Section */}
-      <section className="faq-content-section container">
-        <div className="faq-wrapper">
-          {faqData.map((categoryGroup, catIndex) => (
-            <div key={catIndex} className="faq-category-group">
-              <h2 className="faq-category-title">{categoryGroup.category}</h2>
-              <div className="faq-accordion">
-                {categoryGroup.questions.map((item, qIndex) => {
-                  const currentIndex = `${catIndex}-${qIndex}`;
-                  const isOpen = openIndex === currentIndex;
-                  
-                  return (
-                    <div 
-                      key={qIndex} 
-                      className={`faq-item ${isOpen ? 'active' : ''}`}
+          {/* Right Column */}
+          <div className="faq-right-col">
+            <div className="faq-accordion-modern">
+              {faqData.map((item, index) => {
+                const isOpen = openIndex === index;
+                return (
+                  <div key={index} className={`faq-item-modern ${isOpen ? 'active' : ''}`}>
+                    <button 
+                      className="faq-question-modern" 
+                      onClick={() => toggleAccordion(index)}
                     >
-                      <button 
-                        className="faq-question" 
-                        onClick={() => toggleAccordion(currentIndex)}
-                      >
-                        {item.q}
-                        <span className="faq-icon">{isOpen ? '−' : '+'}</span>
-                      </button>
-                      <div 
-                        className="faq-answer-wrapper" 
-                        style={{ maxHeight: isOpen ? '500px' : '0px' }}
-                      >
-                        <div className="faq-answer">
-                          <p>{item.a}</p>
-                        </div>
+                      <span className="q-text">{item.q}</span>
+                      <span className="q-icon">
+                        {isOpen ? (
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="2"/><path d="M7 12H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+                        ) : (
+                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="11" stroke="currentColor" strokeWidth="2"/><path d="M12 7V17M7 12H17" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/></svg>
+                        )}
+                      </span>
+                    </button>
+                    <div 
+                      className="faq-answer-modern-wrapper" 
+                      style={{ maxHeight: isOpen ? '500px' : '0px' }}
+                    >
+                      <div className="faq-answer-modern">
+                        <p>{item.a}</p>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+                  </div>
+                );
+              })}
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="faq-cta-section">
-        <div className="container text-center">
-          <h2>Still have questions?</h2>
-          <p>Our dedicated support team is here to help you plan the perfect European getaway.</p>
-          <Link to="/contact" className="btn btn-primary btn-lg mt-4" style={{ padding: '1rem 2.5rem', fontSize: '1.1rem' }}>
-            Contact Us
-          </Link>
+          </div>
         </div>
       </section>
     </div>
