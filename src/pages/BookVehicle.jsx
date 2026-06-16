@@ -20,54 +20,26 @@ const vehicles = [
   {
     id: '8-9-seated',
     name: '8/9 seated',
+    subtitle: 'Group Travel Van',
     image: '/images/van.jpg',
-    price: '$200',
-    topTags: [{text: 'Group Travel', type: 'success'}],
-    pills: [
-      { icon: '👥', text: '8/9 seats' },
-      { icon: '🧳', text: '8 Bags' },
-      { icon: '📶', text: 'Wi-Fi' },
-      { icon: '❄️', text: 'Climate Control' }
-    ]
   },
   {
     id: 'mercedes-benz-ford',
     name: 'Mercedes Benz/ Ford',
+    subtitle: 'Premium Sedan',
     image: '/images/sedan.webp',
-    price: '$300',
-    topTags: [{text: 'Premium', type: 'success'}],
-    pills: [
-      { icon: '👥', text: '3 seats' },
-      { icon: '🧳', text: '2 Bags' },
-      { icon: '📶', text: 'Wi-Fi' },
-      { icon: '💺', text: 'Leather Seats' }
-    ]
   },
   {
     id: 'luxury-vans',
     name: 'Luxury vans',
+    subtitle: '7-Seat Luxury Van',
     image: '/images/black_luxury_van.png',
-    price: '$250',
-    topTags: [{text: 'Available', type: 'success'}, {text: 'Popular', type: 'alert'}],
-    pills: [
-      { icon: '👥', text: '7 seats' },
-      { icon: '🧳', text: '7 Bags' },
-      { icon: '📶', text: 'Wi-Fi' },
-      { icon: '🚐', text: 'Van' }
-    ]
   },
   {
     id: 'luxury-bus',
-    name: 'luxury bus',
+    name: 'Luxury bus',
+    subtitle: '30-Seat Tour Bus',
     image: '/images/bus.jpg',
-    price: '$450',
-    topTags: [{text: 'Available', type: 'success'}],
-    pills: [
-      { icon: '👥', text: '30 seats' },
-      { icon: '🧳', text: '30 Bags' },
-      { icon: '📶', text: 'Wi-Fi' },
-      { icon: '🚌', text: 'Bus' }
-    ]
   }
 ];
 
@@ -114,44 +86,29 @@ const BookVehicle = () => {
             variants={staggerContainer}
           >
             {vehicles.map((vehicle) => (
-              <motion.div className="fleet-card-modern" key={vehicle.id} variants={fadeInUp}>
-                <div className="fleet-card-image-wrapper">
-                  <div className="fleet-card-tags">
-                    {vehicle.topTags.map((tag, idx) => (
-                      <span key={idx} className={`fleet-tag tag-${tag.type}`}>
-                        <span className="tag-icon">{tag.type === 'alert' ? '!' : '✓'}</span> {tag.text}
-                      </span>
-                    ))}
+              <motion.div className="fleet-card-modern" key={vehicle.id} variants={fadeInUp} style={{ padding: 0, overflow: 'hidden', border: '1px solid #eaeaea', borderRadius: '12px', backgroundColor: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
+                <div className="fleet-card-image-wrapper" style={{ backgroundColor: '#f4f4f5', padding: '2rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                  <div className="fleet-heart-icon" style={{ position: 'absolute', top: '15px', right: '15px', background: '#fff', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', cursor: 'pointer' }}>
+                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="#999" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                   </div>
-                  <img src={vehicle.image} alt={vehicle.name} className="fleet-img" />
-                  <div className="fleet-carousel-dots">
-                    <span className="dot active"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                    <span className="dot"></span>
-                  </div>
+                  <img src={vehicle.image} alt={vehicle.name} className="fleet-img" style={{ maxWidth: '100%', height: 'auto', maxHeight: '180px', objectFit: 'contain' }} />
                 </div>
 
-                <div className="fleet-card-content">
+                <div className="fleet-card-content" style={{ padding: '1.5rem', textAlign: 'left' }}>
                   <div className="fleet-card-header-modern">
-                    <h3>{vehicle.name}</h3>
+                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111', marginBottom: '0.2rem' }}>{vehicle.name}</h3>
+                    <p style={{ color: '#888', fontSize: '0.85rem', margin: 0 }}>{vehicle.subtitle}</p>
                   </div>
 
-                  <div className="fleet-pill-grid">
-                    {vehicle.pills.map((pill, idx) => (
-                      <div className="fleet-pill" key={idx}>
-                        <span className="pill-icon">{pill.icon}</span> {pill.text}
-                      </div>
-                    ))}
-                  </div>
+                  <hr style={{ borderTop: '1px solid #eee', borderBottom: 'none', margin: '1.25rem 0' }} />
 
-                  <div className="fleet-card-footer">
-                    <button 
-                      className="btn-book-now-modern"
+                  <div className="fleet-card-footer" style={{ padding: 0 }}>
+                    <div 
+                      style={{ fontWeight: '700', color: '#111', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontSize: '0.9rem' }}
                       onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
                     >
-                      Book Now <span className="arrow">→</span>
-                    </button>
+                      INQUIRE <span style={{ fontWeight: '400', fontSize: '1.2rem' }}>+</span>
+                    </div>
                   </div>
                 </div>
               </motion.div>
