@@ -15,7 +15,7 @@ const TravelersChoice = () => {
 
   const tours = [
     {
-      img: '/images/paris_dest_1781075727792.webp',
+      img: '/images/Eiffel_Tower_Summit_Access_&_Seine_Cruise.webp',
       subtitle: 'Tours • Paris',
       title: 'Eiffel Tower Summit Access & Seine Cruise',
       tag: 'Book now for tomorrow',
@@ -25,7 +25,7 @@ const TravelersChoice = () => {
       link: '/region/france'
     },
     {
-      img: '/images/hero_bg_1781075622715.webp',
+      img: '/images/Jungfraujoch_Top_of_Europe_Day_Trip.jpg',
       subtitle: 'Tours • Zurich',
       title: 'Jungfraujoch Top of Europe Day Trip',
       tag: 'Book now for tomorrow',
@@ -35,7 +35,7 @@ const TravelersChoice = () => {
       link: '/region/switzerland'
     },
     {
-      img: '/images/london_dest_1781077494703.webp',
+      img: '/images/London_Eye_Standard_Ticket.jpg',
       subtitle: 'Attractions • London',
       title: 'London Eye Standard Ticket',
       tag: 'Book now for tomorrow',
@@ -45,7 +45,7 @@ const TravelersChoice = () => {
       link: '/region/uk'
     },
     {
-      img: '/images/amsterdam_dest_1781077507425.webp',
+      img: '/images/Amsterdam_Evening_Canal_Cruise.jpg',
       subtitle: 'Cruises • Amsterdam',
       title: 'Amsterdam Evening Canal Cruise',
       tag: 'Book now for today',
@@ -55,7 +55,7 @@ const TravelersChoice = () => {
       link: '/region/netherlands'
     },
     {
-      img: '/images/italy_vertical_1781089947416.webp',
+      img: '/images/Vatican_Museums_&_Sistine_Chapel_Tour.jpg',
       subtitle: 'Tours • Rome',
       title: 'Vatican Museums & Sistine Chapel Tour',
       tag: 'Bestseller',
@@ -65,7 +65,7 @@ const TravelersChoice = () => {
       link: '/region/italy'
     },
     {
-      img: '/images/spain_circle_1781090146338.webp',
+      img: '/images/Sagrada_Familia_Fast_Track_Access.jpg',
       subtitle: 'Attractions • Barcelona',
       title: 'Sagrada Familia Fast Track Access',
       tag: 'Book now for tomorrow',
@@ -75,7 +75,7 @@ const TravelersChoice = () => {
       link: '/region/spain'
     },
     {
-      img: '/images/swiss_circle_1781090136030.webp',
+      img: '/images/Mount_Titlis_Half-Day_Tour_with_Cable_Car.jpg',
       subtitle: 'Tours • Lucerne',
       title: 'Mount Titlis Half-Day Tour with Cable Car',
       tag: 'Instant Confirmation',
@@ -85,7 +85,7 @@ const TravelersChoice = () => {
       link: '/region/switzerland'
     },
     {
-      img: '/images/france_circle_1781090115021.webp',
+      img: '/images/Versailles_Palace_Skip-the-Line_Guided_Tour.jpg',
       subtitle: 'Day Trips • Paris',
       title: 'Versailles Palace Skip-the-Line Guided Tour',
       tag: 'Book now for today',
