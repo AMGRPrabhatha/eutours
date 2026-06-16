@@ -32,7 +32,7 @@ const AdventureStyles = () => {
   return (
     <div className="adv-styles-page">
       {/* Hero Section */}
-      <section className="adv-styles-hero" style={{ backgroundImage: "url('/images/hero_bg_1781075622715.webp')" }}>
+      <section className="adv-styles-hero" style={{ backgroundImage: "url('/images/Adventure_Styles_hero.jpg')" }}>
         <div className="adv-styles-hero-overlay"></div>
         <div className="container adv-styles-hero-content">
           <h1>Find Your Perfect Adventure</h1>
