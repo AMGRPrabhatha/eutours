@@ -423,13 +423,23 @@ ul {
 }
 
 .sf-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   gap: 2rem;
   margin-bottom: 4rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding-bottom: 1rem;
+}
+
+.sf-cards::-webkit-scrollbar {
+  display: none;
 }
 
 .sf-card {
+  flex: 0 0 calc(50% - 1rem);
+  scroll-snap-align: start;
   border: 1px solid #eaeaea;
   border-radius: 12px;
   padding: 1.5rem;
@@ -499,6 +509,7 @@ ul {
   height: 100%;
   width: 50%;
   background: #111;
+  transition: width 0.3s ease;
 }
 
 .sf-nav-buttons {
@@ -535,8 +546,8 @@ ul {
     flex-direction: column;
     gap: 2rem;
   }
-  .sf-cards {
-    grid-template-columns: 1fr;
+  .sf-card {
+    flex: 0 0 100%;
   }
 }
 
