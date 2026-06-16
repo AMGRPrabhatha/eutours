@@ -79,7 +79,7 @@ const BookVehicle = () => {
   return (
     <div className="booking-page">
       {/* Hero Section */}
-      <section className="booking-hero" style={{ backgroundImage: "url('/images/hero_bg_1781075622715.webp')" }}>
+      <section className="booking-hero" style={{ backgroundImage: "url('/images/Book_a_Vehicle.jpg')" }}>
         <div className="booking-hero-overlay"></div>
         <motion.div 
           className="container booking-hero-content"
