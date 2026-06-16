@@ -70,26 +70,21 @@ const Reviews = () => {
       {/* Reviews Grid Section */}
       <section className="reviews-grid-section">
         <div className="container">
-          <div className="section-header">
-            <h2 className="section-title">Verified Customer Reviews</h2>
+          <div className="reviews-header">
+            <span className="section-pill">//REVIEW</span>
+            <h2 className="reviews-main-title">Your trusted partner in travel</h2>
           </div>
           
-          <div className="reviews-masonry">
+          <div className="reviews-masonry-grid">
             {reviewsData.map((review) => (
-              <div key={review.id} className="review-card">
-                <div className="review-header">
-                  <div className="review-stars">
-                    {'★'.repeat(review.rating)}
+              <div key={review.id} className="modern-review-card">
+                <div className="modern-review-header">
+                  <div className="avatar">
+                    <img src={`https://ui-avatars.com/api/?name=${review.name.split(' ').join('+')}&background=f3f4f6&color=111`} alt={review.name} />
                   </div>
-                  <span className="review-date">{review.date}</span>
+                  <h4>{review.name}</h4>
                 </div>
-                <p className="review-text">"{review.text}"</p>
-                <div className="review-footer">
-                  <div className="review-author-info">
-                    <h4>{review.name}</h4>
-                    <span>{review.trip}</span>
-                  </div>
-                </div>
+                <p className="modern-review-text">{review.text}</p>
               </div>
             ))}
           </div>
