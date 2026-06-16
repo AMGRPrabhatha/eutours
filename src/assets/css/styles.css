@@ -920,7 +920,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 120px;
+  margin-top: 104px;
 }
 .klook-hero::after {
   content: '';
