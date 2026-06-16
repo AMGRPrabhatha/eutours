@@ -126,7 +126,7 @@ const TravelersChoice = () => {
                               <span className="adv-star">★</span> {tour.rating} <span>{tour.reviews}</span>
                           </div>
                           <div className="adv-price-section">
-                              <div className="adv-price">{tour.price}</div>
+                              <div className="adv-price" style={{ textDecoration: 'underline', fontWeight: '600', color: 'var(--text-main)' }}>Inquiry</div>
                           </div>
                       </div>
                   </Link>
