@@ -135,9 +135,6 @@ const BookVehicle = () => {
                 <div className="fleet-card-content">
                   <div className="fleet-card-header-modern">
                     <h3>{vehicle.name}</h3>
-                    <div className="fleet-card-price">
-                      <strong>{vehicle.price}</strong><span>/day</span>
-                    </div>
                   </div>
 
                   <div className="fleet-pill-grid">
