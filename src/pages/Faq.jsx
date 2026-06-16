@@ -49,7 +49,24 @@ const Faq = () => {
 
   return (
     <div className="faq-page-redesign" style={{ background: 'var(--white)', minHeight: '80vh' }}>
-      <section className="faq-split-container container section-padding" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
+      {/* New Header Section */}
+      <section className="faq-header-modern container section-padding" style={{ paddingBottom: '0' }}>
+        <div className="faq-header-grid">
+          <div className="faq-header-left">
+            <span className="faq-support-tag">Support</span>
+            <h1 className="faq-main-title">Top questions about Eutours</h1>
+            <div className="faq-search-bar">
+              <svg className="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" placeholder="Search" />
+            </div>
+          </div>
+          <div className="faq-header-right">
+            <p>Need something cleared up? Here are our most frequently asked questions.</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="faq-split-container container section-padding" style={{ paddingTop: '4rem', paddingBottom: '6rem' }}>
         <div className="faq-split-layout">
           {/* Left Column */}
           <div className="faq-left-col">
