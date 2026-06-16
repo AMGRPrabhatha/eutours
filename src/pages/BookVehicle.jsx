@@ -70,8 +70,7 @@ const BookVehicle = () => {
           <motion.div 
             className="section-header text-center"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.8 }}
+            animate="visible"
             variants={fadeInUp}
           >
             <h2>Our Premium Fleet</h2>
@@ -81,26 +80,25 @@ const BookVehicle = () => {
           <motion.div 
             className="fleet-grid-new"
             initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
+            animate="visible"
             variants={staggerContainer}
           >
             {vehicles.map((vehicle) => (
-              <motion.div className="fleet-card-modern" key={vehicle.id} variants={fadeInUp} style={{ padding: 0, overflow: 'hidden', border: '1px solid #eaeaea', borderRadius: '12px', backgroundColor: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.03)' }}>
-                <div className="fleet-card-image-wrapper" style={{ backgroundColor: '#f4f4f5', padding: '2rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <motion.div className="fleet-card-modern" key={vehicle.id} variants={fadeInUp} style={{ padding: 0, overflow: 'hidden', border: '1px solid #eaeaea', borderRadius: '12px', backgroundColor: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div className="fleet-card-image-wrapper" style={{ backgroundColor: '#f4f4f5', padding: '2rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '220px' }}>
                   <div className="fleet-heart-icon" style={{ position: 'absolute', top: '15px', right: '15px', background: '#fff', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', cursor: 'pointer' }}>
                     <svg viewBox="0 0 24 24" width="16" height="16" stroke="#999" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
                   </div>
-                  <img src={vehicle.image} alt={vehicle.name} className="fleet-img" style={{ maxWidth: '100%', height: 'auto', maxHeight: '180px', objectFit: 'contain' }} />
+                  <img src={vehicle.image} alt={vehicle.name} className="fleet-img" style={{ maxWidth: '100%', height: '100%', objectFit: 'contain' }} />
                 </div>
 
-                <div className="fleet-card-content" style={{ padding: '1.5rem', textAlign: 'left' }}>
+                <div className="fleet-card-content" style={{ padding: '1.5rem', textAlign: 'left', display: 'flex', flexDirection: 'column', flex: 1 }}>
                   <div className="fleet-card-header-modern">
                     <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111', marginBottom: '0.2rem' }}>{vehicle.name}</h3>
                     <p style={{ color: '#888', fontSize: '0.85rem', margin: 0 }}>{vehicle.subtitle}</p>
                   </div>
 
-                  <hr style={{ borderTop: '1px solid #eee', borderBottom: 'none', margin: '1.25rem 0' }} />
+                  <hr style={{ borderTop: '1px solid #eee', borderBottom: 'none', margin: '1.25rem 0', marginTop: 'auto' }} />
 
                   <div className="fleet-card-footer" style={{ padding: 0 }}>
                     <div 
