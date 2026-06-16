@@ -20,27 +20,39 @@ const staggerContainer = {
 const vehicles = [
   {
     id: '8-9-seated',
-    name: '8/9 seated',
-    subtitle: 'Group Travel Van',
-    image: '/images/van.jpg',
+    name: '8/9 Seated Tour Van',
+    location: 'Paris, France',
+    features: ['Group Travel', '4.9 rating', 'Max 9 Pax'],
+    price: '€1,200',
+    duration: '7-day package',
+    image: '/images/van_paris.png',
   },
   {
     id: 'mercedes-benz-ford',
-    name: 'Mercedes Benz/ Ford',
-    subtitle: 'Premium Sedan',
-    image: '/images/sedan.webp',
+    name: 'Mercedes Premium Sedan',
+    location: 'Swiss Alps',
+    features: ['Luxury Travel', '5.0 rating', 'Max 4 Pax'],
+    price: '€1,850',
+    duration: '5-day package',
+    image: '/images/sedan_alps.png',
   },
   {
     id: 'luxury-vans',
-    name: 'Luxury vans',
-    subtitle: '7-Seat Luxury Van',
-    image: '/images/black_luxury_van.png',
+    name: 'Luxury V-Class Van',
+    location: 'Rome, Italy',
+    features: ['Premium VIP', '5.0 rating', 'Max 7 Pax'],
+    price: '€2,100',
+    duration: '10-day package',
+    image: '/images/luxury_van_rome.png',
   },
   {
     id: 'luxury-bus',
-    name: 'Luxury bus',
-    subtitle: '30-Seat Tour Bus',
-    image: '/images/bus.jpg',
+    name: 'Luxury Tourist Coach',
+    location: 'Europe Countryside',
+    features: ['Large Group', '4.8 rating', 'Max 30 Pax'],
+    price: '€3,500',
+    duration: '14-day package',
+    image: '/images/bus_europe.png',
   }
 ];
 
@@ -81,35 +93,37 @@ const BookVehicle = () => {
           </motion.div>
 
           <motion.div 
-            className="fleet-grid-new"
+            className="premium-fleet-grid"
             initial="hidden"
             animate="visible"
             variants={staggerContainer}
           >
             {vehicles.map((vehicle) => (
-              <motion.div className="fleet-card-modern" key={vehicle.id} variants={fadeInUp} style={{ padding: 0, overflow: 'hidden', border: '1px solid #eaeaea', borderRadius: '12px', backgroundColor: '#fff', boxShadow: '0 4px 15px rgba(0,0,0,0.03)', display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div className="fleet-card-image-wrapper" style={{ backgroundColor: '#f4f4f5', padding: '2rem', position: 'relative', display: 'flex', justifyContent: 'center', alignItems: 'center', height: '220px' }}>
-                  <div className="fleet-heart-icon" style={{ position: 'absolute', top: '15px', right: '15px', background: '#fff', borderRadius: '50%', width: '32px', height: '32px', display: 'flex', justifyContent: 'center', alignItems: 'center', boxShadow: '0 2px 5px rgba(0,0,0,0.05)', cursor: 'pointer' }}>
-                    <svg viewBox="0 0 24 24" width="16" height="16" stroke="#999" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-                  </div>
-                  <img src={vehicle.image} alt={vehicle.name} className="fleet-img" style={{ maxWidth: '100%', height: '100%', objectFit: 'contain' }} />
+              <motion.div className="premium-fleet-photo-card" key={vehicle.id} variants={fadeInUp}>
+                <div className="pfc-image">
+                  <img src={vehicle.image} alt={vehicle.name} />
                 </div>
-
-                <div className="fleet-card-content" style={{ padding: '1.5rem', textAlign: 'left', display: 'flex', flexDirection: 'column', flex: 1 }}>
-                  <div className="fleet-card-header-modern">
-                    <h3 style={{ fontSize: '1.25rem', fontWeight: 'bold', color: '#111', marginBottom: '0.2rem' }}>{vehicle.name}</h3>
-                    <p style={{ color: '#888', fontSize: '0.85rem', margin: 0 }}>{vehicle.subtitle}</p>
+                <div className="pfc-content">
+                  <h3 className="pfc-title">{vehicle.name}</h3>
+                  <div className="pfc-location">
+                    <span className="pfc-pin">📍</span> {vehicle.location}
                   </div>
-
-                  <hr style={{ borderTop: '1px solid #eee', borderBottom: 'none', margin: '1.25rem 0', marginTop: 'auto' }} />
-
-                  <div className="fleet-card-footer" style={{ padding: 0 }}>
-                    <div 
-                      style={{ fontWeight: '700', color: '#111', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', fontSize: '0.9rem' }}
+                  <div className="pfc-meta-row">
+                    <div className="pfc-meta-item"><span>↺</span> {vehicle.features[0]}</div>
+                    <div className="pfc-meta-item"><span>☆</span> {vehicle.features[1]}</div>
+                    <div className="pfc-meta-item"><span>📅</span> {vehicle.features[2]}</div>
+                  </div>
+                  <div className="pfc-footer">
+                    <div className="pfc-price-info">
+                      <div className="pfc-price">{vehicle.price}</div>
+                      <div className="pfc-duration">{vehicle.duration}</div>
+                    </div>
+                    <button 
+                      className="pfc-book-btn"
                       onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
                     >
-                      INQUIRE <span style={{ fontWeight: '400', fontSize: '1.2rem' }}>+</span>
-                    </div>
+                      Book
+                    </button>
                   </div>
                 </div>
               </motion.div>
