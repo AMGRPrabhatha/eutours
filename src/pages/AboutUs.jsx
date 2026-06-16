@@ -132,40 +132,6 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="about-features">
-        <div className="container">
-          <motion.h2 
-            className="section-title"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.8 }}
-            variants={fadeInUp}
-          >
-            Why Choose Eutours
-          </motion.h2>
-          <motion.div 
-            className="features-grid"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={staggerContainer}
-          >
-            {[
-              { icon: '🚙', title: 'Premium Transport', desc: 'Travel in ultimate comfort with our hassle-free, luxury European tour vans.' },
-              { icon: '🏨', title: 'Curated Stays', desc: 'Rest easy in our hand-picked, premium accommodations ensuring maximum relaxation.' },
-              { icon: '🗺️', title: 'Expert Guidance', desc: 'Unforgettable guided tours led by passionate experts who bring history to life.' },
-              { icon: '🇱🇰', title: 'Tailored For You', desc: 'Meticulously planned itineraries designed specifically with Sri Lankan travelers in mind.' }
-            ].map((feature, idx) => (
-              <motion.div className="feature-card" key={idx} variants={fadeInUp}>
-                <div className="feature-icon">{feature.icon}</div>
-                <h3>{feature.title}</h3>
-                <p>{feature.desc}</p>
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
-      </section>
 
       {/* Global Reach Map Section */}
       <section className="global-reach-section">
