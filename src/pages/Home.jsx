@@ -4,6 +4,7 @@ import WhereToNext from '../components/home/WhereToNext';
 import TravelersChoice from '../components/home/TravelersChoice';
 import ServicesGrid from '../components/home/ServicesGrid';
 import TrendingDestinations from '../components/home/TrendingDestinations';
+import OurPackages from '../components/home/OurPackages';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <TravelersChoice />
       <ServicesGrid />
       <TrendingDestinations />
+      <OurPackages />
     </>
   );
 };

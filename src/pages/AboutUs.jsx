@@ -50,31 +50,85 @@ const AboutUs = () => {
         </motion.div>
       </section>
 
-      {/* Brand Story Section */}
-      <section className="brand-story-section">
-        <div className="brand-story-container">
-          <motion.div 
-            className="brand-story-image"
-            initial="hidden"
-            animate="visible"
-            variants={slideInLeft}
-          >
-            <img src="/images/about_us_history.jpg" alt="Eutours Journey" />
-          </motion.div>
-          <motion.div 
-            className="brand-story-content"
-            initial="hidden"
-            animate="visible"
-            variants={slideInRight}
-          >
-            <h2>HISTORY OF THE BRAND</h2>
-            <p>
-              Eutours first launched with a vision to connect Sri Lankan travelers with the mesmerizing landscapes and cultures of Europe. Our founders had a desire to challenge conventions and an idea to modernize the travel experience, leaving the stale and the conservative behind.
-            </p>
-            <p>
-              Today, Eutours has grown into a premier travel partner with a worldwide presence, offering innovative and luxurious itineraries tailored specifically for you—from the romantic streets of Paris to the snow-capped Swiss Alps.
-            </p>
-          </motion.div>
+      {/* About Intro Section */}
+      <section className="about-intro-section">
+        <div className="container">
+          
+          <div className="about-intro-top">
+            <div className="about-intro-left">
+              <span className="section-pill">//ABOUT US</span>
+              <h2 className="about-intro-title">
+                We are a passionate team of travel enthusiasts dedicated to making your travel dreams come true. <span className="text-light">Our mission is to provide you with the best travel experiences</span>
+              </h2>
+            </div>
+            <div className="about-intro-right">
+              <div className="stat-item">
+                <h3>200+</h3>
+                <p>Happy Customers</p>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-item">
+                <h3>65+</h3>
+                <p>Top Hotels</p>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-item">
+                <h3>250+</h3>
+                <p>Experienced Guides</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="about-services-top">
+            <span className="section-pill">//OUR SERVICE</span>
+            <h2 className="about-services-title">Explore endless options with our service</h2>
+            <p className="about-services-subtitle">Discover a myriad of choices available through our service, offering limitless possibilities for your exploration and enjoyment</p>
+          </div>
+
+          <div className="about-services-grid">
+            <motion.div 
+              className="service-card large-vertical"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <img src="/images/Jungfraujoch_Top_of_Europe_Day_Trip.jpg" alt="Comprehensive Travel Support" />
+              <div className="service-card-content">
+                <h3>Comprehensive Travel Support</h3>
+                <p>24/7 customer service to assist you before, during, and after your trip.</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="service-card small-horizontal top-right"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <img src="/images/Swiss Alps.jpg" alt="Expert Travel Advice" />
+              <div className="service-card-content">
+                <h3>Expert Travel Advice</h3>
+                <p>Tips and guides to enhance your travel experience.</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="service-card small-horizontal bottom-right"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+            >
+              <img src="/images/Vatican_Museums_&_Sistine_Chapel_Tour.jpg" alt="Diverse Destinations" />
+              <div className="service-card-content">
+                <h3>Diverse Destinations</h3>
+                <p>Access to a wide range of domestic and international locations.</p>
+              </div>
+            </motion.div>
+          </div>
+
         </div>
       </section>
 
