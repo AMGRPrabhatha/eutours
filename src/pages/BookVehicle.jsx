@@ -46,7 +46,7 @@ const vehicles = [
   {
     id: 'luxury-vans',
     name: 'Luxury vans',
-    image: '/images/luxury_van_1781075675269.webp',
+    image: '/images/black_luxury_van.png',
     price: '$250',
     topTags: [{text: 'Available', type: 'success'}, {text: 'Popular', type: 'alert'}],
     pills: [
