@@ -5624,3 +5624,237 @@ ul {
     gap: 1.5rem;
   }
 }
+
+/* Vehicle Activities Section */
+.vehicle-activities-section {
+  padding: 6rem 0;
+  overflow: hidden;
+}
+
+.va-header {
+  margin-bottom: 3rem;
+}
+
+.va-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  border: 1px solid #eaeaea;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 1.5rem;
+  background: white;
+}
+
+.plus-icon {
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.va-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.3;
+}
+
+.va-title span {
+  color: #666;
+  font-weight: 400;
+}
+
+.va-filters {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.va-filter-btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  background: #f8f9fa;
+  color: #666;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.va-filter-btn.active, .va-filter-btn:hover {
+  background: #111;
+  color: white;
+}
+
+.va-slider-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.va-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.va-card {
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  flex-shrink: 0;
+}
+
+.va-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Staggered sizing */
+.small-left, .small-right {
+  width: 100px;
+  height: 350px;
+  opacity: 0.6;
+}
+
+.medium-left, .medium-right {
+  width: 250px;
+  height: 400px;
+  opacity: 0.9;
+}
+
+.active-center {
+  width: 320px;
+  height: 450px;
+  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+  z-index: 10;
+  padding: 1rem;
+}
+
+.va-circular-cutout {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 2rem auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+.va-circular-cutout img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.va-center-content {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.va-center-text h3 {
+  font-size: 1.1rem;
+  color: #111;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.va-center-text p {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0;
+  max-width: 180px;
+}
+
+.va-arrow-icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #111;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Slider Controls */
+.va-slider-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.va-control-btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+  background: white;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.va-control-btn:hover {
+  background: #f8f9fa;
+  border-color: #ccc;
+}
+
+.va-progress-bar {
+  width: 200px;
+  height: 2px;
+  background: #eaeaea;
+  position: relative;
+}
+
+.va-progress-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background: #111;
+}
+
+@media (max-width: 1024px) {
+  .va-track {
+    gap: 1rem;
+  }
+  .small-left, .small-right {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .medium-left, .medium-right {
+    display: none;
+  }
+}

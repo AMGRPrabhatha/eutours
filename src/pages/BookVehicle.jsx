@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
+import VehicleActivities from '../components/vehicles/VehicleActivities';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -63,6 +64,8 @@ const BookVehicle = () => {
           <motion.p variants={fadeInUp}>Travel Europe in comfort and style with our premium fleet.</motion.p>
         </motion.div>
       </section>
+
+      <VehicleActivities />
 
       {/* Fleet Section */}
       <section className="booking-fleet section-padding">
