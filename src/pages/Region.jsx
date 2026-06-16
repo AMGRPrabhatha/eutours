@@ -132,14 +132,14 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: id === 'france' ? `/images/france/${name}.jpg` : images[i % images.length],
+    img: id === 'france' ? encodeURI(`/images/france/${name}.jpg`) : images[i % images.length],
     fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: id === 'france' ? `/images/france/${name}.jpg` : images[(i + 5) % images.length],
+    img: id === 'france' ? encodeURI(`/images/france/${name}.jpg`) : images[(i + 5) % images.length],
     fallbackImg: images[(i + 5) % images.length]
   }));
 
@@ -170,7 +170,7 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: id === 'france' ? `/images/france/${title}.jpg` : images[(itemSeed) % images.length],
+      img: id === 'france' ? encodeURI(`/images/france/${title}.jpg`) : images[(itemSeed) % images.length],
       fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
@@ -224,7 +224,7 @@ const Region = () => {
   // Use existing hero if available, else generic
   let heroImage = '/images/home%20hero.webp';
   if (id === 'france') {
-    heroImage = '/images/france/France hero.webp';
+    heroImage = encodeURI('/images/france/France hero.webp');
   } else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }
