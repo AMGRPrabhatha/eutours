@@ -71,7 +71,7 @@ const Contact = () => {
               variants={fadeInUp}
             >
               <span className="contact-subtitle">REACH OUT TO US</span>
-              <h2>Let's Start Planning Your European Dream</h2>
+              <h2>Let's Start Planning Your <span className="text-theme">European Dream</span></h2>
               <p>
                 Whether you have a question about our itineraries, need help booking a specific luxury vehicle, or want a completely customized tour, our expert team is ready to assist you.
               </p>

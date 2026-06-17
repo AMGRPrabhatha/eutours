@@ -81,7 +81,7 @@ const AboutUs = () => {
 
           <div className="about-services-top">
             <span className="section-pill">//OUR SERVICE</span>
-            <h2 className="about-services-title">Explore endless options with our service</h2>
+            <h2 className="about-services-title">Explore <span className="text-theme">endless options</span> with our service</h2>
             <p className="about-services-subtitle">Discover a myriad of choices available through our service, offering limitless possibilities for your exploration and enjoyment</p>
           </div>
 
@@ -144,7 +144,7 @@ const AboutUs = () => {
             variants={fadeInUp}
           >
             <div className="reach-title">
-              <h2>We Tailor Our European Tours To Meet Your Specific Travel Dreams</h2>
+              <h2>We Tailor Our European Tours To Meet Your Specific <span className="text-theme">Travel Dreams</span></h2>
             </div>
             <div className="reach-stats">
               <div className="stat-item">

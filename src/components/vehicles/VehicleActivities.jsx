@@ -14,7 +14,7 @@ const VehicleActivities = () => {
             <span className="plus-icon">+</span> Vehicle Activity
           </div>
           <h2 className="va-title">
-            Our Premium Fleet <span>Ensures A Seamless<br/>And Memorable Adventure.</span>
+            Our <span className="text-theme">Premium</span> Fleet <span>Ensures A Seamless<br/>And Memorable Adventure.</span>
           </h2>
         </div>
 

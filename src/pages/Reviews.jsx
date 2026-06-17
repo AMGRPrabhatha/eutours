@@ -72,7 +72,7 @@ const Reviews = () => {
         <div className="container">
           <div className="reviews-header">
             <span className="section-pill">//REVIEW</span>
-            <h2 className="reviews-main-title">Your trusted partner in travel</h2>
+            <h2 className="reviews-main-title">Your <span className="text-theme">trusted partner</span> in travel</h2>
           </div>
           
           <div className="reviews-masonry-grid">

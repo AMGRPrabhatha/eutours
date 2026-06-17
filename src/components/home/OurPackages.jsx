@@ -8,7 +8,7 @@ const OurPackages = () => {
         
         <div className="packages-header">
           <span className="section-pill">//OUR PACKAGE</span>
-          <h2>Discover our exceptional selection of travel<br/>packages and destinations</h2>
+          <h2>Discover our <span className="text-theme">exceptional</span> selection of travel<br/>packages and destinations</h2>
         </div>
 
         <div className="packages-grid">

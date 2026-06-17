@@ -50,7 +50,7 @@ const SpecialFeatures = () => {
         <div className="sf-header">
           <div className="sf-header-left">
             <span className="sf-pill">/About Us</span>
-            <h2>What's so special<br/>about this?</h2>
+            <h2>What's so <span className="text-theme">special</span><br/>about this?</h2>
             <p>Save more on your trips with exclusive discounts, seasonal promotions, and unbeatable deals for unforgettable adventures.</p>
           </div>
           <div className="sf-header-right">
