@@ -157,7 +157,7 @@ const Header = () => {
                         <div style={{
                             position: 'absolute',
                             top: '100%',
-                            right: 0,
+                            right: '15px',
                             paddingTop: '15px',
                             zIndex: 1000
                         }}>
