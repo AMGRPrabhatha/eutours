@@ -281,14 +281,12 @@ ul {
 .nav-links {
   display: flex;
   gap: 2rem;
-  align-items: center;
+  align-items: stretch;
   height: 100%;
 }
 
 .nav-links > li {
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .nav-links > li > a {
