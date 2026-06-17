@@ -7,7 +7,7 @@ const guidesData = [
     title: 'The Ultimate European Packing List',
     category: 'Preparation',
     description: 'Travel light but travel right. Discover the essential items you need to pack for a seamless European vacation across multiple climates.',
-    img: '/images/guide_packing_1781117034832.png',
+    img: '/images/The Ultimate European Packing List.jpg',
     content: {
       intro: "Packing for a trip to Europe can be a daunting task, especially if you're visiting multiple countries with different climates or cultures. The secret to a successful European holiday is packing light, prioritizing comfort, and focusing on versatility.",
       sections: [
@@ -35,7 +35,7 @@ const guidesData = [
     title: 'Navigating European Rail Systems',
     category: 'Transport',
     description: 'A comprehensive guide to booking, boarding, and enjoying scenic train routes across the continent without the stress.',
-    img: '/images/guide_train_1781117045654.png',
+    img: '/images/Navigating European Rail Systems.jpg',
     content: {
       intro: "Train travel is one of the greatest joys of exploring Europe. The continent boasts a highly connected, fast, and reliable rail network that connects bustling city centers directly, sparing you from airport queues and traffic.",
       sections: [
@@ -63,7 +63,7 @@ const guidesData = [
     title: 'Culinary Secrets of Western Europe',
     category: 'Culture & Food',
     description: 'Skip the tourist traps. Learn how to find authentic local cuisine, from hidden Parisian cafés to traditional Italian trattorias.',
-    img: '/images/guide_food_1781117057421.png',
+    img: '/images/Culinary Secrets of Western Europe.jpg',
     content: {
       intro: "Food is a vital part of European culture, and dining out should be a highlight of your trip. However, popular destinations are filled with overpriced tourist traps serving subpar meals. With a few simple insider tips, you can eat like a local.",
       sections: [
@@ -91,7 +91,7 @@ const guidesData = [
     title: 'Europe on a Budget: Money-Saving Tips',
     category: 'Finance',
     description: 'Learn how to stretch your Euros. From budget airlines to free walking tours, discover how to travel Europe without breaking the bank.',
-    img: '/images/guide_budget.png',
+    img: '/images/Europe on a Budget Money-Saving Tips.jpg',
     content: {
       intro: "Europe doesn't have to be prohibitively expensive. With smart planning, budget-friendly transportation options, and a little local know-how, you can experience the wonders of the continent on a modest budget.",
       sections: [
@@ -119,7 +119,7 @@ const guidesData = [
     title: "The Solo Traveler's Survival Guide",
     category: 'Safety',
     description: 'Embarking on a solo adventure? Read our top tips on staying safe, meeting people, and navigating European cities on your own.',
-    img: '/images/guide_solo.png',
+    img: "/images/The Solo Traveler's Survival Guide.jpg",
     content: {
       intro: "Solo travel in Europe is an incredibly rewarding and liberating experience. It gives you complete control over your itinerary and encourages self-discovery. Europe is one of the safest regions for solo travel, but staying alert and prepared is key.",
       sections: [
@@ -147,7 +147,7 @@ const guidesData = [
     title: 'Hidden Gems: Off the Beaten Path',
     category: 'Exploration',
     description: "Ditch the crowds. Explore Europe's best-kept secrets, from quiet alpine villages to untouched Mediterranean beaches.",
-    img: '/images/guide_hidden.png',
+    img: '/images/Hidden Gems Off the Beaten Path.jpg',
     content: {
       intro: "While Paris, Rome, and London are spectacular, Europe is full of quieter, lesser-known destinations that offer rich culture and breathtaking scenery without the overwhelming crowds. Venture off the beaten path to find authentic European charm.",
       sections: [
