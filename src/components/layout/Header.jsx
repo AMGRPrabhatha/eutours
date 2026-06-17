@@ -120,7 +120,7 @@ const Header = () => {
                       {activeMenu === 'regions' && (
                         <div style={{
                             position: 'absolute',
-                            top: '100%',
+                            top: 'calc(100% - 1px)',
                             left: '50%',
                             marginLeft: '-450px',
                             width: '900px',
@@ -134,7 +134,8 @@ const Header = () => {
                               boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                               borderRadius: '0 0 16px 16px',
                               borderTop: '1px solid #eaeaea',
-                              padding: '2rem'
+                              padding: '2rem',
+                              transform: 'translateY(0)'
                           }}>
                               <div className="mega-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                                   {regions.map((item) => (
@@ -153,6 +154,7 @@ const Header = () => {
                     </li>
                     <li><Link to="/book-vehicle" onClick={() => setMobileMenuOpen(false)}>Book a Vehicle</Link></li>
                     <li><Link to="/packages" onClick={() => setMobileMenuOpen(false)}>Packages</Link></li>
+                    <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link></li>
                     <li 
                       onMouseEnter={() => setActiveMenu('more')}
                       onMouseLeave={() => setActiveMenu(null)}
@@ -189,7 +191,6 @@ const Header = () => {
                               gap: '0.5rem'
                           }}>
                               <Link to="/reviews" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
-                              <Link to="/contact" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
                               <Link to="/travel-guides" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Travel guides</Link>
                               <Link to="/blog" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
                               <Link to="/faq" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
