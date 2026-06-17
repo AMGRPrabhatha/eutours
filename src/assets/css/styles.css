@@ -3055,7 +3055,7 @@ ul {
   .hero-subtitle { font-size: 1.1rem; }
   
   /* Horizontal Scroller Cards for Home Page */
-  .dest-grid, .advanced-grid, .destinations-grid, .trending-grid { 
+  .trending-grid, .packages-grid { 
     display: flex !important;
     flex-wrap: nowrap !important;
     overflow-x: auto;
@@ -3065,11 +3065,23 @@ ul {
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   }
-  .dest-grid::-webkit-scrollbar, .advanced-grid::-webkit-scrollbar, .destinations-grid::-webkit-scrollbar, .trending-grid::-webkit-scrollbar { display: none; }
-  .vertical-card, .adv-card, .destination-card, .trending-card { 
+  .trending-grid::-webkit-scrollbar, .packages-grid::-webkit-scrollbar { display: none; }
+  .trending-card, .pkg-card { 
     min-width: 85vw;
     scroll-snap-align: center;
     flex-shrink: 0;
+  }
+  
+  .trending-card.small {
+    height: 280px;
+  }
+  
+  .dest-grid {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .advanced-grid {
+    grid-template-columns: 1fr !important;
   }
   
   .services-grid-wrapper {
