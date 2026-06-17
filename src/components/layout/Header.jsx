@@ -37,8 +37,7 @@ const Header = () => {
   };
 
   const menuData = {
-    regions: { items: regions, label: 'Things to do in', title: 'Popular regions' },
-    destinations: { items: destinations, label: 'Things to do in', title: 'Popular destinations' }
+    regions: { items: regions, label: 'Things to do in', title: 'Popular regions' }
   };
 
   const renderSubNav = () => (
@@ -87,6 +86,7 @@ const Header = () => {
         <Link to="/packages" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Packages</Link>
         <span className="sub-nav-divider"></span>
         <Link to="/travel-guides" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Travel guides</Link>
+        <Link to="/blog" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
         <Link to="/faq" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
         <Link to="/moments" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Moments</Link>
     </div>
