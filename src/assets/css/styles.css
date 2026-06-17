@@ -3050,7 +3050,11 @@ ul {
   }
   
   /* Home Page Components */
-  .hero { margin-top: var(--header-height); height: calc(100vh - var(--header-height)); }
+  .hero, .about-hero, .adv-styles-hero, .reviews-hero, .faq-hero, .guides-hero, .booking-hero, .contact-hero, .blog-hero-header { 
+    margin-top: var(--header-height); 
+    height: 65vh !important; 
+    min-height: 450px !important;
+  }
   .hero-title { font-size: 2.2rem !important; }
   .hero-subtitle { font-size: 1.1rem; }
   
