@@ -58,57 +58,7 @@ const VehicleActivities = () => {
           </h2>
         </div>
 
-        <div className="va-filters">
-          {filters.map(filter => (
-            <button 
-              key={filter} 
-              className={`va-filter-btn ${activeFilter === filter ? 'active' : ''}`}
-              onClick={() => handleFilterClick(filter)}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
 
-        <div className="va-slider-container">
-          <div className="va-track">
-            {filteredVehicles.map((vehicle, index) => {
-              const cardClass = getCardClass(index);
-              if (cardClass === 'hidden-card') return null;
-
-              if (cardClass === 'active-center') {
-                return (
-                  <div key={vehicle.id} className={`va-card ${cardClass}`}>
-                    <div className="va-circular-cutout">
-                      <img src={vehicle.image} alt={vehicle.name} style={{ objectFit: 'contain', background: '#fff' }} />
-                    </div>
-                    <div className="va-center-content">
-                      <div className="va-center-text">
-                        <h3>{vehicle.name}</h3>
-                        <p>{vehicle.desc}</p>
-                      </div>
-                      <div className="va-arrow-icon">↗</div>
-                    </div>
-                  </div>
-                );
-              }
-
-              return (
-                <div key={vehicle.id} className={`va-card ${cardClass}`}>
-                  <img src={vehicle.image} alt={vehicle.name} style={{ objectFit: 'contain', background: '#f4f4f5' }} />
-                </div>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="va-slider-controls">
-          <button className="va-control-btn" onClick={handlePrev} disabled={currentIndex === 0}>←</button>
-          <div className="va-progress-bar">
-            <div className="va-progress-fill" style={{ width: `${((currentIndex + 1) / filteredVehicles.length) * 100}%` }}></div>
-          </div>
-          <button className="va-control-btn" onClick={handleNext} disabled={currentIndex === filteredVehicles.length - 1}>→</button>
-        </div>
 
       </div>
     </section>
