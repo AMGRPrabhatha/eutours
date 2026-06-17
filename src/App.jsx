@@ -14,6 +14,7 @@ import TravelGuides from './pages/TravelGuides';
 import BookVehicle from './pages/BookVehicle';
 import Packages from './pages/Packages';
 import ScrollToTop from './components/ScrollToTop';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 import './assets/css/styles.css';
 
@@ -39,6 +40,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <FloatingWhatsApp />
     </Router>
   );
 }

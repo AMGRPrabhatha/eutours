@@ -6412,3 +6412,56 @@ ul {
     grid-column: span 1;
   }
 }
+
+/* Floating WhatsApp */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 65px;
+  height: 65px;
+  background: linear-gradient(135deg, #32d671, #1bb05b);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+  z-index: 9999;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.floating-whatsapp::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  left: -15px;
+  right: -15px;
+  bottom: -15px;
+  background: rgba(37, 211, 102, 0.15);
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 0.4s ease;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.05);
+}
+
+.floating-whatsapp:hover::before {
+  transform: scale(1.1);
+  background: rgba(37, 211, 102, 0.25);
+}
+
+.whatsapp-icon-inner {
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-icon-inner svg {
+  width: 100%;
+  height: 100%;
+}
