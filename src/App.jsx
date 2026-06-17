@@ -6,6 +6,7 @@ import Region from './pages/Region';
 import AboutUs from './pages/AboutUs';
 
 import Faq from './pages/Faq';
+import Blog from './pages/Blog';
 import Moments from './pages/Moments';
 import Contact from './pages/Contact';
 import Reviews from './pages/Reviews';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
 
           <Route path="/faq" element={<Faq />} />
+          <Route path="/blog" element={<Blog />} />
           <Route path="/moments" element={<Moments />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/reviews" element={<Reviews />} />
