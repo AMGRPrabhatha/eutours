@@ -114,10 +114,6 @@ const BookVehicle = () => {
                     <div className="pfc-meta-item"><span>📅</span> {vehicle.features[2]}</div>
                   </div>
                   <div className="pfc-footer">
-                    <div className="pfc-price-info">
-                      <div className="pfc-price">{vehicle.price}</div>
-                      <div className="pfc-duration">{vehicle.duration}</div>
-                    </div>
                     <button 
                       className="pfc-book-btn"
                       onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
