@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { regions, destinations } from '../../data';
 
 const advStyles = [
@@ -32,6 +32,20 @@ const Header = () => {
   const [destHover, setDestHover] = useState(false);
   const [advHover, setAdvHover] = useState(false);
 
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
@@ -39,11 +53,11 @@ const Header = () => {
 
 
   return (
-    <header className="main-header" onMouseLeave={() => setActiveMenu(null)}>
+    <header className={`main-header ${scrolled ? 'scrolled' : ''}`} onMouseLeave={() => setActiveMenu(null)}>
         <nav className="navbar static-nav" id="navbar">
             <div className="container nav-container">
                 <Link to="/" className="logo">
-                    Eu<span>tours</span>
+                    <img src="/images/logo.png" alt="Eutours" style={{ height: '40px' }} />
                 </Link>
                 <div 
                     className="menu-toggle" 
@@ -149,6 +163,9 @@ const Header = () => {
                         onClick={(e) => { e.preventDefault(); setActiveMenu(activeMenu === 'more' ? null : 'more'); }}
                       >
                         More
+                        <span style={{ display: 'inline-block', marginLeft: '4px' }}>
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: activeMenu === 'more' ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
                         <span className="mobile-dropdown-icon">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: activeMenu === 'more' ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </span>
