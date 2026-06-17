@@ -36,17 +36,7 @@ const Header = () => {
     setMobileMenuOpen(!mobileMenuOpen);
   };
 
-  const renderSubNav = () => (
-    <div className="container sub-nav-flex" style={{ position: 'relative' }}>
 
-        <Link to="/packages" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Packages</Link>
-        <span className="sub-nav-divider"></span>
-        <Link to="/travel-guides" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Travel guides</Link>
-        <Link to="/blog" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-        <Link to="/faq" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-        <Link to="/moments" className="sub-nav-link" onClick={() => setMobileMenuOpen(false)}>Moments</Link>
-    </div>
-  );
 
   return (
     <header className="main-header" onMouseLeave={() => setActiveMenu(null)}>
@@ -148,20 +138,52 @@ const Header = () => {
                       )}
                     </li>
                     <li><Link to="/book-vehicle" onClick={() => setMobileMenuOpen(false)}>Book a Vehicle</Link></li>
-                    <li><Link to="/reviews" onClick={() => setMobileMenuOpen(false)}>Reviews</Link></li>
-                    <li className="mobile-only-sub-nav">
-                        {renderSubNav()}
-                    </li>
-                    <li>
-                        <Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+                    <li><Link to="/packages" onClick={() => setMobileMenuOpen(false)}>Packages</Link></li>
+                    <li 
+                      onMouseEnter={() => setActiveMenu('more')}
+                      onMouseLeave={() => setActiveMenu(null)}
+                      className="primary-nav-item"
+                    >
+                      <Link 
+                        to="#" 
+                        onClick={(e) => { e.preventDefault(); setActiveMenu(activeMenu === 'more' ? null : 'more'); }}
+                      >
+                        More
+                        <span className="mobile-dropdown-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: activeMenu === 'more' ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </span>
+                      </Link>
+                      {activeMenu === 'more' && (
+                        <div style={{
+                            position: 'absolute',
+                            top: '100%',
+                            right: 0,
+                            paddingTop: '15px',
+                            zIndex: 1000
+                        }}>
+                          <div style={{ 
+                              background: 'white',
+                              boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                              borderRadius: '16px',
+                              padding: '1rem',
+                              display: 'flex',
+                              flexDirection: 'column',
+                              minWidth: '180px',
+                              gap: '0.5rem'
+                          }}>
+                              <Link to="/reviews" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
+                              <Link to="/contact" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Contact Us</Link>
+                              <Link to="/travel-guides" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Travel guides</Link>
+                              <Link to="/blog" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
+                              <Link to="/faq" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
+                              <Link to="/moments" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Moments</Link>
+                          </div>
+                        </div>
+                      )}
                     </li>
                 </ul>
             </div>
         </nav>
-
-        <div className="sub-nav-categories desktop-only-sub-nav">
-            {renderSubNav()}
-        </div>
     </header>
   );
 };
