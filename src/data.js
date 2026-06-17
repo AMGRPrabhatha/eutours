@@ -1,9 +1,17 @@
 // Reusing existing images for now to provide rich aesthetics immediately
 const images = {
   france: '/images/paris.jpg',
-  italy: '/images/italy.jpg',
+  italy: '/images/Italy.jpg',
   swiss: '/images/Switzerland.jpg',
   spain: '/images/barcelona.jpg',
+  germany: '/images/Germany.jpg',
+  uk: '/images/london.jpg',
+  netherlands: '/images/Netherlands.jpg',
+  greece: '/images/greece.png',
+  portugal: '/images/portugal.png',
+  austria: '/images/Swiss Alps.jpg',
+  belgium: '/images/belgium.png',
+  ireland: '/images/ireland.png',
   paris_bg: '/images/paris.jpg',
   rome_bg: '/images/rome.jpg',
   london_bg: '/images/london.jpg',
@@ -18,14 +26,14 @@ export const regions = [
   { id: 'italy', title: 'Italy', img: images.italy },
   { id: 'switzerland', title: 'Switzerland', img: images.swiss },
   { id: 'spain', title: 'Spain', img: images.spain },
-  { id: 'germany', title: 'Germany', img: images.generic_bg },
-  { id: 'uk', title: 'United Kingdom', img: images.london_bg },
-  { id: 'netherlands', title: 'Netherlands', img: images.amsterdam_bg },
-  { id: 'greece', title: 'Greece', img: images.rome_bg },
-  { id: 'portugal', title: 'Portugal', img: images.spain },
-  { id: 'austria', title: 'Austria', img: images.swiss_bg },
-  { id: 'belgium', title: 'Belgium', img: images.france },
-  { id: 'ireland', title: 'Ireland', img: images.london_bg }
+  { id: 'germany', title: 'Germany', img: images.germany },
+  { id: 'uk', title: 'United Kingdom', img: images.uk },
+  { id: 'netherlands', title: 'Netherlands', img: images.netherlands },
+  { id: 'greece', title: 'Greece', img: images.greece },
+  { id: 'portugal', title: 'Portugal', img: images.portugal },
+  { id: 'austria', title: 'Austria', img: images.austria },
+  { id: 'belgium', title: 'Belgium', img: images.belgium },
+  { id: 'ireland', title: 'Ireland', img: images.ireland }
 ];
 
 export const destinations = [

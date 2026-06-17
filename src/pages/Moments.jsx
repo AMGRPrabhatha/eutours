@@ -49,7 +49,7 @@ const Moments = () => {
 
             {/* Bottom Row */}
             <div className="moment-card">
-              <img src="/images/Hiking & Trekking.jpg" alt="Hiking" className="moment-bg" onError={(e) => { e.target.src="/images/italy.jpg"; }} />
+              <img src="/images/Adventure_Styles_hero.jpg" alt="Hiking" className="moment-bg" />
               <div className="moment-overlay"></div>
               <div className="moment-play-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>

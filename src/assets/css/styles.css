@@ -6515,12 +6515,14 @@ ul {
   margin-bottom: 0.5rem;
   display: block;
   opacity: 0.9;
+  color: white !important;
 }
 
 .moment-card-title {
   font-size: 1.8rem;
   font-weight: 600;
   margin: 0;
+  color: white !important;
 }
 
 .moment-badge {
