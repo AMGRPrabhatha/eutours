@@ -4,7 +4,7 @@ import Footer from './components/layout/Footer';
 import Home from './pages/Home';
 import Region from './pages/Region';
 import AboutUs from './pages/AboutUs';
-import AdventureStyles from './pages/AdventureStyles';
+
 import Faq from './pages/Faq';
 import Moments from './pages/Moments';
 import Contact from './pages/Contact';
@@ -25,7 +25,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/styles" element={<AdventureStyles />} />
+
           <Route path="/faq" element={<Faq />} />
           <Route path="/moments" element={<Moments />} />
           <Route path="/contact" element={<Contact />} />
