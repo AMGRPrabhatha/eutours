@@ -5866,7 +5866,8 @@ ul {
   background: #ffffff;
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+  border: 1px solid #edf2f7;
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.06);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
@@ -5874,20 +5875,24 @@ ul {
 
 .premium-fleet-photo-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 16px 34px rgba(15, 23, 42, 0.1);
 }
 
 .pfc-image {
   width: 100%;
   height: 250px;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .pfc-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
   transition: transform 0.5s ease;
+  mix-blend-mode: darken;
 }
 
 .premium-fleet-photo-card:hover .pfc-image img {
@@ -5902,19 +5907,20 @@ ul {
 }
 
 .pfc-title {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #1a202c;
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
+  font-size: 1.28rem;
+  font-weight: 750;
+  color: #111827;
+  margin-bottom: 0.6rem;
+  line-height: 1.25;
 }
 
 .pfc-location {
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  font-size: 0.9rem;
-  color: #718096;
+  font-size: 0.92rem;
+  color: #64748b;
+  font-weight: 600;
   margin-bottom: 1.25rem;
 }
 
@@ -5923,22 +5929,47 @@ ul {
 }
 
 .pfc-meta-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   border-top: 1px solid #edf2f7;
   border-bottom: 1px solid #edf2f7;
-  padding: 1rem 0;
+  padding: 0.95rem 0;
   margin-bottom: 1.25rem;
 }
 
 .pfc-meta-item {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 0.3rem;
-  font-size: 0.85rem;
-  color: #4a5568;
-  font-weight: 500;
+  min-width: 0;
+  padding: 0 0.75rem;
+}
+
+.pfc-meta-item:first-child {
+  padding-left: 0;
+}
+
+.pfc-meta-item:not(:first-child) {
+  border-left: 1px solid #edf2f7;
+}
+
+.pfc-meta-label {
+  color: #94a3b8;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.pfc-meta-value {
+  color: #334155;
+  font-size: 0.88rem;
+  font-weight: 750;
+  line-height: 1.25;
+  overflow-wrap: break-word;
 }
 
 .pfc-footer {
@@ -5968,10 +5999,10 @@ ul {
 .pfc-book-btn {
   background: transparent;
   color: #2b6cb0;
-  border: 1px solid #e2e8f0;
-  padding: 0.5rem 1.5rem;
+  border: 1px solid #cbd5e1;
+  padding: 0.58rem 1.6rem;
   border-radius: 30px;
-  font-weight: 600;
+  font-weight: 750;
   cursor: pointer;
   transition: all 0.3s ease;
 }

@@ -22,37 +22,53 @@ const vehicles = [
     id: '8-9-seated',
     name: '8/9 Seated Tour Van',
     location: 'Paris, France',
-    features: ['Group Travel', '4.9 rating', 'Max 9 Pax'],
+    features: [
+      { label: 'Type', value: 'Group Travel' },
+      { label: 'Rating', value: '4.9' },
+      { label: 'Capacity', value: 'Max 9 Pax' },
+    ],
     price: '€1,200',
     duration: '7-day package',
-    image: '/images/van_paris.png',
+    image: '/images/black_tour_van.png',
   },
   {
     id: 'mercedes-benz-ford',
     name: 'Mercedes Premium Sedan',
     location: 'Swiss Alps',
-    features: ['Luxury Travel', '5.0 rating', 'Max 4 Pax'],
+    features: [
+      { label: 'Type', value: 'Luxury Travel' },
+      { label: 'Rating', value: '5.0' },
+      { label: 'Capacity', value: 'Max 4 Pax' },
+    ],
     price: '€1,850',
     duration: '5-day package',
-    image: '/images/sedan_alps.png',
+    image: '/images/black_premium_sedan.png',
   },
   {
     id: 'luxury-vans',
     name: 'Luxury V-Class Van',
     location: 'Rome, Italy',
-    features: ['Premium VIP', '5.0 rating', 'Max 7 Pax'],
+    features: [
+      { label: 'Type', value: 'Premium VIP' },
+      { label: 'Rating', value: '5.0' },
+      { label: 'Capacity', value: 'Max 7 Pax' },
+    ],
     price: '€2,100',
     duration: '10-day package',
-    image: '/images/luxury_van_rome.png',
+    image: '/images/black_vclass_van.png',
   },
   {
     id: 'luxury-bus',
     name: 'Luxury Tourist Coach',
     location: 'Europe Countryside',
-    features: ['Large Group', '4.8 rating', 'Max 30 Pax'],
+    features: [
+      { label: 'Type', value: 'Large Group' },
+      { label: 'Rating', value: '4.8' },
+      { label: 'Capacity', value: 'Max 30 Pax' },
+    ],
     price: '€3,500',
     duration: '14-day package',
-    image: '/images/bus_europe.png',
+    image: '/images/black_luxury_coach.png',
   }
 ];
 
@@ -109,9 +125,12 @@ const BookVehicle = () => {
                     <span className="pfc-pin">📍</span> {vehicle.location}
                   </div>
                   <div className="pfc-meta-row">
-                    <div className="pfc-meta-item"><span>↺</span> {vehicle.features[0]}</div>
-                    <div className="pfc-meta-item"><span>☆</span> {vehicle.features[1]}</div>
-                    <div className="pfc-meta-item"><span>📅</span> {vehicle.features[2]}</div>
+                    {vehicle.features.map((feature) => (
+                      <div className="pfc-meta-item" key={feature.label}>
+                        <span className="pfc-meta-label">{feature.label}</span>
+                        <span className="pfc-meta-value">{feature.value}</span>
+                      </div>
+                    ))}
                   </div>
                   <div className="pfc-footer">
                     <button 
