@@ -56,7 +56,7 @@ const VehicleActivities = () => {
           <div className="why-col why-center-col">
             <motion.div className="why-center-image" initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
               <div className="why-circle-bg"></div>
-              <img src="/images/top_down_black_car.png" alt="Premium Car" />
+              <img src="/images/top_down_black_car_transparent.png" alt="Premium Car" />
             </motion.div>
           </div>
 
