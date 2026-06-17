@@ -1,16 +1,16 @@
 // Reusing existing images for now to provide rich aesthetics immediately
 const images = {
-  france: '/images/france_circle_1781090115021.webp',
-  italy: '/images/italy_circle_1781090125109.webp',
-  swiss: '/images/swiss_circle_1781090136030.webp',
-  spain: '/images/spain_circle_1781090146338.webp',
-  paris_bg: '/images/paris_dest_1781075727792.webp',
-  rome_bg: '/images/italy_vertical_1781089947416.webp',
-  london_bg: '/images/london_dest_1781077494703.webp',
-  amsterdam_bg: '/images/amsterdam_dest_1781077507425.webp',
-  swiss_bg: '/images/switzerland_vertical_1781089957980.webp',
-  generic_bg: '/images/hero_bg_1781075622715.webp',
-  van_bg: '/images/luxury_van_1781075675269.webp'
+  france: '/images/paris.jpg',
+  italy: '/images/italy.jpg',
+  swiss: '/images/Switzerland.jpg',
+  spain: '/images/barcelona.jpg',
+  paris_bg: '/images/paris.jpg',
+  rome_bg: '/images/rome.jpg',
+  london_bg: '/images/london.jpg',
+  amsterdam_bg: '/images/Amsterdam.jpg',
+  swiss_bg: '/images/Switzerland.jpg',
+  generic_bg: '/images/europe_map_wide.png',
+  van_bg: '/images/black_luxury_van.png'
 };
 
 export const regions = [

@@ -114,32 +114,36 @@ const Header = () => {
                         </span>
                       </Link>
                       {activeMenu === 'regions' && (
-                        <div className="mega-menu" style={{ 
-                            opacity: 1, 
-                            visibility: 'visible', 
-                            transform: 'translateY(15px)',
+                        <div style={{
+                            position: 'absolute',
+                            top: '100%',
                             left: '50%',
                             marginLeft: '-450px',
                             width: '900px',
-                            position: 'absolute',
-                            top: '100%',
-                            background: 'white',
-                            boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                            borderRadius: '16px',
-                            padding: '2rem',
+                            paddingTop: '15px',
                             zIndex: 1000
                         }}>
-                            <div className="mega-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
-                                {regions.map((item) => (
-                                    <Link to={`/region/${item.id}`} className="mega-item" key={item.id} onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
-                                        <img src={item.img} alt={item.title} />
-                                        <div>
-                                            <span className="mega-sub">Things to do in</span>
-                                            <span className="mega-title">{item.title}</span>
-                                        </div>
-                                    </Link>
-                                ))}
-                            </div>
+                          <div className="mega-menu" style={{ 
+                              opacity: 1, 
+                              visibility: 'visible', 
+                              position: 'relative',
+                              background: 'white',
+                              boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
+                              borderRadius: '16px',
+                              padding: '2rem'
+                          }}>
+                              <div className="mega-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
+                                  {regions.map((item) => (
+                                      <Link to={`/region/${item.id}`} className="mega-item" key={item.id} onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
+                                          <img src={item.img} alt={item.title} />
+                                          <div>
+                                              <span className="mega-sub">Things to do in</span>
+                                              <span className="mega-title">{item.title}</span>
+                                          </div>
+                                      </Link>
+                                  ))}
+                              </div>
+                          </div>
                         </div>
                       )}
                     </li>
