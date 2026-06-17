@@ -6034,197 +6034,125 @@ ul {
   font-weight: 400;
 }
 
-.va-filters {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 4rem;
-  flex-wrap: wrap;
-}
-
-.va-filter-btn {
-  padding: 0.6rem 1.5rem;
-  border-radius: 30px;
-  border: none;
-  background: #f8f9fa;
-  color: #666;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.va-filter-btn.active, .va-filter-btn:hover {
-  background: #111;
-  color: white;
-}
-
-.va-slider-container {
-  position: relative;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.va-track {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Why Choose Us Section */
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: 1fr 400px 1fr;
   gap: 2rem;
-  width: 100%;
+  align-items: center;
+  margin-top: 5rem;
 }
 
-.va-card {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-  flex-shrink: 0;
-  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-}
-
-.va-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Staggered sizing */
-.small-left, .small-right {
-  width: 100px;
-  height: 350px;
-  opacity: 0.6;
-}
-
-.medium-left, .medium-right {
-  width: 250px;
-  height: 400px;
-  opacity: 0.9;
-}
-
-.active-center {
-  width: 320px;
-  height: 450px;
-  background: linear-gradient(135deg, #74ebd5 0%, #9face6 100%);
+.why-col {
   display: flex;
   flex-direction: column;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-  z-index: 10;
-  padding: 1rem;
+  gap: 3rem;
 }
 
-.va-circular-cutout {
-  width: 250px;
-  height: 250px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin: 2rem auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-.va-circular-cutout img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.va-center-content {
-  background: white;
-  border-radius: 15px;
-  padding: 1.5rem;
+.why-item {
   display: flex;
-  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.5rem;
+}
+
+.why-item.left-item {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.why-item.right-item {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.why-icon {
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  border-radius: 16px;
+  background-color: #f0f7ff;
+  color: #0066ff;
+  display: flex;
   align-items: center;
-  margin-top: auto;
-}
-
-.va-center-text h3 {
-  font-size: 1.1rem;
-  color: #111;
-  margin-bottom: 0.3rem;
-  font-weight: 600;
-}
-
-.va-center-text p {
-  font-size: 0.8rem;
-  color: #666;
-  margin: 0;
-  max-width: 180px;
-}
-
-.va-arrow-icon {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 1px solid #eaeaea;
-  display: flex;
   justify-content: center;
-  align-items: center;
-  color: #111;
+}
+
+.why-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.why-text h3 {
   font-size: 1.2rem;
-  flex-shrink: 0;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
 }
 
-/* Slider Controls */
-.va-slider-controls {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 4rem;
+.why-text p {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+  margin: 0;
 }
 
-.va-control-btn {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 1px solid #eaeaea;
-  background: white;
-  font-size: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  color: #333;
-  transition: all 0.3s ease;
-}
-
-.va-control-btn:hover {
-  background: #f8f9fa;
-  border-color: #ccc;
-}
-
-.va-progress-bar {
-  width: 200px;
-  height: 2px;
-  background: #eaeaea;
+.why-center-col {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.va-progress-fill {
+.why-center-image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 120%;
+}
+
+.why-circle-bg {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 30%;
-  background: #111;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding-bottom: 90%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f0f7ff 0%, #ffffff 70%);
+  z-index: 1;
+}
+
+.why-center-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: 110%;
+  object-fit: contain;
+  z-index: 2;
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.15));
 }
 
 @media (max-width: 1024px) {
-  .va-track {
-    gap: 1rem;
+  .why-choose-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
-  .small-left, .small-right {
-    display: none;
+  
+  .why-col {
+    gap: 2rem;
   }
-}
-
-@media (max-width: 768px) {
-  .medium-left, .medium-right {
-    display: none;
+  
+  .why-item.left-item {
+    justify-content: flex-start;
+    text-align: left;
+    flex-direction: row-reverse;
+  }
+  
+  .why-center-image {
+    padding-bottom: 60%;
+    max-width: 400px;
+    margin: 0 auto;
   }
 }
 
@@ -7175,5 +7103,295 @@ ul {
   .back-to-top-btn {
     width: 45px;
     height: 45px;
+  }
+}
+
+@keyframes mobileRegionCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .region-page {
+    overflow-x: hidden;
+    background: #f8fafc;
+  }
+
+  .region-page .klook-section.container {
+    max-width: 100% !important;
+    padding: 2rem 1.25rem !important;
+  }
+
+  .region-page .klook-section.container:last-of-type {
+    padding-bottom: 5.5rem !important;
+  }
+
+  .region-page .klook-section-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    gap: 0.65rem !important;
+    margin-bottom: 1.15rem !important;
+  }
+
+  .region-page .klook-section-title {
+    max-width: 100%;
+    font-size: clamp(1.85rem, 8vw, 2.25rem) !important;
+    line-height: 1.08 !important;
+    letter-spacing: 0 !important;
+    overflow-wrap: break-word;
+  }
+
+  .region-page .klook-see-more {
+    display: inline-flex;
+    align-items: center;
+    max-width: 100%;
+    padding: 0.42rem 0.72rem !important;
+    border: 1px solid #e2e8f0;
+    border-radius: 999px;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
+    color: #475569;
+    font-size: 0.86rem !important;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+  }
+
+  .region-page .klook-grid-5,
+  .region-page .klook-grid-4,
+  .region-page .klook-grid-3 {
+    display: flex !important;
+    grid-template-columns: none !important;
+    gap: 1rem !important;
+    overflow-x: auto !important;
+    overflow-y: visible !important;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 1.25rem;
+    -webkit-overflow-scrolling: touch;
+    margin-left: -1.25rem !important;
+    margin-right: -1.25rem !important;
+    padding: 0 1.25rem 1rem !important;
+    scrollbar-width: none;
+  }
+
+  .region-page .klook-grid-5::-webkit-scrollbar,
+  .region-page .klook-grid-4::-webkit-scrollbar,
+  .region-page .klook-grid-3::-webkit-scrollbar {
+    display: none;
+  }
+
+  .region-page .klook-card,
+  .region-page .klook-vert-card,
+  .region-page .klook-review-card {
+    scroll-snap-align: start;
+    animation: mobileRegionCardIn 0.45s ease both;
+  }
+
+  .region-page .klook-card:nth-child(2),
+  .region-page .klook-vert-card:nth-child(2),
+  .region-page .klook-review-card:nth-child(2) {
+    animation-delay: 0.07s;
+  }
+
+  .region-page .klook-card:nth-child(3),
+  .region-page .klook-vert-card:nth-child(3),
+  .region-page .klook-review-card:nth-child(3) {
+    animation-delay: 0.14s;
+  }
+
+  .region-page .klook-card {
+    flex: 0 0 min(78vw, 320px) !important;
+    width: min(78vw, 320px) !important;
+    min-width: min(78vw, 320px) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.12);
+  }
+
+  .region-page .klook-grid-4 .klook-card {
+    flex-basis: min(86vw, 360px) !important;
+    width: min(86vw, 360px) !important;
+    min-width: min(86vw, 360px) !important;
+  }
+
+  .region-page .klook-square-card {
+    aspect-ratio: 1 / 0.82 !important;
+  }
+
+  .region-page .klook-rect-card {
+    aspect-ratio: 1 / 0.68 !important;
+  }
+
+  .region-page .klook-card-overlay {
+    padding: 3rem 1rem 1rem !important;
+    font-size: 1.15rem !important;
+    line-height: 1.1;
+  }
+
+  .region-page .klook-card:hover img {
+    transform: none !important;
+  }
+
+  .region-page .klook-vert-card {
+    flex: 0 0 min(86vw, 370px) !important;
+    width: min(86vw, 370px) !important;
+    min-width: min(86vw, 370px) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+  }
+
+  .region-page .klook-vert-card:hover {
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08) !important;
+  }
+
+  .region-page .klook-vert-img-box {
+    height: 205px !important;
+  }
+
+  .region-page .klook-vert-heart {
+    width: 36px !important;
+    height: 36px !important;
+    top: 0.8rem !important;
+    right: 0.8rem !important;
+  }
+
+  .region-page .klook-vert-info {
+    padding: 1rem !important;
+  }
+
+  .region-page .klook-vert-loc {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .region-page .klook-vert-title {
+    font-size: 1.05rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .region-page .klook-vert-badge {
+    font-size: 0.72rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+
+  .region-page .klook-vert-info p {
+    font-size: 0.88rem !important;
+    line-height: 1.45 !important;
+    margin-bottom: 0.9rem !important;
+  }
+
+  .region-page .klook-vert-rating {
+    margin-bottom: 0.8rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .region-page .klook-vert-footer .btn {
+    min-height: 44px;
+    padding: 0.72rem 1rem !important;
+    border-radius: 999px !important;
+    font-size: 0.95rem !important;
+  }
+
+  .region-page .klook-review-card {
+    flex: 0 0 min(86vw, 360px) !important;
+    width: min(86vw, 360px) !important;
+    min-width: min(86vw, 360px) !important;
+    min-height: 300px;
+    padding: 1.05rem !important;
+    border: 1px solid #e2e8f0;
+    background: #ffffff !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+  }
+
+  .region-page .klook-review-header {
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .region-page .klook-reviewer-name {
+    font-size: 0.98rem !important;
+  }
+
+  .region-page .klook-review-date {
+    font-size: 0.76rem !important;
+  }
+
+  .region-page .klook-review-rating {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    font-size: 0.78rem !important;
+  }
+
+  .region-page .klook-review-text {
+    font-size: 0.9rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .region-page .klook-review-product {
+    min-width: 0;
+    padding: 0.55rem !important;
+    gap: 0.65rem !important;
+  }
+
+  .region-page .klook-review-product span {
+    min-width: 0;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.25;
+  }
+
+  .region-page .klook-weather-widget {
+    max-width: none !important;
+    width: 100% !important;
+    padding: 1.25rem !important;
+    background: #ffffff !important;
+    box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+  }
+
+  body:has(.region-page) .floating-whatsapp,
+  body:has(.region-page) .back-to-top {
+    z-index: 850 !important;
+  }
+
+  body:has(.region-page) .floating-whatsapp {
+    width: 50px !important;
+    height: 50px !important;
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+
+  body:has(.region-page) .floating-whatsapp::before {
+    top: -9px !important;
+    right: -9px !important;
+    bottom: -9px !important;
+    left: -9px !important;
+  }
+
+  body:has(.region-page) .back-to-top {
+    left: 16px !important;
+    bottom: 16px !important;
+  }
+
+  body:has(.region-page) .back-to-top-btn {
+    width: 42px !important;
+    height: 42px !important;
+  }
+}
+
+@media (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .region-page .klook-card,
+  .region-page .klook-vert-card,
+  .region-page .klook-review-card {
+    animation: none !important;
   }
 }

@@ -1,50 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 
-const filters = ['Luxury Vans', 'Sedans', 'SUVs', 'Minibuses'];
-
-const allVehicles = [
-  { id: 1, type: 'Luxury Vans', name: 'Premium Drive', desc: 'Explore the vast landscapes in a sturdy luxury van.', image: '/images/black_luxury_van.png' },
-  { id: 2, type: 'Luxury Vans', name: 'Group Travel Van', desc: 'Perfect for group travel across Europe.', image: '/images/van.jpg' },
-  { id: 3, type: 'Sedans', name: 'Executive Sedan', desc: 'Arrive in style with our premium sedans.', image: '/images/sedan.webp' },
-  { id: 4, type: 'Minibuses', name: 'Luxury Coach', desc: 'Ideal for large tour groups.', image: '/images/bus.jpg' },
-  { id: 5, type: 'Luxury Vans', name: 'VIP V-Class', desc: 'The ultimate VIP transport.', image: '/images/black_luxury_van.png' },
-  { id: 6, type: 'Sedans', name: 'City Sedan', desc: 'Navigate cities in absolute comfort.', image: '/images/sedan.webp' },
-];
+const fadeInUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const VehicleActivities = () => {
-  const [activeFilter, setActiveFilter] = useState('Luxury Vans');
-  const [currentIndex, setCurrentIndex] = useState(2);
-
-  const filteredVehicles = allVehicles.filter(v => activeFilter === 'All' || v.type === activeFilter || activeFilter === 'Luxury Vans'); // default fallback if empty
-
-  // If filter changes, reset index
-  const handleFilterClick = (filter) => {
-    setActiveFilter(filter);
-    setCurrentIndex(2);
-  };
-
-  const handleNext = () => {
-    if (currentIndex < filteredVehicles.length - 1) {
-      setCurrentIndex(currentIndex + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (currentIndex > 0) {
-      setCurrentIndex(currentIndex - 1);
-    }
-  };
-
-  const getCardClass = (index) => {
-    const diff = index - currentIndex;
-    if (diff === 0) return 'active-center';
-    if (diff === -1) return 'medium-left';
-    if (diff === -2) return 'small-left';
-    if (diff === 1) return 'medium-right';
-    if (diff === 2) return 'small-right';
-    return 'hidden-card';
-  };
-
   return (
     <section className="vehicle-activities-section section-padding" style={{ background: '#fff' }}>
       <div className="container">
@@ -58,7 +20,79 @@ const VehicleActivities = () => {
           </h2>
         </div>
 
+        <div className="why-choose-grid">
+          <div className="why-col">
+            <motion.div className="why-item left-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <div className="why-text">
+                <h3>Experience driver</h3>
+                <p>Don't have driver? Don't worry, we have experienced driver for you.</p>
+              </div>
+              <div className="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+              </div>
+            </motion.div>
 
+            <motion.div className="why-item left-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <div className="why-text">
+                <h3>Wide Range of Vehicles</h3>
+                <p>From economy to luxury — choose the perfect car for any trip.</p>
+              </div>
+              <div className="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+              </div>
+            </motion.div>
+
+            <motion.div className="why-item left-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <div className="why-text">
+                <h3>24/7 technical support</h3>
+                <p>Have a question? Contact support any time when you have problem.</p>
+              </div>
+              <div className="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+              </div>
+            </motion.div>
+          </div>
+
+          <div className="why-col why-center-col">
+            <motion.div className="why-center-image" initial={{ scale: 0.8, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.8 }}>
+              <div className="why-circle-bg"></div>
+              <img src="/images/top_down_black_car.png" alt="Premium Car" />
+            </motion.div>
+          </div>
+
+          <div className="why-col">
+            <motion.div className="why-item right-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <div className="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+              </div>
+              <div className="why-text">
+                <h3>Best price guaranteed</h3>
+                <p>Find a lower price? We'll refund you 100% of the difference.</p>
+              </div>
+            </motion.div>
+
+            <motion.div className="why-item right-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <div className="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              </div>
+              <div className="why-text">
+                <h3>Well-Maintained Cars</h3>
+                <p>Every vehicle is regularly serviced and ensured in top condition.</p>
+              </div>
+            </motion.div>
+
+            <motion.div className="why-item right-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
+              <div className="why-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              </div>
+              <div className="why-text">
+                <h3>24 hour car delivery</h3>
+                <p>Book your car anytime and we will deliver it directly to you.</p>
+              </div>
+            </motion.div>
+          </div>
+
+        </div>
 
       </div>
     </section>
