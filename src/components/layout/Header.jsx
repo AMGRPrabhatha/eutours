@@ -64,9 +64,15 @@ const Header = () => {
                     id="mobile-menu"
                     onClick={toggleMobileMenu}
                 >
-                    <span style={{ transform: mobileMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : 'none' }}></span>
-                    <span style={{ opacity: mobileMenuOpen ? 0 : 1 }}></span>
-                    <span style={{ transform: mobileMenuOpen ? 'rotate(-45deg) translate(7px, -6px)' : 'none' }}></span>
+                    {mobileMenuOpen ? (
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2b3a4a" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    ) : (
+                      <>
+                        <span style={{ transform: 'none' }}></span>
+                        <span style={{ opacity: 1 }}></span>
+                        <span style={{ transform: 'none' }}></span>
+                      </>
+                    )}
                 </div>
                 <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`} id="nav-links">
                     <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
