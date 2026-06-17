@@ -41,10 +41,9 @@ const Footer = () => {
           <div className="footer-column contact-column">
             <h4 className="footer-heading">CONTACT INFO</h4>
             <ul className="footer-links">
-              <li><a href="tel:+447700900077">+44 7700 900077</a></li>
+              <li><a href="tel:+94777924464">+94 77 792 4464</a></li>
               <li><a href="#">WhatsApp Us</a></li>
-              <li><a href="mailto:info@eutours.eu">info@eutours.eu</a></li>
-              <li className="location-text" style={{ marginTop: '1rem', color: '#1a1a1a' }}>Paris, Europe</li>
+              <li><a href="mailto:info@eurotours.eu">info@eurotours.eu</a></li>
             </ul>
           </div>
 

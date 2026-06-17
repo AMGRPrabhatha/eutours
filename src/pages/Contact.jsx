@@ -89,7 +89,7 @@ const Contact = () => {
                   <div className="detail-icon">📞</div>
                   <div>
                     <h3>Phone Number</h3>
-                    <p>+44 20 7946 0958<br/>+94 74 359 2570</p>
+                    <p>+94 77 792 4464</p>
                   </div>
                 </div>
                 
@@ -97,7 +97,7 @@ const Contact = () => {
                   <div className="detail-icon">✉️</div>
                   <div>
                     <h3>Email Address</h3>
-                    <p>bookings@eutours.com<br/>support@eutours.com</p>
+                    <p>info@eurotours.eu</p>
                   </div>
                 </div>
               </div>

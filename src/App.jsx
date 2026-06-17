@@ -15,6 +15,7 @@ import BookVehicle from './pages/BookVehicle';
 import Packages from './pages/Packages';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
+import BackToTop from './components/BackToTop';
 
 import './assets/css/styles.css';
 
@@ -39,8 +40,9 @@ function App() {
           <Route path="/region/:id" element={<Region />} />
         </Routes>
         <Footer />
+        <FloatingWhatsApp />
+        <BackToTop />
       </div>
-      <FloatingWhatsApp />
     </Router>
   );
 }
