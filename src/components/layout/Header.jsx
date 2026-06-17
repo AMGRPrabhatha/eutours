@@ -110,7 +110,6 @@ const Header = () => {
                             left: '50%',
                             marginLeft: '-450px',
                             width: '900px',
-                            paddingTop: '15px',
                             zIndex: 1000
                         }}>
                           <div className="mega-menu" style={{ 
@@ -119,7 +118,8 @@ const Header = () => {
                               position: 'relative',
                               background: 'white',
                               boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                              borderRadius: '16px',
+                              borderRadius: '0 0 16px 16px',
+                              borderTop: '1px solid #eaeaea',
                               padding: '2rem'
                           }}>
                               <div className="mega-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
@@ -158,13 +158,13 @@ const Header = () => {
                             position: 'absolute',
                             top: '100%',
                             right: '15px',
-                            paddingTop: '15px',
                             zIndex: 1000
                         }}>
                           <div style={{ 
                               background: 'white',
                               boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
-                              borderRadius: '16px',
+                              borderRadius: '0 0 16px 16px',
+                              borderTop: '1px solid #eaeaea',
                               padding: '1rem',
                               display: 'flex',
                               flexDirection: 'column',
