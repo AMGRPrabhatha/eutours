@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import VehicleActivities from '../components/vehicles/VehicleActivities';
+import FormModal from '../components/ui/FormModal';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -156,6 +157,7 @@ const BookVehicle = () => {
     specialRequests: ''
   });
   const [status, setStatus] = useState('idle');
+  const [modalConfig, setModalConfig] = useState({ isOpen: false, status: 'success', message: '' });
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -184,7 +186,11 @@ const BookVehicle = () => {
       }
 
       setStatus('success');
-      alert('Your vehicle booking request has been sent! Our team will contact you shortly with confirmation.');
+      setModalConfig({
+        isOpen: true,
+        status: 'success',
+        message: 'Your vehicle booking request has been sent! Our team will contact you shortly with confirmation.'
+      });
       setFormData({
         fullName: '',
         email: '',
@@ -201,7 +207,11 @@ const BookVehicle = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
-      alert('There was an error sending your request. Please try again later.');
+      setModalConfig({
+        isOpen: true,
+        status: 'error',
+        message: 'There was an error sending your request. Please try again later.'
+      });
     } finally {
       if (status !== 'error') {
           setTimeout(() => setStatus('idle'), 3000);
@@ -213,6 +223,12 @@ const BookVehicle = () => {
 
   return (
     <div className="booking-page">
+      <FormModal 
+        isOpen={modalConfig.isOpen} 
+        status={modalConfig.status} 
+        message={modalConfig.message} 
+        onClose={() => setModalConfig(prev => ({ ...prev, isOpen: false }))} 
+      />
       {/* Hero Section */}
       <section className="booking-hero" style={{ backgroundImage: "url('/images/Book_a_Vehicle.jpg')" }}>
         <div className="booking-hero-overlay"></div>

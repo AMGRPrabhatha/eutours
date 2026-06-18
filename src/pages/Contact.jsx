@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import FormModal from '../components/ui/FormModal';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -11,6 +12,7 @@ const Contact = () => {
   const [searchParams] = useSearchParams();
   const tourQuery = searchParams.get('tour');
   const [status, setStatus] = useState('idle');
+  const [modalConfig, setModalConfig] = useState({ isOpen: false, status: 'success', message: '' });
   
   const [formData, setFormData] = useState({
     name: '',
@@ -47,7 +49,11 @@ const Contact = () => {
       }
 
       setStatus('success');
-      alert('Thank you for your inquiry! Our travel experts will get back to you shortly.');
+      setModalConfig({
+        isOpen: true,
+        status: 'success',
+        message: 'Thank you for your inquiry! Our travel experts will get back to you shortly.'
+      });
       setFormData({
         name: '',
         email: '',
@@ -58,7 +64,11 @@ const Contact = () => {
     } catch (error) {
       console.error('Error submitting form:', error);
       setStatus('error');
-      alert('There was an error sending your message. Please try again later.');
+      setModalConfig({
+        isOpen: true,
+        status: 'error',
+        message: 'There was an error sending your message. Please try again later.'
+      });
     } finally {
       if (status !== 'error') {
           setTimeout(() => setStatus('idle'), 3000);
@@ -70,6 +80,12 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <FormModal 
+        isOpen={modalConfig.isOpen} 
+        status={modalConfig.status} 
+        message={modalConfig.message} 
+        onClose={() => setModalConfig(prev => ({ ...prev, isOpen: false }))} 
+      />
       {/* Contact Hero */}
       <section className="contact-hero" style={{ backgroundImage: "url('/images/aboutus-hero.jpg')" }}>
         <div className="contact-hero-overlay"></div>
