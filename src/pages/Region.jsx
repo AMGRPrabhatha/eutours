@@ -400,7 +400,6 @@ const Region = () => {
             </div>
             <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>{weather.desc}</div>
         </div>
-        </div>
       </section>
 
       <ImagePreviewModal 
