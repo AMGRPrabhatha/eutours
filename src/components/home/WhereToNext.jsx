@@ -1,9 +1,10 @@
 import { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import ImagePreviewModal from '../ui/ImagePreviewModal';
 
 const WhereToNext = () => {
   const [visibleCount, setVisibleCount] = useState(5);
   const scrollRef = useRef(null);
+  const [previewData, setPreviewData] = useState({ isOpen: false, img: '', title: '' });
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -39,16 +40,28 @@ const WhereToNext = () => {
             </div>
             <div className="dest-grid" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', marginTop: '1rem' }} ref={scrollRef}>
                 {destinations.map((dest, idx) => (
-                  <Link to={dest.link} className={`vertical-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} key={idx}>
+                  <div 
+                    className={`vertical-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} 
+                    key={idx}
+                    onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
+                    style={{ cursor: 'pointer' }}
+                  >
                       <img src={dest.img} alt={dest.title} style={dest.style || {}} />
                       <div className="v-card-overlay">
                           <h3>{dest.title}</h3>
                           <p>{dest.activities}</p>
                       </div>
-                  </Link>
+                  </div>
                 ))}
             </div>
         </div>
+        
+        <ImagePreviewModal 
+          isOpen={previewData.isOpen}
+          onClose={() => setPreviewData({ ...previewData, isOpen: false })}
+          imageSrc={previewData.img}
+          title={previewData.title}
+        />
     </section>
   );
 };

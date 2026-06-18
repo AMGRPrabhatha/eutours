@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="footer-bottom-bar">
           <div className="footer-bottom-left">
             <span className="location-pin">📍 Europe</span>
-            <span className="copyright">© 2026 Eutours. All rights reserved</span>
+            <span className="copyright">© 2026 Eutours. All rights reserved @RP</span>
           </div>
           <div className="footer-bottom-right">
             <Link to="/travel-guides">Guides</Link>

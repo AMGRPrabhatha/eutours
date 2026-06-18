@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
+import ImagePreviewModal from '../components/ui/ImagePreviewModal';
 import { regionPages } from '../data';
 
 const getAlbaniaImage = (name) => {
@@ -254,6 +255,7 @@ const Region = () => {
   const [visibleDests, setVisibleDests] = useState(5);
   const [visibleAttrs, setVisibleAttrs] = useState(4);
   const [visibleThings, setVisibleThings] = useState(3);
+  const [previewData, setPreviewData] = useState({ isOpen: false, img: '', title: '' });
   
   // Use existing hero if available, else generic
   let heroImage = '/images/home%20hero.webp';
@@ -288,7 +290,12 @@ const Region = () => {
         </div>
         <div className="klook-grid-5">
           {topDests.slice(0, visibleDests).map((dest, index) => (
-            <div className="klook-card klook-square-card" key={index}>
+            <div 
+              className="klook-card klook-square-card" 
+              key={index}
+              onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
+              style={{ cursor: 'pointer' }}
+            >
               <img src={dest.img} alt={dest.title} onError={(e) => { e.target.onerror = null; e.target.src = dest.fallbackImg; }} />
               <div className="klook-card-overlay">{dest.title}</div>
             </div>
@@ -306,7 +313,12 @@ const Region = () => {
         </div>
         <div className="klook-grid-4">
           {topAttractions.slice(0, visibleAttrs).map((attr, index) => (
-            <div className="klook-card klook-rect-card" key={index}>
+            <div 
+              className="klook-card klook-rect-card" 
+              key={index}
+              onClick={() => setPreviewData({ isOpen: true, img: attr.img, title: attr.title })}
+              style={{ cursor: 'pointer' }}
+            >
               <img src={attr.img} alt={attr.title} onError={(e) => { e.target.onerror = null; e.target.src = attr.fallbackImg; }} />
               <div className="klook-card-overlay">{attr.title}</div>
             </div>
@@ -388,8 +400,15 @@ const Region = () => {
             </div>
             <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.5rem' }}>{weather.desc}</div>
         </div>
+        </div>
       </section>
 
+      <ImagePreviewModal 
+        isOpen={previewData.isOpen}
+        onClose={() => setPreviewData({ ...previewData, isOpen: false })}
+        imageSrc={previewData.img}
+        title={previewData.title}
+      />
     </div>
   );
 };

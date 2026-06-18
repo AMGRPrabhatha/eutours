@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import ImagePreviewModal from '../ui/ImagePreviewModal';
 
 const TravelersChoice = () => {
   const [visibleCount, setVisibleCount] = useState(4);
   const scrollRef = useRef(null);
+  const [previewData, setPreviewData] = useState({ isOpen: false, img: '', title: '' });
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -112,7 +114,12 @@ const TravelersChoice = () => {
             
             <div className="advanced-grid" style={{ marginBottom: 0 }} ref={scrollRef}>
                 {tours.map((tour, idx) => (
-                  <Link to={tour.link} className={`adv-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} key={idx}>
+                  <div 
+                    className={`adv-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} 
+                    key={idx}
+                    onClick={() => setPreviewData({ isOpen: true, img: tour.img, title: tour.title })}
+                    style={{ cursor: 'pointer' }}
+                  >
                       <div className="adv-img-container">
                           <img src={tour.img} alt={tour.title} className="adv-img" />
                       </div>
@@ -131,10 +138,17 @@ const TravelersChoice = () => {
                               </div>
                           </div>
                       </div>
-                  </Link>
+                  </div>
                 ))}
             </div>
         </div>
+        
+        <ImagePreviewModal 
+          isOpen={previewData.isOpen}
+          onClose={() => setPreviewData({ ...previewData, isOpen: false })}
+          imageSrc={previewData.img}
+          title={previewData.title}
+        />
     </section>
   );
 };
