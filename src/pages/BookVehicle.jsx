@@ -21,11 +21,16 @@ const vehicles = [
   {
     id: '8-9-seated',
     name: '8/9 Seated Tour Van',
+    model: 'Executive Tour Van',
     location: 'Paris, France',
-    features: [
-      { label: 'Type', value: 'Group Travel' },
-      { label: 'Rating', value: '4.9' },
-      { label: 'Capacity', value: 'Max 9 Pax' },
+    rating: '4.9',
+    reviews: '100+',
+    category: 'GROUP',
+    details: [
+      '8-9 passengers',
+      '8 bags',
+      'Automatic',
+      'Airport transfers and private tours',
     ],
     price: '€1,200',
     duration: '7-day package',
@@ -34,11 +39,16 @@ const vehicles = [
   {
     id: 'mercedes-benz-ford',
     name: 'Mercedes Premium Sedan',
+    model: 'Luxury Sedan',
     location: 'Swiss Alps',
-    features: [
-      { label: 'Type', value: 'Luxury Travel' },
-      { label: 'Rating', value: '5.0' },
-      { label: 'Capacity', value: 'Max 4 Pax' },
+    rating: '5.0',
+    reviews: '80+',
+    category: 'LUXURY',
+    details: [
+      '1-4 passengers',
+      '3 bags',
+      'Automatic',
+      'Business trips and scenic drives',
     ],
     price: '€1,850',
     duration: '5-day package',
@@ -47,11 +57,16 @@ const vehicles = [
   {
     id: 'luxury-vans',
     name: 'Luxury V-Class Van',
+    model: 'Mercedes V-Class',
     location: 'Rome, Italy',
-    features: [
-      { label: 'Type', value: 'Premium VIP' },
-      { label: 'Rating', value: '5.0' },
-      { label: 'Capacity', value: 'Max 7 Pax' },
+    rating: '5.0',
+    reviews: '75+',
+    category: 'VIP VAN',
+    details: [
+      '1-7 passengers',
+      '7 bags',
+      'Automatic',
+      'Family tours and VIP transfers',
     ],
     price: '€2,100',
     duration: '10-day package',
@@ -60,17 +75,71 @@ const vehicles = [
   {
     id: 'luxury-bus',
     name: 'Luxury Tourist Coach',
+    model: 'Premium Coach',
     location: 'Europe Countryside',
-    features: [
-      { label: 'Type', value: 'Large Group' },
-      { label: 'Rating', value: '4.8' },
-      { label: 'Capacity', value: 'Max 30 Pax' },
+    rating: '4.8',
+    reviews: '120+',
+    category: 'COACH',
+    details: [
+      'Up to 30 passengers',
+      'Large luggage hold',
+      'Automatic',
+      'Multi-day group tours',
     ],
     price: '€3,500',
     duration: '14-day package',
     image: '/images/black_luxury_coach.png',
   }
 ];
+
+const iconPaths = {
+  location: (
+    <>
+      <path d="M12 21s7-5.1 7-11a7 7 0 0 0-14 0c0 5.9 7 11 7 11Z" />
+      <circle cx="12" cy="10" r="2.5" />
+    </>
+  ),
+  star: <path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z" />,
+  vehicle: (
+    <>
+      <path d="M5 16h14l-1.4-5.5A2 2 0 0 0 15.7 9H8.3a2 2 0 0 0-1.9 1.5L5 16Z" />
+      <path d="M4 16v3" />
+      <path d="M20 16v3" />
+      <circle cx="7.5" cy="17" r="1.5" />
+      <circle cx="16.5" cy="17" r="1.5" />
+      <path d="M7 13h10" />
+    </>
+  ),
+  range: (
+    <>
+      <circle cx="12" cy="12" r="8" />
+      <path d="m12 8 4 4" />
+      <path d="M12 8v8" />
+    </>
+  ),
+  class: (
+    <>
+      <circle cx="12" cy="12" r="8" />
+      <path d="M12 20v-8" />
+      <path d="M8 10l4 2 4-2" />
+      <path d="M9 7h6" />
+    </>
+  ),
+  seat: (
+    <>
+      <path d="M7 5h7a3 3 0 0 1 3 3v5H7V5Z" />
+      <path d="M5 13h14v5H5z" />
+      <path d="M7 18v2" />
+      <path d="M17 18v2" />
+    </>
+  ),
+};
+
+const CardIcon = ({ type, className = '' }) => (
+  <svg className={`pfc-icon ${className}`} viewBox="0 0 24 24" aria-hidden="true">
+    {iconPaths[type]}
+  </svg>
+);
 
 const BookVehicle = () => {
   useEffect(() => {
@@ -116,31 +185,38 @@ const BookVehicle = () => {
           >
             {vehicles.map((vehicle) => (
               <motion.div className="premium-fleet-photo-card" key={vehicle.id} variants={fadeInUp}>
+                <div className="pfc-heading-row">
+                  <div>
+                    <h3 className="pfc-title">{vehicle.name}</h3>
+                    <p className="pfc-model">{vehicle.model}</p>
+                  </div>
+                  <div className="pfc-rating">
+                    <CardIcon type="star" className="pfc-star" />
+                    <span>{vehicle.rating}</span>
+                    <small>({vehicle.reviews})</small>
+                  </div>
+                </div>
                 <div className="pfc-image">
+                  <span className="pfc-badge">{vehicle.category}</span>
                   <img src={vehicle.image} alt={vehicle.name} />
                 </div>
                 <div className="pfc-content">
-                  <h3 className="pfc-title">{vehicle.name}</h3>
                   <div className="pfc-location">
-                    <span className="pfc-pin">📍</span> {vehicle.location}
-                  </div>
-                  <div className="pfc-meta-row">
-                    {vehicle.features.map((feature) => (
-                      <div className="pfc-meta-item" key={feature.label}>
-                        <span className="pfc-meta-label">{feature.label}</span>
-                        <span className="pfc-meta-value">{feature.value}</span>
-                      </div>
-                    ))}
-                  </div>
-                  <div className="pfc-footer">
-                    <button 
-                      className="pfc-book-btn"
-                      onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
-                    >
-                      Book
-                    </button>
+                    <CardIcon type="location" />
+                    <span>{vehicle.location}</span>
                   </div>
                 </div>
+                <ul className="pfc-detail-list">
+                  {vehicle.details.map((detail) => (
+                    <li key={detail}>{detail}</li>
+                  ))}
+                </ul>
+                <button
+                  className="pfc-book-btn"
+                  onClick={() => document.getElementById('booking-form-section').scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Reserve This Ride
+                </button>
               </motion.div>
             ))}
           </motion.div>

@@ -1,20 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import { regions, destinations } from '../../data';
-
-const advStyles = [
-  { name: 'Adventure & Adrenaline', icon: '⛰️' },
-  { name: 'Ancient Wonders', icon: '🏛️' },
-  { name: 'Bicycle', icon: '🚲' },
-  { name: 'City & Culture', icon: '🏙️' },
-  { name: 'Festival & Events', icon: '🎉' },
-  { name: 'Food & Wine', icon: '🍷' },
-  { name: 'Hiking & Trekking', icon: '🥾' },
-  { name: 'River Cruise', icon: '⛴️' },
-  { name: 'Safari', icon: '🦁' },
-  { name: 'Sailing', icon: '⛵' },
-  { name: 'Wellness & Retreats', icon: '🧘' }
-];
+import { regions } from '../../data';
 
 const allEuropeCountries = [
   "Albania", "Andorra", "Austria", "Belgium", "Bosnia", "Bulgaria",
@@ -30,7 +16,6 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
   const [destHover, setDestHover] = useState(false);
-  const [advHover, setAdvHover] = useState(false);
 
   const [scrolled, setScrolled] = useState(false);
 
@@ -46,18 +31,61 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    document.body.style.overflow = mobileMenuOpen ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileMenuOpen]);
+
   const toggleMobileMenu = () => {
-    setMobileMenuOpen(!mobileMenuOpen);
+    setMobileMenuOpen(prev => {
+      const nextOpen = !prev;
+      if (!nextOpen) {
+        setActiveMenu(null);
+        setDestHover(false);
+      }
+      return nextOpen;
+    });
+  };
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false);
+    setActiveMenu(null);
+    setDestHover(false);
+  };
+
+  const handleHeaderMouseLeave = () => {
+    if (!mobileMenuOpen) {
+      setActiveMenu(null);
+      setDestHover(false);
+    }
+  };
+
+  const handleDestinationsToggle = (event) => {
+    event.preventDefault();
+    setDestHover(prev => !prev);
+    setActiveMenu(null);
+  };
+
+  const handleMenuToggle = (event, menu) => {
+    event.preventDefault();
+    setActiveMenu(prev => (prev === menu ? null : menu));
+    setDestHover(false);
   };
 
 
-
   return (
-    <header className={`main-header ${scrolled ? 'scrolled' : ''}`} onMouseLeave={() => setActiveMenu(null)}>
+    <header className={`main-header ${scrolled ? 'scrolled' : ''}`} onMouseLeave={handleHeaderMouseLeave}>
         <nav className="navbar static-nav" id="navbar">
             <div className="container nav-container">
                 <Link to="/" className="logo">
-                    <img src="/images/logo.png" alt="Eutours" style={{ height: '40px' }} />
+                    <span className="logo-mark" aria-hidden="true">e</span>
+                    <span className="logo-word">
+                      <span className="logo-word-dark">eu</span>
+                      <span className="logo-word-dot" aria-hidden="true"></span>
+                      <span className="logo-word-muted">tours</span>
+                    </span>
                 </Link>
                 <div 
                     className="menu-toggle" 
@@ -75,14 +103,14 @@ const Header = () => {
                     )}
                 </div>
                 <ul className={`nav-links ${mobileMenuOpen ? 'active' : ''}`} id="nav-links">
-                    <li><Link to="/" onClick={() => setMobileMenuOpen(false)}>Home</Link></li>
-                    <li><Link to="/about" onClick={() => setMobileMenuOpen(false)}>About Us</Link></li>
+                    <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+                    <li><Link to="/about" onClick={closeMobileMenu}>About Us</Link></li>
                     <li 
-                      onMouseEnter={() => setDestHover(true)}
-                      onMouseLeave={() => setDestHover(false)}
+                      onMouseEnter={() => { if (!mobileMenuOpen) setDestHover(true); }}
+                      onMouseLeave={() => { if (!mobileMenuOpen) setDestHover(false); }}
                       className="primary-nav-item"
                     >
-                      <a href="#" onClick={(e) => { e.preventDefault(); setDestHover(!destHover); }}>
+                      <a href="#" onClick={handleDestinationsToggle}>
                         Destinations
                         <span className="mobile-dropdown-icon">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: destHover ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -97,7 +125,7 @@ const Header = () => {
                               </div>
                               <div className="primary-dropdown-grid">
                                 {allEuropeCountries.map(country => (
-                                  <Link to={`/region/${country.toLowerCase().replace(/ /g, '-')}`} key={country} className="country-item" onClick={() => setDestHover(false)}>
+                                  <Link to={`/region/${country.toLowerCase().replace(/ /g, '-')}`} key={country} className="country-item" onClick={closeMobileMenu}>
                                     {country}
                                     {country === 'Ireland' && <span className="badge-trending">Trending</span>}
                                     {country === 'Iceland' && <span className="badge-topseller">Top seller</span>}
@@ -110,13 +138,13 @@ const Header = () => {
                       )}
                     </li>
                     <li 
-                      onMouseEnter={() => setActiveMenu('regions')}
-                      onMouseLeave={() => setActiveMenu(null)}
+                      onMouseEnter={() => { if (!mobileMenuOpen) setActiveMenu('regions'); }}
+                      onMouseLeave={() => { if (!mobileMenuOpen) setActiveMenu(null); }}
                       className="primary-nav-item"
                     >
                       <Link 
                         to="#" 
-                        onClick={(e) => { e.preventDefault(); setActiveMenu(activeMenu === 'regions' ? null : 'regions'); }}
+                        onClick={(event) => handleMenuToggle(event, 'regions')}
                       >
                         Popular regions
                         <span className="mobile-dropdown-icon">
@@ -124,14 +152,14 @@ const Header = () => {
                         </span>
                       </Link>
                       {activeMenu === 'regions' && (
-                        <div style={{
+                        <div className="nav-dropdown-panel nav-dropdown-panel-regions" style={{
                             position: 'absolute',
                             top: 'calc(100% - 1px)',
                             left: '50%',
                             marginLeft: '-450px',
                             width: '900px',
                             zIndex: 1000
-                        }}>
+                          }}>
                           <div className="mega-menu" style={{ 
                               opacity: 1, 
                               visibility: 'visible', 
@@ -145,7 +173,7 @@ const Header = () => {
                           }}>
                               <div className="mega-grid" style={{ gridTemplateColumns: 'repeat(4, 1fr)' }}>
                                   {regions.map((item) => (
-                                      <Link to={`/region/${item.id}`} className="mega-item" key={item.id} onClick={() => { setActiveMenu(null); setMobileMenuOpen(false); }}>
+                                      <Link to={`/region/${item.id}`} className="mega-item" key={item.id} onClick={closeMobileMenu}>
                                           <img src={item.img} alt={item.title} />
                                           <div>
                                               <span className="mega-sub">Things to do in</span>
@@ -158,34 +186,31 @@ const Header = () => {
                         </div>
                       )}
                     </li>
-                    <li><Link to="/book-vehicle" onClick={() => setMobileMenuOpen(false)}>Book a Vehicle</Link></li>
-                    <li><Link to="/packages" onClick={() => setMobileMenuOpen(false)}>Packages</Link></li>
-                    <li><Link to="/contact" onClick={() => setMobileMenuOpen(false)}>Contact Us</Link></li>
+                    <li><Link to="/book-vehicle" onClick={closeMobileMenu}>Book a Vehicle</Link></li>
+                    <li><Link to="/packages" onClick={closeMobileMenu}>Packages</Link></li>
+                    <li><Link to="/contact" onClick={closeMobileMenu}>Contact Us</Link></li>
                     <li 
-                      onMouseEnter={() => setActiveMenu('more')}
-                      onMouseLeave={() => setActiveMenu(null)}
+                      onMouseEnter={() => { if (!mobileMenuOpen) setActiveMenu('more'); }}
+                      onMouseLeave={() => { if (!mobileMenuOpen) setActiveMenu(null); }}
                       className="primary-nav-item"
                     >
                       <Link 
                         to="#" 
-                        onClick={(e) => { e.preventDefault(); setActiveMenu(activeMenu === 'more' ? null : 'more'); }}
+                        onClick={(event) => handleMenuToggle(event, 'more')}
                       >
                         More
-                        <span style={{ display: 'inline-block', marginLeft: '4px' }}>
-                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: activeMenu === 'more' ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
-                        </span>
                         <span className="mobile-dropdown-icon">
                           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ transform: activeMenu === 'more' ? 'rotate(180deg)' : 'none', transition: 'transform 0.3s' }}><polyline points="6 9 12 15 18 9"></polyline></svg>
                         </span>
                       </Link>
                       {activeMenu === 'more' && (
-                        <div style={{
+                        <div className="nav-dropdown-panel nav-dropdown-panel-more" style={{
                             position: 'absolute',
                             top: '100%',
                             right: '15px',
                             zIndex: 1000
                         }}>
-                          <div style={{ 
+                          <div className="more-dropdown" style={{ 
                               background: 'white',
                               boxShadow: '0 10px 30px rgba(0,0,0,0.1)',
                               borderRadius: '0 0 16px 16px',
@@ -196,11 +221,11 @@ const Header = () => {
                               minWidth: '180px',
                               gap: '0.5rem'
                           }}>
-                              <Link to="/reviews" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Reviews</Link>
-                              <Link to="/travel-guides" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Travel guides</Link>
-                              <Link to="/blog" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-                              <Link to="/faq" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-                              <Link to="/moments" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={() => setMobileMenuOpen(false)}>Moments</Link>
+                              <Link to="/reviews" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={closeMobileMenu}>Reviews</Link>
+                              <Link to="/travel-guides" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={closeMobileMenu}>Travel guides</Link>
+                              <Link to="/blog" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={closeMobileMenu}>Blog</Link>
+                              <Link to="/faq" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={closeMobileMenu}>FAQ</Link>
+                              <Link to="/moments" className="sub-nav-link" style={{ padding: '0.5rem 1rem' }} onClick={closeMobileMenu}>Moments</Link>
                           </div>
                         </div>
                       )}
