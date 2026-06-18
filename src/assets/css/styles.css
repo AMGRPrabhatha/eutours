@@ -7670,50 +7670,50 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 24px;
-  border-bottom: 1px solid #f1f5f9;
+  padding: 20px 20px 16px 20px;
+  /* Removed border-bottom so it flows seamlessly */
 }
 
 .preview-modal-title {
   margin: 0;
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #0f172a;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #000000;
 }
 
 .preview-modal-close {
-  background: #f1f5f9;
-  border: none;
-  width: 36px;
-  height: 36px;
+  background: transparent;
+  border: 1.5px solid #e2e8f0;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #64748b;
+  color: #475569;
   cursor: pointer;
   transition: all 0.2s ease;
 }
 
 .preview-modal-close:hover {
-  background: #e2e8f0;
+  background: #f1f5f9;
   color: #0f172a;
+  border-color: #cbd5e1;
   transform: scale(1.05);
 }
 
 .preview-modal-body {
-  padding: 24px;
+  padding: 0 12px 12px 12px;
   overflow-y: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f8fafc;
+  background-color: #ffffff;
 }
 
 .preview-modal-image {
   max-width: 100%;
-  max-height: 70vh;
+  max-height: 80vh;
   object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 16px;
 }
