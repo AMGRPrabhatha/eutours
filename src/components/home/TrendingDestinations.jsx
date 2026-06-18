@@ -23,13 +23,17 @@ const TrendingDestinations = () => {
             <div 
               key={dest.id} 
               className={`trending-card ${dest.size}`}
-              onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.name })}
-              style={{ cursor: 'pointer' }}
             >
-              <div className="trending-bg" style={{ backgroundImage: `url('${dest.img}')` }}></div>
+              <div 
+                className="trending-bg" 
+                style={{ backgroundImage: `url('${dest.img}')`, cursor: 'pointer' }}
+                onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.name })}
+              ></div>
               <div className="trending-overlay"></div>
               <div className="trending-content">
-                <h3>{dest.name} <span>{dest.flag}</span></h3>
+                <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                  <h3>{dest.name} <span>{dest.flag}</span></h3>
+                </Link>
               </div>
             </div>
           ))}

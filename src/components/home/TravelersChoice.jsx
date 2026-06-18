@@ -117,15 +117,19 @@ const TravelersChoice = () => {
                   <div 
                     className={`adv-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} 
                     key={idx}
-                    onClick={() => setPreviewData({ isOpen: true, img: tour.img, title: tour.title })}
-                    style={{ cursor: 'pointer' }}
                   >
-                      <div className="adv-img-container">
+                      <div 
+                        className="adv-img-container" 
+                        onClick={() => setPreviewData({ isOpen: true, img: tour.img, title: tour.title })}
+                        style={{ cursor: 'pointer' }}
+                      >
                           <img src={tour.img} alt={tour.title} className="adv-img" />
                       </div>
                       <div className="adv-info">
                           <p className="adv-subtitle" style={{ marginBottom: '0.3rem' }}>{tour.subtitle}</p>
-                          <h3 className="adv-title">{tour.title}</h3>
+                          <Link to={tour.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                              <h3 className="adv-title">{tour.title}</h3>
+                          </Link>
                           <div className="adv-tags">
                               <span className="adv-tag">{tour.tag}</span>
                           </div>
@@ -133,9 +137,11 @@ const TravelersChoice = () => {
                               <span className="adv-star">★</span> {tour.rating} <span>{tour.reviews}</span>
                           </div>
                           <div className="adv-price-section">
-                              <div className="adv-price" style={{ fontWeight: '700', color: 'var(--text-main)', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                                  INQUIRE <span style={{ fontWeight: '400', fontSize: '1.2rem' }}>+</span>
-                              </div>
+                              <Link to={`/contact?tour=${encodeURIComponent(tour.title)}`} style={{ textDecoration: 'none' }}>
+                                  <div className="adv-price" style={{ fontWeight: '700', color: 'var(--text-main)', textTransform: 'uppercase', letterSpacing: '0.5px', display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer' }}>
+                                      INQUIRE <span style={{ fontWeight: '400', fontSize: '1.2rem' }}>+</span>
+                                  </div>
+                              </Link>
                           </div>
                       </div>
                   </div>

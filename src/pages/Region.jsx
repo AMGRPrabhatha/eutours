@@ -293,11 +293,17 @@ const Region = () => {
             <div 
               className="klook-card klook-square-card" 
               key={index}
-              onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
-              style={{ cursor: 'pointer' }}
             >
-              <img src={dest.img} alt={dest.title} onError={(e) => { e.target.onerror = null; e.target.src = dest.fallbackImg; }} />
-              <div className="klook-card-overlay">{dest.title}</div>
+              <img 
+                src={dest.img} 
+                alt={dest.title} 
+                onError={(e) => { e.target.onerror = null; e.target.src = dest.fallbackImg; }} 
+                onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
+                style={{ cursor: 'pointer' }}
+              />
+              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="klook-card-overlay">{dest.title}</div>
+              </Link>
             </div>
           ))}
         </div>
@@ -316,11 +322,17 @@ const Region = () => {
             <div 
               className="klook-card klook-rect-card" 
               key={index}
-              onClick={() => setPreviewData({ isOpen: true, img: attr.img, title: attr.title })}
-              style={{ cursor: 'pointer' }}
             >
-              <img src={attr.img} alt={attr.title} onError={(e) => { e.target.onerror = null; e.target.src = attr.fallbackImg; }} />
-              <div className="klook-card-overlay">{attr.title}</div>
+              <img 
+                src={attr.img} 
+                alt={attr.title} 
+                onError={(e) => { e.target.onerror = null; e.target.src = attr.fallbackImg; }} 
+                onClick={() => setPreviewData({ isOpen: true, img: attr.img, title: attr.title })}
+                style={{ cursor: 'pointer' }}
+              />
+              <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
+                <div className="klook-card-overlay">{attr.title}</div>
+              </Link>
             </div>
           ))}
         </div>

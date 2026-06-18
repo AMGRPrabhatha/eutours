@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import ImagePreviewModal from '../ui/ImagePreviewModal';
 
 const WhereToNext = () => {
@@ -43,14 +44,19 @@ const WhereToNext = () => {
                   <div 
                     className={`vertical-card ${idx >= visibleCount ? 'desktop-hide' : ''}`} 
                     key={idx}
-                    onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
-                    style={{ cursor: 'pointer' }}
                   >
-                      <img src={dest.img} alt={dest.title} style={dest.style || {}} />
-                      <div className="v-card-overlay">
-                          <h3>{dest.title}</h3>
-                          <p>{dest.activities}</p>
-                      </div>
+                      <img 
+                        src={dest.img} 
+                        alt={dest.title} 
+                        style={{ ...(dest.style || {}), cursor: 'pointer' }} 
+                        onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
+                      />
+                      <Link to={dest.link} style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <div className="v-card-overlay">
+                              <h3>{dest.title}</h3>
+                              <p>{dest.activities}</p>
+                          </div>
+                      </Link>
                   </div>
                 ))}
             </div>
