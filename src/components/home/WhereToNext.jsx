@@ -14,14 +14,14 @@ const WhereToNext = () => {
   };
 
   const destinations = [
-    { title: 'Rome', activities: '150 activities', img: '/images/rome.jpg', link: '/region/italy' },
-    { title: 'Swiss Alps', activities: '120 activities', img: '/images/Swiss Alps.jpg', link: '/region/switzerland' },
-    { title: 'Paris', activities: '200 activities', img: '/images/paris.jpg', style: { objectPosition: 'center' }, link: '/region/france' },
-    { title: 'London', activities: '180 activities', img: '/images/london.jpg', link: '/region/uk' },
-    { title: 'Barcelona', activities: '190 activities', img: '/images/barcelona.jpg', link: '/region/spain' },
-    { title: 'Amsterdam', activities: '140 activities', img: '/images/Amsterdam.jpg', link: '/region/netherlands' },
-    { title: 'Berlin', activities: '160 activities', img: '/images/berlin.jpg', link: '/region/germany' },
-    { title: 'Venice', activities: '110 activities', img: '/images/Venice.jpg', link: '/region/italy' }
+    { title: 'Rome', activities: '150 activities', img: '/images/rome.webp', link: '/region/italy' },
+    { title: 'Swiss Alps', activities: '120 activities', img: '/images/Swiss Alps.webp', link: '/region/switzerland' },
+    { title: 'Paris', activities: '200 activities', img: '/images/paris.webp', style: { objectPosition: 'center' }, link: '/region/france' },
+    { title: 'London', activities: '180 activities', img: '/images/london.webp', link: '/region/uk' },
+    { title: 'Barcelona', activities: '190 activities', img: '/images/barcelona.webp', link: '/region/spain' },
+    { title: 'Amsterdam', activities: '140 activities', img: '/images/Amsterdam.webp', link: '/region/netherlands' },
+    { title: 'Berlin', activities: '160 activities', img: '/images/berlin.webp', link: '/region/germany' },
+    { title: 'Venice', activities: '110 activities', img: '/images/Venice.webp', link: '/region/italy' }
   ];
 
   return (

@@ -72,7 +72,7 @@ const BookingSection = () => {
                 </form>
             </div>
             <div className="booking-image-wrapper">
-                <img src="/images/luxury_van_1781075675269.webp" alt="Luxury European Tour Van" />
+                <img src="/images/luxury_van_rome.webp" alt="Luxury European Tour Van" />
             </div>
         </div>
     </section>

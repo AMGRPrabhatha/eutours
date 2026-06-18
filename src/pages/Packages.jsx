@@ -399,9 +399,9 @@ const Packages = () => {
                   {/* Left Column: Real Image & Map overlay */}
                   <div className="pkg-card-media-col" onClick={(e) => e.stopPropagation()}>
                     <img 
-                      src={`/images/packages/${pkg.id}.jpg`} 
+                      src={`/images/packages/${pkg.id}.webp`} 
                       alt={pkg.title} 
-                      onError={(e) => { e.target.onerror = null; e.target.src = '/images/switzerland_vertical_1781089957980.webp'; }}
+                      onError={(e) => { e.target.onerror = null; e.target.src = '/images/Switzerland.webp'; }}
                       className="pkg-card-real-img"
                     />
                     
@@ -414,7 +414,7 @@ const Packages = () => {
                     </button>
                     
                     <div className="pkg-map-wrapper">
-                      <img src="/images/map_placeholder.png" className="mock-map-svg" alt="Map Route Placeholder" />
+                      <img src="/images/map_placeholder.webp" className="mock-map-svg" alt="Map Route Placeholder" />
                       <button className="view-map-overlay-btn" onClick={() => openItinerary(pkg)}>
                         <span className="map-icon">📍</span> View Map
                       </button>
@@ -498,7 +498,7 @@ const Packages = () => {
               {/* Left Column (70%) */}
               <div className="pkg-modal-left">
                 <div className="pkg-modal-hero-img">
-                  <img src={`/images/packages/${activeItinerary.id}.jpg`} alt={activeItinerary.title} onError={(e) => { e.target.onerror = null; e.target.src = '/images/switzerland_vertical_1781089957980.webp'; }} />
+                  <img src={`/images/packages/${activeItinerary.id}.webp`} alt={activeItinerary.title} onError={(e) => { e.target.onerror = null; e.target.src = '/images/Switzerland.webp'; }} />
                   {activeItinerary.discount && (
                     <div className="pkg-hero-discount">
                       Save {activeItinerary.discount.replace(' Off', '')}
@@ -615,7 +615,7 @@ const Packages = () => {
 
                 {/* Map Card */}
                 <div className="pkg-map-card">
-                  <img src="/images/map_placeholder.png" alt="Route Map" />
+                  <img src="/images/map_placeholder.webp" alt="Route Map" />
                 </div>
               </div>
             </div>

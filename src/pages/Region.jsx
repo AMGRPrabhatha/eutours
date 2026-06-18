@@ -8,13 +8,13 @@ const getAlbaniaImage = (name) => {
     'Old Town Square Experience': 'Old Town Square',
   }[name] || name;
 
-  return `/images/albania/${encodeURIComponent(`${filename}.jpg`)}`;
+  return `/images/Albania/${encodeURIComponent(`${filename}.webp`)}`;
 };
 
-const manualImageCountries = ['andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 'czech-republic', 'albania'];
+const manualImageCountries = ['albania'];
 const getManualImage = (id, name) => {
   if (id === 'albania') return getAlbaniaImage(name);
-  return `/images/${id}/${name}.jpg`;
+  return `/images/${id}/${name}.webp`;
 };
 
 // Helper function for deterministic mock data
@@ -146,16 +146,16 @@ const getMockData = (id) => {
   };
 
   const images = [
-    '/images/london_dest_1781077494703.webp',
-    '/images/italy_circle_1781090125109.webp',
-    '/images/swiss_circle_1781090136030.webp',
-    '/images/amsterdam_dest_1781077507425.webp',
-    '/images/france_circle_1781090115021.webp',
-    '/images/paris_dest_1781075727792.webp',
-    '/images/hero_bg_1781075622715.webp',
-    '/images/spain_circle_1781090146338.webp',
-    '/images/italy_vertical_1781089947416.webp',
-    '/images/switzerland_vertical_1781089957980.webp'
+    '/images/london.webp',
+    '/images/Italy.webp',
+    '/images/Swiss Alps.webp',
+    '/images/Amsterdam.webp',
+    '/images/paris.webp',
+    '/images/home hero.webp',
+    '/images/barcelona.webp',
+    '/images/italy/Venice.webp',
+    '/images/Switzerland.webp',
+    '/images/Germany.webp'
   ];
 
   const fallbackDests = [`${capitalized} Capital City`, `Historic ${capitalized}`, `${capitalized} Mountains`, `${capitalized} Coast`, `Rural ${capitalized}`];
@@ -167,14 +167,14 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[i % images.length],
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[i % images.length],
     fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[(i + 5) % images.length],
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[(i + 5) % images.length],
     fallbackImg: images[(i + 5) % images.length]
   }));
 
@@ -204,7 +204,7 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.jpg` : manualImageCountries.includes(id) ? getManualImage(id, title) : images[(itemSeed) % images.length],
+      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, title) : images[(itemSeed) % images.length],
       fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
@@ -260,7 +260,7 @@ const Region = () => {
   if (id === 'france') {
     heroImage = '/images/france/France_hero.webp';
   } else if (id === 'italy') {
-    heroImage = '/images/italy/Italy_hero.jpg';
+    heroImage = '/images/italy/Italy_hero.webp';
   } else if (id === 'albania') {
     heroImage = getAlbaniaImage('Albania hero');
   } else if (regionPages[id] && regionPages[id].hero) {

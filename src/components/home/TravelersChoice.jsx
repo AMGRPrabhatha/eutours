@@ -25,7 +25,7 @@ const TravelersChoice = () => {
       link: '/region/france'
     },
     {
-      img: '/images/Jungfraujoch_Top_of_Europe_Day_Trip.jpg',
+      img: '/images/Jungfraujoch_Top_of_Europe_Day_Trip.webp',
       subtitle: 'Tours • Zurich',
       title: 'Jungfraujoch Top of Europe Day Trip',
       tag: 'Book now for tomorrow',
@@ -35,7 +35,7 @@ const TravelersChoice = () => {
       link: '/region/switzerland'
     },
     {
-      img: '/images/London_Eye_Standard_Ticket.jpg',
+      img: '/images/London_Eye_Standard_Ticket.webp',
       subtitle: 'Attractions • London',
       title: 'London Eye Standard Ticket',
       tag: 'Book now for tomorrow',
@@ -45,7 +45,7 @@ const TravelersChoice = () => {
       link: '/region/uk'
     },
     {
-      img: '/images/Amsterdam_Evening_Canal_Cruise.jpg',
+      img: '/images/Amsterdam_Evening_Canal_Cruise.webp',
       subtitle: 'Cruises • Amsterdam',
       title: 'Amsterdam Evening Canal Cruise',
       tag: 'Book now for today',
@@ -55,7 +55,7 @@ const TravelersChoice = () => {
       link: '/region/netherlands'
     },
     {
-      img: '/images/Vatican_Museums_&_Sistine_Chapel_Tour.jpg',
+      img: '/images/Vatican_Museums_&_Sistine_Chapel_Tour.webp',
       subtitle: 'Tours • Rome',
       title: 'Vatican Museums & Sistine Chapel Tour',
       tag: 'Bestseller',
@@ -65,7 +65,7 @@ const TravelersChoice = () => {
       link: '/region/italy'
     },
     {
-      img: '/images/Sagrada_Familia_Fast_Track_Access.jpg',
+      img: '/images/Sagrada_Familia_Fast_Track_Access.webp',
       subtitle: 'Attractions • Barcelona',
       title: 'Sagrada Familia Fast Track Access',
       tag: 'Book now for tomorrow',
@@ -75,7 +75,7 @@ const TravelersChoice = () => {
       link: '/region/spain'
     },
     {
-      img: '/images/Mount_Titlis_Half-Day_Tour_with_Cable_Car.jpg',
+      img: '/images/Mount_Titlis_Half-Day_Tour_with_Cable_Car.webp',
       subtitle: 'Tours • Lucerne',
       title: 'Mount Titlis Half-Day Tour with Cable Car',
       tag: 'Instant Confirmation',
@@ -85,7 +85,7 @@ const TravelersChoice = () => {
       link: '/region/switzerland'
     },
     {
-      img: '/images/Versailles_Palace_Skip-the-Line_Guided_Tour.jpg',
+      img: '/images/Versailles_Palace_Skip-the-Line_Guided_Tour.webp',
       subtitle: 'Day Trips • Paris',
       title: 'Versailles Palace Skip-the-Line Guided Tour',
       tag: 'Book now for today',

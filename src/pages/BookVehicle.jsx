@@ -35,7 +35,7 @@ const vehicles = [
     ],
     price: '€1,200',
     duration: '7-day package',
-    image: '/images/black_tour_van.png',
+    image: '/images/black_tour_van.webp',
   },
   {
     id: 'mercedes-benz-ford',
@@ -53,7 +53,7 @@ const vehicles = [
     ],
     price: '€1,850',
     duration: '5-day package',
-    image: '/images/black_premium_sedan.png',
+    image: '/images/black_premium_sedan.webp',
   },
   {
     id: 'luxury-vans',
@@ -71,7 +71,7 @@ const vehicles = [
     ],
     price: '€2,100',
     duration: '10-day package',
-    image: '/images/black_vclass_van.png',
+    image: '/images/black_vclass_van.webp',
   },
   {
     id: 'luxury-bus',
@@ -89,7 +89,7 @@ const vehicles = [
     ],
     price: '€3,500',
     duration: '14-day package',
-    image: '/images/black_luxury_coach.png',
+    image: '/images/black_luxury_coach.webp',
   }
 ];
 
@@ -230,7 +230,7 @@ const BookVehicle = () => {
         onClose={() => setModalConfig(prev => ({ ...prev, isOpen: false }))} 
       />
       {/* Hero Section */}
-      <section className="booking-hero" style={{ backgroundImage: "url('/images/Book_a_Vehicle.jpg')" }}>
+      <section className="booking-hero" style={{ backgroundImage: "url('/images/Book_a_Vehicle.webp')" }}>
         <div className="booking-hero-overlay"></div>
         <motion.div 
           className="container booking-hero-content"

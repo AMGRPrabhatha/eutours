@@ -69,7 +69,7 @@ const SpecialFeatures = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="sf-card-top">
-              <img src="/images/Italy.jpg" alt="Beautiful landscape" />
+              <img src="/images/Italy.webp" alt="Beautiful landscape" />
               <span className="sf-number">01</span>
             </div>
             <div className="sf-card-content">
@@ -85,7 +85,7 @@ const SpecialFeatures = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className="sf-card-top">
-              <img src="/images/Swiss Alps.jpg" alt="Mountain landscape" />
+              <img src="/images/Swiss Alps.webp" alt="Mountain landscape" />
               <span className="sf-number">02</span>
             </div>
             <div className="sf-card-content">
@@ -101,7 +101,7 @@ const SpecialFeatures = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <div className="sf-card-top">
-              <img src="/images/paris.jpg" alt="City landscape" />
+              <img src="/images/paris.webp" alt="City landscape" />
               <span className="sf-number">03</span>
             </div>
             <div className="sf-card-content">

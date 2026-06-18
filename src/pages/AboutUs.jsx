@@ -37,7 +37,7 @@ const AboutUs = () => {
   return (
     <div className="about-page">
       {/* Hero Section */}
-      <section className="about-hero" style={{ backgroundImage: "url('/images/aboutus-hero.jpg')" }}>
+      <section className="about-hero" style={{ backgroundImage: "url('/images/aboutus-hero.webp')" }}>
         <div className="about-hero-overlay"></div>
         <motion.div 
           className="container about-hero-content"
@@ -93,7 +93,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img src="/images/Jungfraujoch_Top_of_Europe_Day_Trip.jpg" alt="Comprehensive Travel Support" />
+              <img src="/images/Jungfraujoch_Top_of_Europe_Day_Trip.webp" alt="Comprehensive Travel Support" />
               <div className="service-card-content">
                 <h3>Comprehensive Travel Support</h3>
                 <p>24/7 customer service to assist you before, during, and after your trip.</p>
@@ -107,7 +107,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <img src="/images/Swiss Alps.jpg" alt="Expert Travel Advice" />
+              <img src="/images/Swiss Alps.webp" alt="Expert Travel Advice" />
               <div className="service-card-content">
                 <h3>Expert Travel Advice</h3>
                 <p>Tips and guides to enhance your travel experience.</p>
@@ -121,7 +121,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <img src="/images/Vatican_Museums_&_Sistine_Chapel_Tour.jpg" alt="Diverse Destinations" />
+              <img src="/images/Vatican_Museums_&_Sistine_Chapel_Tour.webp" alt="Diverse Destinations" />
               <div className="service-card-content">
                 <h3>Diverse Destinations</h3>
                 <p>Access to a wide range of domestic and international locations.</p>
@@ -173,7 +173,7 @@ const AboutUs = () => {
             visible: { opacity: 1, scale: 1, transition: { duration: 0.8 } }
           }}
         >
-          <img src="/images/europe_map_wide.png" alt="European Travel Routes" className="reach-map-img" />
+          <img src="/images/europe_map_wide.png" alt="Premium European Travel Routes" className="reach-map-img" style={{ borderRadius: '16px', boxShadow: '0 20px 40px rgba(0,0,0,0.2)' }} />
         </motion.div>
       </section>
 

@@ -20,7 +20,7 @@ const OurPackages = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <img src="/images/Italy.jpg" alt="All-Inclusive Packages" />
+            <img src="/images/Italy.webp" alt="All-Inclusive Packages" />
             <div className="pkg-duration">5 day, 4 night</div>
             <div className="pkg-content">
               <div className="pkg-text">
@@ -39,7 +39,7 @@ const OurPackages = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <img src="/images/Vatican_Museums_&_Sistine_Chapel_Tour.jpg" alt="Cultural Packages" />
+            <img src="/images/Vatican_Museums_&_Sistine_Chapel_Tour.webp" alt="Cultural Packages" />
             <div className="pkg-duration">5 day, 4 night</div>
             <div className="pkg-content">
               <div className="pkg-text">
@@ -57,7 +57,7 @@ const OurPackages = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <img src="/images/Mount_Titlis_Half-Day_Tour_with_Cable_Car.jpg" alt="Adventure Packages" />
+            <img src="/images/Mount_Titlis_Half-Day_Tour_with_Cable_Car.webp" alt="Adventure Packages" />
             <div className="pkg-duration">5 day, 4 night</div>
             <div className="pkg-content">
               <div className="pkg-text">

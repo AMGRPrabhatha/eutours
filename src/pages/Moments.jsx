@@ -23,7 +23,7 @@ const Moments = () => {
           <div className="moments-grid">
             {/* Top Row */}
             <div className="moment-card span-2">
-              <img src="/images/Swiss Alps.jpg" alt="Country above the clouds" className="moment-bg" />
+              <img src="/images/Swiss Alps.webp" alt="Country above the clouds" className="moment-bg" />
               <div className="moment-overlay"></div>
               <div className="moment-badge">Most interesting</div>
               <div className="moment-content">
@@ -38,7 +38,7 @@ const Moments = () => {
             </div>
 
             <div className="moment-card">
-              <img src="/images/Jungfraujoch_Top_of_Europe_Day_Trip.jpg" alt="Jeep Tour" className="moment-bg" />
+              <img src="/images/Jungfraujoch_Top_of_Europe_Day_Trip.webp" alt="Jeep Tour" className="moment-bg" />
               <div className="moment-overlay"></div>
               <div className="moment-play-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -51,7 +51,7 @@ const Moments = () => {
 
             {/* Bottom Row */}
             <div className="moment-card">
-              <img src="/images/Adventure_Styles_hero.jpg" alt="Hiking" className="moment-bg" />
+              <img src="/images/Adventure_Styles_hero.webp" alt="Hiking" className="moment-bg" />
               <div className="moment-overlay"></div>
               <div className="moment-play-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -63,7 +63,7 @@ const Moments = () => {
             </div>
 
             <div className="moment-card">
-              <img src="/images/Sagrada_Familia_Fast_Track_Access.jpg" alt="Culture" className="moment-bg" />
+              <img src="/images/Sagrada_Familia_Fast_Track_Access.webp" alt="Culture" className="moment-bg" />
               <div className="moment-overlay"></div>
               <div className="moment-play-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>
@@ -75,7 +75,7 @@ const Moments = () => {
             </div>
 
             <div className="moment-card">
-              <img src="/images/paris.jpg" alt="City Riding" className="moment-bg" />
+              <img src="/images/paris.webp" alt="City Riding" className="moment-bg" />
               <div className="moment-overlay"></div>
               <div className="moment-play-icon">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M8 5v14l11-7z"/></svg>

@@ -87,7 +87,7 @@ const Contact = () => {
         onClose={() => setModalConfig(prev => ({ ...prev, isOpen: false }))} 
       />
       {/* Contact Hero */}
-      <section className="contact-hero" style={{ backgroundImage: "url('/images/aboutus-hero.jpg')" }}>
+      <section className="contact-hero" style={{ backgroundImage: "url('/images/aboutus-hero.webp')" }}>
         <div className="contact-hero-overlay"></div>
         <motion.div 
           className="container contact-hero-content"

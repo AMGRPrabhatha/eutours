@@ -1,24 +1,24 @@
 // Reusing existing images for now to provide rich aesthetics immediately
 const images = {
-  france: '/images/paris.jpg',
-  italy: '/images/Italy.jpg',
-  swiss: '/images/Switzerland.jpg',
-  spain: '/images/barcelona.jpg',
-  germany: '/images/Germany.jpg',
-  uk: '/images/london.jpg',
-  netherlands: '/images/Netherlands.jpg',
-  greece: '/images/greece.png',
-  portugal: '/images/portugal.png',
-  austria: '/images/Swiss Alps.jpg',
-  belgium: '/images/belgium.png',
-  ireland: '/images/ireland.png',
-  paris_bg: '/images/paris.jpg',
-  rome_bg: '/images/rome.jpg',
-  london_bg: '/images/london.jpg',
-  amsterdam_bg: '/images/Amsterdam.jpg',
-  swiss_bg: '/images/Switzerland.jpg',
-  generic_bg: '/images/europe_map_wide.png',
-  van_bg: '/images/black_luxury_van.png'
+  france: '/images/paris.webp',
+  italy: '/images/Italy.webp',
+  swiss: '/images/Switzerland.webp',
+  spain: '/images/barcelona.webp',
+  germany: '/images/Germany.webp',
+  uk: '/images/london.webp',
+  netherlands: '/images/Netherlands.webp',
+  greece: '/images/greece.webp',
+  portugal: '/images/portugal.webp',
+  austria: '/images/Swiss Alps.webp',
+  belgium: '/images/belgium.webp',
+  ireland: '/images/ireland.webp',
+  paris_bg: '/images/paris.webp',
+  rome_bg: '/images/rome.webp',
+  london_bg: '/images/london.webp',
+  amsterdam_bg: '/images/Amsterdam.webp',
+  swiss_bg: '/images/Switzerland.webp',
+  generic_bg: '/images/europe_map_wide.webp',
+  van_bg: '/images/black_luxury_van.webp'
 };
 
 export const regions = [

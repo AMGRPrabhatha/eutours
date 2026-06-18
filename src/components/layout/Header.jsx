@@ -80,7 +80,7 @@ const Header = () => {
         <nav className="navbar static-nav" id="navbar">
             <div className="container nav-container">
                 <Link to="/" className="logo">
-                    <img src="/images/logo.png" alt="Eutours" />
+                    <img src="/images/logo.webp" alt="Eutours" />
                 </Link>
                 <div 
                     className="menu-toggle" 
