@@ -182,18 +182,23 @@ const TravelGuides = () => {
 
   const openGuide = (guide) => {
     setSelectedGuide(guide);
-    document.body.style.overflow = 'hidden'; // prevent scrolling behind the modal
   };
 
   const closeGuide = () => {
     setSelectedGuide(null);
-    document.body.style.overflow = 'unset';
   };
+
+  useEffect(() => {
+    document.body.style.overflow = selectedGuide ? 'hidden' : '';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [selectedGuide]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') {
-        closeGuide();
+        setSelectedGuide(null);
       }
     };
     if (selectedGuide) {
@@ -206,15 +211,6 @@ const TravelGuides = () => {
 
   return (
     <div className="guides-page">
-      {/* Hero Section */}
-      <section className="guides-hero" style={{ backgroundImage: "url('/images/travelguide-hero.jpg')" }}>
-        <div className="guides-hero-overlay"></div>
-        <div className="guides-hero-content container">
-          <h1>Expert Travel Guides</h1>
-          <p>Everything you need to know for a perfect European getaway.</p>
-        </div>
-      </section>
-
       {/* Guides Grid Section */}
       <section className="guides-content-section container">
         <div className="guides-grid">

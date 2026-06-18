@@ -1,4 +1,4 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   return (
@@ -14,8 +14,8 @@ const Blog = () => {
                 This blog features beautiful photographs and personal experiences, providing insights into the local culture and customs, and inspiring travel enthusiasts to explore this enchanting destination.
               </p>
               <div className="blog-hero-buttons">
-                <button className="btn btn-dark-rounded">Reminder me</button>
-                <button className="btn btn-outline-rounded">Learn More</button>
+                <Link to="/contact?subject=Blog%20Updates" className="btn btn-dark-rounded">Reminder me</Link>
+                <Link to="/travel-guides" className="btn btn-outline-rounded">Learn More</Link>
               </div>
             </div>
           </div>

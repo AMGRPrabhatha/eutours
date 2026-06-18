@@ -1,6 +1,21 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { regionPages } from '../data';
+
+const getAlbaniaImage = (name) => {
+  const filename = {
+    'National Museum of Albania': 'National Museum of Albania Express Pass',
+    'Old Town Square Experience': 'Old Town Square',
+  }[name] || name;
+
+  return `/images/albania/${encodeURIComponent(`${filename}.jpg`)}`;
+};
+
+const manualImageCountries = ['andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 'czech-republic', 'albania'];
+const getManualImage = (id, name) => {
+  if (id === 'albania') return getAlbaniaImage(name);
+  return `/images/${id}/${name}.jpg`;
+};
 
 // Helper function for deterministic mock data
 const getMockData = (id) => {
@@ -107,6 +122,26 @@ const getMockData = (id) => {
     munich: {
       dests: ['Altstadt', 'Maxvorstadt', 'Schwabing', 'Haidhausen', 'Glockenbach'],
       attrs: ['Marienplatz', 'English Garden', 'Nymphenburg', 'Hofbräuhaus']
+    },
+    andorra: {
+      dests: ['Andorra la Vella', 'Encamp', 'Ordino', 'La Massana', 'Canillo'],
+      attrs: ['Vallnord', 'Grandvalira', 'Caldea Spa', 'Casa de la Vall']
+    },
+    bosnia: {
+      dests: ['Sarajevo', 'Mostar', 'Banja Luka', 'Tuzla'],
+      attrs: ['Stari Most', 'Baščaršija', 'Kravica Waterfall', 'Gazi Husrev-beg Mosque']
+    },
+    bulgaria: {
+      dests: ['Sofia', 'Plovdiv', 'Varna', 'Burgas'],
+      attrs: ['Rila Monastery', 'Alexander Nevsky Cathedral', 'Tsarevets Fortress', 'Seven Rila Lakes']
+    },
+    croatia: {
+      dests: ['Dubrovnik', 'Split', 'Zagreb', 'Zadar'],
+      attrs: ['Plitvice Lakes', 'Diocletian\'s Palace', 'Dubrovnik Walls', 'Krka National Park']
+    },
+    'czech-republic': {
+      dests: ['Prague', 'Brno', 'Cesky Krumlov', 'Karlovy Vary'],
+      attrs: ['Charles Bridge', 'Prague Castle', 'Old Town Square', 'St. Vitus Cathedral']
     }
   };
 
@@ -132,20 +167,19 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : images[i % images.length],
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[i % images.length],
     fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : images[(i + 5) % images.length],
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.jpg` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[(i + 5) % images.length],
     fallbackImg: images[(i + 5) % images.length]
   }));
 
   // Top things to do using available attractions
   const topThings = attrNames.map((name, i) => {
-    const isBase = i < 3;
     const itemSeed = seed + i;
     
     let title = `${name} Experience`;
@@ -170,7 +204,7 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.jpg` : images[(itemSeed) % images.length],
+      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.jpg` : manualImageCountries.includes(id) ? getManualImage(id, title) : images[(itemSeed) % images.length],
       fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
@@ -227,6 +261,8 @@ const Region = () => {
     heroImage = '/images/france/France_hero.webp';
   } else if (id === 'italy') {
     heroImage = '/images/italy/Italy_hero.jpg';
+  } else if (id === 'albania') {
+    heroImage = getAlbaniaImage('Albania hero');
   } else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }
@@ -240,15 +276,6 @@ const Region = () => {
         <h1 className="klook-hero-title">
           {title} {id === 'france' && '🇫🇷'} {id === 'italy' && '🇮🇹'}
         </h1>
-      </div>
-
-      {/* Sub Navigation */}
-      <div className="klook-nav">
-        <div className="container klook-nav-container">
-          <div className="klook-nav-tab active">Explore</div>
-          <div className="klook-nav-tab">Things to do</div>
-          <div className="klook-nav-tab">Travel guides</div>
-        </div>
       </div>
 
       {/* Top Destinations Section */}

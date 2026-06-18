@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -10,19 +10,17 @@ const fadeInUp = {
 const Contact = () => {
   const [searchParams] = useSearchParams();
   const tourQuery = searchParams.get('tour');
+  const [status, setStatus] = useState('idle');
   
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
-    destination: '',
+    destination: tourQuery || '',
     message: ''
   });
 
   useEffect(() => {
-    if (tourQuery) {
-      setFormData(prev => ({ ...prev, destination: tourQuery }));
-    }
     window.scrollTo(0, 0);
   }, [tourQuery]);
 
@@ -31,16 +29,43 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Thank you for your inquiry! Our travel experts will get back to you shortly.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      destination: '',
-      message: ''
-    });
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, type: 'contact' }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message');
+      }
+
+      setStatus('success');
+      alert('Thank you for your inquiry! Our travel experts will get back to you shortly.');
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        destination: tourQuery || '',
+        message: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+      alert('There was an error sending your message. Please try again later.');
+    } finally {
+      if (status !== 'error') {
+          setTimeout(() => setStatus('idle'), 3000);
+      } else {
+          setStatus('idle');
+      }
+    }
   };
 
   return (
@@ -179,8 +204,8 @@ const Contact = () => {
                   ></textarea>
                 </div>
 
-                <button type="submit" className="btn-book-orange">
-                  Send Message
+                <button type="submit" className="btn btn-primary" disabled={status === 'loading'}>
+                  {status === 'loading' ? 'SENDING...' : 'SEND MESSAGE'}
                 </button>
               </form>
             </motion.div>

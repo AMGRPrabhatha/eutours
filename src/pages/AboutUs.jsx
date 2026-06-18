@@ -192,7 +192,7 @@ const AboutUs = () => {
           <h2>Ready for your dream European adventure?</h2>
           <p>Join thousands of happy travelers who have explored Europe with us.</p>
           <div className="cta-buttons">
-            <Link to="/" className="btn btn-primary" style={{ marginRight: '1rem' }}>Explore Destinations</Link>
+            <Link to="/region/france" className="btn btn-primary" style={{ marginRight: '1rem' }}>Explore Destinations</Link>
             <Link to="/contact" className="btn btn-accent">Contact Our Experts</Link>
           </div>
         </motion.div>

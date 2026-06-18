@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const SpecialFeatures = () => {
   const scrollRef = useRef(null);
@@ -54,7 +55,7 @@ const SpecialFeatures = () => {
             <p>Save more on your trips with exclusive discounts, seasonal promotions, and unbeatable deals for unforgettable adventures.</p>
           </div>
           <div className="sf-header-right">
-            <button className="btn-sf-learn">Learn More &gt;&gt;&gt;</button>
+            <Link to="/about" className="btn-sf-learn">Learn More &gt;&gt;&gt;</Link>
           </div>
         </div>
 

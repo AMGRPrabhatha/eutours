@@ -7,7 +7,8 @@ const reviewsData = [
     trip: '14 Days in Classic Europe',
     rating: 5,
     text: 'Eutours planned the absolute perfect honeymoon for us! From the moment we landed in Paris to our final night in Rome, everything was incredibly seamless. The luxury transport made hopping between countries entirely stress-free.',
-    date: 'March 2026'
+    date: 'March 2026',
+    avatar: '/images/avatars/avatar_saman_nimeshi_1781792924179.png'
   },
   {
     id: 2,
@@ -15,7 +16,8 @@ const reviewsData = [
     trip: '10 Days in the Swiss Alps',
     rating: 5,
     text: 'Traveling with two young kids is usually a nightmare, but the Eutours team took care of every single logistical detail. Our guide in Interlaken was incredibly knowledgeable and fantastic with the kids. Truly a trip of a lifetime!',
-    date: 'January 2026'
+    date: 'January 2026',
+    avatar: '/images/avatars/avatar_perera_family_1781792938042.png'
   },
   {
     id: 3,
@@ -23,7 +25,8 @@ const reviewsData = [
     trip: '7 Days - Taste of Italy',
     rating: 5,
     text: 'The food and wine tour through Tuscany was breathtaking. I highly recommend letting Eutours handle your itinerary—they found boutique hotels and authentic local experiences that we never would have discovered on our own.',
-    date: 'November 2025'
+    date: 'November 2025',
+    avatar: '/images/avatars/avatar_dilshan_1781792950719.png'
   },
   {
     id: 4,
@@ -31,7 +34,8 @@ const reviewsData = [
     trip: '12 Days - Northern Lights',
     rating: 5,
     text: 'Seeing the Aurora Borealis in Iceland has always been my dream. The Eutours team ensured we were at the right place at the perfect time, with cozy, premium accommodations waiting for us in the extreme cold. Exceptional service.',
-    date: 'February 2026'
+    date: 'February 2026',
+    avatar: '/images/avatars/avatar_amaya_1781792963732.png'
   },
   {
     id: 5,
@@ -39,7 +43,8 @@ const reviewsData = [
     trip: '15 Days Backpacking Europe',
     rating: 5,
     text: 'We wanted a mix of city nightlife and cultural tours. The custom itinerary Eutours built gave us the absolute perfect balance. The local guides in Amsterdam and Berlin were legendary.',
-    date: 'December 2025'
+    date: 'December 2025',
+    avatar: '/images/avatars/avatar_kavindu_friends_1781793007405.png'
   },
   {
     id: 6,
@@ -47,7 +52,8 @@ const reviewsData = [
     trip: '21 Days - Grand European Tour',
     rating: 5,
     text: 'As older travelers, comfort was our top priority. The luxury vans and hand-picked accessible hotels were beyond our expectations. A highly professional, warm, and caring team that we trust completely.',
-    date: 'October 2025'
+    date: 'October 2025',
+    avatar: '/images/avatars/avatar_silvas_1781793020282.png'
   }
 ];
 
@@ -58,15 +64,6 @@ const Reviews = () => {
 
   return (
     <div className="reviews-page">
-      {/* Hero Section */}
-      <section className="reviews-hero" style={{ backgroundImage: "url('/images/reviews-hero.jpg')" }}>
-        <div className="reviews-hero-overlay"></div>
-        <div className="container reviews-hero-content">
-          <h1>What Our Travelers Say</h1>
-          <p>Don't just take our word for it. Read the stories of thousands of happy Sri Lankans who trusted Eutours with their dream European vacation.</p>
-        </div>
-      </section>
-
       {/* Reviews Grid Section */}
       <section className="reviews-grid-section">
         <div className="container">
@@ -80,7 +77,7 @@ const Reviews = () => {
               <div key={review.id} className="modern-review-card">
                 <div className="modern-review-header">
                   <div className="avatar">
-                    <img src={`https://ui-avatars.com/api/?name=${review.name.split(' ').join('+')}&background=f3f4f6&color=111`} alt={review.name} />
+                    <img src={review.avatar || `https://ui-avatars.com/api/?name=${review.name.split(' ').join('+')}&background=f3f4f6&color=111`} alt={review.name} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                   </div>
                   <h4>{review.name}</h4>
                 </div>

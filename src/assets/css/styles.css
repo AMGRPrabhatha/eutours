@@ -506,11 +506,15 @@ ul {
 }
 
 .btn-sf-learn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(249, 115, 22, 0.15);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(249, 115, 22, 0.3);
   color: var(--secondary);
+  text-decoration: none;
   padding: 1rem 2rem;
   border-radius: 30px;
   font-size: 1rem;
@@ -1214,7 +1218,7 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: var(--header-height);
 }
 .klook-hero::after {
   content: '';
@@ -4063,7 +4067,7 @@ ul {
   justify-content: center;
   text-align: center;
   color: white;
-  margin-top: 80px;
+  margin-top: var(--header-height);
 }
 
 .contact-hero-overlay {
@@ -4081,11 +4085,15 @@ ul {
   font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 1rem;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.35);
 }
 
 .contact-hero-content p {
   font-size: 1.15rem;
   opacity: 0.9;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.35);
 }
 
 .contact-split-section {
@@ -5869,9 +5877,13 @@ ul {
 }
 
 .btn-pkg-choose {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: white;
+  text-decoration: none;
   padding: 0.6rem 1.5rem;
   border-radius: 30px;
   cursor: pointer;
@@ -6098,9 +6110,12 @@ ul {
   width: 100%;
   min-height: 46px;
   margin-top: auto;
-  background: #0f2238;
+  background: linear-gradient(135deg, rgba(255, 136, 34, 0.85) 0%, rgba(255, 94, 0, 0.9) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   color: #ffffff;
-  border: 1px solid #0f2238;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 20px rgba(255, 110, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.5), inset 0 -2px 5px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   cursor: pointer;
   font-size: 0.86rem;
@@ -6108,13 +6123,15 @@ ul {
   letter-spacing: 0.04em;
   line-height: 1;
   text-transform: uppercase;
-  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .pfc-book-btn:hover {
-  background: #050505;
-  border-color: #050505;
-  transform: translateY(-1px);
+  background: linear-gradient(135deg, rgba(255, 150, 50, 0.95) 0%, rgba(255, 110, 0, 1) 100%);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(255, 110, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.6), inset 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 1200px) {
@@ -6413,8 +6430,12 @@ ul {
 }
 
 .btn-dark-rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: #1a1a1a;
   color: #fff;
+  text-decoration: none;
   border-radius: 30px;
   padding: 0.8rem 2rem;
   border: none;
@@ -6428,8 +6449,12 @@ ul {
 }
 
 .btn-outline-rounded {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   background: transparent;
   color: #1a1a1a;
+  text-decoration: none;
   border-radius: 30px;
   padding: 0.8rem 2rem;
   border: 1px solid #1a1a1a;

@@ -1,5 +1,5 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const OurPackages = () => {
   return (
@@ -27,7 +27,7 @@ const OurPackages = () => {
                 <h3>All-Inclusive Packages</h3>
                 <p>These include everything from flights to accommodation, meals, and activities.</p>
               </div>
-              <button className="btn-pkg-choose">Choose package</button>
+              <Link to="/packages" className="btn-pkg-choose">Choose package</Link>
             </div>
           </motion.div>
 

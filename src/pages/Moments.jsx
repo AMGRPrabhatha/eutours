@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 const Moments = () => {
   return (
     <main className="moments-page">
@@ -12,8 +14,8 @@ const Moments = () => {
                 This journey offers an unforgettable experience that blends adventure, culture, and natural beauty. Located in the heart of Europe's most iconic destinations.
               </p>
               <div className="moments-buttons">
-                <button className="btn btn-dark-rounded">Reminder me</button>
-                <button className="btn btn-outline-rounded">Learn More</button>
+                <Link to="/contact?subject=Travel%20Moments" className="btn btn-dark-rounded">Reminder me</Link>
+                <Link to="/travel-guides" className="btn btn-outline-rounded">Learn More</Link>
               </div>
             </div>
           </div>

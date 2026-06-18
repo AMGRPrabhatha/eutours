@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 import VehicleActivities from '../components/vehicles/VehicleActivities';
 
@@ -142,9 +142,74 @@ const CardIcon = ({ type, className = '' }) => (
 );
 
 const BookVehicle = () => {
+  const [formData, setFormData] = useState({
+    fullName: '',
+    email: '',
+    flightNumber: '',
+    pickupDate: '',
+    pickupTime: '',
+    adults: '',
+    children: '0',
+    vehicleType: '',
+    pickupLocation: '',
+    dropoffLocation: '',
+    specialRequests: ''
+  });
+  const [status, setStatus] = useState('idle');
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const handleChange = (e) => {
+    const { id, value } = e.target;
+    setFormData(prev => ({ ...prev, [id]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus('loading');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ ...formData, type: 'vehicle' }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send booking request');
+      }
+
+      setStatus('success');
+      alert('Your vehicle booking request has been sent! Our team will contact you shortly with confirmation.');
+      setFormData({
+        fullName: '',
+        email: '',
+        flightNumber: '',
+        pickupDate: '',
+        pickupTime: '',
+        adults: '',
+        children: '0',
+        vehicleType: '',
+        pickupLocation: '',
+        dropoffLocation: '',
+        specialRequests: ''
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('error');
+      alert('There was an error sending your request. Please try again later.');
+    } finally {
+      if (status !== 'error') {
+          setTimeout(() => setStatus('idle'), 3000);
+      } else {
+          setStatus('idle');
+      }
+    }
+  };
 
   return (
     <div className="booking-page">
@@ -253,38 +318,38 @@ const BookVehicle = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInUp}
             >
-              <form className="booking-form-new" onSubmit={(e) => e.preventDefault()}>
+              <form className="booking-form-new" onSubmit={handleSubmit}>
                 
                 <div className="form-row-new">
                   <div className="form-group-new">
                     <label htmlFor="fullName">FULL NAME *</label>
-                    <input type="text" id="fullName" placeholder="Your full name" required />
+                    <input type="text" id="fullName" placeholder="Your full name" required value={formData.fullName} onChange={handleChange} />
                   </div>
                   <div className="form-group-new">
                     <label htmlFor="email">EMAIL ADDRESS *</label>
-                    <input type="email" id="email" placeholder="your@email.com" required />
+                    <input type="email" id="email" placeholder="your@email.com" required value={formData.email} onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="form-row-new">
                   <div className="form-group-new">
                     <label htmlFor="flightNumber">FLIGHT NUMBER</label>
-                    <input type="text" id="flightNumber" placeholder="e.g., UL 504" />
+                    <input type="text" id="flightNumber" placeholder="e.g., UL 504" value={formData.flightNumber} onChange={handleChange} />
                   </div>
                   <div className="form-group-new">
                     <label htmlFor="pickupDate">PICKUP DATE *</label>
-                    <input type="date" id="pickupDate" required />
+                    <input type="date" id="pickupDate" required value={formData.pickupDate} onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="form-row-new">
                   <div className="form-group-new">
                     <label htmlFor="pickupTime">PICKUP TIME *</label>
-                    <input type="time" id="pickupTime" required />
+                    <input type="time" id="pickupTime" required value={formData.pickupTime} onChange={handleChange} />
                   </div>
                   <div className="form-group-new">
                     <label htmlFor="adults">ADULTS *</label>
-                    <select id="adults" required>
+                    <select id="adults" required value={formData.adults} onChange={handleChange}>
                       <option value="">Select number</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -297,7 +362,7 @@ const BookVehicle = () => {
                 <div className="form-row-new">
                   <div className="form-group-new">
                     <label htmlFor="children">CHILDREN</label>
-                    <select id="children">
+                    <select id="children" value={formData.children} onChange={handleChange}>
                       <option value="0">No Children</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -306,7 +371,7 @@ const BookVehicle = () => {
                   </div>
                   <div className="form-group-new">
                     <label htmlFor="vehicleType">VEHICLE TYPE *</label>
-                    <select id="vehicleType" required>
+                    <select id="vehicleType" required value={formData.vehicleType} onChange={handleChange}>
                       <option value="">Select vehicle type</option>
                       {vehicles.map(v => (
                         <option key={v.id} value={v.id}>{v.name}</option>
@@ -318,20 +383,22 @@ const BookVehicle = () => {
                 <div className="form-row-new">
                   <div className="form-group-new">
                     <label htmlFor="pickupLocation">PICKUP LOCATION *</label>
-                    <input type="text" id="pickupLocation" placeholder="e.g., Colombo Airport" required />
+                    <input type="text" id="pickupLocation" placeholder="e.g., Colombo Airport" required value={formData.pickupLocation} onChange={handleChange} />
                   </div>
                   <div className="form-group-new">
                     <label htmlFor="dropoffLocation">DROP-OFF LOCATION *</label>
-                    <input type="text" id="dropoffLocation" placeholder="e.g., Galle Fort Hotel" required />
+                    <input type="text" id="dropoffLocation" placeholder="e.g., Galle Fort Hotel" required value={formData.dropoffLocation} onChange={handleChange} />
                   </div>
                 </div>
 
                 <div className="form-group-new full-width">
                   <label htmlFor="specialRequests">SPECIAL REQUESTS</label>
-                  <textarea id="specialRequests" rows="3" placeholder="Any special requirements, luggage details, or additional information..."></textarea>
+                  <textarea id="specialRequests" rows="3" placeholder="Any special requirements, luggage details, or additional information..." value={formData.specialRequests} onChange={handleChange}></textarea>
                 </div>
 
-                <button type="submit" className="btn btn-book-orange">BOOK NOW →</button>
+                <button type="submit" className="btn btn-book-orange" disabled={status === 'loading'}>
+                  {status === 'loading' ? 'SENDING REQUEST...' : 'BOOK NOW →'}
+                </button>
               </form>
             </motion.div>
           </div>
