@@ -199,6 +199,12 @@ ul {
   color: var(--accent);
 }
 
+.logo img {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
 .logo-mark {
   width: 30px;
   height: 30px;

@@ -80,12 +80,7 @@ const Header = () => {
         <nav className="navbar static-nav" id="navbar">
             <div className="container nav-container">
                 <Link to="/" className="logo">
-                    <span className="logo-mark" aria-hidden="true">e</span>
-                    <span className="logo-word">
-                      <span className="logo-word-dark">eu</span>
-                      <span className="logo-word-dot" aria-hidden="true"></span>
-                      <span className="logo-word-muted">tours</span>
-                    </span>
+                    <img src="/logo.png" alt="Eutours" />
                 </Link>
                 <div 
                     className="menu-toggle" 
