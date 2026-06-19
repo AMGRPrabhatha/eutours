@@ -129,40 +129,37 @@ const AboutUs = () => {
             </motion.div>
           </div>
 
+          {/* New Experience Section */}
+          <div className="about-intro-top" style={{ marginTop: '7rem', paddingTop: '4rem', borderTop: '1px solid #eaeaea' }}>
+            <div className="about-intro-left">
+              <span className="section-pill">//OUR EXPERIENCE</span>
+              <h2 className="about-intro-title">
+                16 years experience in European tours <span className="text-light">tailored exclusively for Sri Lankan travelers.</span>
+              </h2>
+            </div>
+            <div className="about-intro-right desktop-only">
+              <div className="stat-item">
+                <h3>16+</h3>
+                <p>Years Experience</p>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-item">
+                <h3>15+</h3>
+                <p>Countries</p>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-item">
+                <h3>50K+</h3>
+                <p>Happy Travelers</p>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
 
 
-      {/* Global Reach Stats */}
-      <section className="global-reach-section" style={{ paddingBottom: '3rem' }}>
-        <div className="container">
-          <motion.div 
-            className="global-reach-header"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            variants={fadeInUp}
-          >
-            <div className="reach-title">
-              <h2>We Tailor Our European Tours To Meet Your Specific <span className="text-theme">Travel Dreams</span></h2>
-            </div>
-            <div className="reach-stats">
-              <div className="stat-item">
-                <span className="stat-value">15+</span>
-                <span className="stat-label">Countries Explored<br/>Across Europe</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-value">50K+</span>
-                <span className="stat-label">Happy Travelers<br/>From Sri Lanka</span>
-              </div>
-              <div className="stat-item">
-                <span className="stat-value">99%</span>
-                <span className="stat-label">Satisfaction Rate<br/>For Our Tours</span>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </section>
+
 
       {/* New Liquid Glass CTA Section */}
       <section className="liquid-glass-cta" style={{
