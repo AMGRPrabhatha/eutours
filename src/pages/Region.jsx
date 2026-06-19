@@ -121,17 +121,17 @@ const exactImageMap = {
   'National Museum of Denmark': '/images/Denmark/National Museum of Denmark.jpg',
   'Royal Palace of Denmark': '/images/Denmark/Royal Palace of Denmark.jpg',
   'Denmark Scenic Gorge': '/images/Denmark/Denmark Scenic Gorge.jpg',
-  'Old Town Square (Denmark)': '/images/Denmark/Old Town Square.jpg', // Distinguish if needed
   'National Museum of Denmark Express Pass': '/images/Denmark/National Museum of Denmark Express Pass.jpg',
   'Full Day Guided Tour of Denmark Capital City': '/images/Denmark/Full Day Guided Tour of Denmark Capital City.jpg',
-  'Denmark Scenic Gorge Skip-the-Line Ticket': '/images/Denmark/Denmark Scenic Gorge Skip-the-Line Ticket.jpg'
+  'Denmark Scenic Gorge Skip-the-Line Ticket': '/images/Denmark/Denmark Scenic Gorge Skip-the-Line Ticket.jpg',
+  'Old Town Square Experience': '/images/Denmark/Old Town Square.jpg'
 };
 
-const getManualImage = (id, name, capitalized) => {
+const manualImageCountries = ['albania', 'andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 'czech-republic', 'denmark'];
+const getManualImage = (id, name) => {
   if (id === 'albania') return getAlbaniaImage(name);
   if (exactImageMap[name]) return exactImageMap[name];
-  // Default predictable path for user to add manually
-  return `/images/${capitalized}/${name}.jpg`;
+  return `/images/${id}/${name}.webp`;
 };
 
 // Helper function for deterministic mock data
@@ -284,14 +284,14 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: getManualImage(id, name, capitalized),
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[i % images.length],
     fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: getManualImage(id, name, capitalized),
+    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[(i + 5) % images.length],
     fallbackImg: images[(i + 5) % images.length]
   }));
 
@@ -321,7 +321,7 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: getManualImage(id, title, capitalized),
+      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, title) : images[(itemSeed) % images.length],
       fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
@@ -374,8 +374,7 @@ const Region = () => {
   const [previewData, setPreviewData] = useState({ isOpen: false, img: '', title: '' });
   
   // Use existing hero if available, else generic
-  let heroImage = `/images/${capitalized}/${capitalized}.jpg`;
-  
+  let heroImage = '/images/home%20hero.webp';
   if (['france', 'japan', 'london', 'vienna', 'italy', 'switzerland', 'spain', 'germany', 'netherlands', 'paris', 'rome', 'amsterdam', 'united-kingdom', 'greece', 'portugal', 'ireland'].includes(id)) {
     heroImage = `/images/${id}.webp`;
   } else if (id === 'andorra') heroImage = '/images/Andorra/Andorra.jpg';
