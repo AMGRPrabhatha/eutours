@@ -284,15 +284,15 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[i % images.length],
-    fallbackImg: images[i % images.length]
+    img: manualImageCountries.includes(id) ? getManualImage(id, name) : '',
+    fallbackImg: ''
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[(i + 5) % images.length],
-    fallbackImg: images[(i + 5) % images.length]
+    img: manualImageCountries.includes(id) ? getManualImage(id, name) : '',
+    fallbackImg: ''
   }));
 
   // Top things to do using available attractions
@@ -321,8 +321,8 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, title) : images[(itemSeed) % images.length],
-      fallbackImg: images[(itemSeed) % images.length],
+      img: manualImageCountries.includes(id) ? getManualImage(id, title) : '',
+      fallbackImg: '',
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
     };
@@ -416,13 +416,15 @@ const Region = () => {
               className="klook-card klook-square-card" 
               key={index}
             >
-              <img 
-                src={dest.img} 
-                alt={dest.title} 
-                onError={(e) => { e.target.onerror = null; e.target.src = dest.fallbackImg; }} 
-                onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
-                style={{ cursor: 'pointer' }}
-              />
+              {dest.img && (
+                <img 
+                  src={dest.img} 
+                  alt={dest.title} 
+                  onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }} 
+                  onClick={() => setPreviewData({ isOpen: true, img: dest.img, title: dest.title })}
+                  style={{ cursor: 'pointer' }}
+                />
+              )}
               <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="klook-card-overlay">{dest.title}</div>
               </Link>
@@ -445,13 +447,15 @@ const Region = () => {
               className="klook-card klook-rect-card" 
               key={index}
             >
-              <img 
-                src={attr.img} 
-                alt={attr.title} 
-                onError={(e) => { e.target.onerror = null; e.target.src = attr.fallbackImg; }} 
-                onClick={() => setPreviewData({ isOpen: true, img: attr.img, title: attr.title })}
-                style={{ cursor: 'pointer' }}
-              />
+              {attr.img && (
+                <img 
+                  src={attr.img} 
+                  alt={attr.title} 
+                  onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }} 
+                  onClick={() => setPreviewData({ isOpen: true, img: attr.img, title: attr.title })}
+                  style={{ cursor: 'pointer' }}
+                />
+              )}
               <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="klook-card-overlay">{attr.title}</div>
               </Link>
@@ -472,7 +476,7 @@ const Region = () => {
           {topThings.slice(0, visibleThings).map((thing, index) => (
             <div className="klook-vert-card" key={index}>
               <div className="klook-vert-img-box">
-                  <img src={thing.img} alt={thing.title} onError={(e) => { e.target.onerror = null; e.target.src = thing.fallbackImg; }} />
+                  {thing.img && <img src={thing.img} alt={thing.title} onError={(e) => { e.target.onerror = null; e.target.style.display = 'none'; }} />}
                   <div className="klook-vert-heart">♡</div>
               </div>
               <div className="klook-vert-info">
