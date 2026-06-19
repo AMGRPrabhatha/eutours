@@ -12,126 +12,13 @@ const getAlbaniaImage = (name) => {
   return `/images/Albania/${encodeURIComponent(`${filename}.webp`)}`;
 };
 
-const exactImageMap = {
-  // Andorra
-  'Andorra la Vella': '/images/Andorra/Andorra.jpg',
-  'Encamp': '/images/Andorra/andorra encamp.jpg',
-  'Ordino': '/images/Andorra/Ordino.jpg',
-  'La Massana': '/images/Andorra/La Massana.jpg',
-  'Canillo': '/images/Andorra/Canillo.jpg',
-  'Vallnord': '/images/Andorra/Vallnord.jpg',
-  'Grandvalira': '/images/Andorra/andorra grandvalira.jpg',
-  'Caldea Spa': '/images/Andorra/andorra caldea spa.jpg',
-  'Vallnord Express Pass': '/images/Andorra/Vallnord Express Pass.jpg',
-  'Full Day Guided Tour of Andorra la Vella': '/images/Andorra/Full Day Guided Tour of Andorra la Vella.jpg',
-  'Caldea Spa Skip-the-Line Ticket': '/images/Andorra/Caldea Spa Skip-the-Line Ticket.avif',
-
-  // Austria
-  'Vienna': '/images/Austria/Vienna.jpg',
-  'Salzburg': '/images/Austria/Salzburg.jpg',
-  'Innsbruck': '/images/Austria/Innsbruck.jpg',
-  'Graz': '/images/Austria/Graz.jpg',
-  'Linz': '/images/Austria/Linz.jpg',
-  'Schönbrunn Palace': '/images/Austria/Schönbrunn Palace.jpg',
-  'Hohensalzburg Fortress': '/images/Austria/Hohensalzburg Fortress.jpg',
-  'Hofburg': '/images/Austria/Hofburg.jpg',
-  'Belvedere': '/images/Austria/Belvedere.jpg',
-  'Schönbrunn Palace Express Pass': '/images/Austria/Schönbrunn Palace Express Pass.jpg',
-  'Full Day Guided Tour of Vienna': '/images/Austria/Full Day Guided Tour of Vienna.jpg',
-  'Hofburg Skip-the-Line Ticket': '/images/Austria/Hofburg Skip-the-Line Ticket.jpg',
-  'Belvedere Experience': '/images/Austria/Belvedere Experience.jpg',
-
-  // Belgium
-  'Brussels': '/images/Belgium/Brussels.jpg',
-  'Bruges': '/images/Belgium/Bruges.jpg',
-  'Antwerp': '/images/Belgium/Antwerp.jpg',
-  'Ghent': '/images/Belgium/Ghent.jpg',
-  'Liege': '/images/Belgium/Liege.jpg',
-  'Grand Place': '/images/Belgium/belgium grand place.jpg',
-  'Atomium': '/images/Belgium/Atomium.jpg',
-  'Manneken Pis': '/images/Belgium/manneken pis.jpg',
-  'Belfry of Bruges': '/images/Belgium/Belfry of Bruges.jpg',
-  'Grand Place Express Pass': '/images/Belgium/Grand Place Express Pass.jpg',
-  'Full Day Guided Tour of Brussels': '/images/Belgium/Full Day Guided Tour of Brussels.avif',
-  'Manneken Pis Skip-the-Line Ticket': '/images/Belgium/Manneken Pis Skip-the-Line Ticket.jpg',
-  'Belfry of Bruges Experience': '/images/Belgium/Belfry of Bruges Experience.jpg',
-
-  // Bosnia
-  'Sarajevo': '/images/Bosnia/Sarajevo.jpg',
-  'Mostar': '/images/Bosnia/Mostar.jpg',
-  'Banja Luka': '/images/Bosnia/Banja Luka.jpg',
-  'Tuzla': '/images/Bosnia/bosnia tuzla.jpg',
-  'Stari Most': '/images/Bosnia/Stari Most.jpg',
-  'Baščaršija': '/images/Bosnia/bosnia baščaršija.jpg',
-  'Kravica Waterfall': '/images/Bosnia/Kravica Waterfall.jpg',
-  'Gazi Husrev-beg Mosque': '/images/Bosnia/bosnia Gazi Husrev-beg Mosque.jpg',
-  'Stari Most Express Pass': '/images/Bosnia/Stari Most Express Pass.jpg',
-  'Full Day Guided Tour of Sarajevo': '/images/Bosnia/Full Day Guided Tour of Sarajevo.jpg',
-  'Kravica Waterfall Skip-the-Line Ticket': '/images/Bosnia/Kravica Waterfall Skip-the-Line Ticket.jpg',
-  'Gazi Husrev-beg Mosque Experience': '/images/Bosnia/Gazi Husrev-beg Mosque Experience.jpg',
-
-  // Bulgaria
-  'Sofia': '/images/Bulgaria/Sofia.jpg',
-  'Plovdiv': '/images/Bulgaria/Plovdiv.jpg',
-  'Varna': '/images/Bulgaria/Varna.jpg',
-  'Burgas': '/images/Bulgaria/Burgas.jpg',
-  'Rila Monastery': '/images/Bulgaria/Rila Monastery.jpg',
-  'Alexander Nevsky Cathedral': '/images/Bulgaria/Alexander Nevsky Cathedral.jpg',
-  'Tsarevets Fortress': '/images/Bulgaria/Tsarevets Fortress.jpg',
-  'Seven Rila Lakes': '/images/Bulgaria/Seven Rila Lakes.jpg',
-  'Rila Monastery Express Pass': '/images/Bulgaria/Rila Monastery Express Pass.jpg',
-  'Full Day Guided Tour of Sofia': '/images/Bulgaria/Full Day Guided Tour of Sofia.jpg',
-  'Tsarevets Fortress Skip-the-Line Ticket': '/images/Bulgaria/Tsarevets Fortress Skip-the-Line Ticket.jpg',
-  'Seven Rila Lakes Experience': '/images/Bulgaria/Seven Rila Lakes Experience.jpg',
-
-  // Croatia
-  'Dubrovnik': '/images/Croatia/Dubrovnik.jpg',
-  'Split': '/images/Croatia/Split.jpg',
-  'Zagreb': '/images/Croatia/Zagreb.jpg',
-  'Zadar': '/images/Croatia/Zadar.jpg',
-  'Plitvice Lakes': '/images/Croatia/Plitvice Lakes.jpg',
-  'Diocletian\'s Palace': '/images/Croatia/croatia diocletian\'s palace.avif',
-  'Dubrovnik Walls': '/images/Croatia/Dubrovnik Walls.jpg',
-  'Krka National Park': '/images/Croatia/Krka National Park.jpg',
-  'Plitvice Lakes Express Pass': '/images/Croatia/Plitvice Lakes Express Pass.jpg',
-  'Full Day Guided Tour of Dubrovnik': '/images/Croatia/Full Day Guided Tour of Dubrovnik.jpg',
-  'Dubrovnik Walls Skip-the-Line Ticket': '/images/Croatia/Dubrovnik Walls Skip-the-Line Ticket.jpg',
-  'Krka National Park Experience': '/images/Croatia/Krka National Park Experience.jpg',
-
-  // Czech Republic
-  'Prague': '/images/Czech Republic/Prague.jpg',
-  'Brno': '/images/Czech Republic/Brno.jpg',
-  'Cesky Krumlov': '/images/Czech Republic/Cesky Krumlov.jpg',
-  'Karlovy Vary': '/images/Czech Republic/Karlovy Vary.jpg',
-  'Charles Bridge': '/images/Czech Republic/Charles Bridge.jpg',
-  'Prague Castle': '/images/Czech Republic/Prague Castle.jpg',
-  'Old Town Square': '/images/Czech Republic/Old Town Square.jpg',
-  'St. Vitus Cathedral': '/images/Czech Republic/St. Vitus Cathedral.jpg',
-  'Charles Bridge Express Pass': '/images/Czech Republic/Charles Bridge Express Pass.jpg',
-  'Full Day Guided Tour of Prague': '/images/Czech Republic/Full Day Guided Tour of Prague.jpg',
-  'Old Town Square Skip-the-Line Ticket': '/images/Czech Republic/Old Town Square Skip-the-Line Ticket.jpg',
-  'St. Vitus Cathedral Experience': '/images/Czech Republic/St. Vitus Cathedral Experience.jpg',
-
-  // Denmark
-  'Denmark Capital City': '/images/Denmark/denmark capital city.jpg',
-  'Historic Denmark': '/images/Denmark/Historic Denmark.jpg',
-  'Denmark Mountains': '/images/Denmark/Denmark Mountains.jpg',
-  'Denmark Coast': '/images/Denmark/Denmark Coast.jpg',
-  'Rural Denmark': '/images/Denmark/Rural Denmark.jpg',
-  'National Museum of Denmark': '/images/Denmark/National Museum of Denmark.jpg',
-  'Royal Palace of Denmark': '/images/Denmark/Royal Palace of Denmark.jpg',
-  'Denmark Scenic Gorge': '/images/Denmark/Denmark Scenic Gorge.jpg',
-  'National Museum of Denmark Express Pass': '/images/Denmark/National Museum of Denmark Express Pass.jpg',
-  'Full Day Guided Tour of Denmark Capital City': '/images/Denmark/Full Day Guided Tour of Denmark Capital City.jpg',
-  'Denmark Scenic Gorge Skip-the-Line Ticket': '/images/Denmark/Denmark Scenic Gorge Skip-the-Line Ticket.jpg',
-  'Old Town Square Experience': '/images/Denmark/Old Town Square.jpg'
-};
-
-const manualImageCountries = ['albania', 'andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 'czech-republic', 'denmark'];
+import { exactImageMap, manualImageCountries } from '../data/imageMappings';
 const getManualImage = (id, name) => {
   if (id === 'albania') return getAlbaniaImage(name);
-  if (exactImageMap[name]) return exactImageMap[name];
-  return `/images/${id}/${name}.webp`;
+  const key = `${id}_${name}`;
+  if (exactImageMap[key]) return exactImageMap[key];
+  if (exactImageMap[name]) return exactImageMap[name]; // fallback for legacy keys
+  return '';
 };
 
 // Helper function for deterministic mock data
@@ -375,8 +262,12 @@ const Region = () => {
   
   // Use existing hero if available, else generic
   let heroImage = '/images/home%20hero.webp';
-  if (['france', 'japan', 'london', 'vienna', 'italy', 'switzerland', 'spain', 'germany', 'netherlands', 'paris', 'rome', 'amsterdam', 'united-kingdom', 'greece', 'portugal', 'ireland'].includes(id)) {
+  if (['japan', 'london', 'vienna', 'italy', 'switzerland', 'spain', 'netherlands', 'paris', 'rome', 'amsterdam', 'united-kingdom', 'portugal', 'ireland'].includes(id)) {
     heroImage = `/images/${id}.webp`;
+  }
+  
+  if (id === 'albania') {
+    heroImage = getAlbaniaImage('Albania hero');
   } else if (id === 'andorra') heroImage = '/images/Andorra/Andorra.jpg';
   else if (id === 'austria') heroImage = '/images/Austria/Austria.jpg';
   else if (id === 'belgium') heroImage = '/images/Belgium/Belgium.jpg';
@@ -385,9 +276,14 @@ const Region = () => {
   else if (id === 'croatia') heroImage = '/images/Croatia/Croatia.jpg';
   else if (id === 'czech-republic') heroImage = '/images/Czech Republic/Czech-republic.jpg';
   else if (id === 'denmark') heroImage = '/images/Denmark/Denmark.jpg';
-  else if (id === 'albania') {
-    heroImage = getAlbaniaImage('Albania hero');
-  } else if (regionPages[id] && regionPages[id].hero) {
+  else if (id === 'england') heroImage = '/images/England/England.jpg';
+  else if (id === 'estonia') heroImage = '/images/Estonia/Estonia.jpg';
+  else if (id === 'faroe-islands') heroImage = '/images/Faroe Islands/Faroe Island.jpg';
+  else if (id === 'finland') heroImage = '/images/Finland/Finland .avif';
+  else if (id === 'france') heroImage = '/images/France/France_hero.webp';
+  else if (id === 'germany') heroImage = '/images/Germany/Germany.jpg';
+  else if (id === 'greece') heroImage = '/images/Greece/Greece.jpg';
+  else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }
 
