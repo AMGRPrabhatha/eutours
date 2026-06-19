@@ -227,11 +227,110 @@ export const exactImageMap = {
   'greece_Full Day Guided Tour of Athens': '/images/Greece/Athens.jpg',
   'greece_Parthenon Skip-the-Line Ticket': '/images/Greece/Parthenon.jpg',
   'greece_Meteora Experience': '/images/Greece/Meteora.jpg',
-  'greece_Delphi Experience': '/images/Greece/Delphi.jpg'
+  'greece_Delphi Experience': '/images/Greece/Delphi.jpg',
+
+  // Hungary
+  'hungary_Hungary Capital City': '/images/Hungary/Hungary Capital City.jpg',
+  'hungary_Historic Hungary': '/images/Hungary/Historic Hungary.jpg',
+  'hungary_Hungary Mountains': '/images/Hungary/Hungary Mountains.jpg',
+  'hungary_Hungary Coast': '/images/Hungary/Hungary Coast.jpg',
+  'hungary_Rural Hungary': '/images/Hungary/ Rural Hungary.jpg',
+  'hungary_National Museum of Hungary': '/images/Hungary/National Museum of Hungary.jpeg',
+  'hungary_Royal Palace of Hungary': '/images/Hungary/Royal Palace of Hungary.jpg',
+  'hungary_Hungary Scenic Gorge': '/images/Hungary/Hungary Scenic Gorge.jpg',
+  'hungary_Old Town Square': '/images/Hungary/Old Town Square.jpg',
+  'hungary_Old Town Square Experience': '/images/Hungary/Old Town Square.jpg',
+
+  // Iceland
+  'iceland_Iceland Capital City': '/images/Iceland/ Iceland Capital City.jpg',
+  'iceland_Historic Iceland': '/images/Iceland/Historic Iceland.jpg',
+  'iceland_Iceland Mountains': '/images/Iceland/ Iceland Mountains .jpg',
+  'iceland_Iceland Coast': '/images/Iceland/Iceland Coast.jpg',
+  'iceland_Rural Iceland': '/images/Iceland/Rural Iceland.jpg',
+  'iceland_National Museum of Iceland': '/images/Iceland/National Museum of Iceland.jpg',
+  'iceland_Royal Palace of Iceland': '/images/Iceland/Royal Palace of Iceland.avif',
+  'iceland_Iceland Scenic Gorge': '/images/Iceland/Iceland Scenic Gorge.jpg',
+  'iceland_Old Town Square': '/images/Iceland/Old Town Square.JPG',
+  'iceland_Old Town Square Experience': '/images/Iceland/Old Town Square.JPG',
+
+  // Ireland
+  'ireland_Dublin': '/images/Ireland/Dublin.jpg',
+  'ireland_Galway': '/images/Ireland/Galway.jpg',
+  'ireland_Cork': '/images/Ireland/Cork.jpg',
+  'ireland_Killarney': '/images/Ireland/Killarney.jpg',
+  'ireland_Limerick': '/images/Ireland/Limerick.jpg',
+  'ireland_Cliffs of Moher': '/images/Ireland/Cliffs of Moher.jpg',
+  'ireland_Guinness Storehouse': '/images/Ireland/Guinness Storehouse.jpg',
+  'ireland_Ring of Kerry': '/images/Ireland/Ring of Kerry.jpg',
+  'ireland_Blarney Castle': '/images/Ireland/Blarney Castle.jpg',
+  'ireland_Cliffs of Moher Express Pass': '/images/Ireland/Cliffs of Moher.jpg',
+  'ireland_Full Day Guided Tour of Dublin': '/images/Ireland/Dublin.jpg',
+  'ireland_Guinness Storehouse Skip-the-Line Ticket': '/images/Ireland/Guinness Storehouse.jpg',
+  'ireland_Ring of Kerry Experience': '/images/Ireland/Ring of Kerry.jpg',
+
+  // Italy
+  'italy_Rome': '/images/Italy/Rome.webp',
+  'italy_Venice': '/images/Italy/Venice.webp',
+  'italy_Florence': '/images/Italy/Florence.webp',
+  'italy_Milan': '/images/Italy/Milan.webp',
+  'italy_Naples': '/images/Italy/Naples.webp',
+  'italy_Verona': '/images/Italy/Verona.webp',
+  'italy_Turin': '/images/Italy/Turin.webp',
+  'italy_Bologna': '/images/Italy/Bologna.webp',
+  'italy_Genoa': '/images/Italy/Genoa.webp',
+  'italy_Palermo': '/images/Italy/Palermo.webp',
+  'italy_Colosseum': '/images/Italy/Colosseum.webp',
+  'italy_Vatican Museums': '/images/Italy/Vatican_Museums.webp',
+  'italy_Leaning Tower of Pisa': '/images/Italy/Leaning_Tower_of_Pisa.webp',
+  'italy_Pantheon': '/images/Italy/Pantheon.webp',
+  'italy_Pompeii': '/images/Italy/Pompeii.webp',
+  'italy_Uffizi Gallery': '/images/Italy/Uffizi_Gallery.webp',
+  'italy_Duomo di Milano': '/images/Italy/Duomo_di_Milano.webp',
+  'italy_Amalfi Coast': '/images/Italy/Amalfi_Coast.webp',
+  'italy_Colosseum Express Pass': '/images/Italy/Colosseum_Express_Pass.webp',
+  'italy_Full Day Guided Tour of Rome': '/images/Italy/Full_Day_Guided_Tour_of_Rome.webp',
+  'italy_Leaning Tower of Pisa Skip-the-Line Ticket': '/images/Italy/Leaning_Tower_of_Pisa_Skip-the-Line_Ticket.webp',
+  'italy_Pantheon Experience': '/images/Italy/Pantheon_Experience.webp',
+
+  // Kosovo
+  'kosovo_Kosovo Capital City': '/images/Kosovo/Kosovo Capital City.jpg',
+  'kosovo_Historic Kosovo': '/images/Kosovo/Historic Kosovo.jpg',
+  'kosovo_Kosovo Mountains': '/images/Kosovo/Kosovo Mountains.jpg',
+  'kosovo_Kosovo Coast': '/images/Kosovo/Kosovo Coast.webp',
+  'kosovo_Rural Kosovo': '/images/Kosovo/Rural Kosovo.jpg',
+  'kosovo_National Museum of Kosovo': '/images/Kosovo/National Museum of Kosovo.jpeg',
+  'kosovo_Royal Palace of Kosovo': '/images/Kosovo/Royal Palace of Kosovo.jpg',
+  'kosovo_Kosovo Scenic Gorge': '/images/Kosovo/Kosovo Scenic Gorge.jpg',
+  'kosovo_Old Town Square': '/images/Kosovo/Old Town Square.jpg',
+  'kosovo_Old Town Square Experience': '/images/Kosovo/Old Town Square.jpg',
+
+  // Latvia
+  'latvia_Latvia Capital City': '/images/Latvia/ Latvia Capital City.jpg',
+  'latvia_Historic Latvia': '/images/Latvia/Historic Latvia .jpg',
+  'latvia_Latvia Mountains': '/images/Latvia/Latvia Mountains.jpg',
+  'latvia_Latvia Coast': '/images/Latvia/Latvia Coast.jpg',
+  'latvia_Rural Latvia': '/images/Latvia/ Rural Latvia.jpg',
+  'latvia_National Museum of Latvia': '/images/Latvia/National Museum of Latvia.jpg',
+  'latvia_Royal Palace of Latvia': '/images/Latvia/Royal Palace of Latvia.jpg',
+  'latvia_Latvia Scenic Gorge': '/images/Latvia/ Latvia Scenic Gorge.jpg',
+  'latvia_Old Town Square': '/images/Latvia/Old Town Square.jpg',
+  'latvia_Old Town Square Experience': '/images/Latvia/Old Town Square.jpg',
+
+  // Lithuania
+  'lithuania_Lithuania Capital City': '/images/Lithuania/Lithuania Capital City.jpg',
+  'lithuania_Historic Lithuania': '/images/Lithuania/Historic Lithuania.jpg',
+  'lithuania_Lithuania Mountains': '/images/Lithuania/Lithuania Mountains.jpg',
+  'lithuania_Lithuania Coast': '/images/Lithuania/Lithuania Coast.jpg',
+  'lithuania_Rural Lithuania': '/images/Lithuania/Rural Lithuania.jpg',
+  'lithuania_National Museum of Lithuania': '/images/Lithuania/National Museum of Lithuania.jpg',
+  'lithuania_Royal Palace of Lithuania': '/images/Lithuania/Royal Palace of Lithuania.jpg',
+  'lithuania_Lithuania Scenic Gorge': '/images/Lithuania/Lithuania Scenic Gorge.jpg',
+  'lithuania_Old Town Square': '/images/Lithuania/Old Town Square.webp',
+  'lithuania_Old Town Square Experience': '/images/Lithuania/Old Town Square.webp'
 };
 
 export const manualImageCountries = [
   'albania', 'andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 
   'czech-republic', 'denmark', 'england', 'estonia', 'faroe-islands', 'finland', 
-  'france', 'germany', 'greece'
+  'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'kosovo', 'latvia', 'lithuania'
 ];
