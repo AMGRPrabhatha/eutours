@@ -110,14 +110,28 @@ const exactImageMap = {
   'Charles Bridge Express Pass': '/images/Czech Republic/Charles Bridge Express Pass.jpg',
   'Full Day Guided Tour of Prague': '/images/Czech Republic/Full Day Guided Tour of Prague.jpg',
   'Old Town Square Skip-the-Line Ticket': '/images/Czech Republic/Old Town Square Skip-the-Line Ticket.jpg',
-  'St. Vitus Cathedral Experience': '/images/Czech Republic/St. Vitus Cathedral Experience.jpg'
+  'St. Vitus Cathedral Experience': '/images/Czech Republic/St. Vitus Cathedral Experience.jpg',
+
+  // Denmark
+  'Denmark Capital City': '/images/Denmark/denmark capital city.jpg',
+  'Historic Denmark': '/images/Denmark/Historic Denmark.jpg',
+  'Denmark Mountains': '/images/Denmark/Denmark Mountains.jpg',
+  'Denmark Coast': '/images/Denmark/Denmark Coast.jpg',
+  'Rural Denmark': '/images/Denmark/Rural Denmark.jpg',
+  'National Museum of Denmark': '/images/Denmark/National Museum of Denmark.jpg',
+  'Royal Palace of Denmark': '/images/Denmark/Royal Palace of Denmark.jpg',
+  'Denmark Scenic Gorge': '/images/Denmark/Denmark Scenic Gorge.jpg',
+  'Old Town Square (Denmark)': '/images/Denmark/Old Town Square.jpg', // Distinguish if needed
+  'National Museum of Denmark Express Pass': '/images/Denmark/National Museum of Denmark Express Pass.jpg',
+  'Full Day Guided Tour of Denmark Capital City': '/images/Denmark/Full Day Guided Tour of Denmark Capital City.jpg',
+  'Denmark Scenic Gorge Skip-the-Line Ticket': '/images/Denmark/Denmark Scenic Gorge Skip-the-Line Ticket.jpg'
 };
 
-const manualImageCountries = ['albania', 'andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 'czech-republic'];
-const getManualImage = (id, name) => {
+const getManualImage = (id, name, capitalized) => {
   if (id === 'albania') return getAlbaniaImage(name);
   if (exactImageMap[name]) return exactImageMap[name];
-  return `/images/${id}/${name}.webp`;
+  // Default predictable path for user to add manually
+  return `/images/${capitalized}/${name}.jpg`;
 };
 
 // Helper function for deterministic mock data
@@ -270,14 +284,14 @@ const getMockData = (id) => {
   // Generate top destinations using exactly the available names
   const topDests = destNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[i % images.length],
+    img: getManualImage(id, name, capitalized),
     fallbackImg: images[i % images.length]
   }));
 
   // Top attractions using exactly the available names
   const topAttractions = attrNames.map((name, i) => ({
     title: name,
-    img: (id === 'france' || id === 'italy') ? `/images/${id}/${name.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, name) : images[(i + 5) % images.length],
+    img: getManualImage(id, name, capitalized),
     fallbackImg: images[(i + 5) % images.length]
   }));
 
@@ -307,7 +321,7 @@ const getMockData = (id) => {
       title: title,
       loc: loc,
       desc: desc,
-      img: (id === 'france' || id === 'italy') ? `/images/${id}/${title.replace(/ /g, '_')}.webp` : manualImageCountries.includes(id) ? getManualImage(id, title) : images[(itemSeed) % images.length],
+      img: getManualImage(id, title, capitalized),
       fallbackImg: images[(itemSeed) % images.length],
       badge: i % 2 === 0 ? 'Book now for tomorrow' : 'Instant Confirmation',
       rating: (4.5 + (i % 5) * 0.1).toFixed(1)
@@ -360,7 +374,8 @@ const Region = () => {
   const [previewData, setPreviewData] = useState({ isOpen: false, img: '', title: '' });
   
   // Use existing hero if available, else generic
-  let heroImage = '/images/home%20hero.webp';
+  let heroImage = `/images/${capitalized}/${capitalized}.jpg`;
+  
   if (['france', 'japan', 'london', 'vienna', 'italy', 'switzerland', 'spain', 'germany', 'netherlands', 'paris', 'rome', 'amsterdam', 'united-kingdom', 'greece', 'portugal', 'ireland'].includes(id)) {
     heroImage = `/images/${id}.webp`;
   } else if (id === 'andorra') heroImage = '/images/Andorra/Andorra.jpg';
@@ -370,6 +385,7 @@ const Region = () => {
   else if (id === 'bulgaria') heroImage = '/images/Bulgaria/Bulgaria.jpg';
   else if (id === 'croatia') heroImage = '/images/Croatia/Croatia.jpg';
   else if (id === 'czech-republic') heroImage = '/images/Czech Republic/Czech-republic.jpg';
+  else if (id === 'denmark') heroImage = '/images/Denmark/Denmark.jpg';
   else if (id === 'albania') {
     heroImage = getAlbaniaImage('Albania hero');
   } else if (regionPages[id] && regionPages[id].hero) {
