@@ -35,7 +35,7 @@ const vehicles = [
     ],
     price: '€1,800',
     duration: '7-day package',
-    image: '/images/Mercedes Classe v extralong 7pax.png',
+    image: '/images/Mercedes Classe v extralong 7pax.webp',
   },
   {
     id: 'mercedes-v-class',
@@ -53,7 +53,7 @@ const vehicles = [
     ],
     price: '€2,100',
     duration: '10-day package',
-    image: '/images/Mercedes V-Class.jpg',
+    image: '/images/Mercedes V-Class.webp',
   },
   {
     id: 'luxury-bus',
