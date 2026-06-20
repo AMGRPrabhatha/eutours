@@ -262,7 +262,7 @@ const Region = () => {
   
   // Use existing hero if available, else generic
   let heroImage = '/images/home%20hero.webp';
-  if (['japan', 'london', 'vienna', 'switzerland', 'spain', 'netherlands', 'paris', 'rome', 'amsterdam', 'united-kingdom', 'portugal'].includes(id)) {
+  if (['japan', 'london', 'vienna', 'switzerland', 'spain', 'paris', 'rome', 'amsterdam', 'united-kingdom', 'portugal'].includes(id)) {
     heroImage = `/images/${id}.webp`;
   }
   
@@ -290,6 +290,13 @@ const Region = () => {
   else if (id === 'kosovo') heroImage = '/images/home%20hero.webp'; // No hero for Kosovo
   else if (id === 'latvia') heroImage = '/images/Latvia/Latvia.jpg';
   else if (id === 'lithuania') heroImage = '/images/Lithuania/Lithuania.jpg';
+  else if (id === 'macedonia') heroImage = '/images/Macedonia/Macedonia.jpg';
+  else if (id === 'malta') heroImage = '/images/Malta/Malta.jpg';
+  else if (id === 'moldova') heroImage = '/images/Moldova/Moldova.jpg';
+  else if (id === 'netherlands') heroImage = '/images/Netherlands/Netherlands.jpg';
+  else if (id === 'northern-ireland') heroImage = '/images/Northern-ireland/Northern-ireland.webp';
+  else if (id === 'norway') heroImage = '/images/Norway/Norway.jpg';
+  else if (id === 'poland') heroImage = '/images/Poland/Poland.jpg';
   else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }

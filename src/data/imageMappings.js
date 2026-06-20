@@ -326,11 +326,99 @@ export const exactImageMap = {
   'lithuania_Royal Palace of Lithuania': '/images/Lithuania/Royal Palace of Lithuania.jpg',
   'lithuania_Lithuania Scenic Gorge': '/images/Lithuania/Lithuania Scenic Gorge.jpg',
   'lithuania_Old Town Square': '/images/Lithuania/Old Town Square.webp',
-  'lithuania_Old Town Square Experience': '/images/Lithuania/Old Town Square.webp'
+  'lithuania_Old Town Square Experience': '/images/Lithuania/Old Town Square.webp',
+
+  // Macedonia
+  'macedonia_Macedonia Capital City': '/images/Macedonia/Macedonia Capital City.jpg',
+  'macedonia_Historic Macedonia': '/images/Macedonia/Historic Macedonia.jpg',
+  'macedonia_Macedonia Mountains': '/images/Macedonia/Macedonia Mountains .jpg',
+  'macedonia_Macedonia Coast': '/images/Macedonia/Macedonia Coast.jpg',
+  'macedonia_Rural Macedonia': '/images/Macedonia/Rural Macedonia.avif',
+  'macedonia_National Museum of Macedonia': '/images/Macedonia/National Museum of Macedonia.jpg',
+  'macedonia_Royal Palace of Macedonia': '/images/Macedonia/Royal Palace of Macedonia.webp',
+  'macedonia_Macedonia Scenic Gorge': '/images/Macedonia/Macedonia Scenic Gorge.webp',
+  'macedonia_Old Town Square': '/images/Macedonia/Old Town Square.webp',
+  'macedonia_Old Town Square Experience': '/images/Macedonia/Old Town Square.webp',
+
+  // Malta
+  'malta_Malta Capital City': '/images/Malta/Malta Capital City.jpg',
+  'malta_Historic Malta': '/images/Malta/Historic Malta.jpg',
+  'malta_Malta Mountains': '/images/Malta/Malta Mountains.jpg',
+  'malta_Malta Coast': '/images/Malta/Malta Coast.jpg',
+  'malta_Rural Malta': '/images/Malta/Rural Malta.jpg',
+  'malta_National Museum of Malta': '/images/Malta/National Museum of Malta.jpg',
+  'malta_Royal Palace of Malta': '/images/Malta/Royal Palace of Malta.jpg',
+  'malta_Malta Scenic Gorge': '/images/Malta/Malta Scenic Gorge.jpg',
+  'malta_Old Town Square': '/images/Malta/Old Town Square.jpg',
+  'malta_Old Town Square Experience': '/images/Malta/Old Town Square.jpg',
+
+  // Moldova
+  'moldova_Moldova Capital City': '/images/Moldova/Moldova Capital City.jpg',
+  'moldova_Historic Moldova': '/images/Moldova/Historic Moldova.jpg',
+  'moldova_Moldova Mountains': '/images/Moldova/Moldova Mountains.jpg',
+  'moldova_Moldova Coast': '/images/Moldova/Moldova Coast.jpg',
+  'moldova_Rural Moldova': '/images/Moldova/Rural Moldova.jpg',
+  'moldova_National Museum of Moldova': '/images/Moldova/National Museum of Moldova.jpg',
+  'moldova_Royal Palace of Moldova': '/images/Moldova/Royal Palace of Moldova.jpg',
+  'moldova_Moldova Scenic Gorge': '/images/Moldova/Moldova Scenic Gorge.jpg',
+  'moldova_Old Town Square': '/images/Moldova/Old Town Square.jpg',
+  'moldova_Old Town Square Experience': '/images/Moldova/Old Town Square.jpg',
+
+  // Netherlands
+  'netherlands_Amsterdam': '/images/Netherlands/Amsterdam.jpg',
+  'netherlands_Rotterdam': '/images/Netherlands/Rotterdam.jpg',
+  'netherlands_The Hague': '/images/Netherlands/The Hague.jpg',
+  'netherlands_Utrecht': '/images/Netherlands/Utrecht.jpg',
+  'netherlands_Maastricht': '/images/Netherlands/Maastricht.jpg',
+  'netherlands_Rijksmuseum': '/images/Netherlands/Rijksmuseum.jpg',
+  'netherlands_Anne Frank House': '/images/Netherlands/Anne Frank House.jpg',
+  'netherlands_Van Gogh Museum': '/images/Netherlands/Van Gogh Museum.jpg',
+  'netherlands_Keukenhof': '/images/Netherlands/Keukenhof.jpeg',
+  'netherlands_Rijksmuseum Express Pass': '/images/Netherlands/Rijksmuseum.jpg',
+  'netherlands_Full Day Guided Tour of Amsterdam': '/images/Netherlands/Amsterdam.jpg',
+  'netherlands_Anne Frank House Skip-the-Line Ticket': '/images/Netherlands/Anne Frank House.jpg',
+  'netherlands_Van Gogh Museum Experience': '/images/Netherlands/Van Gogh Museum.jpg',
+
+  // Northern-ireland
+  'northern-ireland_Northern-ireland Capital City': '/images/Northern-ireland/Northern-ireland Capital City.jpg',
+  'northern-ireland_Historic Northern-ireland': '/images/Northern-ireland/Historic Northern-ireland.jpg',
+  'northern-ireland_Northern-ireland Mountains': '/images/Northern-ireland/Northern-ireland Mountains.jpg',
+  'northern-ireland_Northern-ireland Coast': '/images/Northern-ireland/Northern-ireland Coast.jpg',
+  'northern-ireland_Rural Northern-ireland': '/images/Northern-ireland/Rural Northern-ireland.jpg',
+  'northern-ireland_National Museum of Northern-ireland': '/images/Northern-ireland/National Museum of Northern-ireland.JPG',
+  'northern-ireland_Royal Palace of Northern-ireland': '/images/Northern-ireland/Royal Palace of Northern-ireland.jpg',
+  'northern-ireland_Northern-ireland Scenic Gorge': '/images/Northern-ireland/Northern-ireland Scenic Gorge.jpg',
+  'northern-ireland_Old Town Square': '/images/Northern-ireland/Old Town Square.JPG',
+  'northern-ireland_Old Town Square Experience': '/images/Northern-ireland/Old Town Square.JPG',
+
+  // Norway
+  'norway_Norway Capital City': '/images/Norway/Norway Capital City.jpg',
+  'norway_Historic Norway': '/images/Norway/Historic Norway.jpg',
+  'norway_Norway Mountains': '/images/Norway/Norway Mountains.jpg',
+  'norway_Norway Coast': '/images/Norway/Norway Coast.jpg',
+  'norway_Rural Norway': '/images/Norway/Rural Norway.jpg',
+  'norway_National Museum of Norway': '/images/Norway/National Museum of Norway.jpg',
+  'norway_Royal Palace of Norway': '/images/Norway/Royal Palace of Norway.jpg',
+  'norway_Norway Scenic Gorge': '/images/Norway/Norway Scenic Gorge.jpg',
+  'norway_Old Town Square': '/images/Norway/Old Town Square.jpg',
+  'norway_Old Town Square Experience': '/images/Norway/Old Town Square.jpg',
+
+  // Poland
+  'poland_Poland Capital City': '/images/Poland/Poland Capital City.jpg',
+  'poland_Historic Poland': '/images/Poland/Historic Poland.jpg',
+  'poland_Poland Mountains': '/images/Poland/Poland Mountains.jpg',
+  'poland_Poland Coast': '/images/Poland/Poland Coast.jpg',
+  'poland_Rural Poland': '/images/Poland/Rural Poland.JPG',
+  'poland_National Museum of Poland': '/images/Poland/National Museum of Poland.jpg',
+  'poland_Royal Palace of Poland': '/images/Poland/Royal Palace of Poland.jpg',
+  'poland_Poland Scenic Gorge': '/images/Poland/Poland Scenic Gorge.jpg',
+  'poland_Old Town Square': '/images/Poland/Old Town Square.JPG',
+  'poland_Old Town Square Experience': '/images/Poland/Old Town Square.JPG'
 };
 
 export const manualImageCountries = [
   'albania', 'andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 
   'czech-republic', 'denmark', 'england', 'estonia', 'faroe-islands', 'finland', 
-  'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'kosovo', 'latvia', 'lithuania'
+  'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'kosovo', 'latvia', 'lithuania',
+  'macedonia', 'malta', 'moldova', 'netherlands', 'northern-ireland', 'norway', 'poland'
 ];
