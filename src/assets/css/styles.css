@@ -6859,6 +6859,10 @@ ul {
     min-height: 0 !important;
   }
 
+  .sf-header-left h2 {
+    font-size: 2rem !important;
+  }
+
   .klook-hero {
     margin-top: var(--header-height) !important;
     height: clamp(420px, 58svh, 560px) !important;
@@ -6901,8 +6905,8 @@ ul {
   }
 
   .klook-section-title {
-    font-size: clamp(2rem, 8vw, 2.6rem) !important;
-    line-height: 1.12 !important;
+    font-size: clamp(1.4rem, 6vw, 1.7rem) !important;
+    line-height: 1.2 !important;
     letter-spacing: 0 !important;
   }
 
@@ -7393,8 +7397,8 @@ ul {
 
   .region-page .klook-section-title {
     max-width: 100%;
-    font-size: clamp(1.85rem, 8vw, 2.25rem) !important;
-    line-height: 1.08 !important;
+    font-size: clamp(1.4rem, 6vw, 1.7rem) !important;
+    line-height: 1.2 !important;
     letter-spacing: 0 !important;
     overflow-wrap: break-word;
   }
