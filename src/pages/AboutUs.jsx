@@ -162,11 +162,10 @@ const AboutUs = () => {
 
 
       {/* New Liquid Glass CTA Section */}
-      <section className="liquid-glass-cta" style={{
+      <section className="liquid-glass-cta cta-fixed-bg" style={{
         backgroundImage: 'url(/images/europe_map_wide.png)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
         padding: '120px 0',
         position: 'relative',
         display: 'flex',

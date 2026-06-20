@@ -23,6 +23,16 @@
   box-sizing: border-box;
 }
 
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.cta-fixed-bg {
+  background-attachment: fixed;
+}
+
 body, button, input, textarea, select {
   font-family: 'Inter', sans-serif;
   color: var(--text-main);
@@ -6825,6 +6835,9 @@ ul {
     margin-top: var(--header-height) !important;
     height: clamp(430px, 60svh, 620px) !important;
     min-height: 0 !important;
+    background-attachment: scroll !important;
+  }
+  .cta-fixed-bg {
     background-attachment: scroll !important;
   }
 
