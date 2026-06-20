@@ -15,9 +15,23 @@ const getAlbaniaImage = (name) => {
 import { exactImageMap, manualImageCountries } from '../data/imageMappings';
 const getManualImage = (id, name) => {
   if (id === 'albania') return getAlbaniaImage(name);
-  const key = `${id}_${name}`;
+  
+  // Try exact match first
+  let key = `${id}_${name}`;
   if (exactImageMap[key]) return exactImageMap[key];
   if (exactImageMap[name]) return exactImageMap[name]; // fallback for legacy keys
+
+  // Strip generated suffixes for 'Top things to do' cards
+  let baseName = name;
+  if (name.endsWith(' Express Pass')) baseName = name.replace(' Express Pass', '');
+  else if (name.endsWith(' Skip-the-Line Ticket')) baseName = name.replace(' Skip-the-Line Ticket', '');
+  else if (name.endsWith(' Experience')) baseName = name.replace(' Experience', '');
+  else if (name.startsWith('Full Day Guided Tour of ')) baseName = name.replace('Full Day Guided Tour of ', '');
+
+  key = `${id}_${baseName}`;
+  if (exactImageMap[key]) return exactImageMap[key];
+  if (exactImageMap[baseName]) return exactImageMap[baseName];
+
   return '';
 };
 
