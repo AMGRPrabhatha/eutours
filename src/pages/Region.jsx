@@ -293,10 +293,13 @@ const Region = () => {
   else if (id === 'macedonia') heroImage = '/images/Macedonia/Macedonia.jpg';
   else if (id === 'malta') heroImage = '/images/Malta/Malta.jpg';
   else if (id === 'moldova') heroImage = '/images/Moldova/Moldova.jpg';
+  else if (id === 'montenegro') heroImage = '/images/Montenegro/Montenegro.jpg';
   else if (id === 'netherlands') heroImage = '/images/Netherlands/Netherlands.jpg';
   else if (id === 'northern-ireland') heroImage = '/images/Northern-ireland/Northern-ireland.webp';
   else if (id === 'norway') heroImage = '/images/Norway/Norway.jpg';
   else if (id === 'poland') heroImage = '/images/Poland/Poland.jpg';
+  else if (id === 'romania') heroImage = '/images/Romania/Romania.jpg';
+  else if (id === 'scotland') heroImage = '/images/Scotland/Scotland.jpg';
   else if (regionPages[id] && regionPages[id].hero) {
     heroImage = regionPages[id].hero;
   }

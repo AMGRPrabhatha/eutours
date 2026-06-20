@@ -413,12 +413,49 @@ export const exactImageMap = {
   'poland_Royal Palace of Poland': '/images/Poland/Royal Palace of Poland.jpg',
   'poland_Poland Scenic Gorge': '/images/Poland/Poland Scenic Gorge.jpg',
   'poland_Old Town Square': '/images/Poland/Old Town Square.JPG',
-  'poland_Old Town Square Experience': '/images/Poland/Old Town Square.JPG'
+  'poland_Old Town Square Experience': '/images/Poland/Old Town Square.JPG',
+
+  // Montenegro
+  'montenegro_Montenegro Capital City': '/images/Montenegro/ Montenegro Capital City.jpg',
+  'montenegro_Historic Montenegro': '/images/Montenegro/Historic Montenegro.JPG',
+  'montenegro_Montenegro Mountains': '/images/Montenegro/Montenegro Mountains.jpg',
+  'montenegro_Montenegro Coast': '/images/Montenegro/Montenegro Coast.jpg',
+  'montenegro_Rural Montenegro': '/images/Montenegro/Rural Montenegro.jpg',
+  'montenegro_National Museum of Montenegro': '/images/Montenegro/National Museum of Montenegro.jpeg',
+  'montenegro_Royal Palace of Montenegro': '/images/Montenegro/Royal Palace of Montenegro.jpg',
+  'montenegro_Montenegro Scenic Gorge': '/images/Montenegro/Montenegro Scenic Gorge.JPG',
+  'montenegro_Old Town Square': '/images/Montenegro/Old Town Square.jpg',
+  'montenegro_Old Town Square Experience': '/images/Montenegro/Old Town Square.jpg',
+
+  // Romania
+  'romania_Romania Capital City': '/images/Romania/Romania Capital City.jpg',
+  'romania_Historic Romania': '/images/Romania/Historic Romania.webp',
+  'romania_Romania Mountains': '/images/Romania/Romania Mountains.jpg',
+  'romania_Romania Coast': '/images/Romania/Romania Coast.jpeg',
+  'romania_Rural Romania': '/images/Romania/Rural Romania.jpg',
+  'romania_National Museum of Romania': '/images/Romania/National Museum of Romania.jpg',
+  'romania_Royal Palace of Romania': '/images/Romania/Royal Palace of Romania.jpg',
+  'romania_Romania Scenic Gorge': '/images/Romania/Romania Scenic Gorge.jpg',
+  'romania_Old Town Square': '/images/Romania/Old Town Square.jpg',
+  'romania_Old Town Square Experience': '/images/Romania/Old Town Square.jpg',
+
+  // Scotland
+  'scotland_Scotland Capital City': '/images/Scotland/Scotland Capital City.jpg',
+  'scotland_Historic Scotland': '/images/Scotland/Historic Scotland.jpg',
+  'scotland_Scotland Mountains': '/images/Scotland/Scotland Mountains.jpg',
+  'scotland_Scotland Coast': '/images/Scotland/Scotland Coast.jpg',
+  'scotland_Rural Scotland': '/images/Scotland/Rural Scotland.jpg',
+  'scotland_National Museum of Scotland': '/images/Scotland/National Museum of Scotland.jpg',
+  'scotland_Royal Palace of Scotland': '/images/Scotland/Royal Palace of Scotland.jpg',
+  'scotland_Scotland Scenic Gorge': '/images/Scotland/Scotland Scenic Gorge.jpg',
+  'scotland_Old Town Square': '/images/Scotland/Old Town Square.jpg',
+  'scotland_Old Town Square Experience': '/images/Scotland/Old Town Square.jpg'
 };
 
 export const manualImageCountries = [
   'albania', 'andorra', 'austria', 'belgium', 'bosnia', 'bulgaria', 'croatia', 
   'czech-republic', 'denmark', 'england', 'estonia', 'faroe-islands', 'finland', 
   'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'kosovo', 'latvia', 'lithuania',
-  'macedonia', 'malta', 'moldova', 'netherlands', 'northern-ireland', 'norway', 'poland'
+  'macedonia', 'malta', 'moldova', 'netherlands', 'northern-ireland', 'norway', 'poland',
+  'montenegro', 'romania', 'scotland'
 ];
