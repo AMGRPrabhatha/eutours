@@ -449,7 +449,133 @@ export const exactImageMap = {
   'scotland_Royal Palace of Scotland': '/images/Scotland/Royal Palace of Scotland.jpg',
   'scotland_Scotland Scenic Gorge': '/images/Scotland/Scotland Scenic Gorge.jpg',
   'scotland_Old Town Square': '/images/Scotland/Old Town Square.jpg',
-  'scotland_Old Town Square Experience': '/images/Scotland/Old Town Square.jpg'
+  'scotland_Old Town Square Experience': '/images/Scotland/Old Town Square.jpg',
+
+  // Portugal
+  'portugal_Lisbon': '/images/Portugal/Lisbon.jpg',
+  'portugal_Porto': '/images/Portugal/Porto.jpg',
+  'portugal_Sintra': '/images/Portugal/Sintra.jpg',
+  'portugal_Faro': '/images/Portugal/Faro.jpg',
+  'portugal_Coimbra': '/images/Portugal/Coimbra.jpg',
+  'portugal_Belém Tower': '/images/Portugal/Belém Tower.jpg',
+  'portugal_Pena Palace': '/images/Portugal/Pena Palace.jpg',
+  'portugal_Jerónimos Monastery': '/images/Portugal/Jerónimos Monastery.jpg',
+  'portugal_Ribeira': '/images/Portugal/Ribeira.jpg',
+  'portugal_Belem Tower Entry': '/images/Portugal/Belém Tower.jpg',
+  'portugal_Pena Palace Tour': '/images/Portugal/Pena Palace.jpg',
+  'portugal_Jeronimos Monastery Ticket': '/images/Portugal/Jerónimos Monastery.jpg',
+
+  // Serbia
+  'serbia_Serbia Capital City': '/images/Serbia/Serbia Capital City.jpg',
+  'serbia_Historic Serbia': '/images/Serbia/Historic Serbia.jpg',
+  'serbia_Serbia Mountains': '/images/Serbia/Serbia Mountains.jpg',
+  'serbia_Serbia Coast': '/images/Serbia/Serbia Coast.jpg',
+  'serbia_Rural Serbia': '/images/Serbia/Rural Serbia.jpg',
+  'serbia_National Museum of Serbia': '/images/Serbia/National Museum of Serbia.jpg',
+  'serbia_Royal Palace of Serbia': '/images/Serbia/Royal Palace of Serbia.jpg',
+  'serbia_Serbia Scenic Gorge': '/images/Serbia/Serbia Scenic Gorge.JPG',
+  'serbia_Old Town Square': '/images/Serbia/Old Town Square.jpg',
+  'serbia_Old Town Square Experience': '/images/Serbia/Old Town Square.jpg',
+
+  // Slovakia
+  'slovakia_Slovakia Capital City': '/images/Slovakia/Slovakia Capital City.jpg',
+  'slovakia_Historic Slovakia': '/images/Slovakia/Historic Slovakia.jpg',
+  'slovakia_Slovakia Mountains': '/images/Slovakia/Slovakia Mountains.jpg',
+  'slovakia_Slovakia Coast': '/images/Slovakia/Slovakia Coast.jpg',
+  'slovakia_Rural Slovakia': '/images/Slovakia/Rural Slovakia.jpg',
+  'slovakia_National Museum of Slovakia': '/images/Slovakia/National Museum of Slovakia.jpg',
+  'slovakia_Royal Palace of Slovakia': '/images/Slovakia/Royal Palace of Slovakia.jpg',
+  'slovakia_Slovakia Scenic Gorge': '/images/Slovakia/Slovakia Scenic Gorge.JPG',
+  'slovakia_Old Town Square': '/images/Slovakia/Old Town Square.jpg',
+  'slovakia_Old Town Square Experience': '/images/Slovakia/Old Town Square.jpg',
+
+  // Slovenia
+  'slovenia_Slovenia Capital City': '/images/Slovenia/Slovenia Capital City.jpg',
+  'slovenia_Historic Slovenia': '/images/Slovenia/Historic Slovenia.jpg',
+  'slovenia_Slovenia Mountains': '/images/Slovenia/Slovenia Mountains.jpg',
+  'slovenia_Slovenia Coast': '/images/Slovenia/Slovenia Coast.jpg',
+  'slovenia_Rural Slovenia': '/images/Slovenia/Rural Slovenia.jpg',
+  'slovenia_National Museum of Slovenia': '/images/Slovenia/National Museum of Slovenia.jpg',
+  'slovenia_Royal Palace of Slovenia': '/images/Slovenia/Royal Palace of Slovenia.JPG',
+  'slovenia_Slovenia Scenic Gorge': '/images/Slovenia/Slovenia Scenic Gorge.jpg',
+  'slovenia_Old Town Square': '/images/Slovenia/Old Town Square.jpg',
+  'slovenia_Old Town Square Experience': '/images/Slovenia/Old Town Square.jpg',
+
+  // Spain
+  'spain_Barcelona': '/images/Spain/Barcelona.jpg',
+  'spain_Madrid': '/images/Spain/Madrid.jpg',
+  'spain_Seville': '/images/Spain/Seville.jpg',
+  'spain_Valencia': '/images/Spain/Valencia.jpg',
+  'spain_Granada': '/images/Spain/Granada.jpg',
+  'spain_Sagrada Familia': '/images/Spain/Sagrada Familia.jpg',
+  'spain_Alhambra': '/images/Spain/Alhambra.jpg',
+  'spain_Park Güell': '/images/Spain/Park Güell.jpg',
+  'spain_Prado Museum': '/images/Spain/Prado Museum.jpg',
+  'spain_Sagrada Familia Entry': '/images/Spain/Sagrada Familia.jpg',
+  'spain_Alhambra Guided Tour': '/images/Spain/Alhambra.jpg',
+  'spain_Park Guell Visit': '/images/Spain/Park Güell.jpg',
+
+  // Svalbard
+  'svalbard_Svalbard Capital City': '/images/Svalbard/Svalbard Capital City.jpg',
+  'svalbard_Historic Svalbard': '/images/Svalbard/Historic Svalbard.jpg',
+  'svalbard_Svalbard Mountains': '/images/Svalbard/Svalbard Mountains.jpg',
+  'svalbard_Svalbard Coast': '/images/Svalbard/Svalbard Coast.JPG',
+  'svalbard_Rural Svalbard': '/images/Svalbard/Rural Svalbard.jpg',
+  'svalbard_National Museum of Svalbard': '/images/Svalbard/National Museum of Svalbard.jpg',
+  'svalbard_Royal Palace of Svalbard': '/images/Svalbard/Royal Palace of Svalbard.jpg',
+  'svalbard_Svalbard Scenic Gorge': '/images/Svalbard/Svalbard Scenic Gorge.jpg',
+  'svalbard_Old Town Square': '/images/Svalbard/Old Town Square.jpg',
+  'svalbard_Old Town Square Experience': '/images/Svalbard/Old Town Square.jpg',
+
+  // Sweden
+  'sweden_Sweden Capital City': '/images/Sweden/Sweden Capital City.jpg',
+  'sweden_Historic Sweden': '/images/Sweden/Historic Sweden.jpg',
+  'sweden_Sweden Mountains': '/images/Sweden/Sweden Mountains.jpg',
+  'sweden_Sweden Coast': '/images/Sweden/Sweden Coast.JPG',
+  'sweden_Rural Sweden': '/images/Sweden/Rural Sweden.jpg',
+  'sweden_National Museum of Sweden': '/images/Sweden/National Museum of Sweden.jpg',
+  'sweden_Royal Palace of Sweden': '/images/Sweden/Royal Palace of Sweden.jpg',
+  'sweden_Sweden Scenic Gorge': '/images/Sweden/Sweden Scenic Gorge.jpg',
+  'sweden_Old Town Square': '/images/Sweden/Old Town Square.JPG',
+  'sweden_Old Town Square Experience': '/images/Sweden/Old Town Square.JPG',
+
+  // Switzerland
+  'switzerland_Zurich': '/images/Switzerland/Zurich.jpg',
+  'switzerland_Geneva': '/images/Switzerland/Geneva.JPG',
+  'switzerland_Lucerne': '/images/Switzerland/Lucerne.jpg',
+  'switzerland_Bern': '/images/Switzerland/Bern.jpg',
+  'switzerland_Interlaken': '/images/Switzerland/Interlaken.jpg',
+  'switzerland_Matterhorn': '/images/Switzerland/Matterhorn.jpg',
+  'switzerland_Jungfraujoch': '/images/Switzerland/Jungfraujoch.jpg',
+  'switzerland_Lake Geneva': '/images/Switzerland/Lake Geneva.jpg',
+  'switzerland_Chapel Bridge': '/images/Switzerland/Chapel Bridge.JPG',
+  'switzerland_Matterhorn Excursion': '/images/Switzerland/Matterhorn.jpg',
+  'switzerland_Jungfraujoch Trip': '/images/Switzerland/Jungfraujoch.jpg',
+  'switzerland_Lake Geneva Cruise': '/images/Switzerland/Lake Geneva.jpg',
+
+  // Turkey
+  'turkey_Turkey Capital City': '/images/Turkey/Turkey Capital City.jpg',
+  'turkey_Historic Turkey': '/images/Turkey/Historic Turkey.jpg',
+  'turkey_Turkey Mountains': '/images/Turkey/Turkey Mountains.jpg',
+  'turkey_Turkey Coast': '/images/Turkey/Turkey Coast.jpg',
+  'turkey_Rural Turkey': '/images/Turkey/Rural Turkey.jpg',
+  'turkey_National Museum of Turkey': '/images/Turkey/National Museum of Turkey.jpg',
+  'turkey_Royal Palace of Turkey': '/images/Turkey/Royal Palace of Turkey.jpg',
+  'turkey_Turkey Scenic Gorge': '/images/Turkey/Turkey Scenic Gorge.JPG',
+  'turkey_Old Town Square': '/images/Turkey/Old Town Square.jpg',
+  'turkey_Old Town Square Experience': '/images/Turkey/Old Town Square.jpg',
+
+  // Wales
+  'wales_Wales Capital City': '/images/Wales/Wales Capital City.jpg',
+  'wales_Historic Wales': '/images/Wales/Historic Wales.jpg',
+  'wales_Wales Mountains': '/images/Wales/Wales Mountains.jpg',
+  'wales_Wales Coast': '/images/Wales/Wales Coast.jpg',
+  'wales_Rural Wales': '/images/Wales/Rural Wales.jpg',
+  'wales_National Museum of Wales': '/images/Wales/National Museum of Wales.jpg',
+  'wales_Royal Palace of Wales': '/images/Wales/Royal Palace of Wales.JPG',
+  'wales_Wales Scenic Gorge': '/images/Wales/Wales Scenic Gorge.jpg',
+  'wales_Old Town Square': '/images/Wales/Old Town Square.jpg',
+  'wales_Old Town Square Experience': '/images/Wales/Old Town Square.jpg'
 };
 
 export const manualImageCountries = [
@@ -457,5 +583,5 @@ export const manualImageCountries = [
   'czech-republic', 'denmark', 'england', 'estonia', 'faroe-islands', 'finland', 
   'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'kosovo', 'latvia', 'lithuania',
   'macedonia', 'malta', 'moldova', 'netherlands', 'northern-ireland', 'norway', 'poland',
-  'montenegro', 'romania', 'scotland'
+  'montenegro', 'romania', 'scotland', 'portugal', 'serbia', 'slovakia', 'slovenia', 'spain', 'svalbard', 'sweden', 'switzerland', 'turkey', 'wales'
 ];
