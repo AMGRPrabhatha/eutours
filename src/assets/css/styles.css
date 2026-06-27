@@ -5446,6 +5446,10 @@ ul {
   margin-bottom: 2.5rem;
 }
 
+.pkg-modal-hero-img .pkg-card-real-img {
+  height: 100%;
+}
+
 .pkg-modal-hero-img img {
   width: 100%;
   height: 100%;
