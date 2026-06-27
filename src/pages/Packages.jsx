@@ -4,205 +4,145 @@ import { Link } from 'react-router-dom';
 // 7 Curated European Tour Packages (Pricing entirely excluded)
 const packagesData = [
   {
-    id: 'venice-alps-rome',
-    title: 'Western and Central Europe: Venice, the Alps & the Flavours of Rome',
-    category: 'Food & Wine',
+    id: 'imperial-europe',
+    title: 'Imperial Europe & Alps Explorer',
+    category: 'Exploration',
     rating: 5.0,
-    reviewCount: 17,
-    quote: "Fast paced tour & lots of sight-seeing. The local food tastings in Florence were amazing.",
-    quoteAuthor: "Jasmine",
-    quoteMonth: "April",
-    duration: 8,
-    countries: ['Italy', 'Austria', 'Germany'],
-    destinations: 'Germany, Austria, Italy, Vatican City (Holy See)',
-    ageRange: 'Ages 18-35',
-    operatedIn: 'English',
-    operator: 'G Adventures • Platinum',
-    discount: '10% Off',
-    roomType: 'Price based on Shared Room',
-    itinerary: [
-      { day: 1, title: 'Arrival in Munich, Germany', desc: 'Arrive in the Bavarian capital, check into your hostel, and meet your group for a welcome dinner.' },
-      { day: 2, title: 'Scenic Drive through the Austrian Alps', desc: 'Travel south through the majestic Alps, stopping for lunch in Innsbruck before crossing into Italy.' },
-      { day: 3, title: 'Exploring Venice Canals', desc: 'Enjoy a private vaporetto ride to St. Mark\'s Square, followed by a walking tour and optional gondola ride.' },
-      { day: 4, title: 'Florence: Art & Architecture', desc: 'Travel to the cradle of the Renaissance. Visit the Duomo, walk across Ponte Vecchio, and taste local Chianti wine.' },
-      { day: 5, title: 'Journey to the Eternal City', desc: 'Head south to Rome. Take a guided walking tour through Rome\'s historic cobblestone alleys to see the Trevi Fountain.' },
-      { day: 6, title: 'Vatican City & Colosseum Tour', desc: 'Explore the Vatican Museums and St. Peter\'s Basilica, then marvel at the architectural wonder of the Colosseum.' },
-      { day: 7, title: 'Rome Leisure Day & Farewell Dinner', desc: 'Spend the day wandering Rome\'s neighborhoods like Trastevere. Regroup for a traditional multi-course farewell feast.' },
-      { day: 8, title: 'Rome Departures', desc: 'Check out of your hotel and catch your departure transfer or continue your European adventure.' }
-    ]
-  },
-  {
-    id: 'grand-europe-eastern',
-    title: 'Grand Tour of Europe: Germany and Eastern Europe',
-    category: 'City & Culture',
-    rating: 4.8,
-    reviewCount: 24,
-    quote: "The entire tour was very well planned and complete guidance was given for each day.",
-    quoteAuthor: "Arpit",
-    quoteMonth: "August",
-    duration: 12,
-    countries: ['Germany', 'Czech Republic', 'Hungary', 'Austria'],
-    destinations: 'Germany, Czech Republic, Slovakia, Hungary, Austria',
-    ageRange: 'All Ages Welcome',
-    operatedIn: 'English',
-    operator: 'WiseYatra • Gold',
-    discount: '10% Off',
-    roomType: 'Price based on Private Double Room',
-    itinerary: [
-      { day: 1, title: 'Welcome to Berlin', desc: 'Arrive in Berlin and gather for a briefing and local craft beer tasting.' },
-      { day: 2, title: 'Berlin Wall & Historic Sights', desc: 'Explore the Brandenburg Gate, Checkpoint Charlie, and the East Side Gallery.' },
-      { day: 3, title: 'Dresden to Prague', desc: 'Stop in the baroque city of Dresden for lunch, then proceed to Prague, the city of a hundred spires.' },
-      { day: 4, title: 'Prague Castle & Old Town', desc: 'A local guide shows you Prague Castle, Charles Bridge, and the Astronomical Clock.' },
-      { day: 5, title: 'Prague to Budapest via Bratislava', desc: 'Travel through Slovakia, stopping in Bratislava for lunch, arriving in Budapest by evening.' },
-      { day: 6, title: 'Budapest Parliament & Thermal Baths', desc: 'Tour Buda Castle, the Parliament building, and unwind in the famous Széchenyi Thermal Baths.' },
-      { day: 7, title: 'Budapest Cruises & Danube Scenic Route', desc: 'Enjoy a daytime cruise on the Danube and explore the historic ruin bars.' },
-      { day: 8, title: 'Budapest to Vienna', desc: 'Drive to Vienna, Austria. Enjoy a classical concert in the evening in the home of Mozart.' },
-      { day: 9, title: 'Vienna Imperial Palace Tour', desc: 'Visit the magnificent Schönbrunn Palace and walk the elegant Ringstrasse boulevard.' },
-      { day: 10, title: 'Salzburg & Alpine Lakes', desc: 'Excursion to Salzburg, the birthplace of Mozart and film location of Sound of Music.' },
-      { day: 11, title: 'Return to Munich', desc: 'Drive back to Munich. Enjoy a farewell celebration at a traditional Bavarian beer hall.' },
-      { day: 12, title: 'Munich Departures', desc: 'Bid farewell to your travel group as your grand tour concludes.' }
-    ]
-  },
-  {
-    id: 'germany-austria-8-days',
-    title: 'Germany and Austria in 8 days - Covering Munich, Innsbruck, Salzburg and Vienna',
-    category: 'City & Culture',
-    rating: 4.9,
-    reviewCount: 31,
-    quote: "Spectacular fairytale castles, breathtaking alpine scenery, and rich imperial history.",
-    quoteAuthor: "Marcus",
-    quoteMonth: "June",
-    duration: 8,
-    countries: ['Germany', 'Austria'],
-    destinations: 'Munich, Innsbruck, Salzburg, Hallstatt, Vienna',
-    ageRange: 'All Ages Welcome',
-    operatedIn: 'English',
-    operator: 'WiseYatra • Silver',
-    discount: '10% Off',
-    roomType: 'Price based on Private Double Room',
-    itinerary: [
-      { day: 1, title: 'Munich Check-in & Marienplatz', desc: 'Check into your hotel and enjoy a walking tour around Marienplatz and the English Garden.' },
-      { day: 2, title: 'Neuschwanstein Castle Excursion', desc: 'Visit Germany\'s most famous fairytale castle in Fussen before crossing into Austria.' },
-      { day: 3, title: 'Innsbruck Old Town & Golden Roof', desc: 'Explore Innsbruck, the capital of Tyrol, surrounded by towering peaks. Visit the Golden Roof.' },
-      { day: 4, title: 'Salzburg: Sound of Music & Fortress', desc: 'Travel to Salzburg. Explore the Hohensalzburg Fortress and walk through Mirabell Gardens.' },
-      { day: 5, title: 'Fairytale Village of Hallstatt', desc: 'Visit the postcard-perfect lakeside village of Hallstatt, taking a funicular to the world\'s oldest salt mine.' },
-      { day: 6, title: 'Vienna: Schönbrunn & Opera House', desc: 'Drive to Vienna. Take an evening tour of the majestic Hofburg Palace and Vienna State Opera.' },
-      { day: 7, title: 'Vienna Coffee House & St. Stephen\'s', desc: 'Indulge in Sachertorte at a traditional café and explore the historic St. Stephen\'s Cathedral.' },
-      { day: 8, title: 'Vienna Departure', desc: 'Check out of your hotel and head to the airport for your return home.' }
-    ]
-  },
-  {
-    id: 'spanish-fiesta-coast',
-    title: 'Spanish Fiesta & Portuguese Coast',
-    category: 'Active Adventure',
-    rating: 4.7,
-    reviewCount: 19,
-    quote: "Loved the stunning coastal beaches in Lagos and the breathtaking architecture in Barcelona.",
-    quoteAuthor: "Elena",
+    reviewCount: 34,
+    quote: "From Roman Legends to Alpine Wonders — Europe's Greatest Highlights",
+    quoteAuthor: "Eutours",
     quoteMonth: "May",
-    duration: 10,
-    countries: ['Spain', 'Portugal'],
-    destinations: 'Madrid, Toledo, Lisbon, Lagos (Algarve), Seville, Granada, Barcelona',
-    ageRange: 'Ages 18-39',
+    duration: 13,
+    countries: ['Italy', 'Austria', 'Germany'],
+    destinations: 'Rome, Naples, Florence, Pisa, Milan, Venice, Salzburg, Munich',
+    ageRange: 'All Ages Welcome',
     operatedIn: 'English',
-    operator: 'Iberian Wonders • Gold',
-    discount: '10% Off',
-    roomType: 'Price based on Shared Twin Room',
+    operator: 'Eutours Premium',
+    discount: 'Special Offer',
+    roomType: 'Price based on Shared/Private Room',
+    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
     itinerary: [
-      { day: 1, title: 'Arrival in Madrid, Spain', desc: 'Meet your tour leader and group, then enjoy a tapas and sangria tasting in Plaza Mayor.' },
-      { day: 2, title: 'Historic Toledo & Travel to Lisbon', desc: 'Tour Toledo, the medieval capital of Spain, then cross the border into Portugal\'s capital.' },
-      { day: 3, title: 'Lisbon: Tram 28 & Belem Tower', desc: 'Explore Lisbon\'s hilly Alfama district, ride a vintage tram, and taste delicious Pasteis de Nata.' },
-      { day: 4, title: 'Algarve Golden Coast (Lagos)', desc: 'Head south to Lagos. Relax on sandy beaches surrounded by dramatic golden limestone cliffs.' },
-      { day: 5, title: 'Lagos Kayak & Grotto Cruise', desc: 'Explore ocean grottos and rock arches by boat. Enjoy fresh seafood overlooking the harbor.' },
-      { day: 6, title: 'Seville: Flamenco & Cathedral', desc: 'Travel back to Spain to Seville. Watch an authentic Flamenco show and tour the Alcázar palace.' },
-      { day: 7, title: 'Granada: The Alhambra Palace', desc: 'Drive to Granada. Visit the breathtaking Moorish fortress of Alhambra and stroll the Albayzín.' },
-      { day: 8, title: 'High-speed Train to Barcelona', desc: 'Catch a high-speed train to Barcelona. Stroll along La Rambla and watch the street artists.' },
-      { day: 9, title: 'Gaudí Masterpieces & Park Güell', desc: 'Visit the spectacular La Sagrada Família, Park Güell, and enjoy a farewell paella dinner.' },
-      { day: 10, title: 'Barcelona Departures', desc: 'Say goodbye to your companions. Your tour concludes after breakfast.' }
+      { day: 1, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
+      { day: 2, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
+      { day: 3, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
+      { day: 4, title: 'Florence & Tuscany', desc: 'Florence Duomo • Ponte Vecchio • Piazza Della Signoria • Tuscan Vineyard & Wine Experience' },
+      { day: 5, title: 'Pisa & Supercars', desc: 'Leaning Tower of Pisa • Optional Ferrari/Lamborghini Factory, Museum & Self-Drive Experience on availability' },
+      { day: 6, title: 'Milan', desc: 'Duomo di Milano • Leonardo da Vinci\'s The Last Supper • Shopping & Leisure' },
+      { day: 7, title: 'Verona & Venice', desc: 'Juliet\'s House • St. Anthony\'s Basilica • Gondola Ride • Murano Glass Workshops' },
+      { day: 8, title: 'Verona & Venice', desc: 'Juliet\'s House • St. Anthony\'s Basilica • Gondola Ride • Murano Glass Workshops' },
+      { day: 9, title: 'Austrian Alps', desc: 'Salzburg • Boat Cruise • Mozart\'s birthplace • Spectacular Alpine Landscapes' },
+      { day: 10, title: 'Austrian Alps', desc: 'Salzburg • Boat Cruise • Mozart\'s birthplace • Spectacular Alpine Landscapes' },
+      { day: 11, title: 'Austrian Alps', desc: 'Salzburg • Boat Cruise • Mozart\'s birthplace • Spectacular Alpine Landscapes' },
+      { day: 12, title: 'Munich', desc: 'BMW facility • Marienplatz • Viktualienmarkt • Munich Airport Drop-Off' },
+      { day: 13, title: 'Munich', desc: 'BMW facility • Marienplatz • Viktualienmarkt • Munich Airport Drop-Off' }
     ]
   },
   {
-    id: 'swiss-alps-lakes',
-    title: 'Swiss Alps Adventure & Italian Lakes',
-    category: 'Hiking & Trekking',
+    id: 'grand-marian',
+    title: 'The Grand Marian & Saints Pilgrimage',
+    category: 'Pilgrimage',
     rating: 4.9,
-    reviewCount: 14,
-    quote: "Hiking under the shadow of the Matterhorn was a dream come true. Truly majestic views.",
-    quoteAuthor: "Sarah",
-    quoteMonth: "September",
-    duration: 9,
-    countries: ['Switzerland', 'Italy'],
-    destinations: 'Zurich, Lucerne, Interlaken, Zermatt, Lake Como, Milan',
-    ageRange: 'All Ages Welcome',
-    operatedIn: 'English',
-    operator: 'AlpenTours • Elite',
-    discount: '10% Off',
-    roomType: 'Price based on Private Double Room',
-    itinerary: [
-      { day: 1, title: 'Zurich to Lucerne Canals', desc: 'Arrive in Zurich and transfer to the lakeside town of Lucerne. See the famous Chapel Bridge.' },
-      { day: 2, title: 'Mount Pilatus Funicular', desc: 'Ascend Mt. Pilatus on the world\'s steepest cogwheel railway for panoramic Alpine views.' },
-      { day: 3, title: 'Interlaken Adventure Capital', desc: 'Travel to Interlaken, nestled between two lakes. Try optional paragliding or kayaking.' },
-      { day: 4, title: 'Lauterbrunnen Valley of 72 Waterfalls', desc: 'Hike through the stunning Lauterbrunnen valley, stopping at the roaring Trummelbach Falls.' },
-      { day: 5, title: 'Car-Free Village of Zermatt', desc: 'Take a train to Zermatt, a car-free alpine village nestled at the foot of the iconic Matterhorn.' },
-      { day: 6, title: 'Gornergrat Railway Vista', desc: 'Ride the cogwheel train to Gornergrat summit for spectacular views of glaciers and 29 peaks.' },
-      { day: 7, title: 'Zermatt to Lake Como, Italy', desc: 'Travel south across the border to the glamourous shores of Lake Como, Italy.' },
-      { day: 8, title: 'Lake Como Ferry & Bellagio', desc: 'Take a scenic public ferry to Bellagio. Walk through narrow streets lined with boutiques.' },
-      { day: 9, title: 'Milan Cathedral & Departure', desc: 'Transfer to Milan. Tour the Duomo before catch your departure flight at Malpensa Airport.' }
-    ]
-  },
-  {
-    id: 'france-netherlands',
-    title: 'Highlights of France & the Netherlands',
-    category: 'Culture & Food',
-    rating: 4.8,
-    reviewCount: 22,
-    quote: "A perfect blend of world-class art in Paris and historic canals in Amsterdam. Very comfortable transport.",
-    quoteAuthor: "Chloe",
-    quoteMonth: "July",
-    duration: 7,
-    countries: ['France', 'Netherlands', 'Belgium'],
-    destinations: 'Paris, Brussels, Amsterdam',
-    ageRange: 'All Ages Welcome',
-    operatedIn: 'English',
-    operator: 'Eutours Platinum',
-    discount: '10% Off',
-    roomType: 'Price based on Private Double Room',
-    itinerary: [
-      { day: 1, title: 'Welcome to Paris, France', desc: 'Arrive in the City of Light. Enjoy an evening cruise along the Seine River to see the Eiffel Tower lit up.' },
-      { day: 2, title: 'Louvre Museum & Montmartre', desc: 'Take a guided tour of the Louvre, see the Mona Lisa, and explore the artistic streets of Montmartre.' },
-      { day: 3, title: 'Palace of Versailles Excursion', desc: 'Visit the magnificent palace of Louis XIV, explore the Hall of Mirrors, and stroll through the manicured gardens.' },
-      { day: 4, title: 'Brussels: Chocolates & Grand Place', desc: 'Travel to Belgium. Walk the cobblestones of the Grand Place and taste world-famous Belgian waffles and chocolates.' },
-      { day: 5, title: 'Brussels to Amsterdam Canals', desc: 'Drive to Amsterdam. Enjoy a scenic twilight canal cruise with cheese and wine on board.' },
-      { day: 6, title: 'Van Gogh Museum & Windmills', desc: 'Tour the Van Gogh Museum and take a brief afternoon trip to Zaanse Schans to see historic windmills.' },
-      { day: 7, title: 'Amsterdam Departures', desc: 'Enjoy a final Dutch breakfast before checking out and departing.' }
-    ]
-  },
-  {
-    id: 'greece-sailing',
-    title: 'Classical Greece & Mediterranean Cruise',
-    category: 'Sailing',
-    rating: 5.0,
     reviewCount: 42,
-    quote: "Watching the golden sunset in Santorini from our catamaran was an unforgettable experience.",
-    quoteAuthor: "Alex",
-    quoteMonth: "September",
-    duration: 8,
-    countries: ['Greece'],
-    destinations: 'Athens, Mykonos, Paros, Santorini',
-    ageRange: 'Ages 18-35',
+    quote: "A Sacred Journey of Faith, Prayer & Grace Across Europe's Most Revered Catholic Shrines",
+    quoteAuthor: "Eutours",
+    quoteMonth: "June",
+    duration: 15,
+    countries: ['Italy', 'France', 'Spain', 'Portugal'],
+    destinations: 'Rome, Assisi, Lanciano, San Giovanni Rotondo, Padua, Lourdes, Barcelona, Zaragoza, Fatima',
+    ageRange: 'All Ages Welcome',
     operatedIn: 'English',
-    operator: 'Aegean Cruises • Premium',
-    discount: '10% Off',
-    roomType: 'Price based on Catamaran Cabin',
+    operator: 'Eutours Premium',
+    discount: 'Special Offer',
+    roomType: 'Price based on Shared/Private Room',
+    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
     itinerary: [
-      { day: 1, title: 'Arrival in Athens, Greece', desc: 'Check in, meet your group, and climb up to the Acropolis to watch the sunset over Athens.' },
-      { day: 2, title: 'Acropolis Museum & Board Catamaran', desc: 'Tour the Acropolis Museum and board your sailing catamaran at the Marina.' },
-      { day: 3, title: 'Sailing to Mykonos Island', desc: 'Sail across the Aegean, anchor in a quiet bay for swimming, and head to Mykonos for nightlife.' },
-      { day: 4, title: 'Mykonos Windmills & Old Town', desc: 'Explore the picture-perfect white houses of Little Venice and the famous windmills.' },
-      { day: 5, title: 'Sailing to Paros Island', desc: 'Enjoy a quiet day of sailing. Explore the charming fishing villages and sandy beaches of Paros.' },
-      { day: 6, title: 'Arriving in Santorini Crater', desc: 'Sail into the dramatic caldera of Santorini. Hike up the cliffs to the cliffside town of Fira.' },
-      { day: 7, title: 'Santorini Catamaran Sunset Tour', desc: 'Enjoy a farewell day catamaran tour around the volcanic red and white beaches, ending with sunset in Oia.' },
-      { day: 8, title: 'Santorini Departures', desc: 'Transfer to Santorini Airport or catch the ferry back to Athens.' }
+      { day: 1, title: 'Italy – In the Footsteps of the Saints', desc: 'Rome • Vatican City • Assisi • Lanciano • San Giovanni Rotondo • Padua. Vatican Museums & St. Peter\'s Basilica. Papal Audience/Blessing.' },
+      { day: 2, title: 'Italy – In the Footsteps of the Saints', desc: 'Holy Mass in Rome. Assisi – Tomb of St. Francis & St. Clare.' },
+      { day: 3, title: 'Italy – In the Footsteps of the Saints', desc: 'Lanciano Eucharistic Miracle Shrine.' },
+      { day: 4, title: 'Italy – In the Footsteps of the Saints', desc: 'San Giovanni Rotondo – Shrine of St. Padre Pio.' },
+      { day: 5, title: 'Italy – In the Footsteps of the Saints', desc: 'Padua – Basilica of St. Anthony.' },
+      { day: 6, title: 'Italy – In the Footsteps of the Saints', desc: 'Dedicated prayer, reflection, and devotional time throughout.' },
+      { day: 7, title: 'France – Lourdes Pilgrimage', desc: '1 night in Monte carlo, 2 nights Lourdes. Sanctuary of Our Lady of Lourdes.' },
+      { day: 8, title: 'France – Lourdes Pilgrimage', desc: 'Grotto of Massabielle. Healing Baths (where available).' },
+      { day: 9, title: 'France – Lourdes Pilgrimage', desc: 'International Holy Mass. Eucharistic Procession. Evening Candlelight Rosary Procession.' },
+      { day: 10, title: 'Spain – Faith & Heritage', desc: 'Barcelona • Zaragoza. Sagrada Familia Basilica.' },
+      { day: 11, title: 'Spain – Faith & Heritage', desc: 'Basilica of Our Lady of the Pillar, Zaragoza.' },
+      { day: 12, title: 'Spain – Faith & Heritage', desc: 'Holy Mass and devotional visits. Time for quiet prayer and pilgrimage activities.' },
+      { day: 13, title: 'Portugal – Fatima', desc: '2 Nights Fatima. Sanctuary of Our Lady of Fatima. Chapel of the Apparitions.' },
+      { day: 14, title: 'Portugal – Fatima', desc: 'Basilica of Our Lady of the Rosary. Holy Mass. Rosary at the Shrine.' },
+      { day: 15, title: 'Portugal – Fatima', desc: 'Evening Candlelight Procession. Personal prayer and thanksgiving before departure.' }
+    ]
+  },
+  {
+    id: 'footsteps-faith',
+    title: 'Footsteps of Faith: Central Europe Catholic Pilgrimage',
+    category: 'Pilgrimage',
+    rating: 5.0,
+    reviewCount: 28,
+    quote: "Spiritually Enriching • Comfortably Paced • Deeply Transformative",
+    quoteAuthor: "Eutours",
+    quoteMonth: "July",
+    duration: 15,
+    countries: ['Italy', 'Poland', 'Czech Republic', 'Slovakia', 'Austria', 'Hungary', 'Bosnia & Herzegovina'],
+    destinations: 'Rome, Warsaw, Prague, Bratislava, Vienna, Budapest, Međugorje',
+    ageRange: 'All Ages Welcome',
+    operatedIn: 'English',
+    operator: 'Eutours Premium',
+    discount: 'Special Offer',
+    roomType: 'Price based on Shared/Private Room',
+    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
+    itinerary: [
+      { day: 1, title: 'Italy – The Heart of Catholicism', desc: 'Rome & Vatican City • Papal Audience (subject to schedule) • St. Peter\'s Basilica • Vatican Museums' },
+      { day: 2, title: 'Italy – The Heart of Catholicism', desc: 'Assisi (St. Francis) • Padua (St. Anthony)' },
+      { day: 3, title: 'Italy – The Heart of Catholicism', desc: 'Lanciano Eucharistic Miracle' },
+      { day: 4, title: 'Italy – The Heart of Catholicism', desc: 'San Giovanni Rotondo (St. Padre Pio)' },
+      { day: 5, title: 'Italy – The Heart of Catholicism', desc: 'Continued exploration of Italy\'s sacred sites.' },
+      { day: 6, title: 'Italy – The Heart of Catholicism', desc: 'Final day in Italy before departing to Poland.' },
+      { day: 7, title: 'Poland', desc: 'Warsaw • Divine Mercy devotion • Pilgrimage sites associated with St. John Paul II' },
+      { day: 8, title: 'Poland', desc: 'Holy Mass & reflection time' },
+      { day: 9, title: 'Czech Republic', desc: 'Prague • Infant Jesus of Prague Shrine • Historic churches and spiritual heritage' },
+      { day: 10, title: 'Slovakia', desc: 'Bratislava • St Martin\'s Cathedral, • Leisurely old-town pilgrimage walk' },
+      { day: 11, title: 'Austria & Hungary', desc: 'Vienna: St. Stephen’s Cathedral • St. Peter’s Church • Karlskirche • Schönbrunn Palace' },
+      { day: 12, title: 'Austria & Hungary', desc: 'Budapest: St. Stephen’s Basilica • Matthias Church • Gellért Hill • Castle District • Danube River' },
+      { day: 13, title: 'Međugorje, Bosnia & Herzegovina', desc: 'Apparition Hill • St. James Church • Holy Mass' },
+      { day: 14, title: 'Međugorje, Bosnia & Herzegovina', desc: 'Rosary & Adoration • Personal prayer, reflection, and spiritual renewal' },
+      { day: 15, title: 'Drop off at airport', desc: 'Final blessings and departure to the airport.' }
+    ]
+  },
+  {
+    id: 'grand-road-adventure',
+    title: 'Grand European Road Adventure',
+    category: 'Road Trip',
+    rating: 4.8,
+    reviewCount: 56,
+    quote: "From Paris boulevards to Roman streets — an unforgettable European road adventure",
+    quoteAuthor: "Eutours",
+    quoteMonth: "August",
+    duration: 15,
+    countries: ['France', 'Belgium', 'Netherlands', 'Germany', 'Switzerland', 'Italy'],
+    destinations: 'Paris, Brussels, Amsterdam, Cologne, Interlaken, Venice, Pisa, Florence, Assisi, Rome',
+    ageRange: 'All Ages Welcome',
+    operatedIn: 'English',
+    operator: 'Eutours Premium',
+    discount: 'Special Offer',
+    roomType: 'Price based on Shared/Private Room',
+    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
+    itinerary: [
+      { day: 1, title: 'Paris, France', desc: 'Eiffel Tower photo stop, Arc de Triomphe, Louvre exterior & pyramid, Cruise tour.' },
+      { day: 2, title: 'Paris Exploration', desc: 'No rushing — enjoy Paris comfortably. Café & shopping time, Paris by night experience.' },
+      { day: 3, title: 'Paris → Brussels → Netherlands', desc: 'Morning Departure from Paris. Stop 1 – Brussels, Belgium. Grand Place, Atomium, Belgian waffles & chocolate.' },
+      { day: 4, title: 'Amsterdam, Netherlands', desc: 'Canal district, Dam Square, Rijksmuseum area, Red Light District. Canal cruise, Tulip + Windmill area visit.' },
+      { day: 5, title: 'Germany Road Experience', desc: 'Cologne Cathedral, Rhine River views, Old Town quick stop. Autobahn driving experience.' },
+      { day: 6, title: 'Arrival in Interlaken, Switzerland', desc: 'Drive through Swiss Alpine roads, Lakeside highways. Interlaken Highlights: Lake Thun, Lake Brienz.' },
+      { day: 7, title: 'Lauterbrunnen & Grindelwald', desc: 'Cliffside scenery, Alpine cafés, Cable car options, Lauterbrunnen Valley Waterfalls.' },
+      { day: 8, title: 'Swiss Scenic Leisure Day', desc: 'Optional Experiences: Harder Kulm viewpoint, Lake cruise, Swiss chocolate shopping.' },
+      { day: 9, title: 'Switzerland → Verona → Padova → Venice', desc: 'Juliet’s balcony, Roman Arena. Padova: Visit St\' Anthony\'s basilica. Evening: Venice waterfront.' },
+      { day: 10, title: 'Venice → Pisa', desc: 'Scenic Italian Highway Journey. Leaning Tower of Pisa, Piazza dei Miracoli. Tuscan-style dinner & overnight stay.' },
+      { day: 11, title: 'Florence → Assisi', desc: 'Florence Cathedral, Ponte Vecchio, panorama View point Florence, St Francis\'s tomb.' },
+      { day: 12, title: 'Lanciano & San Giovanni Rotondo', desc: 'Eucaristico di Lanciano & Padre Pio Shrine & Church.' },
+      { day: 13, title: 'Foggia → Rome', desc: 'Scenic Southern Italy Drive. Arrival in Rome. Colosseum night views, Spanish Steps area.' },
+      { day: 14, title: 'Rome Exploration', desc: 'Colosseum, Roman Forum viewpoints, Vatican City, St. Peter’s Basilica, Pantheon, Piazza Navona.' },
+      { day: 15, title: 'Departure', desc: 'Airport transfer.' }
     ]
   }
 ];
@@ -219,6 +159,45 @@ const TemplateImagePlaceholder = ({ category }) => (
     <span className="placeholder-text-badge">{category}</span>
   </div>
 );
+
+const AutoImageSlider = ({ images, title }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (!images || images.length <= 1) return;
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, [images]);
+
+  if (!images || images.length === 0) return null;
+
+  return (
+    <div style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
+      {images.map((img, index) => (
+        <img
+          key={index}
+          src={img}
+          alt={`${title} - ${index + 1}`}
+          className="pkg-card-real-img"
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            opacity: index === currentIndex ? 1 : 0,
+            transition: 'opacity 0.8s ease-in-out',
+            zIndex: index === currentIndex ? 1 : 0
+          }}
+          onError={(e) => { e.target.onerror = null; e.target.src = '/images/Switzerland.webp'; }}
+        />
+      ))}
+    </div>
+  );
+};
 
 const Packages = () => {
   const [selectedCountries, setSelectedCountries] = useState([]);
@@ -398,12 +377,7 @@ const Packages = () => {
                 <div key={pkg.id} className="pkg-horizontal-card" onClick={() => openItinerary(pkg)} style={{ cursor: 'pointer' }}>
                   {/* Left Column: Real Image & Map overlay */}
                   <div className="pkg-card-media-col" onClick={(e) => e.stopPropagation()}>
-                    <img 
-                      src={`/images/packages/${pkg.id}.webp`} 
-                      alt={pkg.title} 
-                      onError={(e) => { e.target.onerror = null; e.target.src = '/images/Switzerland.webp'; }}
-                      className="pkg-card-real-img"
-                    />
+                    <AutoImageSlider images={pkg.images} title={pkg.title} />
                     
                     <button 
                       className={`wishlist-heart-btn ${wishlist.includes(pkg.id) ? 'active' : ''}`}
@@ -498,7 +472,7 @@ const Packages = () => {
               {/* Left Column (70%) */}
               <div className="pkg-modal-left">
                 <div className="pkg-modal-hero-img">
-                  <img src={`/images/packages/${activeItinerary.id}.webp`} alt={activeItinerary.title} onError={(e) => { e.target.onerror = null; e.target.src = '/images/Switzerland.webp'; }} />
+                  <AutoImageSlider images={activeItinerary.images} title={activeItinerary.title} />
                   {activeItinerary.discount && (
                     <div className="pkg-hero-discount">
                       Save {activeItinerary.discount.replace(' Off', '')}
