@@ -670,8 +670,12 @@ ul {
 @media (max-width: 768px) {
   .sf-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    text-align: center;
     gap: 1.5rem;
+  }
+  .sf-description {
+    text-align: center;
   }
   .sf-card {
     flex: 0 0 100%;
