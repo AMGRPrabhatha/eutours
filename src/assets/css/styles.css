@@ -488,7 +488,7 @@ ul {
 .sf-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 4rem;
   gap: 2rem;
 }
@@ -670,7 +670,8 @@ ul {
 @media (max-width: 768px) {
   .sf-header {
     flex-direction: column;
-    gap: 2rem;
+    align-items: flex-start;
+    gap: 1.5rem;
   }
   .sf-card {
     flex: 0 0 100%;

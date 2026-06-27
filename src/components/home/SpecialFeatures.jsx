@@ -48,7 +48,7 @@ const SpecialFeatures = () => {
       <div className="container">
         
         {/* Top Header Section */}
-        <div className="sf-header" style={{ marginBottom: '1.5rem', alignItems: 'center' }}>
+        <div className="sf-header" style={{ marginBottom: '1.5rem' }}>
           <div className="sf-header-left">
             <span className="sf-pill">/About Us</span>
             <h2 style={{ marginBottom: 0 }}>About <span className="text-theme">EUtours</span></h2>
