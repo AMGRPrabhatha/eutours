@@ -24,7 +24,7 @@ const Blog = () => {
             <div className="blog-grid-main">
               <div className="blog-card main-card">
                 <div className="blog-img-wrapper">
-                  <img src="/images/Hidden Gems Off the Beaten Path.webp" alt="Local Culture" />
+                  <img src="/images/hidden_gems.webp" alt="Local Culture" />
                 </div>
                 <div className="blog-content">
                   <span className="blog-tag">TRAVEL</span>
