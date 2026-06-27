@@ -571,10 +571,6 @@ const Packages = () => {
                   </ul>
                 </div>
 
-                {/* Map Card */}
-                <div className="pkg-map-card">
-                  <img src="/images/map_placeholder.webp" alt="Route Map" />
-                </div>
               </div>
             </div>
           </div>
