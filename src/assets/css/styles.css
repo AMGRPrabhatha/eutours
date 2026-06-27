@@ -494,7 +494,8 @@ ul {
 }
 
 .sf-header-left {
-  max-width: 600px;
+  max-width: 100%;
+  flex: 1;
 }
 
 .sf-pill {
