@@ -3308,7 +3308,9 @@ ul {
   }
   .dest-grid::-webkit-scrollbar, .advanced-grid::-webkit-scrollbar, .trending-grid::-webkit-scrollbar, .packages-grid::-webkit-scrollbar { display: none; }
   .vertical-card, .adv-card, .trending-card, .pkg-card { 
-    min-width: 80vw;
+    min-width: 85vw;
+    width: 85vw;
+    max-width: 85vw;
     scroll-snap-align: center;
     flex-shrink: 0;
   }
