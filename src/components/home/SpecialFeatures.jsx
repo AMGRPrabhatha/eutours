@@ -48,19 +48,20 @@ const SpecialFeatures = () => {
       <div className="container">
         
         {/* Top Header Section */}
-        <div className="sf-header">
+        <div className="sf-header" style={{ marginBottom: '1.5rem', alignItems: 'center' }}>
           <div className="sf-header-left">
             <span className="sf-pill">/About Us</span>
-            <h2>About <span className="text-theme">EUtours</span></h2>
-            <div style={{ marginTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', color: '#475569', fontSize: '1.05rem', lineHeight: '1.7' }}>
-              <p>At EU Tours, we believe exceptional journeys deserve exceptional planning. With years of Experience, we curate bespoke experiences that are as seamless as they are unforgettable.</p>
-              <p>From the first moment you plan your journey to your return home, our dedicated staff manage every detail with precision and discretion, ensuring a journey defined by comfort, exclusivity, and peace of mind. Renowned for our personalized service and unwavering commitment to excellence, we transform travel into extraordinary experiences and lasting memories.</p>
-              <p>At EU Tours, your journey is more than a destination—it is a carefully crafted experience, designed around you.</p>
-            </div>
+            <h2 style={{ marginBottom: 0 }}>About <span className="text-theme">EUtours</span></h2>
           </div>
           <div className="sf-header-right">
             <Link to="/about" className="btn-sf-learn">Learn More &gt;&gt;&gt;</Link>
           </div>
+        </div>
+
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem', color: '#475569', fontSize: '1.05rem', lineHeight: '1.7', marginBottom: '4rem', width: '100%' }}>
+          <p>At EU Tours, we believe exceptional journeys deserve exceptional planning. With years of Experience, we curate bespoke experiences that are as seamless as they are unforgettable.</p>
+          <p>From the first moment you plan your journey to your return home, our dedicated staff manage every detail with precision and discretion, ensuring a journey defined by comfort, exclusivity, and peace of mind. Renowned for our personalized service and unwavering commitment to excellence, we transform travel into extraordinary experiences and lasting memories.</p>
+          <p>At EU Tours, your journey is more than a destination—it is a carefully crafted experience, designed around you.</p>
         </div>
 
         {/* Cards Slider */}
