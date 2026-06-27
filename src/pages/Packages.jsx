@@ -174,13 +174,12 @@ const AutoImageSlider = ({ images, title }) => {
   if (!images || images.length === 0) return null;
 
   return (
-    <div style={{ position: 'relative', width: '100%', height: '100%', overflow: 'hidden' }}>
+    <div className="pkg-card-real-img" style={{ position: 'relative', overflow: 'hidden' }}>
       {images.map((img, index) => (
         <img
           key={index}
           src={img}
           alt={`${title} - ${index + 1}`}
-          className="pkg-card-real-img"
           style={{
             position: 'absolute',
             top: 0,
@@ -386,13 +385,6 @@ const Packages = () => {
                     >
                       ♥
                     </button>
-                    
-                    <div className="pkg-map-wrapper">
-                      <img src="/images/map_placeholder.webp" className="mock-map-svg" alt="Map Route Placeholder" />
-                      <button className="view-map-overlay-btn" onClick={() => openItinerary(pkg)}>
-                        <span className="map-icon">📍</span> View Map
-                      </button>
-                    </div>
                   </div>
 
                   {/* Middle Column: Details & Ratings */}

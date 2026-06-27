@@ -4788,7 +4788,7 @@ ul {
 
 .pkg-card-real-img {
   width: 100%;
-  height: 160px;
+  height: 260px;
   object-fit: cover;
   border-radius: 12px;
   display: block;
@@ -7180,7 +7180,7 @@ ul {
   .pkg-card-real-img,
   .template-image-placeholder {
     width: 100% !important;
-    height: 220px !important;
+    height: 300px !important;
     border-radius: 0 !important;
     object-fit: cover !important;
   }
