@@ -377,14 +377,6 @@ const Packages = () => {
                   {/* Left Column: Real Image & Map overlay */}
                   <div className="pkg-card-media-col" onClick={(e) => e.stopPropagation()}>
                     <AutoImageSlider images={pkg.images} title={pkg.title} />
-                    
-                    <button 
-                      className={`wishlist-heart-btn ${wishlist.includes(pkg.id) ? 'active' : ''}`}
-                      onClick={() => toggleWishlist(pkg.id)}
-                      aria-label="Save to wishlist"
-                    >
-                      ♥
-                    </button>
                   </div>
 
                   {/* Middle Column: Details & Ratings */}
