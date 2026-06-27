@@ -20,7 +20,7 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
+    images: [\'/images/italy/Rome.webp\',\'/images/italy/Florence.webp\',\'/images/italy/Venice.webp\',\'/images/Austria/Salzburg.webp\',\'/images/Germany/Munich.webp\'],
     itinerary: [
       { day: 1, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
       { day: 2, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
@@ -54,7 +54,7 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
+    images: [\'/images/italy/Rome.webp\',\'/images/italy/Vatican_Museums.webp\',\'/images/france/Notre-Dame.webp\',\'/images/Spain/Barcelona.webp\',\'/images/Portugal/Lisbon.webp\'],
     itinerary: [
       { day: 1, title: 'Italy – In the Footsteps of the Saints', desc: 'Rome • Vatican City • Assisi • Lanciano • San Giovanni Rotondo • Padua. Vatican Museums & St. Peter\'s Basilica. Papal Audience/Blessing.' },
       { day: 2, title: 'Italy – In the Footsteps of the Saints', desc: 'Holy Mass in Rome. Assisi – Tomb of St. Francis & St. Clare.' },
@@ -90,7 +90,7 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
+    images: [\'/images/italy/Rome.webp\',\'/images/Poland/Old Town Square.webp\',\'/images/Austria/Vienna.webp\',\'/images/Germany/Berlin.webp\',\'/images/italy/Pantheon.webp\'],
     itinerary: [
       { day: 1, title: 'Italy – The Heart of Catholicism', desc: 'Rome & Vatican City • Papal Audience (subject to schedule) • St. Peter\'s Basilica • Vatican Museums' },
       { day: 2, title: 'Italy – The Heart of Catholicism', desc: 'Assisi (St. Francis) • Padua (St. Anthony)' },
@@ -126,7 +126,7 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/Poland/Poland Coast.webp', '/images/Poland/Rural Poland.webp', '/images/Poland/Old Town Square.webp', '/images/Poland/Poland Scenic Gorge.webp', '/images/Poland/Historic Poland.webp'],
+    images: [\'/images/france/Paris.webp\',\'/images/Germany/Cologne.webp\',\'/images/italy/Venice.webp\',\'/images/italy/Rome.webp\',\'/images/france/Eiffel_Tower.webp\'],
     itinerary: [
       { day: 1, title: 'Paris, France', desc: 'Eiffel Tower photo stop, Arc de Triomphe, Louvre exterior & pyramid, Cruise tour.' },
       { day: 2, title: 'Paris Exploration', desc: 'No rushing — enjoy Paris comfortably. Café & shopping time, Paris by night experience.' },
