@@ -130,6 +130,21 @@ export const exactImageMap = {
   'england_England Scenic Gorge Skip-the-Line Ticket': '/images/England/England Scenic Gorge Skip-the-Line Ticket.webp',
   'england_Old Town Square Experience': '/images/England/Old Town Square Experience.webp',
 
+  // UK
+  'uk_Uk Capital City': '/images/England/England Capital City.webp',
+  'uk_Historic Uk': '/images/England/    Historic England.webp',
+  'uk_Uk Mountains': '/images/England/England Mountains.webp',
+  'uk_Uk Coast': '/images/England/England Coast.webp',
+  'uk_Rural Uk': '/images/England/Rural England.webp',
+  'uk_National Museum of Uk': '/images/England/National Museum of England.webp',
+  'uk_Royal Palace of Uk': '/images/England/Royal Palace of England.webp',
+  'uk_Uk Scenic Gorge': '/images/England/England Scenic Gorge.webp',
+  'uk_Old Town Square': '/images/England/Old Town Square.webp',
+  'uk_National Museum of Uk Express Pass': '/images/England/National Museum of England Express Pass.webp',
+  'uk_Full Day Guided Tour of Uk Capital City': '/images/England/Full Day Guided Tour of England Capital City.webp',
+  'uk_Uk Scenic Gorge Skip-the-Line Ticket': '/images/England/England Scenic Gorge Skip-the-Line Ticket.webp',
+  'uk_Old Town Square Experience': '/images/England/Old Town Square Experience.webp',
+
   // Estonia
   'estonia_Estonia Capital City': '/images/Estonia/Estonia Capital City.webp',
   'estonia_Historic Estonia': '/images/Estonia/Historic Estonia.webp',

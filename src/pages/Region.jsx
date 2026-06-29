@@ -284,6 +284,7 @@ const Region = () => {
     heroImage = getAlbaniaImage('Albania hero');
   } else if (id === 'andorra') heroImage = '/images/Andorra/Andorra.webp';
   else if (id === 'austria') heroImage = '/images/Austria/Austria.webp';
+  else if (id === 'uk' || id === 'united-kingdom') heroImage = '/images/England/England.webp';
   else if (id === 'belgium') heroImage = '/images/Belgium/Belgium.webp';
   else if (id === 'bosnia') heroImage = '/images/Bosnia/Bosnia.webp';
   else if (id === 'bulgaria') heroImage = '/images/Bulgaria/Bulgaria.webp';
