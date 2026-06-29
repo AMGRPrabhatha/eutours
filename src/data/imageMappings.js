@@ -601,5 +601,5 @@ export const manualImageCountries = [
   'czech-republic', 'denmark', 'england', 'estonia', 'faroe-islands', 'finland', 
   'france', 'germany', 'greece', 'hungary', 'iceland', 'ireland', 'italy', 'kosovo', 'latvia', 'lithuania',
   'macedonia', 'malta', 'moldova', 'netherlands', 'northern-ireland', 'norway', 'poland',
-  'montenegro', 'romania', 'scotland', 'portugal', 'serbia', 'slovakia', 'slovenia', 'spain', 'svalbard', 'sweden', 'switzerland', 'turkey', 'wales'
+  'montenegro', 'romania', 'scotland', 'portugal', 'serbia', 'slovakia', 'slovenia', 'spain', 'svalbard', 'sweden', 'switzerland', 'turkey', 'wales', 'uk'
 ];
