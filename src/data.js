@@ -4,7 +4,7 @@ const images = {
   italy: '/images/Italy.webp',
   swiss: '/images/Switzerland.webp',
   spain: '/images/barcelona.webp',
-  germany: '/images/Germany.webp',
+  germany: '/images/Germany/Germany.webp',
   uk: '/images/london.webp',
   netherlands: '/images/Netherlands.webp',
   greece: '/images/greece.webp',
