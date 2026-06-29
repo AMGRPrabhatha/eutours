@@ -333,7 +333,7 @@ const Region = () => {
   return (
     <div className="region-page">
       {/* Hero Banner */}
-      <div className="klook-hero" style={{ backgroundImage: `url('${heroImage}')` }}>
+      <div className="klook-hero" style={{ backgroundImage: `url("${heroImage}")` }}>
         <h1 className="klook-hero-title">
           {title} {id === 'france' && '🇫🇷'} {id === 'italy' && '🇮🇹'}
         </h1>

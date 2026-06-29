@@ -181,7 +181,7 @@ export const exactImageMap = {
   'france_Mont Saint-Michel': '/images/france/Mont_Saint-Michel.webp',
   'france_Arc de Triomphe': '/images/france/Arc_de_Triomphe.webp',
   'france_Notre-Dame': '/images/france/Notre-Dame.webp',
-  'france_Château de Chambord': '/images/france/Château_de_Chambord.webp',
+  'france_Château de Chambord': '/images/france/Paris.webp',
   'france_Eiffel Tower Express Pass': '/images/france/Eiffel_Tower.webp',
   'france_Full Day Guided Tour of Paris': '/images/france/Full_Day_Guided_Tour_of_Paris.webp',
   'france_Mont Blanc Skip-the-Line Ticket': '/images/france/Mont_Blanc_Skip-the-Line_Ticket.webp',
