@@ -11,6 +11,8 @@ export const exactImageMap = {
   'andorra_Vallnord Express Pass': '/images/Andorra/Vallnord Express Pass.webp',
   'andorra_Full Day Guided Tour of Andorra la Vella': '/images/Andorra/Full Day Guided Tour of Andorra la Vella.webp',
   'andorra_Caldea Spa Skip-the-Line Ticket': '/images/Andorra/Caldea Spa Skip-the-Line Ticket.webp',
+  'andorra_Casa de la Vall': '/images/Andorra/Andorra.webp',
+  'andorra_Casa de la Vall Skip-the-Line Ticket': '/images/Andorra/Andorra.webp',
 
   // Austria
   'austria_Vienna': '/images/Austria/Vienna.webp',
@@ -110,6 +112,7 @@ export const exactImageMap = {
   'denmark_National Museum of Denmark Express Pass': '/images/Denmark/National Museum of Denmark Express Pass.webp',
   'denmark_Full Day Guided Tour of Denmark Capital City': '/images/Denmark/Full Day Guided Tour of Denmark Capital City.webp',
   'denmark_Denmark Scenic Gorge Skip-the-Line Ticket': '/images/Denmark/Denmark Scenic Gorge Skip-the-Line Ticket.webp',
+  'denmark_Old Town Square': '/images/Denmark/Old Town Square.webp',
   'denmark_Old Town Square Experience': '/images/Denmark/Old Town Square.webp',
 
   // England
@@ -508,12 +511,12 @@ export const exactImageMap = {
   'spain_Valencia': '/images/Spain/Valencia.webp',
   'spain_Granada': '/images/Spain/Granada.webp',
   'spain_Sagrada Familia': '/images/Spain/Sagrada Familia.webp',
+  'spain_Park Güell': '/images/Spain/Park Güell.webp',
   'spain_Alhambra': '/images/Spain/Alhambra.webp',
-  'spain_Park Güell': '/images/Spain/Park Güell.webp',
   'spain_Prado Museum': '/images/Spain/Prado Museum.webp',
-  'spain_Sagrada Familia Entry': '/images/Spain/Sagrada Familia.webp',
-  'spain_Alhambra Guided Tour': '/images/Spain/Alhambra.webp',
-  'spain_Park Guell Visit': '/images/Spain/Park Güell.webp',
+  'spain_Sagrada Familia Express Pass': '/images/Spain/Sagrada Familia.webp',
+  'spain_Full Day Guided Tour of Barcelona': '/images/Spain/Barcelona.webp',
+  'spain_Alhambra Skip-the-Line Ticket': '/images/Spain/Alhambra.webp',
 
   // Svalbard
   'svalbard_Svalbard Capital City': '/images/Svalbard/Svalbard Capital City.webp',
