@@ -273,7 +273,7 @@ export const exactImageMap = {
   'italy_Venice': '/images/italy/Venice.webp',
   'italy_Florence': '/images/italy/Florence.webp',
   'italy_Milan': '/images/italy/Milan.webp',
-  'italy_Naples': '/images/italy/Naples.webp',
+  'italy_Naples': '/images/italy/Amalfi_Coast.webp',
   'italy_Verona': '/images/italy/Verona.webp',
   'italy_Turin': '/images/italy/Turin.webp',
   'italy_Bologna': '/images/italy/Bologna.webp',

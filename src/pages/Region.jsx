@@ -300,7 +300,7 @@ const Region = () => {
   else if (id === 'hungary') heroImage = '/images/Hungary/ Hungary.webp';
   else if (id === 'iceland') heroImage = '/images/Iceland/Iceland .webp';
   else if (id === 'ireland') heroImage = '/images/Ireland/ireland.webp';
-  else if (id === 'italy') heroImage = '/images/italy/Italy_hero.webp';
+  else if (id === 'italy') heroImage = '/images/Italy.webp';
   else if (id === 'kosovo') heroImage = '/images/Kosovo/Kosovo.webp';
   else if (id === 'latvia') heroImage = '/images/Latvia/Latvia.webp';
   else if (id === 'lithuania') heroImage = '/images/Lithuania/Lithuania.webp';
