@@ -457,13 +457,13 @@ export const exactImageMap = {
   'portugal_Sintra': '/images/Portugal/Sintra.webp',
   'portugal_Faro': '/images/Portugal/Faro.webp',
   'portugal_Coimbra': '/images/Portugal/Coimbra.webp',
-  'portugal_Belém Tower': '/images/Portugal/Belém Tower.webp',
+  'portugal_Belém Tower': '/images/Portugal/Belém Tower.webp',
   'portugal_Pena Palace': '/images/Portugal/Pena Palace.webp',
-  'portugal_Jerónimos Monastery': '/images/Portugal/Jerónimos Monastery.webp',
+  'portugal_Jerónimos Monastery': '/images/Portugal/Jerónimos Monastery.webp',
   'portugal_Ribeira': '/images/Portugal/Ribeira.webp',
-  'portugal_Belem Tower Entry': '/images/Portugal/Belém Tower.webp',
-  'portugal_Pena Palace Tour': '/images/Portugal/Pena Palace.webp',
-  'portugal_Jeronimos Monastery Ticket': '/images/Portugal/Jerónimos Monastery.webp',
+  'portugal_Belém Tower Express Pass': '/images/Portugal/Belém Tower.webp',
+  'portugal_Full Day Guided Tour of Lisbon': '/images/Portugal/Lisbon.webp',
+  'portugal_Jerónimos Monastery Skip-the-Line Ticket': '/images/Portugal/Jerónimos Monastery.webp',
 
   // Serbia
   'serbia_Serbia Capital City': '/images/Serbia/Serbia Capital City.webp',
