@@ -20,7 +20,13 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/italy/Rome.webp','/images/italy/Florence.webp','/images/italy/Venice.webp','/images/Austria/Salzburg.webp','/images/Germany/Munich.webp'],
+    images: [
+      '/images/packagess/Imperial Europe & Alps Explorer/Piazza towerr.webp',
+      '/images/packagess/Imperial Europe & Alps Explorer/marienplatz germany.webp',
+      '/images/packagess/Imperial Europe & Alps Explorer/pompeiii.webp',
+      '/images/packagess/Imperial Europe & Alps Explorer/rome colloseum.webp',
+      '/images/packagess/Imperial Europe & Alps Explorer/trevi fountain rome.webp'
+    ],
     itinerary: [
       { day: 1, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
       { day: 2, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
@@ -54,7 +60,14 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/italy/Rome.webp','/images/italy/Vatican_Museums.webp','/images/france/Notre-Dame.webp','/images/Spain/Barcelona.webp','/images/Portugal/Lisbon.webp'],
+    images: [
+      '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.22 (1).webp',
+      '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.22 (2).webp',
+      '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.22 (3).webp',
+      '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.22.webp',
+      '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.23 (1).webp',
+      '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.23.webp'
+    ],
     itinerary: [
       { day: 1, title: 'Italy – In the Footsteps of the Saints', desc: 'Rome • Vatican City • Assisi • Lanciano • San Giovanni Rotondo • Padua. Vatican Museums & St. Peter\'s Basilica. Papal Audience/Blessing.' },
       { day: 2, title: 'Italy – In the Footsteps of the Saints', desc: 'Holy Mass in Rome. Assisi – Tomb of St. Francis & St. Clare.' },
@@ -75,7 +88,7 @@ const packagesData = [
   },
   {
     id: 'footsteps-faith',
-    title: 'Footsteps of Faith: Central Europe Catholic Pilgrimage',
+    title: 'Footsteps of Faith Central Europe Catholic Pilgrimage',
     category: 'Pilgrimage',
     rating: 5.0,
     reviewCount: 28,
@@ -90,7 +103,14 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/italy/Rome.webp','/images/Poland/Old Town Square.webp','/images/Austria/Vienna.webp','/images/Germany/Berlin.webp','/images/italy/Pantheon.webp'],
+    images: [
+      '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41 (1).webp',
+      '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41 (2).webp',
+      '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41 (3).webp',
+      '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41 (4).webp',
+      '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41 (5).webp',
+      '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41.webp'
+    ],
     itinerary: [
       { day: 1, title: 'Italy – The Heart of Catholicism', desc: 'Rome & Vatican City • Papal Audience (subject to schedule) • St. Peter\'s Basilica • Vatican Museums' },
       { day: 2, title: 'Italy – The Heart of Catholicism', desc: 'Assisi (St. Francis) • Padua (St. Anthony)' },
@@ -126,7 +146,14 @@ const packagesData = [
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
-    images: ['/images/france/Paris.webp','/images/Germany/Cologne.webp','/images/italy/Venice.webp','/images/italy/Rome.webp','/images/france/Eiffel_Tower.webp'],
+    images: [
+      '/images/packagess/Grand European Road Adventure/Lucerne swiss.webp',
+      '/images/packagess/Grand European Road Adventure/bernina red train.webp',
+      '/images/packagess/Grand European Road Adventure/duomo dii milano.webp',
+      '/images/packagess/Grand European Road Adventure/livigno.webp',
+      '/images/packagess/Grand European Road Adventure/rhine falls.webp',
+      '/images/packagess/Grand European Road Adventure/vienna austria.webp'
+    ],
     itinerary: [
       { day: 1, title: 'Paris, France', desc: 'Eiffel Tower photo stop, Arc de Triomphe, Louvre exterior & pyramid, Cruise tour.' },
       { day: 2, title: 'Paris Exploration', desc: 'No rushing — enjoy Paris comfortably. Café & shopping time, Paris by night experience.' },
