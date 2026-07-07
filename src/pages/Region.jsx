@@ -173,7 +173,7 @@ const getMockData = (id) => {
     '/images/barcelona.webp',
     '/images/italy/Venice.webp',
     '/images/Switzerland.webp',
-    '/images/Germany.webp'
+    '/images/Germany/Germany.webp'
   ];
 
   const fallbackDests = [`${capitalized} Capital City`, `Historic ${capitalized}`, `${capitalized} Mountains`, `${capitalized} Coast`, `Rural ${capitalized}`];

@@ -6,7 +6,7 @@ const trendingData = [
   { id: 'fr', name: 'France', flag: '🇫🇷', img: '/images/home hero.webp', size: 'large' },
   { id: 'ch', name: 'Switzerland', flag: '🇨🇭', img: '/images/Switzerland.webp', size: 'large' },
   { id: 'it', name: 'Italy', flag: '🇮🇹', img: '/images/Italy.webp', size: 'small' },
-  { id: 'de', name: 'Germany', flag: '🇩🇪', img: '/images/Germany.webp', size: 'small' },
+  { id: 'de', name: 'Germany', flag: '🇩🇪', img: '/images/Germany/Germany.webp', size: 'small' },
   { id: 'nl', name: 'Netherlands', flag: '🇳🇱', img: '/images/Netherlands.webp', size: 'small' }
 ];
 
