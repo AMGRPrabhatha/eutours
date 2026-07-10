@@ -171,6 +171,72 @@ const packagesData = [
       { day: 14, title: 'Rome Exploration', desc: 'Colosseum, Roman Forum viewpoints, Vatican City, St. Peter’s Basilica, Pantheon, Piazza Navona.' },
       { day: 15, title: 'Departure', desc: 'Airport transfer.' }
     ]
+  },
+  {
+    id: 'romance-peaks',
+    title: 'A Journey Through Romance & Peaks',
+    category: 'Exploration',
+    rating: 4.9,
+    reviewCount: 30,
+    quote: "A breathtaking journey through romantic cities and majestic peaks",
+    quoteAuthor: "Eutours",
+    quoteMonth: "September",
+    duration: 10,
+    countries: ['France', 'Switzerland'],
+    destinations: 'Paris, Colmar, Bern, Interlaken, Jungfraujoch',
+    ageRange: 'All Ages Welcome',
+    operatedIn: 'English',
+    operator: 'Eutours Premium',
+    discount: 'Special Offer',
+    roomType: 'Price based on Shared/Private Room',
+    images: [
+      '/images/packagess/A Journey Through Romance & Peaks/bern clocktower.webp',
+      '/images/packagess/A Journey Through Romance & Peaks/colmar france.webp',
+      '/images/packagess/A Journey Through Romance & Peaks/disny france.webp',
+      '/images/packagess/A Journey Through Romance & Peaks/jungfraujoch.webp',
+      '/images/packagess/A Journey Through Romance & Peaks/thunersee.webp'
+    ],
+    itinerary: [
+      { day: 1, title: 'Arrival', desc: 'Welcome and transfer to hotel.' },
+      { day: 2, title: 'Exploration', desc: 'Guided tour of the highlights.' },
+      { day: 3, title: 'Scenic Drive', desc: 'Travel through picturesque landscapes.' },
+      { day: 4, title: 'Alpine Wonders', desc: 'Experience the majestic peaks.' },
+      { day: 5, title: 'Departure', desc: 'Transfer to airport for departure.' }
+    ]
+  },
+  {
+    id: 'italy-swiss-alps-2',
+    title: 'ITALY TO SWISS ALPS PRIME ESCAPE 2',
+    category: 'Road Trip',
+    rating: 5.0,
+    reviewCount: 45,
+    quote: "The ultimate escape from Italian charm to Swiss Alpine grandeur",
+    quoteAuthor: "Eutours",
+    quoteMonth: "October",
+    duration: 12,
+    countries: ['Italy', 'Switzerland'],
+    destinations: 'Milan, Lake Como, St. Moritz, Zermatt, Geneva',
+    ageRange: 'All Ages Welcome',
+    operatedIn: 'English',
+    operator: 'Eutours Premium',
+    discount: 'Special Offer',
+    roomType: 'Price based on Shared/Private Room',
+    images: [
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (1).webp',
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (2).webp',
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (3).webp',
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (4).webp',
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (5).webp',
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (6).webp',
+      '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15.webp'
+    ],
+    itinerary: [
+      { day: 1, title: 'Arrival', desc: 'Welcome and transfer to hotel.' },
+      { day: 2, title: 'Exploration', desc: 'Guided tour of the highlights.' },
+      { day: 3, title: 'Scenic Drive', desc: 'Travel through picturesque landscapes.' },
+      { day: 4, title: 'Alpine Wonders', desc: 'Experience the majestic peaks.' },
+      { day: 5, title: 'Departure', desc: 'Transfer to airport for departure.' }
+    ]
   }
 ];
 
