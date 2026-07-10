@@ -206,7 +206,7 @@ const packagesData = [
   },
   {
     id: 'italy-swiss-alps-2',
-    title: 'ITALY TO SWISS ALPS PRIME ESCAPE 2',
+    title: 'Italy to Swiss Alps Prime Escape 2',
     category: 'Road Trip',
     rating: 5.0,
     reviewCount: 45,
