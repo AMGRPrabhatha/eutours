@@ -7,7 +7,7 @@ import TrendingDestinations from '../components/home/TrendingDestinations';
 import OurPackages from '../components/home/OurPackages';
 import ComingSoon from '../components/home/ComingSoon';
 
-const SHOW_COMING_SOON = true;
+const SHOW_COMING_SOON = false;
 
 const Home = () => {
   if (SHOW_COMING_SOON) {
