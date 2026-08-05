@@ -25,7 +25,9 @@ const packagesData = [
       '/images/packagess/Imperial Europe & Alps Explorer/marienplatz germany.webp',
       '/images/packagess/Imperial Europe & Alps Explorer/pompeiii.webp',
       '/images/packagess/Imperial Europe & Alps Explorer/rome colloseum.webp',
-      '/images/packagess/Imperial Europe & Alps Explorer/trevi fountain rome.webp'
+      '/images/packagess/Imperial Europe & Alps Explorer/trevi fountain rome.webp',
+      '/images/packagess/Imperial Europe & Alps Explorer/1.jpeg',
+      '/images/packagess/Imperial Europe & Alps Explorer/2.jpeg'
     ],
     itinerary: [
       { day: 1, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
