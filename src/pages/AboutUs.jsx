@@ -144,7 +144,7 @@ const AboutUs = () => {
               </div>
               <div className="stat-divider"></div>
               <div className="stat-item">
-                <h3>15+</h3>
+                <h3>25+</h3>
                 <p>Countries</p>
               </div>
               <div className="stat-divider"></div>

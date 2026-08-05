@@ -43,7 +43,7 @@ const Footer = () => {
             <ul className="footer-links">
               <li><a href="tel:+94777924464">+94 77 792 4464</a></li>
               <li><a href="https://wa.me/94777924464" target="_blank" rel="noopener noreferrer">WhatsApp Us</a></li>
-              <li><a href="mailto:info@eurtours.eu">info@eurtours.eu</a></li>
+              <li><a href="mailto:info@eutours.eu">info@eutours.eu</a></li>
             </ul>
           </div>
 
