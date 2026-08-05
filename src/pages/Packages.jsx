@@ -391,71 +391,7 @@ const Packages = () => {
 
       <div className="packages-layout container">
         {/* Left Side Filters Sidebar */}
-        <aside className="packages-sidebar">
-          {/* Applied filters box */}
-          <div className="applied-filters-box">
-            <h4>Applied filters</h4>
-            
-            {selectedCountries.length > 0 ? (
-              <div className="active-filters-tags">
-                {selectedCountries.map((country) => (
-                  <button 
-                    key={country} 
-                    className="filter-chip"
-                    onClick={() => removeCountryFilter(country)}
-                  >
-                    Goes through {country}
-                    <span className="chip-close">&times;</span>
-                  </button>
-                ))}
-              </div>
-            ) : (
-              <p className="no-active-filters">No active filters applied</p>
-            )}
 
-            {selectedCountries.length > 0 && (
-              <button className="clear-all-btn" onClick={clearAllFilters}>
-                Clear all
-              </button>
-            )}
-          </div>
-
-          {/* Sort Dropdown */}
-          <div className="sidebar-filter-section">
-            <label htmlFor="sort-select" className="filter-label">Sort Packages</label>
-            <div className="custom-select-wrapper">
-              <select 
-                id="sort-select" 
-                value={sortBy} 
-                onChange={(e) => setSortBy(e.target.value)}
-                className="filter-select"
-              >
-                <option value="popular">Popularity: Most popular first</option>
-                <option value="duration-asc">Duration: Short to long</option>
-                <option value="duration-desc">Duration: Long to short</option>
-              </select>
-            </div>
-          </div>
-
-          {/* Must-see countries checkboxes */}
-          <div className="sidebar-filter-section">
-            <h4 className="filter-section-title">Must-see countries</h4>
-            <div className="checkbox-list">
-              {allCountries.map((country) => (
-                <label key={country} className="checkbox-item">
-                  <input 
-                    type="checkbox"
-                    checked={selectedCountries.includes(country)}
-                    onChange={() => handleCountryToggle(country)}
-                  />
-                  <span className="checkbox-custom"></span>
-                  <span className="checkbox-label-text">{country}</span>
-                  <span className="checkbox-count">{getCountryCount(country)}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-        </aside>
 
         {/* Right Side Packages List */}
         <main className="packages-main-content">
