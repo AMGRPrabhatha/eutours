@@ -93,7 +93,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
             >
-              <img src="/images/Jungfraujoch_Top_of_Europe_Day_Trip.webp" alt="Comprehensive Travel Support" />
+              <img src="/images/travel_support.webp" alt="Comprehensive Travel Support" />
               <div className="service-card-content">
                 <h3>Comprehensive Travel Support</h3>
                 <p>24/7 customer service to assist you before, during, and after your trip.</p>
@@ -107,7 +107,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              <img src="/images/Swiss Alps.webp" alt="Expert Travel Advice" />
+              <img src="/images/travel_advice.webp" alt="Expert Travel Advice" />
               <div className="service-card-content">
                 <h3>Expert Travel Advice</h3>
                 <p>Tips and guides to enhance your travel experience.</p>
@@ -121,7 +121,7 @@ const AboutUs = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
             >
-              <img src="/images/Vatican_Museums_&_Sistine_Chapel_Tour.webp" alt="Diverse Destinations" />
+              <img src="/images/diverse_destinations.webp" alt="Diverse Destinations" />
               <div className="service-card-content">
                 <h3>Diverse Destinations</h3>
                 <p>Access to a wide range of domestic and international locations.</p>
