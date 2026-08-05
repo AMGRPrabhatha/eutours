@@ -21,7 +21,7 @@ const staggerContainer = {
 const vehicles = [
   {
     id: 'mercedes-classe-v-extralong',
-    name: 'Mercedes Classe V Extralong',
+    name: 'Mercedes classe vito',
     model: 'Luxury Van',
     location: 'Europe',
     rating: '5.0',
