@@ -3,13 +3,13 @@ import { useState, useEffect } from 'react';
 import { regions } from '../../data';
 
 const allEuropeCountries = [
-  "Albania", "Andorra", "Austria", "Belgium", "Bosnia", "Bulgaria",
-  "Croatia", "Czech Republic", "Denmark", "England", "Estonia", "Faroe Islands",
-  "Finland", "France", "Germany", "Greece", "Hungary", "Iceland",
-  "Ireland", "Italy", "Kosovo", "Latvia", "Lithuania", "Macedonia",
-  "Malta", "Moldova", "Montenegro", "Netherlands", "Northern Ireland", "Norway",
+  "Andorra", "Austria", "Belgium", "Bosnia", "Bulgaria",
+  "Croatia", "Czech Republic", "Denmark", "England", "Estonia",
+  "Finland", "France", "Germany", "Greece", "Hungary",
+  "Italy", "Kosovo", "Latvia", "Lithuania", "Macedonia",
+  "Malta", "Moldova", "Montenegro", "Netherlands", "Norway",
   "Poland", "Portugal", "Romania", "Scotland", "Serbia", "Slovakia",
-  "Slovenia", "Spain", "Svalbard", "Sweden", "Switzerland", "Turkey", "Wales"
+  "Slovenia", "Spain", "Sweden", "Switzerland", "Turkey"
 ];
 
 const Header = () => {
@@ -122,8 +122,8 @@ const Header = () => {
                                 {allEuropeCountries.map(country => (
                                   <Link to={`/region/${country.toLowerCase().replace(/ /g, '-')}`} key={country} className="country-item" onClick={closeMobileMenu}>
                                     {country}
-                                    {country === 'Ireland' && <span className="badge-trending">Trending</span>}
-                                    {country === 'Iceland' && <span className="badge-topseller">Top seller</span>}
+                                    {(country === 'Austria' || country === 'Switzerland') && <span className="badge-trending">Trending</span>}
+                                    {country === 'Italy' && <span className="badge-topseller">Top seller</span>}
                                   </Link>
                                 ))}
                               </div>
