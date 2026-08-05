@@ -147,12 +147,11 @@ const packagesData = [
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
     images: [
-      '/images/packagess/Grand European Road Adventure/Lucerne swiss.webp',
-      '/images/packagess/Grand European Road Adventure/bernina red train.webp',
-      '/images/packagess/Grand European Road Adventure/duomo dii milano.webp',
-      '/images/packagess/Grand European Road Adventure/livigno.webp',
-      '/images/packagess/Grand European Road Adventure/rhine falls.webp',
-      '/images/packagess/Grand European Road Adventure/vienna austria.webp'
+      '/images/packagess/Grand European Road Adventure/1.jpg',
+      '/images/packagess/Grand European Road Adventure/2.jpg',
+      '/images/packagess/Grand European Road Adventure/3.jpg',
+      '/images/packagess/Grand European Road Adventure/4.jpg',
+      '/images/packagess/Grand European Road Adventure/5.jpg'
     ],
     itinerary: [
       { day: 1, title: 'Paris, France', desc: 'Eiffel Tower photo stop, Arc de Triomphe, Louvre exterior & pyramid, Cruise tour.' },
