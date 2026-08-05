@@ -397,7 +397,7 @@ const Packages = () => {
         {/* Right Side Packages List */}
         <main className="packages-main-content">
           <div className="packages-list-header">
-            <h3>★ Special Offers</h3>
+            <h3>Special Offers</h3>
           </div>
 
           <div className="packages-list-cards">
