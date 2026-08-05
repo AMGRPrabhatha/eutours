@@ -79,15 +79,7 @@ const VehicleActivities = () => {
               </div>
             </motion.div>
 
-            <motion.div className="why-item right-item" initial="hidden" whileInView="visible" viewport={{ once: true }} variants={fadeInUp}>
-              <div className="why-icon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-              </div>
-              <div className="why-text">
-                <h3>24 hour car delivery</h3>
-                <p>Book your car anytime and we will deliver it directly to you.</p>
-              </div>
-            </motion.div>
+
           </div>
 
         </div>
