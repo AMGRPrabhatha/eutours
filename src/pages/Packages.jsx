@@ -214,7 +214,7 @@ const packagesData = [
     quoteMonth: "October",
     duration: 12,
     countries: ['Italy', 'Switzerland'],
-    destinations: 'Milan, Lake Como, St. Moritz, Zermatt, Geneva',
+    destinations: 'Rome, Venice, Florence, Milan, St. Moritz, Zermatt, Geneva',
     ageRange: 'All Ages Welcome',
     operatedIn: 'English',
     operator: 'Eutours Premium',
