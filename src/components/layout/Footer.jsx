@@ -67,7 +67,7 @@ const Footer = () => {
           <div className="footer-bottom-right">
             <Link to="/travel-guides">Guides</Link>
             <Link to="/faq">Terms of Use</Link>
-            <Link to="/faq">Terms of Sale</Link>
+            <Link to="/booking-terms">Booking Terms & Conditions</Link>
             <Link to="/about">Company Details</Link>
             <Link to="/faq">Privacy & Cookie Policy</Link>
           </div>

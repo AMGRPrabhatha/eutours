@@ -13,6 +13,7 @@ import Reviews from './pages/Reviews';
 import TravelGuides from './pages/TravelGuides';
 import BookVehicle from './pages/BookVehicle';
 import Packages from './pages/Packages';
+import BookingTerms from './pages/BookingTerms';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import BackToTop from './components/BackToTop';
@@ -37,6 +38,7 @@ function App() {
           <Route path="/travel-guides" element={<TravelGuides />} />
           <Route path="/book-vehicle" element={<BookVehicle />} />
           <Route path="/packages" element={<Packages />} />
+          <Route path="/booking-terms" element={<BookingTerms />} />
           <Route path="/region/:id" element={<Region />} />
         </Routes>
         <Footer />
