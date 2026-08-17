@@ -14,6 +14,7 @@ import TravelGuides from './pages/TravelGuides';
 import BookVehicle from './pages/BookVehicle';
 import Packages from './pages/Packages';
 import BookingTerms from './pages/BookingTerms';
+import CancellationPolicy from './pages/CancellationPolicy';
 import ScrollToTop from './components/ScrollToTop';
 import FloatingWhatsApp from './components/FloatingWhatsApp';
 import BackToTop from './components/BackToTop';
@@ -39,6 +40,7 @@ function App() {
           <Route path="/book-vehicle" element={<BookVehicle />} />
           <Route path="/packages" element={<Packages />} />
           <Route path="/booking-terms" element={<BookingTerms />} />
+          <Route path="/cancellation-policy" element={<CancellationPolicy />} />
           <Route path="/region/:id" element={<Region />} />
         </Routes>
         <Footer />

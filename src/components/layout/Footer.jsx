@@ -22,7 +22,7 @@ const Footer = () => {
               <li><Link to="/faq">Get Help</Link></li>
               <li><Link to="/contact?subject=Booking%20Status">Booking Status</Link></li>
               <li><Link to="/faq">Payment Options</Link></li>
-              <li><Link to="/faq">Cancellation Policy</Link></li>
+              <li><Link to="/cancellation-policy">Cancellation Policy</Link></li>
               <li><Link to="/contact">Contact Us</Link></li>
             </ul>
           </div>
