@@ -9,14 +9,13 @@ const packagesData = [
     category: 'Exploration',
     rating: 5.0,
     reviewCount: 34,
-    quote: "From Roman Legends to Alpine Wonders — Europe\'s Greatest Highlights",
+    quote: "From Roman Legends to Alpine Wonders — Europe's Greatest Highlights",
     quoteAuthor: "Eutours",
     quoteMonth: "May",
     duration: 13,
     countries: ['Italy', 'Austria', 'Germany'],
-    destinations: 'Rome, Naples, Florence, Pisa, Milan, Venice, Salzburg, Munich',
     ageRange: 'All Ages Welcome',
-    operatedIn: 'English, Sinhala',
+    operatedIn: 'your preferred Language',
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
@@ -29,20 +28,8 @@ const packagesData = [
       '/images/packagess/Imperial Europe & Alps Explorer/1.jpeg',
       '/images/packagess/Imperial Europe & Alps Explorer/2.jpeg'
     ],
-    itinerary: [
-      { day: 1, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
-      { day: 2, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
-      { day: 3, title: 'Rome & Naples', desc: 'Colosseum • Vatican Museums • Sistine Chapel • St. Peter\'s Basilica • Trevi Fountain • Pantheon • Piazza Navona • Pompeii • Mount Vesuvius' },
-      { day: 4, title: 'Florence & Tuscany', desc: 'Florence Duomo • Ponte Vecchio • Piazza Della Signoria • Tuscan Vineyard & Wine Experience' },
-      { day: 5, title: 'Pisa & Supercars', desc: 'Leaning Tower of Pisa • Optional Ferrari/Lamborghini Factory, Museum & Self-Drive Experience on availability' },
-      { day: 6, title: 'Milan', desc: 'Duomo di Milano • Leonardo da Vinci\'s The Last Supper • Shopping & Leisure' },
-      { day: 7, title: 'Verona & Venice', desc: 'Juliet\'s House • St. Anthony\'s Basilica • Gondola Ride • Murano Glass Workshops' },
-      { day: 8, title: 'Verona & Venice', desc: 'Juliet\'s House • St. Anthony\'s Basilica • Gondola Ride • Murano Glass Workshops' },
-      { day: 9, title: 'Austrian Alps', desc: 'Salzburg • Boat Cruise • Mozart\'s birthplace • Spectacular Alpine Landscapes' },
-      { day: 10, title: 'Austrian Alps', desc: 'Salzburg • Boat Cruise • Mozart\'s birthplace • Spectacular Alpine Landscapes' },
-      { day: 11, title: 'Austrian Alps', desc: 'Salzburg • Boat Cruise • Mozart\'s birthplace • Spectacular Alpine Landscapes' },
-      { day: 12, title: 'Munich', desc: 'BMW facility • Marienplatz • Viktualienmarkt • Munich Airport Drop-Off' },
-      { day: 13, title: 'Munich', desc: 'BMW facility • Marienplatz • Viktualienmarkt • Munich Airport Drop-Off' }
+    overview: [
+      "Discover the timeless beauty of Italy, Austria, and Germany on an unforgettable 13-day journey that blends ancient history, Renaissance masterpieces, world-famous landmarks, breathtaking Alpine scenery, and iconic automotive experiences. Wander through the Eternal City of Rome, marvel at the ruins of Pompeii, indulge in the charm of Tuscany, cruise Venice's romantic canals, embrace the spectacular Austrian Alps, and conclude your adventure in vibrant Munich. Carefully paced and thoughtfully designed, this itinerary lets you experience Europe's most celebrated destinations without feeling rushed."
     ]
   },
   {
@@ -51,14 +38,13 @@ const packagesData = [
     category: 'Pilgrimage',
     rating: 4.9,
     reviewCount: 42,
-    quote: "A Sacred Journey of Faith, Prayer & Grace Across Europe\'s Most Revered Catholic Shrines",
+    quote: "A Sacred Journey of Faith, Prayer & Grace Across Europe's Most Revered Catholic Shrines",
     quoteAuthor: "Eutours",
     quoteMonth: "June",
     duration: 15,
     countries: ['Italy', 'France', 'Spain', 'Portugal'],
-    destinations: 'Rome, Assisi, Lanciano, San Giovanni Rotondo, Padua, Lourdes, Barcelona, Zaragoza, Fatima',
     ageRange: 'All Ages Welcome',
-    operatedIn: 'English, Sinhala',
+    operatedIn: 'your preferred Language',
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
@@ -70,27 +56,14 @@ const packagesData = [
       '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.23 (1).webp',
       '/images/packagess/The Grand Marian & Saints Pilgrimage/WhatsApp Image 2026-07-04 at 00.51.23.webp'
     ],
-    itinerary: [
-      { day: 1, title: 'Italy – In the Footsteps of the Saints', desc: 'Rome • Vatican City • Assisi • Lanciano • San Giovanni Rotondo • Padua. Vatican Museums & St. Peter\'s Basilica. Papal Audience/Blessing.' },
-      { day: 2, title: 'Italy – In the Footsteps of the Saints', desc: 'Holy Mass in Rome. Assisi – Tomb of St. Francis & St. Clare.' },
-      { day: 3, title: 'Italy – In the Footsteps of the Saints', desc: 'Lanciano Eucharistic Miracle Shrine.' },
-      { day: 4, title: 'Italy – In the Footsteps of the Saints', desc: 'San Giovanni Rotondo – Shrine of St. Padre Pio.' },
-      { day: 5, title: 'Italy – In the Footsteps of the Saints', desc: 'Padua – Basilica of St. Anthony.' },
-      { day: 6, title: 'Italy – In the Footsteps of the Saints', desc: 'Dedicated prayer, reflection, and devotional time throughout.' },
-      { day: 7, title: 'France – Lourdes Pilgrimage', desc: '1 night in Monte carlo, 2 nights Lourdes. Sanctuary of Our Lady of Lourdes.' },
-      { day: 8, title: 'France – Lourdes Pilgrimage', desc: 'Grotto of Massabielle. Healing Baths (where available).' },
-      { day: 9, title: 'France – Lourdes Pilgrimage', desc: 'International Holy Mass. Eucharistic Procession. Evening Candlelight Rosary Procession.' },
-      { day: 10, title: 'Spain – Faith & Heritage', desc: 'Barcelona • Zaragoza. Sagrada Familia Basilica.' },
-      { day: 11, title: 'Spain – Faith & Heritage', desc: 'Basilica of Our Lady of the Pillar, Zaragoza.' },
-      { day: 12, title: 'Spain – Faith & Heritage', desc: 'Holy Mass and devotional visits. Time for quiet prayer and pilgrimage activities.' },
-      { day: 13, title: 'Portugal – Fatima', desc: '2 Nights Fatima. Sanctuary of Our Lady of Fatima. Chapel of the Apparitions.' },
-      { day: 14, title: 'Portugal – Fatima', desc: 'Basilica of Our Lady of the Rosary. Holy Mass. Rosary at the Shrine.' },
-      { day: 15, title: 'Portugal – Fatima', desc: 'Evening Candlelight Procession. Personal prayer and thanksgiving before departure.' }
+    overview: [
+      "Travel across some of Europe's most cherished Catholic destinations through four remarkable European countries, where centuries of faith, devotion, and Christian heritage come alive. This carefully curated spiritual journey combines revered Marian traditions, inspiring saints, sacred places of worship, and opportunities for daily prayer, reflection, and Holy Mass in an atmosphere of peace and grace.",
+      "Designed for pilgrims seeking more than sightseeing, this unforgettable experience offers meaningful moments of worship, spiritual renewal, candlelit devotions, breathtaking scenery, and fellowship with fellow believers. Every step is thoughtfully planned to inspire the heart, strengthen faith, and create memories that last a lifetime."
     ]
   },
   {
     id: 'footsteps-faith',
-    title: 'Footsteps of Faith Central Europe Catholic Pilgrimage',
+    title: 'Footsteps of Faith: Central Europe Catholic Pilgrimage',
     category: 'Pilgrimage',
     rating: 5.0,
     reviewCount: 28,
@@ -98,10 +71,9 @@ const packagesData = [
     quoteAuthor: "Eutours",
     quoteMonth: "July",
     duration: 15,
-    countries: ['Italy', 'Poland', 'Czech Republic', 'Slovakia', 'Austria', 'Hungary', 'Bosnia & Herzegovina'],
-    destinations: 'Rome, Warsaw, Prague, Bratislava, Vienna, Budapest, Međugorje',
+    countries: ['Italy', 'Poland', 'Czech Republic', 'Slovakia', 'Austria', 'Hungary', 'Bosnia'],
     ageRange: 'All Ages Welcome',
-    operatedIn: 'English, Sinhala',
+    operatedIn: 'your preferred Language',
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
@@ -113,22 +85,8 @@ const packagesData = [
       '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41 (5).webp',
       '/images/packagess/Footsteps of Faith Central Europe Catholic Pilgrimage/WhatsApp Image 2026-07-05 at 21.15.41.webp'
     ],
-    itinerary: [
-      { day: 1, title: 'Italy – The Heart of Catholicism', desc: 'Rome & Vatican City • Papal Audience (subject to schedule) • St. Peter\'s Basilica • Vatican Museums' },
-      { day: 2, title: 'Italy – The Heart of Catholicism', desc: 'Assisi (St. Francis) • Padua (St. Anthony)' },
-      { day: 3, title: 'Italy – The Heart of Catholicism', desc: 'Lanciano Eucharistic Miracle' },
-      { day: 4, title: 'Italy – The Heart of Catholicism', desc: 'San Giovanni Rotondo (St. Padre Pio)' },
-      { day: 5, title: 'Italy – The Heart of Catholicism', desc: 'Continued exploration of Italy\'s sacred sites.' },
-      { day: 6, title: 'Italy – The Heart of Catholicism', desc: 'Final day in Italy before departing to Poland.' },
-      { day: 7, title: 'Poland', desc: 'Warsaw • Divine Mercy devotion • Pilgrimage sites associated with St. John Paul II' },
-      { day: 8, title: 'Poland', desc: 'Holy Mass & reflection time' },
-      { day: 9, title: 'Czech Republic', desc: 'Prague • Infant Jesus of Prague Shrine • Historic churches and spiritual heritage' },
-      { day: 10, title: 'Slovakia', desc: 'Bratislava • St Martin\'s Cathedral, • Leisurely old-town pilgrimage walk' },
-      { day: 11, title: 'Austria & Hungary', desc: 'Vienna: St. Stephen’s Cathedral • St. Peter’s Church • Karlskirche • Schönbrunn Palace' },
-      { day: 12, title: 'Austria & Hungary', desc: 'Budapest: St. Stephen’s Basilica • Matthias Church • Gellért Hill • Castle District • Danube River' },
-      { day: 13, title: 'Međugorje, Bosnia & Herzegovina', desc: 'Apparition Hill • St. James Church • Holy Mass' },
-      { day: 14, title: 'Međugorje, Bosnia & Herzegovina', desc: 'Rosary & Adoration • Personal prayer, reflection, and spiritual renewal' },
-      { day: 15, title: 'Drop off at airport', desc: 'Final blessings and departure to the airport.' }
+    overview: [
+      "Embark on a sacred pilgrimage through the heart of Catholic Europe, where every destination invites you to deepen your faith, encounter the lives of beloved saints, and experience God's presence in places of profound spiritual significance. From the Vatican and the holy footsteps of St. Francis, St. Anthony, and St. Padre Pio, to the Divine Mercy devotion in Poland, the Infant Jesus of Prague, the timeless cathedrals of Vienna and Budapest, and the peaceful sanctuary of Međugorje, this journey is thoughtfully designed to nourish your soul. With opportunities for Holy Mass, prayer, reflection, and fellowship, this pilgrimage offers not only a visit to holy sites but also a life-changing spiritual experience that inspires, renews, and strengthens your walk with Christ"
     ]
   },
   {
@@ -142,9 +100,8 @@ const packagesData = [
     quoteMonth: "August",
     duration: 15,
     countries: ['France', 'Belgium', 'Netherlands', 'Germany', 'Switzerland', 'Italy'],
-    destinations: 'Paris, Brussels, Amsterdam, Cologne, Interlaken, Venice, Pisa, Florence, Assisi, Rome',
     ageRange: 'All Ages Welcome',
-    operatedIn: 'English, Sinhala',
+    operatedIn: 'your preferred Language',
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
@@ -155,38 +112,26 @@ const packagesData = [
       '/images/packagess/Grand European Road Adventure/4.jpg',
       '/images/packagess/Grand European Road Adventure/5.jpg'
     ],
-    itinerary: [
-      { day: 1, title: 'Paris, France', desc: 'Eiffel Tower photo stop, Arc de Triomphe, Louvre exterior & pyramid, Cruise tour.' },
-      { day: 2, title: 'Paris Exploration', desc: 'No rushing — enjoy Paris comfortably. Café & shopping time, Paris by night experience.' },
-      { day: 3, title: 'Paris → Brussels → Netherlands', desc: 'Morning Departure from Paris. Stop 1 – Brussels, Belgium. Grand Place, Atomium, Belgian waffles & chocolate.' },
-      { day: 4, title: 'Amsterdam, Netherlands', desc: 'Canal district, Dam Square, Rijksmuseum area, Red Light District. Canal cruise, Tulip + Windmill area visit.' },
-      { day: 5, title: 'Germany Road Experience', desc: 'Cologne Cathedral, Rhine River views, Old Town quick stop. Autobahn driving experience.' },
-      { day: 6, title: 'Arrival in Interlaken, Switzerland', desc: 'Drive through Swiss Alpine roads, Lakeside highways. Interlaken Highlights: Lake Thun, Lake Brienz.' },
-      { day: 7, title: 'Lauterbrunnen & Grindelwald', desc: 'Cliffside scenery, Alpine cafés, Cable car options, Lauterbrunnen Valley Waterfalls.' },
-      { day: 8, title: 'Swiss Scenic Leisure Day', desc: 'Optional Experiences: Harder Kulm viewpoint, Lake cruise, Swiss chocolate shopping.' },
-      { day: 9, title: 'Switzerland → Verona → Padova → Venice', desc: 'Juliet’s balcony, Roman Arena. Padova: Visit St\' Anthony\'s basilica. Evening: Venice waterfront.' },
-      { day: 10, title: 'Venice → Pisa', desc: 'Scenic Italian Highway Journey. Leaning Tower of Pisa, Piazza dei Miracoli. Tuscan-style dinner & overnight stay.' },
-      { day: 11, title: 'Florence → Assisi', desc: 'Florence Cathedral, Ponte Vecchio, panorama View point Florence, St Francis\'s tomb.' },
-      { day: 12, title: 'Lanciano & San Giovanni Rotondo', desc: 'Eucaristico di Lanciano & Padre Pio Shrine & Church.' },
-      { day: 13, title: 'Foggia → Rome', desc: 'Scenic Southern Italy Drive. Arrival in Rome. Colosseum night views, Spanish Steps area.' },
-      { day: 14, title: 'Rome Exploration', desc: 'Colosseum, Roman Forum viewpoints, Vatican City, St. Peter’s Basilica, Pantheon, Piazza Navona.' },
-      { day: 15, title: 'Departure', desc: 'Airport transfer.' }
+    overview: [
+      "One unforgettable journey. Six incredible countries. Endless memories.",
+      "Discover the very best, from elegant capital cities and charming old towns to breathtaking alpine landscapes and picturesque countryside, this carefully crafted tour blends iconic European experiences with comfortable travel, scenic drives, relaxing sightseeing, and plenty of opportunities to capture unforgettable memories.",
+      "Enjoy a perfect balance of culture, history, nature, and local experiences as you cruise through beautiful waterways, wander vibrant city centers, admire world-famous architecture, experience spectacular mountain scenery, travel along legendary highways, and savor authentic European cafés, cuisine, shopping, and regional flavors. Every day offers a new destination and a different perspective, ensuring an exciting yet unhurried journey.",
+      "The adventure concludes in Italy, where romance, timeless heritage, artistic beauty, and spiritual traditions come together to create the perfect finale. Whether you're travelling as a couple, family, or group of friends, this expertly planned itinerary offers a seamless European holiday that combines famous highlights, hidden treasures, scenic routes, and unforgettable experiences—all designed to let you experience Europe at its finest."
     ]
   },
   {
     id: 'romance-peaks',
-    title: 'A Journey Through Romance & Peaks',
+    title: 'A Journey through Romance & Peaks',
     category: 'Exploration',
     rating: 4.9,
     reviewCount: 30,
     quote: "A breathtaking journey through romantic cities and majestic peaks",
     quoteAuthor: "Eutours",
     quoteMonth: "September",
-    duration: 10,
+    duration: 9,
     countries: ['France', 'Switzerland'],
-    destinations: 'Paris, Colmar, Bern, Interlaken, Jungfraujoch',
     ageRange: 'All Ages Welcome',
-    operatedIn: 'English, Sinhala',
+    operatedIn: 'your preferred Language',
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
@@ -197,28 +142,25 @@ const packagesData = [
       '/images/packagess/A Journey Through Romance & Peaks/jungfraujoch.webp',
       '/images/packagess/A Journey Through Romance & Peaks/thunersee.webp'
     ],
-    itinerary: [
-      { day: 1, title: 'Arrival', desc: 'Welcome and transfer to hotel.' },
-      { day: 2, title: 'Exploration', desc: 'Guided tour of the highlights.' },
-      { day: 3, title: 'Scenic Drive', desc: 'Travel through picturesque landscapes.' },
-      { day: 4, title: 'Alpine Wonders', desc: 'Experience the majestic peaks.' },
-      { day: 5, title: 'Departure', desc: 'Transfer to airport for departure.' }
+    overview: [
+      "From Parisian elegance to Swiss alpine grandeur, this 8-night journey blends two iconic worlds into one seamless escape. Start in Paris with its timeless landmarks—admire the Louvre Museum, stand beneath the Arc de Triomphe, cruise the Seine, and explore the grandeur of the Palace of Versailles. Venture into the French countryside with a scenic stop in storybook Colmar.",
+      "Then continue into Switzerland’s alpine beauty—stroll through Lucerne, cross the iconic Chapel Bridge, and unwind by Lake Lucerne. Experience Swiss craftsmanship at Lindt & Sprüngli before journeying through the mountains to Interlaken and reaching the breathtaking heights of Jungfraujoch—the “Top of Europe.”",
+      "A refined, private, and perfectly paced escape through Europe’s most unforgettable landscapes"
     ]
   },
   {
-    id: 'italy-swiss-alps-2',
-    title: 'Italy to Swiss Alps Prime Escape 2',
+    id: 'italy-swiss-alps',
+    title: 'Italy to Swiss Alps Prime Escape',
     category: 'Road Trip',
     rating: 5.0,
     reviewCount: 45,
     quote: "The ultimate escape from Italian charm to Swiss Alpine grandeur",
     quoteAuthor: "Eutours",
     quoteMonth: "October",
-    duration: 12,
+    duration: 10,
     countries: ['Italy', 'Switzerland'],
-    destinations: 'Rome, Venice, Florence, Milan, St. Moritz, Zermatt, Geneva',
     ageRange: 'All Ages Welcome',
-    operatedIn: 'English, Sinhala',
+    operatedIn: 'your preferred Language',
     operator: 'Eutours Premium',
     discount: 'Special Offer',
     roomType: 'Price based on Shared/Private Room',
@@ -231,12 +173,10 @@ const packagesData = [
       '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15 (6).webp',
       '/images/packagess/ITALY TO SWISS ALPS PRIME ESCAPE 2/WhatsApp Image 2026-07-07 at 01.06.15.webp'
     ],
-    itinerary: [
-      { day: 1, title: 'Arrival', desc: 'Welcome and transfer to hotel.' },
-      { day: 2, title: 'Exploration', desc: 'Guided tour of the highlights.' },
-      { day: 3, title: 'Scenic Drive', desc: 'Travel through picturesque landscapes.' },
-      { day: 4, title: 'Alpine Wonders', desc: 'Experience the majestic peaks.' },
-      { day: 5, title: 'Departure', desc: 'Transfer to airport for departure.' }
+    overview: [
+      "Where timeless elegance meets breathtaking alpine beauty.",
+      "Journey through the heart of Italy and Switzerland on a carefully crafted escape that blends romance, culture, spectacular scenery, and unforgettable experiences. Discover historic cities, charming lakeside retreats, picturesque countryside, and majestic mountain landscapes while enjoying relaxed travel, premium comfort, and handpicked experiences designed to create lasting memories.",
+      "From Mediterranean charm to snow-capped Alpine peaks, this signature journey offers the perfect balance of iconic highlights, authentic local experiences, scenic drives, and leisurely exploration—making every day as memorable as the destination itself."
     ]
   }
 ];
@@ -420,9 +360,9 @@ const Packages = () => {
                         <span className="spec-value">{pkg.duration} days</span>
                       </div>
                       <div className="spec-item">
-                        <span className="spec-label">Destinations</span>
-                        <span className="spec-value text-truncate" title={pkg.destinations}>
-                          {pkg.destinations}
+                        <span className="spec-label">Countries</span>
+                        <span className="spec-value text-truncate" title={pkg.countries.join(', ')}>
+                          {pkg.countries.join(', ')}
                         </span>
                       </div>
                       <div className="spec-item">
@@ -498,15 +438,15 @@ const Packages = () => {
                   <div className="pkg-detail-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     <div className="pkg-detail-text">
-                      <span className="pkg-detail-label">Departure City</span>
-                      <span className="pkg-detail-value">{activeItinerary.itinerary[0]?.title.split(',')[0].replace('Arrival in ', '') || 'Varies'}</span>
+                      <span className="pkg-detail-label">Start</span>
+                      <span className="pkg-detail-value">{activeItinerary.countries[0] || 'Varies'}</span>
                     </div>
                   </div>
                   <div className="pkg-detail-item">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     <div className="pkg-detail-text">
-                      <span className="pkg-detail-label">End City</span>
-                      <span className="pkg-detail-value">{activeItinerary.itinerary[activeItinerary.itinerary.length - 1]?.title.split(' ')[0] || 'Varies'}</span>
+                      <span className="pkg-detail-label">End</span>
+                      <span className="pkg-detail-value">{activeItinerary.countries[activeItinerary.countries.length - 1] || 'Varies'}</span>
                     </div>
                   </div>
                   <div className="pkg-detail-item">
@@ -547,15 +487,9 @@ const Packages = () => {
                 </div>
 
                 <div className="guide-modal-sections">
-                  <h4 style={{ marginBottom: '1.25rem', fontSize: '1.5rem', fontWeight: 800 }}>Detailed Day-by-Day Itinerary</h4>
-                  {activeItinerary.itinerary.map((dayPlan) => (
-                    <div key={dayPlan.day} className="pkg-itinerary-day-card">
-                      <div className="day-number-badge">Day {dayPlan.day}</div>
-                      <div className="day-card-body">
-                        <h5>{dayPlan.title}</h5>
-                        <p>{dayPlan.desc}</p>
-                      </div>
-                    </div>
+                  <h4 style={{ marginBottom: '1.25rem', fontSize: '1.5rem', fontWeight: 800 }}>Tour Overview</h4>
+                  {activeItinerary.overview && activeItinerary.overview.map((paragraph, idx) => (
+                    <p key={idx} style={{ marginBottom: '1rem', lineHeight: '1.6', color: '#4b5563', fontSize: '1.05rem' }}>{paragraph}</p>
                   ))}
                 </div>
               </div>
